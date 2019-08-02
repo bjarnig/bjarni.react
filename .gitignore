@@ -6,3 +6,5 @@ node_modules
 
 # Ignore npm-debug
 npm-debug.log
+
+package-lock.json
