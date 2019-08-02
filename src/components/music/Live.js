@@ -44,7 +44,12 @@ class Live extends Component {
 
         </div>
 
-        <div className="media">
+    <div className="media">
+    <p>Ghent</p>
+    <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/640450551&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    </div>
+
+    <div className="media">
     <p>Utrecht</p>
     <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/248736798&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
     </div>

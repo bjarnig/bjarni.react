@@ -75,7 +75,8 @@ import rc from './../../assets/images/rc.jpg';
 import SonologyConcert17October2018 from './../../assets/images/SonologyConcert17October2018.jpg';
 import OrpheusMachine from './../../assets/images/orpheus-machines.jpeg';
 import lueur1 from './../../assets/images/lueura.png';
-import synthetic_environment from './../../assets/images/synthetic-environment.png';
+// import synthetic_environment from './../../assets/images/synthetic-environment.png';
+import Crxssings from './../../assets/images/CRXSSINGS.jpg';
 
 
 class Current extends Component {
@@ -92,6 +93,20 @@ class Current extends Component {
   render() {
     return <div className="container">
       <div className="content">
+        <article>
+          <div className="date">01-07-2019</div>
+          <div className="hr"><hr/></div>
+          <p>
+            CRXSSINGS (fundraiser for City Plaza)
+          </p>
+          <div className="img-center">
+            <OpacityImage imageUrl= {Crxssings} />
+          </div>
+          <p>CRXSSINGS is a compilation remix album as a fundraiser for Refugee Accommodation and Solidarity Space City Plaza. Almost four hours of music, with 34 artists, remixing each others tracks. It contains my rework of BJ Nilsen and his of mine.</p>
+          <p>'Mass migration is one of the most pressing humanitarian and political topics we face today. Rutger Zuydervelt (a.k.a Machinefabriek) and Gabriel Saloman of Yellow Swans initiated the compilation CRXSSINGS as a means to support migrants and refugees in Europe. They called upon friends and colleagues from Europe, North America and Australia to get involved, the conceptual idea being that duos of two artists would collaborate and donate their exclusive tracks for CRXSSINGS.'</p>
+          <p>'CRXSSINGS will be released digitally on July 1 via a special Bandcamp account for a donation of 10 €. All the funds generated will be donated to City Plaza Hotel, a squatted refuge in the heart of Athens, Greece organized for and by migrants from Africa and Asia, which was covered by The Guardian back in 2017.'</p>
+          <p><a href="https://crxssings.bandcamp.coms"> https://crxssings.bandcamp.com </a></p>
+        </article>
         <article>
           <div className="date">22-05-2019</div>
           <div className="hr"><hr/></div>
@@ -113,7 +128,7 @@ class Current extends Component {
           <p>
             Inspired by immersive artificial worlds, the idea of a Synthetic Environment refers to generated (usually quite detailed) surroundings or spaces of virtual worlds. Example of current work, now on Vimeo.
           </p>
-        
+
           <p>
             <iframe src="https://player.vimeo.com/video/325550871?color=F27059&title=0&byline=0&portrait=0" width="100%" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </p>

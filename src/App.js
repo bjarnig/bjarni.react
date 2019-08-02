@@ -145,15 +145,15 @@ class Login extends React.Component {
 
   login = () => {
 
-    if(this.state.value === 'programming') {
+    if(this.state.value === 'programmingx') {
         fakeAuth.authenticate('success', () => {
             this.setState({ redirectTo: '/pma' });
         });
-    } else if(this.state.value === 'music') {
+    } else if(this.state.value === 'musicx') {
         fakeAuth.authenticate('success', () => {
             this.setState({ redirectTo: '/pmb' });
         });
-    } else if(this.state.value === 'composing') {
+    } else if(this.state.value === 'composingx') {
         fakeAuth.authenticate('success', () => {
             this.setState({ redirectTo: '/cwa' });
         });
