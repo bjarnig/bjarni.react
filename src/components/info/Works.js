@@ -28,6 +28,13 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
+                      <tr>
+                          <td>Cendres</td>
+                          <td>2020</td>
+                          <td>22:14</td>
+                          <td>8</td>
+                          <td>-</td>
+                      </tr>
                     <tr>
                         <td><a href="https://www.researchcatalogue.net/view/540350/540351#becoming">Copaline</a></td>
                         <td>2019</td>
@@ -330,6 +337,20 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
+                      <tr>
+                          <td><a href="https://crxssings.bandcamp.com"> CRXSSINGS (fundraiser for City Plaza) </a></td>
+                          <td>-</td>
+                          <td>2019</td>
+                          <td>Compilation</td>
+                          <td>Digital</td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur</a></td>
+                          <td><a href="https://tartarugarecords.bandcamp.com">Tartaruga Records</a></td>
+                          <td>2018</td>
+                          <td>Solo</td>
+                          <td>Vinyl / Digital</td>
+                      </tr>
                     <tr>
                         <td><a href="https://hisolat.bandcamp.com/album/various-artists-one-2">Various Artists One</a></td>
                         <td><a href="https://hisolat.bandcamp.com">Hisolat Records</a></td>
@@ -474,12 +495,54 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                        <td class="performance">Todays Art 2018</td>
-                        <td>The Grey Space</td>
-                        <td>Den Haag, Netherlands</td>
-                        <td>21.09.2018</td>
-                    </tr>
+                      <tr>
+                          <td class="performance">RASK #2</td>
+                          <td>Sonix #9</td>
+                          <td>Brno, Czech Republic</td>
+                          <td>21.02.2020</td>
+                      </tr>
+                      <tr>
+                          <td class="performance">Sonology Concert #1</td>
+                          <td>KC / Institute of Sonology</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>29.01.2020</td>
+                      </tr>
+                      <tr>
+                          <td class="performance">RASK #2</td>
+                          <td>Loft Hostel & Mengi</td>
+                          <td>Reykjavík, Ísland</td>
+                          <td>28.12.2019</td>
+                      </tr>
+                      <tr>
+                          <td class="performance">Concert Institut de Sonologie de La Haye @ GRM</td>
+                          <td>Akousma, Mpaa Saint-germain</td>
+                          <td>Paris, France</td>
+                          <td>18.10.2019</td>
+                      </tr>
+                      <tr>
+                          <td class="performance">Music, Humans and Machines (ODC 2019)</td>
+                          <td>Orpheus Institute</td>
+                          <td>Ghent, Belgium</td>
+                          <td>22.05.2019</td>
+                      </tr>
+                      <tr>
+                          <td class="performance">Simulation and Computer Experimentation</td>
+                          <td>Orpheus Institute</td>
+                          <td>Ghent, Belgium</td>
+                          <td>21.03.2019</td>
+                      </tr>
+                      <tr>
+                          <td class="performance">Lectorate - Festive Presentation</td>
+                          <td>Royal Conservatory, The Hague</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>25.01.2019</td>
+                      </tr>
+                      <tr>
+                          <td class="performance">Sonology Concert #1</td>
+                          <td>KC / Institute of Sonology</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>21.09.2018</td>
+                      </tr>
                     <tr>
                         <td class="performance">Sound and Music Computing 2018</td>
                         <td>SMC2018</td>

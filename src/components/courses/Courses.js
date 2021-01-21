@@ -11,7 +11,7 @@ import music from './../../assets/images/pmb.png';
 class Courses extends Component {
   render() { return<div className="container">
       <div className="music">
-        <div className="date">2018 - 2019</div>
+        <div className="date">Sonology, 2020 - 2021</div>
         <div className="hr"><hr /></div>
         <div className="row">
 

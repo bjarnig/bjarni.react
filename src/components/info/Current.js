@@ -12,8 +12,8 @@ import './../../assets/css/main.css';
 import OpacityImage from './../common/OpacityImage';
 
 // Images
-import smc2018 from './../../assets/images/smc2018.png';
-import todaysart2018 from './../../assets/images/todaysart2018.png';
+import smc2018 from './../../assets/images/smc2018.jpg';
+import todaysart2018 from './../../assets/images/todaysart2018.jpg';
 import fraislandi from './../../assets/images/fraislandi.jpg';
 import arc_power from './../../assets/images/arc-power.jpg';
 import hisolat_k7 from './../../assets/images/hisolat-k7.jpg';
@@ -75,9 +75,15 @@ import rc from './../../assets/images/rc.jpg';
 import SonologyConcert17October2018 from './../../assets/images/SonologyConcert17October2018.jpg';
 import OrpheusMachine from './../../assets/images/orpheus-machines.jpeg';
 import lueur1 from './../../assets/images/lueura.png';
-// import synthetic_environment from './../../assets/images/synthetic-environment.png';
+import synthetic_environment from './../../assets/images/synthetic-environment.png';
+import multiphonies from './../../assets/images/grm_multiphonies2019-20.jpg';
 import Crxssings from './../../assets/images/CRXSSINGS.jpg';
-
+import Rask2 from './../../assets/images/rask2poster2.jpg';
+import Sonix from './../../assets/images/sonix.jpg';
+import DC2020 from './../../assets/images/discussion-concert-jan2020.jpg';
+import superpang from './../../assets/images/superpang.jpg';
+import cendres_sovn from './../../assets/images/cendres_sovn.jpg';
+import cendres_sovn2 from './../../assets/images/cendres_sovn2.jpg';
 
 class Current extends Component {
 
@@ -93,6 +99,147 @@ class Current extends Component {
   render() {
     return <div className="container">
       <div className="content">
+
+      <article > <div className="date">06-11-2020</div>
+      <div className="hr"><hr/></div>
+      <p>
+          'Cendres' on SØVN Records
+      </p>
+      <div className="img-center">
+        <OpacityImage imageUrl= {cendres_sovn} />
+      </div>
+      <p>
+          Released on the 18th of November. <a href="https://sovnrecords.bandcamp.com/album/cendres"> Available now for pre-order</a>
+      </p>
+      <div className="img-center">
+        <OpacityImage imageUrl= {cendres_sovn2} />
+      </div>
+      <p>
+      </p>
+      </article>
+
+      <article > <div className="date">18-09-2020</div>
+      <div className="hr"><hr/></div>
+      <p>
+          Volume & Void
+      </p>
+      <div className="img-center">
+        <OpacityImage imageUrl= {superpang} />
+      </div>
+      <p>
+
+      </p>
+      <p> New release out on <a href="https://superpang.bandcamp.com/album/volume-void"> Superpang </a>
+      </p>
+      <p>
+          Composed through experimental scheduling algorithms that explore the duality of immediate, direct events with gradual and evolving processes.<br /><br />
+          System and sounds created during the summer of 2020 in Scheveningen, The Hague.<br /><br />
+          Design: Joe Gilmore
+      </p>
+      </article>
+
+        <article > <div className="date">06-03-2020</div>
+        <div className="hr"><hr/></div>
+        <p>
+            LKS
+        </p>
+        <p>
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771434518&color=%234c4655&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        </p>
+        <p>A new Mix / Music selection made for LKS now on SoundCloud.
+        </p>
+        </article>
+
+        <article > <div className="date">21-02-2020</div>
+        <div className="hr"><hr/></div>
+        <p>
+            Sonix #9
+        </p>
+        <div className="img-center">
+          <OpacityImage imageUrl= {Sonix} />
+        </div>
+        <p>
+            Ji Youn Kang (KR/NL)<br />
+            Bjarni Gunnarson (IS/NL)<br />
+            Amen Tma (SK)<br />
+            Panáčik (SK/CZ)<br />
+            Ramin Kuliev (AZ/CZ)<br />
+            Rudolf Růžička (CZ)<br />
+        </p>
+        <p>
+        Darkness and deep listening - an evening of international electroacoustic music working with both rich sound spectra and space, will present new compositions by composers from the Institute of Sonology (The Hague, NL), JAMU (Brno, CZ) and the surrounding area.
+        The concert will be performed in darkness in 8 channel surround sound.
+        Dramaturgy and organization: Jiří Suchánek. Brno, Czech Republic.
+        </p>
+        <p><a href="https://www.facebook.com/events/615517735902652/"> Sonix #9 </a></p>
+        </article>
+
+        <article > <div className="date">29-01-2020</div>
+        <div className="hr"><hr/></div>
+        <p>
+            Discussion Concert #3
+        </p>
+        <div className="img-center">
+          <OpacityImage imageUrl= {DC2020} />
+        </div>
+        <p>The third Sonology Discussion Concert of the Academic Year 2019–2020 with participants from Czech Republic, Italy, Iran, Iceland, Germany and Syria.</p>
+<p>The concert will start at 19:30, please be on time.</p>
+<p>As usual, entrance and drinks are free.</p>
+<p>May we also have your attention for the Royal Conservatoire’s annual Open Day, which takes place on Saturday 25 January 2020 from 10:00 until 17:30. Sonology’s studios will be open from 11 and there is a Sonology concert presentation at 16:00. Please pass by when you are interested in one of our educational programmes or just would like to see what is going on in the studios.</p>
+<p>Last but not least: have a look at our new website www.sonology.org, which has a lot of additional information, including a calendar.</p>
+<p><a href="http://www.sonology.org/"> sonology.org </a></p>
+        </article>
+
+        <article>
+          <div className="date">28-12-2019</div>
+          <div className="hr"><hr/></div>
+          <p>
+            RASK #2
+          </p>
+          <div className="img-center">
+            <OpacityImage imageUrl= {Rask2} />
+          </div>
+          <p>RASK #2 is the second edition of event series promoting new media art and experimentation in Reykjavik. It is organised by a collective of young Icelandic artists working in the intersection of art and technology. </p>
+          <p>EXHIBITION IN INGÓLFSSTRÆTI 6 - 14:00 - 19:00<br />
+            Ásdís Birna Gylfadóttir & Ragnheiður Erla<br />
+            Hákon Bragason<br />
+            Logi Leó Gunnarsson<br />
+            María Guðjohnsen<br />
+            Rúnar Örn Marinósson<br />
+            Kristín Helga Ríkharðsdóttir</p>
+
+            <p>CODE CAFÉ AT LOFT HOSTEL - 15:00 - 17:00<br />
+            Snæi Jack<br />
+            Hexia (Ólöf Rún Benediktsdóttir)<br />
+            Bjarni Gunnarsson</p>
+
+            <p>LIVE PERFORMANCES IN MENGI - 19:30 - 22:30<br />
+            Doors open 19:30, performances start at 20:00:<br />
+            Kaðlín Sara Ólafsdóttir<br />
+            Halldór Eldjárn & Sól Ey<br />
+            Höskuldur Eiríksson & Ingibjörg Friðriksdóttir<br />
+            Bjarni Gunnarsson & Marie Guilleray</p>
+              <p><a href="https://www.facebook.com/events/441285456536290/"> Rask #2 </a></p>
+
+        </article>
+        <article>
+          <div className="date">18-10-2019</div>
+          <div className="hr"><hr/></div>
+          <p>
+            Akousma 18 Octobre 2019 / Mpaa Saint-germain. Sonologie @ GRM.
+          </p>
+          <div className="img-center">
+            <OpacityImage imageUrl= {multiphonies} />
+          </div>
+          <p>Concert Institut de Sonologie de La Haye</p>
+          <p>L’Institut de Sonologie adopte une position claire concernant l’utilisation de la
+technologie en musique : la technologie n’est pas simplement un complément à la
+pratique musicale existante, mais doit être principalement utilisée pour explorer de
+nouvelles formes de composition et de présentation publique de la musique et de
+l’art. En même temps, la sonologie n’est liée à aucun dogme stylistique.</p>
+
+        <p><a href="https://inagrm.com/fr/showcase/open-agenda/3980622"> Akousma </a></p>
+        </article>
         <article>
           <div className="date">01-07-2019</div>
           <div className="hr"><hr/></div>

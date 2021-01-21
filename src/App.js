@@ -80,7 +80,7 @@ render() {
               </div>
           </div>
         </div>
-        <Route exact path="/" component={Main} />
+        <Route exact path="/" component={Current} />
         <Route path="/music" component={Music} />
         <Route path="/collaborations" component={Collaborations} />
         <Route path="/live" component={Live} />
@@ -145,15 +145,15 @@ class Login extends React.Component {
 
   login = () => {
 
-    if(this.state.value === 'programmingx') {
+    if(this.state.value === 'programming') {
         fakeAuth.authenticate('success', () => {
             this.setState({ redirectTo: '/pma' });
         });
-    } else if(this.state.value === 'musicx') {
+    } else if(this.state.value === 'music') {
         fakeAuth.authenticate('success', () => {
             this.setState({ redirectTo: '/pmb' });
         });
-    } else if(this.state.value === 'composingx') {
+    } else if(this.state.value === 'composing') {
         fakeAuth.authenticate('success', () => {
             this.setState({ redirectTo: '/cwa' });
         });

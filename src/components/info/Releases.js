@@ -10,6 +10,7 @@ import albumProcessesInserts from './../../assets/images/inserts2.jpg';
 import safn1 from './../../assets/images/safn1.JPEG';
 import tvenna1 from './../../assets/images/tvenna1.JPEG';
 import albumLueur from './../../assets/images/lueur1.png';
+import superpang from './../../assets/images/superpang.jpg';
 
 class Releases extends Component {
 
@@ -21,6 +22,12 @@ class Releases extends Component {
         width: '100%',
         height: '307px'
       },
+      bandcampStyleVV: {
+        border: '0',
+        width: '100%',
+        height: '940px'
+      },
+
       bandcampStyleTvenna: {
         border: '0', width: '100%', height: '1040px'}
     };
@@ -37,6 +44,24 @@ class Releases extends Component {
             <a href="/press">press</a>
           </li>
         </ul>
+        <div className="hr"><hr/></div>
+        <div className="release">
+
+          <div className="release-title">Volume & Void (2020)</div>
+
+        <div className="bandcamp">
+              <iframe style={this.state.bandcampStyleVV} src="https://bandcamp.com/EmbeddedPlayer/album=1204087134/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://superpang.bandcamp.com/album/volume-void">Volume &amp; Void by Bjarni Gunnarsson</a></iframe>
+          </div>
+          <p> New release out on <a href="https://superpang.bandcamp.com/album/volume-void"> Superpang </a>
+          </p>
+          <p>
+              Composed through experimental scheduling algorithms that explore the duality of immediate, direct events with gradual and evolving processes.<br /><br />
+              System and sounds created during the summer of 2020 in Scheveningen, The Hague.<br /><br />
+              Design: Joe Gilmore
+          </p>
+          <br/>
+
+        </div>
         <div className="hr"><hr/></div>
         <div className="release">
 
