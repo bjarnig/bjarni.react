@@ -11,6 +11,36 @@ import music from './../../assets/images/pmb.png';
 class Pma extends Component {
   render() { return<div className="container">
       <div className="content">
+      
+      <article>
+        <div className="date"> 11.02.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 16, Demand</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma16.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma16.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma16.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 04.02.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 15, Workshop</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma15.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma15.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma15.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 28.01.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 14, Patterns 2</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma14.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma14.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma14.zip" target="_blank">Download materials</a></p>
+      </article>
 
       <article>
         <div className="date"> 21.01.2021 </div>
@@ -25,7 +55,7 @@ class Pma extends Component {
       <article>
         <div className="date"> 12.01.2021 </div>
         <div className="hr"><hr /></div>
-        <h1>Class 12, Patterns 01 </h1>
+        <h1>Class 12, Patterns 1 </h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma12.zip" target="_blank">
         <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma12.png" />
         </a>

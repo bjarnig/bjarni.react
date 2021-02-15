@@ -13,6 +13,46 @@ class Pmb extends Component {
       <div className="content">
 
       <article>
+        <div className="date"> 16.02.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 18, Tidal Cycles</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb18.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb18.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb18.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 09.02.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 17, Spectromorphology</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb17.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb17.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb17.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 02.02.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 16, CDP</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb16.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb16.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb16.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 26.01.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 15, Examples</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb15.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb15.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb15.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
         <div className="date"> 19.01.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 14, Analysis</h1>

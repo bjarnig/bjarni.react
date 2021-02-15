@@ -13,7 +13,46 @@ class Cwa extends Component {
       <div className="content">
 
       <article>
-        <div className="date"> 12.01.2021</div>
+        <div className="date"> 11.02.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 17, Complexity</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa17.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa17.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa17.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/418393696" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/418393885" target="_blank">Video 2</a></p>
+        <p>* access code to the videos is the same as for class</p>
+      </article>
+
+      <article>
+        <div className="date"> 04.02.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 16, Sonification</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa16.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa16.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa16.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/415836563" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/418394047" target="_blank">Video 2</a></p>
+        <p>* access code to the videos is the same as for class</p>
+      </article>
+
+      <article>
+        <div className="date"> 28.01.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 15, Sound processes</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa15.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa15.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa15.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/415828985" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/415828271" target="_blank">Video 2</a></p>
+        <p>* access code to the videos is the same as for class</p>
+      </article>
+
+      <article>
+        <div className="date"> 21.01.2021</div>
         <div className="hr"><hr /></div>
         <h1>Class 14, Composition Processes</h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa14.zip" target="_blank">

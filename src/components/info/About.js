@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import about from './../../assets/images/bjarni-gunnarsson.jpg';
+import bjarni from './../../assets/images/bjarni.jpg';
 
 class About extends Component {
   render() { return<div className="container">
@@ -11,6 +12,7 @@ class About extends Component {
       <div className="row">
       <div className="col-lg-6">
 
+      {/* <div className="img-center"><img onload="this.style.opacity='1.0';" src={bjarni} alt="Bjarni Gunnarsson" className="img-responsive" /></div> */}
       <div className="img-center"><img onload="this.style.opacity='1.0';" src={about} alt="Bjarni Gunnarsson" className="img-responsive" /></div>
       <h1>bjarnig@gmail.com </h1></div>
       <div className="col-lg-6">
