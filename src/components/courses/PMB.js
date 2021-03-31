@@ -13,6 +13,26 @@ class Pmb extends Component {
       <div className="content">
 
       <article>
+        <div className="date"> 30.03.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 20, JavaScript 2</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb20.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb20.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb20.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 16.03.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 19, JavaScript 1</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb19.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb19.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb19.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
         <div className="date"> 16.02.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 18, Tidal Cycles</h1>

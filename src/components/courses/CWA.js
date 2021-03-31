@@ -11,6 +11,52 @@ import music from './../../assets/images/pmb.png';
 class Cwa extends Component {
   render() { return<div className="container">
       <div className="content">
+      
+      <article>
+        <div className="date"> 01.04.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 22, Microsound</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa22.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa22.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa22.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 25.03.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 21, Assignment</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa21.pdf" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa21.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa21.pdf" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 18.03.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 19, Microtime</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa19.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa19.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa19.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/525153671" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/525155474" target="_blank">Video 2</a></p>
+        <p>* access code to the videos is the same as for class</p>
+      </article>
+
+      <article>
+        <div className="date"> 17.02.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 18, Midi & Mapping</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa18.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa18.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa18.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/513588673" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/405916671" target="_blank">Video 2</a></p>
+        <p>* access code to the videos is the same as for class</p>
+      </article>
 
       <article>
         <div className="date"> 11.02.2021</div>

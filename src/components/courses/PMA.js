@@ -13,6 +13,26 @@ class Pma extends Component {
       <div className="content">
       
       <article>
+        <div className="date"> 01.04.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 18, Assignment 3</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma18.pdf" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma18.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma18.pdf" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 18.03.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 17, GUI</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma17.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma17.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma17.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
         <div className="date"> 11.02.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 16, Demand</h1>

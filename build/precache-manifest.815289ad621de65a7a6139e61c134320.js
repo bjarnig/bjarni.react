@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e1981c8cdd46454865a941f5ceea5e3",
+    "revision": "d7d1027d7e4d2feebfa16ad4bf4f4a49",
     "url": "/index.html"
   },
   {
-    "revision": "ace53b3a2956077f8251",
+    "revision": "d636eccb56d5985c19aa",
     "url": "/static/css/main.2cc3f1c6.chunk.css"
   },
   {
-    "revision": "74d0cd4c458b1f1d773f",
-    "url": "/static/js/2.f0db9dd5.chunk.js"
+    "revision": "819bc83ca01a4a8c2362",
+    "url": "/static/js/2.5748265c.chunk.js"
   },
   {
-    "revision": "ace53b3a2956077f8251",
-    "url": "/static/js/main.e2c5902b.chunk.js"
+    "revision": "d636eccb56d5985c19aa",
+    "url": "/static/js/main.a1a3135c.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -90,6 +90,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d1f59c5893745f436be00a68616dd101",
     "url": "/static/media/bjarni-gunnarsson.d1f59c58.jpg"
+  },
+  {
+    "revision": "4f79273c6c23c34470065eeab7ebad9f",
+    "url": "/static/media/bjarni.4f79273c.jpg"
   },
   {
     "revision": "dfc9c7c83a099376533effe580bbc683",
