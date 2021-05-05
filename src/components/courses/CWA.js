@@ -11,7 +11,27 @@ import music from './../../assets/images/pmb.png';
 class Cwa extends Component {
   render() { return<div className="container">
       <div className="content">
+
+      <article>
+        <div className="date"> 15.04.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 24, Live Coding</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa24.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa24.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa24.zip" target="_blank">Download materials</a></p>
+      </article>
       
+      <article>
+        <div className="date"> 08.04.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 23, Chaos</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa23.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa23.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa23.zip" target="_blank">Download materials</a></p>
+      </article>
+
       <article>
         <div className="date"> 01.04.2021</div>
         <div className="hr"><hr /></div>
@@ -20,6 +40,10 @@ class Cwa extends Component {
         <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa22.png" />
         </a>
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa22.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/531454962" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/531455690" target="_blank">Video 2</a></p>
+        <p><a href="https://vimeo.com/531456304" target="_blank">Video 3</a></p>
+        <p>* access code to the videos is the same as for class</p>
       </article>
 
       <article>

@@ -13,6 +13,36 @@ class Pmb extends Component {
       <div className="content">
 
       <article>
+        <div className="date"> 20.04.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 23, ToneJS & Exercises</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb23.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb23.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb23.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 13.04.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 22, ToneJS</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb22.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb22.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb22.zip" target="_blank">Download materials</a></p>
+      </article>
+      
+      <article>
+        <div className="date"> 06.04.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 21, JavaScript Workshop 1</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb21.pdf" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb21.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb21.pdf" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
         <div className="date"> 30.03.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 20, JavaScript 2</h1>

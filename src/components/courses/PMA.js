@@ -13,6 +13,57 @@ class Pma extends Component {
       <div className="content">
       
       <article>
+        <div className="date"> 06.06.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 23, Examples 2</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma23.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma23.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma23.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 29.04.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 22, MIDI & Mapping</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma22.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma22.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma22.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 15.04.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 21, Examples 1</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma21.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma21.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma21.zip" target="_blank">Download materials</a></p>
+      </article>
+
+
+      <article>
+        <div className="date"> 15.04.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 20, Processing</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma20.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma20.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma20.zip" target="_blank">Download materials</a></p>
+      </article>
+
+      <article>
+        <div className="date"> 08.04.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 19, Sampling</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma19.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma19.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pma19.zip" target="_blank">Download materials</a></p>
+      </article>
+      
+      <article>
         <div className="date"> 01.04.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 18, Assignment 3</h1>
