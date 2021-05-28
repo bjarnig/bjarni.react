@@ -23,12 +23,18 @@ import Works from './components/info/Works';
 import Pma from './components/courses/PMA';
 import Pmb from './components/courses/PMB';
 import Cwa from './components/courses/CWA';
+
 import './assets/css/style.css';
 import './assets/css/custom.css';
 import './assets/css/login.css';
 import './assets/css/admin.css';
 import './assets/css/app.css';
 import './assets/css/main.css';
+
+// let divStyle = {
+//   display: 'none'
+// };
+
 
 
 class App extends React.Component {
@@ -37,13 +43,38 @@ class App extends React.Component {
  //   return this.props.location.pathname === path ? 'active' : '';
  // }
 
+ state = {
+  divStyle : {
+    display: 'none'
+  }
+};
+
+navbarToggleClick = () => {
+ 
+  if(this.state.divStyle.display === 'none') {
+    this.setState({
+      divStyle : {
+        display: 'block'
+      }
+    });
+  } else {
+    this.setState({
+      divStyle : {
+        display: 'none'
+      }
+    });
+  }
+
+}
+
 render() {
+
     return (
       <Router>
         <div>
         <div className="navbar navbar-fixed-top">
           <div className="container">
-            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse" onClick={this.navbarToggleClick}>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
@@ -78,6 +109,35 @@ render() {
                   </LinkContainer>
                 </ul>
               </div>
+          </div>
+          <div id="phonemenu" style={this.state.divStyle}>
+            <ul class="nav navbar-nav pull-right">
+            <LinkContainer to="/current" activeClassName="active" onClick={this.navbarToggleClick}>
+                    <NavItem>
+                      current
+                    </NavItem>
+                  </LinkContainer>
+                  <LinkContainer to="/music" activeClassName="active" onClick={this.navbarToggleClick}>
+                    <NavItem>
+                      music
+                    </NavItem>
+                  </LinkContainer>
+                  <LinkContainer to="/releases" activeClassName="active" onClick={this.navbarToggleClick}>
+                    <NavItem>
+                      releases
+                    </NavItem>
+                  </LinkContainer>
+                  <LinkContainer to="/courses" activeClassName="active" onClick={this.navbarToggleClick}>
+                    <NavItem>
+                      courses
+                    </NavItem>
+                  </LinkContainer>
+                  <LinkContainer to="/about" activeClassName="active" onClick={this.navbarToggleClick}>
+                    <NavItem>
+                      about
+                    </NavItem>
+                  </LinkContainer>
+          </ul>
           </div>
         </div>
         <Route exact path="/" component={Current} />
@@ -172,7 +232,7 @@ class Login extends React.Component {
     if (redirectTo) {
       return <Redirect to={ redirectTo } />;
     }
-
+    
     return (<div className="container">
         <div className="music">
             <h3>Access Course</h3>

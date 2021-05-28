@@ -307,8 +307,8 @@ margin-top: -2%;
 @media screen and (min-width: 768px) and (max-width: 1024px)  {
 
 	.frontImage {
-	position:relative;
-	margin: 10% 15%;
+		position:relative;
+		margin: 10% 15%;
 	}
 
 	.navbar-brand {
@@ -319,3 +319,5 @@ margin-top: -2%;
 
 	.bandcamp { margin-left: 0%; }
 }
+/* 
+#phonemenu { display: none;}	 */
