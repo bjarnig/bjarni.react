@@ -117,16 +117,26 @@ class Current extends Component {
         </a>
       </div>
       <p>
-          <strong>xCoAx 2021</strong> takes place this week exploring "the frontiers of digital art with a multidisciplinary investigation on aesthetics, computing, communication and the elusive X factor that connects them all." 
-          <a href="https://2021.xcoax.org/#program"> xCoaX 2021 </a>
+        <strong>xCoAx 2021</strong> takes place this week exploring "the frontiers of digital art with a multidisciplinary investigation on aesthetics, computing, communication and the elusive X factor that connects them all." 
+        <a href="https://2021.xcoax.org/#program"> xCoaX 2021 </a>
       </p>
       <p>
-           <strong>xCoAx 2021</strong> goes hybrid in Graz, Austria and is open and free to everyone online. I'm presenting my paper 'Synthesis and Operation Flows' on the 16.07 at 14:00.
-          <a href="https://2021.xcoax.org/papers2"> Paper session 2 </a>
+        <strong>xCoAx 2021</strong> goes hybrid in Graz, Austria and is open and free to everyone online. I'm presenting my paper 'Synthesis and Operation Flows' on the 16.07 at 14:00.
+        <a href="https://2021.xcoax.org/papers2"> Paper session 2 </a>
       </p>
       <p>
-      <a href="https://soundcloud.com/bjarni/sets/research"> Sound Examples </a>
+      <a href="https://www.youtube.com/watch?v=mIpAZS3bbPw"> Presentation </a>
       </p>
+      <p>
+      <a href="https://soundcloud.com/bjarni/sets/research"> Sounds </a>
+      </p>
+      <p>
+      <a href="https://github.com/bjarnig/OF"> Code </a>
+      </p>
+      <p>
+      <a href="https://www.academia.edu/50027204/Synthesis_and_Operation_Flows"> Paper </a>
+      </p>
+      
       </article>
 
       <article > <div className="date">12-06-2021</div>

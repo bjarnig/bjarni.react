@@ -19,7 +19,7 @@ class About extends Component {
 
       <div className="bio">
       <p>
-        Icelandic Composer / Sound artist. Released numerous LP´s, EP´s, compilation tracks and reworks on labels like Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny and Tartaruga records.
+        Icelandic Composer and Software Engineer. Released numerous LP´s, EP´s, compilation tracks and reworks on labels like Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny and Tartaruga records.
         </p>
 
         <p>Perfomed his music in concerts and festivals in Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Switzerland, Italy, Ireland and Iceland. Collections of his solo works can be found on the CDs “Safn 2006-2009” (2010), "Processes & Potentials" (2013), "Paths" (2016) and "Lueur" (2018). </p>
