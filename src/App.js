@@ -8,6 +8,8 @@ import Main from './components/Main';
 import Current from './components/info/Current';
 import Music from './components/music/Music';
 import Collaborations from './components/music/Collaborations';
+import Code from './components/music/Code';
+import Writings from './components/music/Writings';
 import Live from './components/music/Live';
 import Mixes from './components/music/Mixes';
 import Excerpts from './components/music/Excerpts';
@@ -89,7 +91,7 @@ render() {
                   </LinkContainer>
                   <LinkContainer to="/music" activeClassName="active">
                     <NavItem>
-                      music
+                      works
                     </NavItem>
                   </LinkContainer>
                   <LinkContainer to="/releases" activeClassName="active">
@@ -119,7 +121,7 @@ render() {
                   </LinkContainer>
                   <LinkContainer to="/music" activeClassName="active" onClick={this.navbarToggleClick}>
                     <NavItem>
-                      music
+                      works
                     </NavItem>
                   </LinkContainer>
                   <LinkContainer to="/releases" activeClassName="active" onClick={this.navbarToggleClick}>
@@ -149,6 +151,8 @@ render() {
         <Route path="/excerpts" component={Excerpts} />
         <Route path="/current" component={Current} />
         <Route path="/releases" component={Releases} />
+        <Route path="/code" component={Code} />
+        <Route path="/writings" component={Writings} />
         <Route path="/press" component={Press} />
         <Route path="/courses" component={Courses} />
         <Route path="/about" component={About} />

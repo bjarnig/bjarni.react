@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.2cc3f1c6.chunk.css",
-    "main.js": "/static/js/main.8c31e929.chunk.js",
-    "main.js.map": "/static/js/main.8c31e929.chunk.js.map",
+    "main.css": "/static/css/main.2f6433be.chunk.css",
+    "main.js": "/static/js/main.c36a109d.chunk.js",
+    "main.js.map": "/static/js/main.c36a109d.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.5748265c.chunk.js": "/static/js/2.5748265c.chunk.js",
-    "static/js/2.5748265c.chunk.js.map": "/static/js/2.5748265c.chunk.js.map",
+    "static/js/2.a2095310.chunk.js": "/static/js/2.a2095310.chunk.js",
+    "static/js/2.a2095310.chunk.js.map": "/static/js/2.a2095310.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.ffd70c99e91a783ff41ee06f230da7c8.js": "/precache-manifest.ffd70c99e91a783ff41ee06f230da7c8.js",
+    "precache-manifest.551bc0c5c6bc4b1cb47a616b7f85c19f.js": "/precache-manifest.551bc0c5c6bc4b1cb47a616b7f85c19f.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.2cc3f1c6.chunk.css.map": "/static/css/main.2cc3f1c6.chunk.css.map",
+    "static/css/main.2f6433be.chunk.css.map": "/static/css/main.2f6433be.chunk.css.map",
     "static/media/3L025_Inserts13.jpg": "/static/media/3L025_Inserts13.4006a303.jpg",
     "static/media/CRXSSINGS.jpg": "/static/media/CRXSSINGS.3660ee7c.jpg",
     "static/media/MiniBEAST-CC.jpg": "/static/media/MiniBEAST-CC.c9790c0a.jpg",
@@ -83,6 +83,7 @@
     "static/media/pma.png": "/static/media/pma.0ab86265.png",
     "static/media/pmb.png": "/static/media/pmb.0266c9f2.png",
     "static/media/processes-potentials.jpg": "/static/media/processes-potentials.3239bf0b.jpg",
+    "static/media/queue.jpeg": "/static/media/queue.1c39a815.jpeg",
     "static/media/rask2poster2.jpg": "/static/media/rask2poster2.d7606ca7.jpg",
     "static/media/rc.jpg": "/static/media/rc.0a85ba3b.jpg",
     "static/media/rewire-andrea.png": "/static/media/rewire-andrea.595b77d7.png",
@@ -95,6 +96,7 @@
     "static/media/sonocd.jpg": "/static/media/sonocd.89fe5784.jpg",
     "static/media/sonoconcert.jpg": "/static/media/sonoconcert.b299fb81.jpg",
     "static/media/spoutnik.png": "/static/media/spoutnik.b82c10e1.png",
+    "static/media/sptour.jpeg": "/static/media/sptour.61a5dce4.jpeg",
     "static/media/superpang.jpg": "/static/media/superpang.8a4dbc49.jpg",
     "static/media/synthetic-environment.png": "/static/media/synthetic-environment.150479c1.png",
     "static/media/tectonics.jpg": "/static/media/tectonics.c1f4fa8c.jpg",
@@ -104,6 +106,7 @@
     "static/media/unm.jpg": "/static/media/unm.06830163.jpg",
     "static/media/vecer.jpg": "/static/media/vecer.4ae68456.jpg",
     "static/media/volkspaleis.jpg": "/static/media/volkspaleis.52c864fe.jpg",
-    "static/media/wfsSonar.jpg": "/static/media/wfsSonar.06e6258f.jpg"
+    "static/media/wfsSonar.jpg": "/static/media/wfsSonar.06e6258f.jpg",
+    "static/media/xcoax.png": "/static/media/xcoax.ee0261b5.png"
   }
 }

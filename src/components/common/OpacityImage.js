@@ -3,7 +3,7 @@ import React from "react";
 class OpacityImage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { style:{ opacity:'0.0' }, className: "img-responsive" };
+    this.state = { style:{ opacity:'0.0', border: '10px' }, className: "img-responsive" };
   }
 
   handleImageLoaded() {

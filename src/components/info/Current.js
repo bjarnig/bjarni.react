@@ -84,6 +84,9 @@ import DC2020 from './../../assets/images/discussion-concert-jan2020.jpg';
 import superpang from './../../assets/images/superpang.jpg';
 import cendres_sovn from './../../assets/images/cendres_sovn.jpg';
 import cendres_sovn2 from './../../assets/images/cendres_sovn2.jpg';
+import xcoax from './../../assets/images/xcoax.png';
+import queue from './../../assets/images/queue.jpeg';
+import sptour from './../../assets/images/sptour.jpeg';
 
 class Current extends Component {
 
@@ -92,13 +95,74 @@ class Current extends Component {
     this.state = {
       bandcampStyle: {
         position: 'relative', display: 'block', width: '400px', height: '100px'
-      }
+      },
+      noBorder: {
+        border: '0px'
+      },
     };
   }
 
   render() {
     return <div className="container">
       <div className="content">
+
+      <article > <div className="date">16-07-2021</div>
+      <div className="hr"><hr/></div>
+      <p>
+          'Synthesis and Operation Flows' at xCoaX 2021.
+      </p>
+      <div className="img-center-noborder">
+        <a href="https://2021.xcoax.org/#program">
+        <OpacityImage imageUrl= {xcoax} />
+        </a>
+      </div>
+      <p>
+          <strong>xCoAx 2021</strong> takes place this week exploring "the frontiers of digital art with a multidisciplinary investigation on aesthetics, computing, communication and the elusive X factor that connects them all." 
+          <a href="https://2021.xcoax.org/#program"> xCoaX 2021 </a>
+      </p>
+      <p>
+           <strong>xCoAx 2021</strong> goes hybrid in Graz, Austria and is open and free to everyone online. I'm presenting my paper 'Synthesis and Operation Flows' on the 16.07 at 14:00.
+          <a href="https://2021.xcoax.org/papers2"> Paper session 2 </a>
+      </p>
+      <p>
+      <a href="https://soundcloud.com/bjarni/sets/research"> Sound Examples </a>
+      </p>
+      </article>
+
+      <article > <div className="date">12-06-2021</div>
+      <div className="hr"><hr/></div>
+      <p>
+          FIFO on 'Music for queuing at the supermarket'
+      </p>
+      <div className="img-center">
+        <OpacityImage imageUrl= {queue} />
+      </div>
+      <p>
+           Celebrating their 30th release SØVN releases the compilation 'Music for queuing at the supermarket'. </p>
+           <p>It includes my piece 'FIFO'.</p>
+
+      <p>
+          <a href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"> Music for queuing at the supermarket </a>
+      </p>
+      <p>
+      </p>
+      </article>
+
+      <article > <div className="date">01-01-2021</div>
+      <div className="hr"><hr/></div>
+      <p>
+         Tour Mode on Superpang
+      </p>
+      <div className="img-center">
+        <OpacityImage imageUrl= {sptour} />
+      </div>
+      <p>
+        The latest SUPERPANG compilation is out with a whole bunch of new music including my latest piece 'Crest'.
+    </p>
+      <p>
+          <a href="https://superpang.bandcamp.com/album/tour-mode"> https://superpang.bandcamp.com/album/tour-mode </a>
+      </p>
+      </article>
 
       <article > <div className="date">06-11-2020</div>
       <div className="hr"><hr/></div>

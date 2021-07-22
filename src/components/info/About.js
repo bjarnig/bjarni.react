@@ -6,7 +6,7 @@ import bjarni from './../../assets/images/bjarni.jpg';
 class About extends Component {
   render() { return<div className="container">
     <div className="content">
-        <ul className="nav nav-pills"><li className="active"><a href="/about">bio</a></li><li><a href="/works">works</a></li></ul>
+        <ul className="nav nav-pills"><li className="active"><a href="/about">bio</a></li><li><a href="/works">works</a></li><li><a href="/works">articles</a></li></ul>
         <div className="hr"><hr /></div>
 
       <div className="row">

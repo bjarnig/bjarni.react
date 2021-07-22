@@ -171,6 +171,15 @@ top: 14px;
     margin-right: auto;
 }
 
+.img-center-noborder img {
+	border: 0px !important;
+	border-style: none;
+	display: block;
+	margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .bandcamp {
 	display: block;
 	margin-top: 2%;

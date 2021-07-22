@@ -31,20 +31,25 @@ constructor(props) {
               <a href="music">pieces</a>
             </li>
             <li>
+              <a href="code">software</a>
+            </li>
+            <li>
+              <a href="writings">writings</a>
+            </li>
+            <li>
               <a href="live">live</a>
             </li>
             <li className="active">
               <a href="collaborations">collaborations</a>
             </li>
+           
             <li>
               <a href="visual">visual</a>
             </li>
             <li>
               <a href="mixes">mixes</a>
             </li>
-            <li>
-              <a href="excerpts">excerpts</a>
-            </li>
+           
           </ul>
 
           <div className="hr"><hr/></div>

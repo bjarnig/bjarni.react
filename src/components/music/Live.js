@@ -23,6 +23,12 @@ class Live extends Component {
             <li>
               <a href="music">pieces</a>
             </li>
+            <li>
+              <a href="code">software</a>
+            </li>
+            <li>
+              <a href="writings">writings</a>
+            </li>
             <li className="active">
               <a href="live">live</a>
             </li>
@@ -34,9 +40,6 @@ class Live extends Component {
             </li>
             <li>
               <a href="mixes">mixes</a>
-            </li>
-            <li>
-              <a href="excerpts">excerpts</a>
             </li>
           </ul>
 
