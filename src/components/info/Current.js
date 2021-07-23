@@ -75,18 +75,18 @@ import rc from './../../assets/images/rc.jpg';
 import SonologyConcert17October2018 from './../../assets/images/SonologyConcert17October2018.jpg';
 import OrpheusMachine from './../../assets/images/orpheus-machines.jpeg';
 import lueur1 from './../../assets/images/lueura.png';
-import synthetic_environment from './../../assets/images/synthetic-environment.png';
 import multiphonies from './../../assets/images/grm_multiphonies2019-20.jpg';
 import Crxssings from './../../assets/images/CRXSSINGS.jpg';
 import Rask2 from './../../assets/images/rask2poster2.jpg';
 import Sonix from './../../assets/images/sonix.jpg';
 import DC2020 from './../../assets/images/discussion-concert-jan2020.jpg';
 import superpang from './../../assets/images/superpang.jpg';
-import cendres_sovn from './../../assets/images/cendres_sovn.jpg';
 import cendres_sovn2 from './../../assets/images/cendres_sovn2.jpg';
 import xcoax from './../../assets/images/xcoax.png';
 import queue from './../../assets/images/queue.jpeg';
 import sptour from './../../assets/images/sptour.jpeg';
+import audiosphere from './../../assets/images/audiosphere.png';
+import festival_ecoutes from './../../assets/images/festival-ecoutes.png';
 
 class Current extends Component {
 
@@ -118,23 +118,23 @@ class Current extends Component {
       </div>
       <p>
         <strong>xCoAx 2021</strong> takes place this week exploring "the frontiers of digital art with a multidisciplinary investigation on aesthetics, computing, communication and the elusive X factor that connects them all." 
-        <a href="https://2021.xcoax.org/#program"> xCoaX 2021 </a>
+        <a href="https://2021.xcoax.org/#program" target="_blank"> xCoaX 2021 </a>
       </p>
       <p>
         <strong>xCoAx 2021</strong> goes hybrid in Graz, Austria and is open and free to everyone online. I'm presenting my paper 'Synthesis and Operation Flows' on the 16.07 at 14:00.
-        <a href="https://2021.xcoax.org/papers2"> Paper session 2 </a>
+        <a href="https://2021.xcoax.org/papers2" target="_blank"> Paper session 2 </a>
       </p>
       <p>
-      <a href="https://www.youtube.com/watch?v=mIpAZS3bbPw"> Presentation </a>
+      <a href="https://www.youtube.com/watch?v=mIpAZS3bbPw" target="_blank"> Presentation </a>
       </p>
       <p>
-      <a href="https://soundcloud.com/bjarni/sets/research"> Sounds </a>
+      <a href="https://soundcloud.com/bjarni/sets/research" target="_blank"> Sounds </a>
       </p>
       <p>
-      <a href="https://github.com/bjarnig/OF"> Code </a>
+      <a href="https://github.com/bjarnig/OF" target="_blank"> Code </a>
       </p>
       <p>
-      <a href="https://www.academia.edu/50027204/Synthesis_and_Operation_Flows"> Paper </a>
+      <a href="https://www.academia.edu/50027204/Synthesis_and_Operation_Flows" target="_blank"> Paper </a>
       </p>
       
       </article>
@@ -142,17 +142,18 @@ class Current extends Component {
       <article > <div className="date">12-06-2021</div>
       <div className="hr"><hr/></div>
       <p>
-          FIFO on 'Music for queuing at the supermarket'
+      <a href="https://superpang.bandcamp.com/album/tour-mode" target="_blank">FIFO</a> on 'Music for queuing at the supermarket'
       </p>
       <div className="img-center">
+      <a href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket" target="_blank">
         <OpacityImage imageUrl= {queue} />
+        </a>
       </div>
       <p>
            Celebrating their 30th release SØVN releases the compilation 'Music for queuing at the supermarket'. </p>
            <p>It includes my piece 'FIFO'.</p>
-
       <p>
-          <a href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"> Music for queuing at the supermarket </a>
+          <a href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket" target="_blank"> Music for queuing at the supermarket </a>
       </p>
       <p>
       </p>
@@ -161,34 +162,72 @@ class Current extends Component {
       <article > <div className="date">01-01-2021</div>
       <div className="hr"><hr/></div>
       <p>
-         Tour Mode on Superpang
+         Tour Mode on <a href="https://superpang.bandcamp.com/album/tour-mode" target="_blank">Superpang</a>
       </p>
       <div className="img-center">
+      <a href="https://superpang.bandcamp.com/album/tour-mode" target="_blank">
         <OpacityImage imageUrl= {sptour} />
+        </a>
       </div>
       <p>
-        The latest SUPERPANG compilation is out with a whole bunch of new music including my latest piece 'Crest'.
+        The SUPERPANG compilation is out with a whole bunch of new music including my piece <a href="https://superpang.bandcamp.com/track/crest" target="_blank"> Crest </a> 
     </p>
       <p>
-          <a href="https://superpang.bandcamp.com/album/tour-mode"> https://superpang.bandcamp.com/album/tour-mode </a>
+          <a href="https://superpang.bandcamp.com/album/tour-mode" target="_blank"> https://superpang.bandcamp.com/album/tour-mode </a>
       </p>
       </article>
 
-      <article > <div className="date">06-11-2020</div>
+      <article > <div className="date">06-12-2020</div>
+      <div className="hr"><hr/></div>
+      <p>
+      Festival Ecoutes
+      </p>
+      <div className="img-center">
+        <a href="http://festivalecoute.org/">
+        <OpacityImage imageUrl= {festival_ecoutes} />
+        </a>
+      </div>
+      <p>Binaural pieces will be featured in  <a href="http://festivalecoute.org/">Festival Ecoute</a> including l'Imaginaire du parleur by me and Marie Guilleray. The binaural mix has been skillfully created by <a href="http://keestazelaar.com/"> Kees Tazelaar</a>. Many thanks for the effort. </p>
+      <p>
+      About the festival: Après l’intense alchimie d’écoute(s) diffusée hier soir sur les ondes, le Festival Ecoute.s. se poursuit cet après-midi avec une riche programmation de documentaires sonores.
+      Sur le site internet du festival vous retrouverez également des podcasts et des contenus annexes, dont « Mondes Fragmentés », la sélection de pièces électroacoustiques en version binaurale que j’ai concoctée en complicité avec A P N É E S.
+      </p>
+      <p>Here on Soundcloud:</p>
+      <p>
+      <iframe width="100%" height="180" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/821805625&color=%234c4655&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      </p>
+      </article>
+
+      <article> 
+      <div className="date">06-11-2020</div>
       <div className="hr"><hr/></div>
       <p>
           'Cendres' on SØVN Records
       </p>
       <div className="img-center">
-        <OpacityImage imageUrl= {cendres_sovn} />
+        <a href="https://sovnrecords.bandcamp.com/album/cendres">
+        <OpacityImage imageUrl= {cendres_sovn2} />
+        </a>
       </div>
+
+      <p> Released on the 18th of November. <a href="https://sovnrecords.bandcamp.com/album/cendres"> Order here </a></p>
+      <p>Cendres consists of two electroacoustic compositions that have been performed in a multichannel setting: respectively, on the Acousmonium at GRM's Sonology concert in Paris in October 2019, and at the Institute of Sonology in The Hague in June 2018. </p>
+      <p>Reworked here and extended in duration while reduced to a stereo format.</p>
+      
+      </article>
+
+      <article > <div className="date">14-10-2020</div>
+      <div className="hr"><hr/></div>
       <p>
-          Released on the 18th of November. <a href="https://sovnrecords.bandcamp.com/album/cendres"> Available now for pre-order</a>
+      Audiosfera 1980-2020
       </p>
       <div className="img-center">
-        <OpacityImage imageUrl= {cendres_sovn2} />
+        <a href="https://www.museoreinasofia.es/en/exhibitions/audiosphere?fbclid=IwAR1zjs351-j-vaGF8GDuCTAcj1i2WZAg8OptU8lzyVtG1cFScyQc3OeFyxw">
+        <OpacityImage imageUrl= {audiosphere} />
+        </a>
       </div>
       <p>
+      <a href="https://www.museoreinasofia.es/en/exhibitions/audiosphere?fbclid=IwAR1zjs351-j-vaGF8GDuCTAcj1i2WZAg8OptU8lzyVtG1cFScyQc3OeFyxw">Audiosfera 1980-2020</a> is happening now in Museo Reina Sofía Madrid, Spain. Curated by Francisco Lopez. Many soundworks are featured including my piece 'Fingrafjall'.
       </p>
       </article>
 
@@ -218,9 +257,9 @@ class Current extends Component {
             LKS
         </p>
         <p>
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/771434518&color=%234c4655&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbjarnig%2Fcyclic-executive%2F" frameborder="0" ></iframe>
         </p>
-        <p>A new Mix / Music selection made for LKS now on SoundCloud.
+        <p> Mix / Music selection made for LKS podcast.
         </p>
         </article>
 

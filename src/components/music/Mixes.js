@@ -49,6 +49,10 @@ class Mixes extends Component {
         </div>
 
         <div className="media">
+        <iframe width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fcyclic-executive%2F" frameborder="0" ></iframe>
+        </div>
+        
+        <div className="media">
         <iframe width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Featthisradio%2Fbjarni-gunnarsson-the-order-of-time%2F" frameborder="0" ></iframe>
         </div>
 

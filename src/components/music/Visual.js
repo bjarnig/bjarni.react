@@ -55,52 +55,61 @@ class Visual extends Component {
         </div>
 
         <div className="media">
-        <p>Copaline (2019)</p>
+        <div className="date">Copaline</div>
+        
         <br />
-        <iframe src="https://player.vimeo.com/video/313406191" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/313406191" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
+        <div className="hr"><hr/></div>
 
         <div className="media">
-        <p>GRM Présences électronique</p>
+        <div className="date">Synthetic Environment</div>
+        <br />
+        <iframe src="https://player.vimeo.com/video/325550871" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="hr"><hr/></div>
+
+        <div className="media">
+        <div className="date">GRM Présences électronique</div>
         <br />
         <iframe width="100%" height="500" src="https://www.youtube.com/embed/XRnw5RrwtxQ" frameborder="0" allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
 
           <div className="media">
-          <p>Journal Afghan</p>
-            <iframe src="https://player.vimeo.com/video/152695407" width="1000" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <div className="date">Journal Afghan</div>
+            <iframe src="https://player.vimeo.com/video/152695407" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <p><a href="https://vimeo.com/152695407">JOURNAL AFGHAN TRAILER</a> from <a href="https://vimeo.com/user2695439">Cedric Dupire</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
           </div>
-
-          <div className="hr"><hr/></div>
+          <br /><br /><div className="hr"><hr/></div>
 
         <div className="media">
-        <p>Grey Seeds (with Cedric Dupire) </p>
-        <iframe src="https://player.vimeo.com/video/62161204" width="1000" height="500" frameborder="0" allowfullscreen></iframe>
+        <div className="date">Grey Seeds</div>
+        <iframe src="https://player.vimeo.com/video/62161204" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
         </div>
-
         <br /><br /><div className="hr"><hr/></div>
 
         <div className="media">
-        <p>O Sal Da Lua, A outra experiência</p>
-        <iframe src="https://player.vimeo.com/video/76064055" width="1000" height="500" frameborder="0" mozallowfullscreen allowfullscreen></iframe>
+        <div className="date">O Sal Da Lua, A outra experiência</div>
+        <br />
+        <iframe src="https://player.vimeo.com/video/76064055" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+        {/* <iframe src="https://player.vimeo.com/video/76064055" width="100%" height="600" frameborder="0" mozallowfullscreen allowfullscreen></iframe> */}
         </div>
-
         <br /><br /><div className="hr"><hr/></div>
 
         <div className="media">
-        <p>Album video for 'Dried up' by Cedric Dupire. Filmed in super 8.</p>
-          <iframe src="https://player.vimeo.com/video/8992814" width="1000" height="504" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <div className="date">Dried Up</div>
+        <br />
+          <iframe src="https://player.vimeo.com/video/8992814" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           <p><a href="https://vimeo.com/8992814">DRIED UP - Bjarni Gunnarsson / Super 8 by Cedric Dupire</a> from <a href="https://vimeo.com/user2695439">Cedric Dupire</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
         </div>
 
         <br /><br /><div className="hr"><hr/></div>
 
           <div className="media">
-          <p>Azimuth documentary</p>
+          <div className="date">Azimuth documentary</div>
           <br />
-            <iframe src="https://player.vimeo.com/video/291798789" width="1000" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/291798789" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <p><a href="https://vimeo.com/291798789">Azimuth</a> from <a href="https://vimeo.com/user89839883">Azimuth</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
           </div>
 

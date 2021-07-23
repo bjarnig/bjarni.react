@@ -29,11 +29,39 @@ class Works extends Component {
                   </thead>
                   <tbody>
                       <tr>
-                          <td>Cendres</td>
+                          <td><a href="https://bjarni.bandcamp.com/track/heap">Heap</a></td>
+                          <td>2020</td>
+                          <td>05:30</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/volume-void">Volume and Void</a></td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/track/wreck">Wreck</a></td>
+                          <td>2020</td>
+                          <td>09:38</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/volume-void">Volume and Void</a></td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/track/blur">Blur</a></td>
+                          <td>2020</td>
+                          <td>06:41</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/volume-void">Volume and Void</a></td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/track/stash">Stash</a></td>
+                          <td>2020</td>
+                          <td>06:41</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/volume-void">Volume and Void</a></td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://sovnrecords.bandcamp.com/track/cendres">Cendres</a></td>
                           <td>2020</td>
                           <td>22:14</td>
                           <td>8</td>
-                          <td>-</td>
+                          <td><a href="https://sovnrecords.bandcamp.com/album/cendres">Cendres</a></td>
                       </tr>
                     <tr>
                         <td><a href="https://www.researchcatalogue.net/view/540350/540351#becoming">Copaline</a></td>
@@ -43,11 +71,11 @@ class Works extends Component {
                         <td>-</td>
                     </tr>
                     <tr>
-                        <td><a href="https://www.researchcatalogue.net/view/540350/540351#context">Polytree</a></td>
+                        <td><a href="https://soundcloud.com/bjarni/polytree">Polytree</a></td>
                         <td>2019</td>
-                        <td>10:01</td>
+                        <td>21:07</td>
                         <td>8</td>
-                        <td>-</td>
+                        <td><a href="https://sovnrecords.bandcamp.com/album/cendres">Cendres</a></td>
                     </tr>
                     <tr>
                         <td><a href="https://soundcloud.com/mgbg/la-philosophie-du-langage">La Philosophie du Language*</a></td>
@@ -323,6 +351,7 @@ class Works extends Component {
               *** With Jacob Stambach
           </div>
       </div>
+    
       <div className="row">
           <div className="col-lg-12">
               <div className="date" style={this.state.compositionsStyle}>Releases</div><br /><br /><br />
@@ -337,6 +366,34 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
+                      <tr>
+                          <td><a href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"> Music for queuing at the supermarket </a></td>
+                          <td> <a href="https://sovnrecords.bandcamp.com"> SØVN </a></td>
+                          <td>2021</td>
+                          <td>Compilation</td>
+                          <td>K7 / Digital</td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://superpang.bandcamp.com/album/tour-mode"> Tour Mode </a></td>
+                          <td> <a href="https://superpang.bandcamp.com"> SUPERPANG </a></td>
+                          <td>2021</td>
+                          <td>Solo</td>
+                          <td>Digital</td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://sovnrecords.bandcamp.com/album/cendres"> Cendres </a></td>
+                          <td> <a href="https://sovnrecords.bandcamp.com"> SØVN </a></td>
+                          <td>2020</td>
+                          <td>Solo</td>
+                          <td>K7 / Digital</td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/album/volume-void"> Volume and Void </a></td>
+                          <td> <a href="https://superpang.bandcamp.com"> SUPERPANG </a></td>
+                          <td>2020</td>
+                          <td>Solo</td>
+                          <td>Digital</td>
+                      </tr>
                       <tr>
                           <td><a href="https://crxssings.bandcamp.com"> CRXSSINGS (fundraiser for City Plaza) </a></td>
                           <td>-</td>
@@ -481,6 +538,62 @@ class Works extends Component {
               </table>
           </div>
       </div><br />
+
+      <div className="row">
+          <div className="col-lg-12">
+              <div className="date" style={this.state.compositionsStyle}>Writings</div><br /><br /><br />
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Title</th>
+                          <th>Date</th>
+                          <th>Publication</th>
+                          <th>Research Catalogue</th>
+                          <th>Link</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Synthesis and Operation Flows</td>
+                          <td>2021</td>
+                          <td><a href="https://2021.xcoax.org/papers2/">xCoAx 2021 Proceedings, 2021</a></td>
+                          <td>-</td>
+                          <td><a href="https://www.academia.edu/50027204/Synthesis_and_Operation_Flows">Academia.edu</a></td>
+                      </tr>
+                      <tr>
+                          <td>Implementing Koenig’s Project 2</td>
+                          <td>2021</td>
+                          <td><a href="https://www.koncon.nl/onderzoek/lectoraten">Koncon Lectorate and Research</a></td>
+                          <td><a href="https://www.researchcatalogue.net/view/1081939/1081944">RC</a></td>
+                          <td>-</td>
+                      </tr>
+                      <tr>
+                          <td>Context and Scope</td>
+                          <td>2019</td>
+                          <td><a href="https://www.koncon.nl/onderzoek/lectoraten">Koncon Lectorate and Research</a></td>
+                          <td><a href="https://www.researchcatalogue.net/view/540350/540351">RC</a></td>
+                          <td><a href="https://www.academia.edu/50027151/Context_and_Scope">Academia.edu</a></td>
+                      </tr>
+                      <tr>
+                          <td>Interrupts and Intervention</td>
+                          <td>2018</td>
+                          <td><a href="http://cyprusconferences.org/smc2018/">SMC2018 Conference, Cyprus</a></td>
+                          <td><a href="https://www.researchcatalogue.net/view/543155/543156">RC</a></td>
+                          <td><a href="https://www.academia.edu/50026453/Interrupts_and_Intervention">Academia.edu</a></td>
+                      </tr>
+                      <tr>
+                          <td>Processes and Potentials</td>
+                          <td>2021</td>
+                          <td><a href="http://sonology.org/">Institute of Sonology</a></td>
+                          <td>-</td>
+                          <td><a href="https://www.academia.edu/50016473/Processes_and_Potentials">Academia.edu</a></td>
+                      </tr>
+                </tbody>
+                </table>
+                </div>
+      </div>
+      <br />
+
       <div className="row">
           <div className="col-lg-12">
               <div className="date" style={this.state.compositionsStyle}>Selected Performances</div>
@@ -496,7 +609,7 @@ class Works extends Component {
                   </thead>
                   <tbody>
                       <tr>
-                          <td class="performance">RASK #2</td>
+                          <td class="performance">Sonix #9</td>
                           <td>Sonix #9</td>
                           <td>Brno, Czech Republic</td>
                           <td>21.02.2020</td>

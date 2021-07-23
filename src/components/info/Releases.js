@@ -11,6 +11,7 @@ import safn1 from './../../assets/images/safn1.JPEG';
 import tvenna1 from './../../assets/images/tvenna1.JPEG';
 import albumLueur from './../../assets/images/lueur1.png';
 import superpang from './../../assets/images/superpang.jpg';
+import cendres_sovn from './../../assets/images/cendres_sovn.jpg';
 
 class Releases extends Component {
 
@@ -27,7 +28,11 @@ class Releases extends Component {
         width: '100%',
         height: '940px'
       },
-
+      bandcampStyleCendres: {
+        border: '0',
+        width: '100%',
+        height: '220px'
+      },
       bandcampStyleTvenna: {
         border: '0', width: '100%', height: '1040px'}
     };
@@ -44,6 +49,34 @@ class Releases extends Component {
             <a href="/press">press</a>
           </li>
         </ul>
+
+        <div className="hr"><hr/></div>
+        <div className="release">
+        <div className="release-title">Cendres (2020)</div>
+
+        <div className="img-center">
+          <a href="https://sovnrecords.bandcamp.com/album/cendres">
+          <OpacityImage imageUrl= {cendres_sovn} />
+          </a>
+        </div>
+        <p> Cendres released on <a href="https://sovnrecords.bandcamp.com/album/cendres"> SØVN </a></p>
+        <p>
+        This work contains outcomes of my recent research focusing on interrupts, intervention and dynamic algorithmic environments. It consists of two electroacoustic compositions that have previously been performed in a multichannel setting but since then extended and reworked to the stereo format found here.
+        </p>
+        <p>
+        <strong>Cendres</strong> was premiered on the Acousmonium at GRM, Paris in October 2019. The work highlights the relation between high-level control processes and purely computer-synthesized sounds. 
+        </p>
+        <p>
+        <strong>Polytree</strong> was first performed at the Institute of Sonology in June 2018. It is made through synthetic algorithms and extensive use of waveshaping processes. 
+        </p>
+        <p></p>
+        <div className="bandcamp">
+        <iframe style={this.state.bandcampStyleCendres} src="https://bandcamp.com/EmbeddedPlayer/album=3794325908/size=large/bgcol=ffffff/linkcol=f171a2/artwork=none/transparent=true/" seamless><a href="https://sovnrecords.bandcamp.com/album/cendres">Cendres by Bjarni Gunnarsson</a></iframe>
+        </div>
+        <p>The two pieces share an attitude of becoming through synthetic sound. They also both focus on the relations between the processes they consist of, and of the varying boundaries of what is caused by algorithms and what by manual intervention.</p>
+        <br/>
+        </div>
+
         <div className="hr"><hr/></div>
         <div className="release">
 

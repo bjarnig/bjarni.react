@@ -50,6 +50,16 @@ class Music extends Component {
         </div>
 
         <div className="media">
+        <p>Polytree</p>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/937805527&color=%234c4655&auto_play=false&;show_artwork=true"></iframe>
+        </div>
+
+        <div className="media">
+          <p>Volume and Void</p>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/899657986&color=%234c4655&auto_play=false&;show_artwork=true"></iframe>
+        </div>
+
+        <div className="media">
           <p>Prisme</p>
           <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535356630&color=%234c4655&auto_play=false&;show_artwork=true"></iframe>
         </div>
