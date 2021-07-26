@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 
 class Press extends Component {
+
+  componentDidMount() { window.scrollTo(0, 0) };
+  
   render() {
     return <div className="container">
       <div className="content">

@@ -4,6 +4,9 @@ import about from './../../assets/images/bjarni-gunnarsson.jpg';
 import bjarni from './../../assets/images/bjarni.jpg';
 
 class About extends Component {
+
+  componentDidMount() { window.scrollTo(0, 0) };
+
   render() { return<div className="container">
     <div className="content">
         <ul className="nav nav-pills"><li className="active"><a href="/about">bio</a></li>

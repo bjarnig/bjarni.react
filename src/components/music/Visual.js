@@ -19,6 +19,8 @@ class Visual extends Component {
     this.state = { ustreamStyle1:{ border: '0px none transparent'}, ustreamStyle2:{ padding: '2px 0px 4px', width: '0px', background: '#ffffff', display: 'block', color: '#000000', 'font-weight': 'normal', 'font-size': '10px', 'text-decoration':'underline', 'text-align': 'center' } };
   }
 
+  componentDidMount() { window.scrollTo(0, 0) }
+
   render() {
     return <div className="container">
 

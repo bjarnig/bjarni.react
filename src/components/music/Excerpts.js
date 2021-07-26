@@ -6,13 +6,10 @@ import './../../assets/css/admin.css';
 import './../../assets/css/app.css';
 import './../../assets/css/main.css';
 
-import Music from './Live';
-import Live from './Live';
-import Mixes from './Mixes';
-import Visual from './Visual';
-import Collaborations from './Collaborations';
-
 class Excerpts extends Component {
+
+  componentDidMount() { window.scrollTo(0, 0) }
+
   render() {
     return <div className="container">
 

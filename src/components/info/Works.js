@@ -9,6 +9,8 @@ class Works extends Component {
     this.state = { compositionsStyle:{ float: 'right' } };
   }
 
+  componentDidMount() { window.scrollTo(0, 0) };
+
   render() { return<div className="container">
     <div className="content">
         <ul className="nav nav-pills"><li><a href="/about">bio</a></li><li className="active"><a href="/works">works</a></li></ul>

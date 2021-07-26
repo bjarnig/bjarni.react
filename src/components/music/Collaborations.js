@@ -6,18 +6,13 @@ import './../../assets/css/admin.css';
 import './../../assets/css/app.css';
 import './../../assets/css/main.css';
 
-import Music from './Live';
-import Live from './Live';
-import Mixes from './Mixes';
-import Visual from './Visual';
-import Excerpts from './Excerpts';
-
 class Collaborations extends Component {
 
 constructor(props) {
   super(props);
   this.state = { bandcampStyle:{ border: '0', width: '100%', height: '120px' } };
 }
+  componentDidMount() { window.scrollTo(0, 0) }
 
   render() {
     return <div className="container">

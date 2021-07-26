@@ -25,6 +25,8 @@ constructor(props) {
   this.state = { bandcampStyle:{ border: '0', width: '100%', height: '120px' } };
 }
 
+  componentDidMount() { window.scrollTo(0, 0) }
+
   render() {
     return <div className="container">
 
