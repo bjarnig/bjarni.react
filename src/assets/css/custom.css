@@ -146,6 +146,8 @@ table a {
 
 .navbar-toggle {
 top: 14px;
+/* left:1px; */
+right: 55px;
 }
 
 .music {
@@ -306,7 +308,7 @@ margin-top: -2%;
 
 	.navbar-brand { font-size: 2em; }
 
-	.music-submenu { display: none; }
+	/* .music-submenu { display: none; } */
 
 	.release-info { display: none; }
 

@@ -39,7 +39,7 @@ class Visual extends Component {
               <a href="live">live</a>
             </li>
             <li>
-              <a href="collaborations">collaborations</a>
+              <a href="collaborations">co</a>
             </li>
             <li className="active">
               <a href="visual">visual</a>

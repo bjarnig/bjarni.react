@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9eb30284365ff90535ebc250c1b44327",
+    "revision": "e2ac98274495e7ea72c7e65a67aa357c",
     "url": "/index.html"
   },
   {
-    "revision": "a627ed32564d17074916",
-    "url": "/static/css/main.7c615c10.chunk.css"
+    "revision": "640ee481b51e950e0348",
+    "url": "/static/css/main.499e3f69.chunk.css"
   },
   {
-    "revision": "b24d11e5e3a595b9b9ba",
-    "url": "/static/js/2.e92d1cda.chunk.js"
+    "revision": "03d340540eca4823939e",
+    "url": "/static/js/2.b19289da.chunk.js"
   },
   {
-    "revision": "a627ed32564d17074916",
-    "url": "/static/js/main.16207b54.chunk.js"
+    "revision": "640ee481b51e950e0348",
+    "url": "/static/js/main.18777278.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -72,8 +72,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/arc-power.4b0677fe.jpg"
   },
   {
+    "revision": "0a3c8d4fbf19920fcd33188c7c4a6101",
+    "url": "/static/media/attn.0a3c8d4f.jpeg"
+  },
+  {
     "revision": "b2c79e4cf3276f5d5eff7603be7d9a9c",
     "url": "/static/media/audiodh.b2c79e4c.jpg"
+  },
+  {
+    "revision": "99237114ff39d67db2203f0456f37711",
+    "url": "/static/media/audiosphere.99237114.png"
   },
   {
     "revision": "9615d5bfff72e29a25142d45a4ebb933",
@@ -198,6 +206,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f09f17efe9d8c6b9a763b87fd337feb9",
     "url": "/static/media/extrapol.f09f17ef.jpg"
+  },
+  {
+    "revision": "cb104c0ff5d3af853897a24d7d47c868",
+    "url": "/static/media/festival-ecoutes.cb104c0f.png"
   },
   {
     "revision": "c7efee74ac44f8c9f7e025e5b191263a",
@@ -378,10 +390,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8a4dbc493a86e9adc22be539a1975c14",
     "url": "/static/media/superpang.8a4dbc49.jpg"
-  },
-  {
-    "revision": "150479c1b64520a2154092c7b33d1fee",
-    "url": "/static/media/synthetic-environment.150479c1.png"
   },
   {
     "revision": "c1f4fa8cf4fccfe993684894e859617d",

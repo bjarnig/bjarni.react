@@ -87,6 +87,7 @@ import queue from './../../assets/images/queue.jpeg';
 import sptour from './../../assets/images/sptour.jpeg';
 import audiosphere from './../../assets/images/audiosphere.png';
 import festival_ecoutes from './../../assets/images/festival-ecoutes.png';
+import attn from './../../assets/images/attn.jpeg';
 
 class Current extends Component {
 
@@ -248,6 +249,26 @@ class Current extends Component {
           Composed through experimental scheduling algorithms that explore the duality of immediate, direct events with gradual and evolving processes.<br /><br />
           System and sounds created during the summer of 2020 in Scheveningen, The Hague.<br /><br />
           Design: Joe Gilmore
+      </p>
+      </article>
+
+      <article > <div className="date">18-09-2020</div>
+      <div className="hr"><hr/></div>
+      <p>
+          ATTN Compilation
+      </p>
+      <div className="img-center">
+      <a href="https://attnspancompilation.bandcamp.com/album/attn-span">
+        <OpacityImage imageUrl= {attn} />
+        </a>
+      </div>
+      <p>
+
+      </p>
+      <p> New track on <a href="https://attnspancompilation.bandcamp.com/album/attn-span"> ATTN </a>
+      </p>
+      <p>
+      ATTN:SPAN compilation is out on Bandcamp. Every penny will be going to the charity Cool Earth, which works with local people to halt deforestation and climate change.
       </p>
       </article>
 
