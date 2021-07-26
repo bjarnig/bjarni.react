@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
-import about from './../../assets/images/bjarni-gunnarsson.jpg';
-import bjarni from './../../assets/images/bjarni.jpg';
+// import about from './../../assets/images/bjarni-gunnarsson.jpg';
+// import about from './../../assets/images/bjarni.jpg';
+// import about from './../../assets/images/bjarni-azi.jpeg';
+import about from './../../assets/images/bjarni-azimbw.png';
+import OpacityImage from './../common/OpacityImage';
 
 class About extends Component {
 
@@ -15,14 +18,15 @@ class About extends Component {
         <div className="hr"><hr /></div>
 
       <div className="row">
-      <div className="col-lg-6">
-
-      {/* <div className="img-center"><img onload="this.style.opacity='1.0';" src={bjarni} alt="Bjarni Gunnarsson" className="img-responsive" /></div> */}
-      <div className="img-center"><img onload="this.style.opacity='1.0';" src={about} alt="Bjarni Gunnarsson" className="img-responsive" /></div>
-      <h1>bjarnig@gmail.com </h1></div>
-      <div className="col-lg-6">
-
+        <div className="col-lg-12">
+        <OpacityImage imageUrl= {about} />
+        {/* <div className="img-center"><img onload="this.style.opacity='1.0';" src={bjarni} alt="Bjarni Gunnarsson" className="img-responsive" /></div> */}
+        </div>
+      </div>
       <div className="bio">
+      <div className="row">
+      <div className="col-lg-8">
+     
       <p>
         Composer and Software Creator from Reykjavík, Iceland. Released numerous LP´s, EP´s, compilation tracks and reworks on labels like Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny and Tartaruga records.
         </p>
@@ -38,11 +42,32 @@ class About extends Component {
         </p>
 
         <p>Currently working with algorithmic composition, generative environments, compositions and live electronics. Also working on new material with his long-lasting electronic music duo Einóma, and for MGBG, a duo of voice and electronics with Marie Guilleray.</p>
-        </div>
+       
       </div>
       
-    </div>
-    </div>
+      <div className="col-lg-4">
+      <div className="biolinks">
+       <p> <a href="https://soundcloud.com/bjarni" target="_blank"># SoundCloud </a></p>
+       <p> <a href="https://bjarni.bandcamp.com" target="_blank"># Bandcamp </a></p>
+       <p> <a href="https://github.com/bjarnig" target="_blank"># GitHub </a></p>
+       <p> <a href="https://www.mixcloud.com/bjarnig/" target="_blank"># Mixcloud </a></p>
+       <p> <a href="https://www.discogs.com/artist/5895598-Bjarni-%C3%9E%C3%B3r-Gunnarsson" target="_blank"># Discogs </a></p>
+       <p> <a href="https://sonology.academia.edu/BjarniGunnarsson" target="_blank"># Academia </a></p>
+       <p> <a href="https://www.researchcatalogue.net/profile/?person=427702" target="_blank"># Research Catalogue </a></p>
+       <p> <a href="https://sonology.net" target="_blank"># Sonology </a></p>
+       <p> <a href="https://einoma.com" target="_blank"># Einóma </a></p>
+       <p> <a href="https://mgbg.net" target="_blank"># MGBG </a></p>
+       <p> <a href="https://vimeo.com/blindni" target="_blank"># Vimeo </a></p>
+       <p> <a href="https://instagram.com/blindni" target="_blank"># Instagram </a></p>
+       <p> <a href="https://twitter.com/blindni" target="_blank"># Twitter </a></p>
+       <p> <a href="https://www.facebook.com/xbjarni.gunnarsson" target="_blank"># Facebook </a></p>
+       <p> <strong> bjarnig@gmail.com </strong> </p>
+       <p> [ Photo from <a href="https://www.azimuthfoundation.net/6-2/">Azimuth #6-2</a> ]</p>
+       </div>
+      </div>
+      </div>
+      </div>
+      </div>
   </div>
   }
 }

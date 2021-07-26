@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "96821d29e6d049955c52cbf5351bed78",
+    "revision": "13dff23f5ef7854b78f861a8bc89ef75",
     "url": "/index.html"
   },
   {
-    "revision": "bd46b6eb8f7e5e9e0082",
-    "url": "/static/css/main.499e3f69.chunk.css"
+    "revision": "e082359148f6f3ab19b2",
+    "url": "/static/css/main.a1aef9e1.chunk.css"
   },
   {
-    "revision": "03d340540eca4823939e",
-    "url": "/static/js/2.b19289da.chunk.js"
+    "revision": "2ee8410f435b7a42d45a",
+    "url": "/static/js/2.35961aad.chunk.js"
   },
   {
-    "revision": "bd46b6eb8f7e5e9e0082",
-    "url": "/static/js/main.b3649ff3.chunk.js"
+    "revision": "e082359148f6f3ab19b2",
+    "url": "/static/js/main.5d0cf051.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -100,12 +100,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bipolare.1454ca93.jpg"
   },
   {
-    "revision": "d1f59c5893745f436be00a68616dd101",
-    "url": "/static/media/bjarni-gunnarsson.d1f59c58.jpg"
+    "revision": "94ab60ce55ec5f8133380903851d1a33",
+    "url": "/static/media/bjarni-azimbw.94ab60ce.png"
   },
   {
-    "revision": "4f79273c6c23c34470065eeab7ebad9f",
-    "url": "/static/media/bjarni.4f79273c.jpg"
+    "revision": "d1f59c5893745f436be00a68616dd101",
+    "url": "/static/media/bjarni-gunnarsson.d1f59c58.jpg"
   },
   {
     "revision": "dfc9c7c83a099376533effe580bbc683",

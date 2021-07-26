@@ -213,6 +213,12 @@ table {
   border-spacing: 0;
 }
 
+.subtitle {
+  display: inline;
+  float: right;
+  left: 10px;
+}
+
 @media print {
   * {
     color: #000 !important;
