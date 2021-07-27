@@ -28,7 +28,7 @@ class About extends Component {
       <div className="col-lg-8">
      
       <p>
-        Composer and Software Creator from Reykjavík, Iceland. Released numerous LP´s, EP´s, compilation tracks and reworks on labels like Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny and Tartaruga records.
+        Composer and Computer Scientist from Reykjavík, Iceland. Released numerous LP´s, EP´s, compilation tracks and reworks on labels like Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny and Tartaruga records.
         </p>
 
         <p>Perfomed his music in concerts and festivals in Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Switzerland, Italy, Ireland and Iceland. Collections of his solo works can be found on the CDs “Safn 2006-2009” (2010), "Processes & Potentials" (2013), "Paths" (2016) and "Lueur" (2018). </p>
@@ -54,9 +54,9 @@ class About extends Component {
        <p> <a href="https://www.discogs.com/artist/5895598-Bjarni-%C3%9E%C3%B3r-Gunnarsson" target="_blank"># Discogs </a></p>
        <p> <a href="https://sonology.academia.edu/BjarniGunnarsson" target="_blank"># Academia </a></p>
        <p> <a href="https://www.researchcatalogue.net/profile/?person=427702" target="_blank"># Research Catalogue </a></p>
-       <p> <a href="https://sonology.net" target="_blank"># Sonology </a></p>
-       <p> <a href="https://einoma.com" target="_blank"># Einóma </a></p>
-       <p> <a href="https://mgbg.net" target="_blank"># MGBG </a></p>
+       <p> <a href="http://sonology.org" target="_blank"># Sonology </a></p>
+       <p> <a href="http://einoma.com" target="_blank"># Einóma </a></p>
+       <p> <a href="http://mgbg.net" target="_blank"># MGBG </a></p>
        <p> <a href="https://vimeo.com/blindni" target="_blank"># Vimeo </a></p>
        <p> <a href="https://instagram.com/blindni" target="_blank"># Instagram </a></p>
        <p> <a href="https://twitter.com/blindni" target="_blank"># Twitter </a></p>
