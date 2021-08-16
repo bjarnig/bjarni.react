@@ -4,9 +4,10 @@ import React, { Component } from 'react';
 import OpacityImage from './../common/OpacityImage';
 
 // Images
-import algorithms from './../../assets/images/cwa.png';
-import programming from './../../assets/images/pma.png';
-import music from './../../assets/images/pmb.png';
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const algorithms = imageurl + 'cwa.png';
+const programming = imageurl + 'pma.png';
+const music = imageurl + 'pmb.png';
 
 class Courses extends Component {
   render() { return<div className="container">

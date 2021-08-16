@@ -4,14 +4,14 @@ import React, {Component} from 'react';
 import OpacityImage from './../common/OpacityImage';
 
 // Images
-import albumPaths from './../../assets/images/album-paths.jpg';
-import albumProcesses from './../../assets/images/processes-potentials.jpg';
-import albumProcessesInserts from './../../assets/images/inserts2.jpg';
-import safn1 from './../../assets/images/safn1.JPEG';
-import tvenna1 from './../../assets/images/tvenna1.JPEG';
-import albumLueur from './../../assets/images/lueur1.png';
-import superpang from './../../assets/images/superpang.jpg';
-import cendres_sovn from './../../assets/images/cendres_sovn.jpg';
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const albumPaths = imageurl + 'album-paths.jpg';
+const albumProcesses = imageurl + 'processes-potentials.jpg';
+const albumProcessesInserts = imageurl + 'inserts2.jpg';
+const safn1 = imageurl + 'safn1.JPEG';
+const tvenna1 = imageurl + 'tvenna1.JPEG';
+const albumLueur = imageurl + 'lueur1.png';
+const cendres_sovn = imageurl + 'cendres_sovn.jpg';
 
 class Releases extends Component {
 

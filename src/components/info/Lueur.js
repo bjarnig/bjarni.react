@@ -4,8 +4,9 @@ import React, {Component} from 'react';
 import OpacityImage from './../common/OpacityImage';
 
 // Images
-import album from './../../assets/images/lueur-double.png';
-import album1 from './../../assets/images/lueur1.png';
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const album  = imageurl + 'lueur-double.png';
+const album1 = imageurl + 'lueur1.png';
 
 class Paths extends Component {
 

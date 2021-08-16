@@ -6,18 +6,13 @@ import './../../assets/css/admin.css';
 import './../../assets/css/app.css';
 import './../../assets/css/main.css';
 
-import Music from './Live';
-import Live from './Live';
-import Mixes from './Mixes';
-import Visual from './Visual';
-import Excerpts from './Excerpts';
-
-// Images
-import research from './../../assets/images/research.png';
-import academia from './../../assets/images/academia.png';
-
 // Components
 import OpacityImage from './../common/OpacityImage';
+
+// Images
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const research = imageurl + 'research.png';
+const academia = imageurl + 'academia.png';
 
 class Collaborations extends Component {
 

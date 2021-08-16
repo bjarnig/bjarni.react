@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import about from './../../assets/images/bjarni-gunnarsson.jpg';
-
 class Works extends Component {
 
   constructor(props) {

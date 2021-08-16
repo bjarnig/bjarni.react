@@ -3,16 +3,11 @@ import React, { Component } from 'react';
 // Components
 import OpacityImage from './../common/OpacityImage';
 
-// Images
-import algorithms from './../../assets/images/cwa.png';
-import programming from './../../assets/images/pma.png';
-import music from './../../assets/images/pmb.png';
-
 class Cwa extends Component {
   render() { return<div className="container">
       <div className="content">
 
-      <article>
+      {/* <article>
         <div className="date"> 15.04.2021</div>
         <div className="hr"><hr /></div>
         <h1>Class 24, Live Coding</h1>
@@ -283,7 +278,7 @@ class Cwa extends Component {
           <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa01.png" />
           </a>
           <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa01.zip" target="_blank">Download materials</a></p>
-        </article>
+        </article> */}
 
       </div>
   </div>

@@ -4,9 +4,10 @@ import React, {Component} from 'react';
 import OpacityImage from './../common/OpacityImage';
 
 // Images
-import Inserts from './../../assets/images/inserts.jpg';
-import Inserts2 from './../../assets/images/inserts2.jpg';
-import Processes_potentials from './../../assets/images/processes-potentials.jpg';
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const Inserts = imageurl + 'inserts.jpg';
+const Inserts2 = imageurl + 'inserts2.jpg';
+const Processes_potentials = imageurl + 'processes-potentials.jpg';
 
 class Processes extends Component {
 

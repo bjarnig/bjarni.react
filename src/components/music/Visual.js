@@ -5,12 +5,18 @@ import './../../assets/css/login.css';
 import './../../assets/css/admin.css';
 import './../../assets/css/app.css';
 import './../../assets/css/main.css';
+import OpacityImage from './../common/OpacityImage';
 
-import Music from './Live';
-import Live from './Live';
-import Mixes from './Mixes';
-import Collaborations from './Visual';
-import Excerpts from './Excerpts';
+import context from './../../assets/images/context.png';
+import copaline from './../../assets/images/copaline.png';
+
+
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const algorithms = imageurl + 'cwa.png';
+const programming = imageurl + 'pma.png';
+const music = imageurl + 'pmb.png';
+
+
 
 class Visual extends Component {
 
@@ -55,6 +61,36 @@ class Visual extends Component {
           <div className="hr"><hr/></div>
 
         </div>
+
+        {/* <div className="row">
+
+<div className="col-lg-6">
+    <h5>Composing with Algorithms </h5>
+    <OpacityImage imageUrl= {context} />
+    <br />
+    <p><a className="btn btn-default" href="/cwa">Access Course</a></p>
+</div>
+
+<div className="col-lg-6">
+    <h5>Programming and Music 1</h5>
+    <OpacityImage imageUrl= {copaline} />
+    <br />
+    <p><a className="btn btn-default" href="/pma">Access Course</a></p>
+</div>
+
+</div>
+<div className="row">
+
+<div className="col-lg-4">
+    <h5>Programming and Music 2</h5>
+    <OpacityImage imageUrl= {music} />
+    <br />
+    <p><a className="btn btn-default" href="/pmb">Access Course</a></p>
+</div>
+
+</div> */}
+
+
 
         <div className="media">
         <div className="date">Copaline</div>

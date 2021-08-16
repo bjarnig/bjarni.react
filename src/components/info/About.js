@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 // import about from './../../assets/images/bjarni-gunnarsson.jpg';
 // import about from './../../assets/images/bjarni.jpg';
 // import about from './../../assets/images/bjarni-azi.jpeg';
-import about from './../../assets/images/bjarni-azimbw.png';
+
 import OpacityImage from './../common/OpacityImage';
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const about = imageurl + 'bjarni-azimbw.png';
 
 class About extends Component {
 
@@ -27,21 +29,27 @@ class About extends Component {
       <div className="row">
       <div className="col-lg-8">
      
-      <p>
-        Composer and Computer Scientist from Reykjavík, Iceland. Released numerous LP´s, EP´s, compilation tracks and reworks on labels like Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny and Tartaruga records.
+         <p>
+         Composer and Computer Scientist from Reykjavík, Iceland. Interested in process-based sound and algorithmic composition. How sound and programming interact and the relationship between algorithms and musical behaviour. Recently exploring adaptive synthetic environments, generative sound streams, digital interrupts, and machine-listening processes.
         </p>
 
-        <p>Perfomed his music in concerts and festivals in Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Switzerland, Italy, Ireland and Iceland. Collections of his solo works can be found on the CDs “Safn 2006-2009” (2010), "Processes & Potentials" (2013), "Paths" (2016) and "Lueur" (2018). </p>
-
-        <p>Concerned with process-based ideas. Sounds focusing on internal activity and motion. Compositions that put into foreground behaviors, actions, fluid sound structures, fuzzy materials or forms.</p>
-
-        <p>Interested in exploring the contact between composed computer sound structures and space. Has presented/worked in various spatial configurations such as at the WFS system in Leiden (192 speakers), the WFS system in Berlin (832 speakers), the BEAST system in Birmingham (up to 100 speakers), GRM Paris as well as recent 8 and 4 channel formations.
+        <p>
+        Performed in festivals such as Tectonics, Rewire, Today's Art, Sonar and Presences Electroniques and in countries such as Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Switzerland, Italy, Ireland and Iceland. Released on labels such as Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny, Tartaruga, SUPERPANG and SØVN.  Collections of his solo works can be found on the releases “Safn 2006-2009” (2010), "Processes & Potentials" (2013), "Paths" (2016), "Lueur" (2018), "Volume & Void" (2020) and "Cendres" (2020). 
         </p>
 
-        <p>Faculty member at the Institute of Sonology, Royal Conservatory in The Hague and currently teacher of algorithmic composition and computer music. Studied composition with Gerard Pape, Trevor Wishart, Agostino Di Scipio and Curtis Roads at the CCMIX music center in Paris. Holds a masters degree from Sonology completed with Paul Berg, Kees Tazelaar and Richard Barrett.
+        <p>
+        Interested in exploring the contact between composed computer sound structures and space. Has presented/worked in various spatial configurations such as at the WFS system in The Hague (192 speakers), the WFS system in Berlin (832 speakers), the BEAST system in Birmingham (up to 100 speakers), GRM Paris as well as recent 8 and 4 channel formations.
         </p>
 
-        <p>Currently working with algorithmic composition, generative environments, compositions and live electronics. Also working on new material with his long-lasting electronic music duo Einóma, and for MGBG, a duo of voice and electronics with Marie Guilleray.</p>
+        <p>
+        A faculty member at the Institute of Sonology, Royal Conservatory in The Hague and currently a teacher of algorithmic composition and computer music. Studied computer science at the University of Reykjavík and composition with Gerard Pape, Trevor Wishart, Agostino Di Scipio and Curtis Roads at the CCMIX music centre in Paris. Holds a masters degree from Sonology completed with Paul Berg, Kees Tazelaar and Richard Barrett.
+        </p>
+
+        <p>
+        Currently working with algorithmic composition, generative environments, compositions and live electronics. Also working on new material with his long-lasting electronic music duo Einóma, and for MGBG, a duo of voice and electronics with Marie Guilleray.
+        </p>
+
+    
        
       </div>
       

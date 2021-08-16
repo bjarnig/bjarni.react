@@ -4,7 +4,8 @@ import React, {Component} from 'react';
 import OpacityImage from './../common/OpacityImage';
 
 // Images
-import albumPaths from './../../assets/images/album-paths.jpg';
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const albumPaths = imageurl + 'album-paths.jpg';
 
 class Paths extends Component {
 

@@ -8,21 +8,18 @@ import './../assets/css/admin.css';
 import './../assets/css/app.css';
 import './../assets/css/main.css';
 
-// Images
-import cedric from './../assets/images/cedric.jpg';
-import cedric2 from './../assets/images/cedric2.jpg';
-import cedric3 from './../assets/images/cedric3.jpg';
-import cedric4 from './../assets/images/cedric4.jpg';
-import cedric5 from './../assets/images/cedric5.jpg';
-import cedric6 from './../assets/images/cedric6.jpg';
-import lueur1   from './../assets/images/lueura.png';
-import lueur2   from './../assets/images/lueurb.png';
-import lueur3   from './../assets/images/lueurc.png';
-import lueur4   from './../assets/images/lueurd.png';
-
 // Components
 import FrontImage from './common/FrontImage';
 import FrontImageLarge from './common/FrontImageLarge';
+
+// Images
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const cedric = imageurl + 'cedric.jpg';
+const cedric2 = imageurl + 'cedric2.jpg';
+const cedric3 = imageurl + 'cedric3.jpg';
+const cedric4 = imageurl + 'cedric4.jpg';
+const cedric5 = imageurl + 'cedric5.jpg';
+const cedric6 = imageurl + 'cedric6.jpg';
 
 class Main extends Component {
   render() {

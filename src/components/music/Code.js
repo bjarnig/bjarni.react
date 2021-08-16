@@ -6,17 +6,12 @@ import './../../assets/css/admin.css';
 import './../../assets/css/app.css';
 import './../../assets/css/main.css';
 
-import Music from './Live';
-import Live from './Live';
-import Mixes from './Mixes';
-import Visual from './Visual';
-import Excerpts from './Excerpts';
-
-// Images
-import code from './../../assets/images/code.png';
-
 // Components
 import OpacityImage from './../common/OpacityImage';
+
+// Images
+const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const code = imageurl + 'code.png';
 
 class Collaborations extends Component {
 
@@ -69,12 +64,8 @@ constructor(props) {
             <OpacityImage imageUrl= {code} />
             </a>
           </div>
-          
         </div>
-
-
         </div>
-
       
       </div>
     </div>
