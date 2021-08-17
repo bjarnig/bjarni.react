@@ -13,6 +13,15 @@ import OpacityImage from './../common/OpacityImage';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const xcoax = imageurl + 'xcoax.jpg';
+const DC2020 = imageurl + 'discussion-concert-jan2020.jpg';
+const superpang = imageurl + 'superpang.jpg';
+const cendres_sovn2 = imageurl + 'cendres_sovn2.jpg';
+const queue = imageurl + 'queue.jpeg';
+const sptour = imageurl + 'sptour.jpeg';
+const audiosphere = imageurl + 'audiosphere.png';
+const festival_ecoutes = imageurl + 'festival-ecoutes.png';
+const attn = imageurl + 'attn.jpeg';
 const smc2018 = imageurl + 'smc2018.jpg';
 const todaysart2018 = imageurl + 'todaysart2018.jpg';
 const fraislandi = imageurl + 'fraislandi.jpg';
@@ -45,7 +54,7 @@ const ambaniv = imageurl + 'ambaniv.jpg';
 const concertzender = imageurl + 'concertzender.jpg';
 const Ship_04_details02_studio_another_day = imageurl + 'Ship_04_details02_studio-another-day.png';
 const mgbg4 = imageurl + 'mgbg4.jpg';
-const journalb = imageurl + 'journalb.png';
+const journalb = imageurl + 'journalb.jpg';
 const journal = imageurl + 'journal.png';
 const rewire = imageurl + 'rewire.png';
 const ina_grm = imageurl + 'ina-grm.png';
@@ -69,26 +78,18 @@ const destellos = imageurl + 'destellos.jpg';
 const cheryl = imageurl + 'cheryl.jpg';
 const osal = imageurl + 'osal.png';
 const wfsSonar = imageurl + 'wfsSonar.jpg';
-const crucial = imageurl + 'crucial.png';
+const crucial = imageurl + 'crucial.jpg';
 const lectoraat = imageurl + 'lectoraat.jpg';
-const orpheus = imageurl + 'bg-orpheus.png';
+const orpheus = imageurl + 'bg-orpheus.jpg';
 const rc = imageurl + 'rc.jpg';
 const SonologyConcert17October2018 = imageurl + 'SonologyConcert17October2018.jpg';
 const OrpheusMachine = imageurl + 'orpheus-machines.jpeg';
-const lueur1 = imageurl + 'lueura.png';
+const lueur1 = imageurl + 'lueura.jpg';
 const multiphonies = imageurl + 'grm_multiphonies2019-20.jpg';
 const Crxssings = imageurl + 'CRXSSINGS.jpg';
 const Rask2 = imageurl + 'rask2poster2.jpg';
 const Sonix = imageurl + 'sonix.jpg';
-const DC2020 = imageurl + 'discussion-concert-jan2020.jpg';
-const superpang = imageurl + 'superpang.jpg';
-const cendres_sovn2 = imageurl + 'cendres_sovn2.jpg';
-const queue = imageurl + 'queue.jpeg';
-const sptour = imageurl + 'sptour.jpeg';
-const audiosphere = imageurl + 'audiosphere.png';
-const festival_ecoutes = imageurl + 'festival-ecoutes.png';
-const attn = imageurl + 'attn.jpeg';
-const xcoax = imageurl + 'xcoax.png';
+
 
 class Current extends Component {
 
