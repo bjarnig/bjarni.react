@@ -251,26 +251,28 @@ class Pmb extends Component {
             <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb03.zip" target="_blank">Download materials</a></p>
           </article>
 
-          <article>
-            <div className="date"> 15.09.2020 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 02, Granularity</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb02.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb02.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb02.zip" target="_blank">Download materials</a></p>
-          </article>
-
-        <article>
-          <div className="date"> 07.09.2020 </div>
-          <div className="hr"><hr /></div>
-          <h1>Class 01, Programming and Music 2</h1>
-          <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb01.zip" target="_blank">
-          <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb01.png" />
-          </a>
-          <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb01.zip" target="_blank">Download materials</a></p>
-        </article>
+         
  */}
+
+<article>
+<div className="date"> 14.09.2020 </div>
+<div className="hr"><hr /></div>
+<h1>Class 02, Granularity</h1>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb02.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb02.png" />
+</a>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb02.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+<div className="date"> 07.09.2021 </div>
+<div className="hr"><hr /></div>
+<h1>Class 01, Programming and Music 2</h1>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb01.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb01.png" />
+</a>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb01.zip" target="_blank">Download materials</a></p>
+</article>
 
 
       </div>
