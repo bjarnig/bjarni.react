@@ -225,34 +225,38 @@ class Pmb extends Component {
         <div className="date"> 06.10.2020 </div>
         <div className="hr"><hr /></div>
         <h1>Class 05, Sonification</h1>
-        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/pmb05.zip" target="_blank">
-        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/pmb05.png" />
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb05.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb05.png" />
         </a>
-        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/pmb05.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb05.zip" target="_blank">Download materials</a></p>
       </article>
 
-          <article>
-            <div className="date"> 29.09.2020 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 04, Workshop 1</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/pmb04.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/pmb04.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/pmb04.zip" target="_blank">Download materials</a></p>
-          </article>
-
-          <article>
-            <div className="date"> 22.09.2020 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 03, Waveforms</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb03.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb03.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb03.zip" target="_blank">Download materials</a></p>
-          </article>
+      
+          
 
          
  */}
+
+<article>
+            <div className="date"> 28.09.2021 </div>
+            <div className="hr"><hr /></div>
+            <h1>Class 04, Workshop 1</h1>
+            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb04.zip" target="_blank">
+            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb04.png" />
+            </a>
+            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb04.zip" target="_blank">Download materials</a></p>
+          </article>
+
+
+<article>
+            <div className="date"> 21.09.2020 </div>
+            <div className="hr"><hr /></div>
+            <h1>Class 03, Waveforms</h1>
+            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb03.zip" target="_blank">
+            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb03.png" />
+            </a>
+            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb03.zip" target="_blank">Download materials</a></p>
+          </article>
 
 <article>
 <div className="date"> 14.09.2020 </div>

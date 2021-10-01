@@ -13,6 +13,8 @@ import OpacityImage from './../common/OpacityImage';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+// const anticlines = imageurl + 'anticlines.jpeg';
+//const anticlines = imageurl + 'anticlines3.png';
 const xcoax = imageurl + 'xcoax.jpg';
 const DC2020 = imageurl + 'discussion-concert-jan2020.jpg';
 const superpang = imageurl + 'superpang.jpg';

@@ -224,10 +224,10 @@ class Cwa extends Component {
         <div className="date"> 15.10.2020 </div>
         <div className="hr"><hr /></div>
         <h1>Class 06, Signals</h1>
-        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/cwa10.zip" target="_blank">
-        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/cwa10.png" />
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa10.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa10.png" />
         </a>
-        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/cwa10.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa10.zip" target="_blank">Download materials</a></p>
       </article>
 
           <article>
@@ -240,37 +240,30 @@ class Cwa extends Component {
             <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa05.zip" target="_blank">Download materials</a></p>
           </article>
 
-          <article>
-            <div className="date"> 01.10.2020 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 04, Workshop 1</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/cwa04.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/cwa04.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2019-2020/cwa04.zip" target="_blank">Download materials</a></p>
-          </article>
-
-          <article>
-            <div className="date"> 24.09.2020 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 03, Patterns</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa03.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa03.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa03.zip" target="_blank">Download materials</a></p>
-          </article>
-
-          <article>
-            <div className="date"> 17.09.2020 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 02, SuperCollider</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa02.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa02.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/cwa02.zip" target="_blank">Download materials</a></p>
-          </article>
+         
 
         */}
+
+<article>
+            <div className="date"> 30.09.2021 </div>
+            <div className="hr"><hr /></div>
+            <h1>Class 04, Workshop 1</h1>
+            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa04.zip" target="_blank">
+            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa04.png" />
+            </a>
+            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa04.zip" target="_blank">Download materials</a></p>
+          </article>
+         
+
+<article>
+            <div className="date"> 23.09.2021 </div>
+            <div className="hr"><hr /></div>
+            <h1>Class 03, Patterns</h1>
+            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa03.zip" target="_blank">
+            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa03.png" />
+            </a>
+            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa03.zip" target="_blank">Download materials</a></p>
+          </article>
 
 <article>
             <div className="date"> 16.09.2021 </div>
