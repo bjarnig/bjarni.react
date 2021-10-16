@@ -221,8 +221,15 @@ class Pmb extends Component {
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb05.zip" target="_blank">Download materials</a></p>
       </article>
 
-      <article>
-        <div className="date"> 06.10.2020 </div>
+     
+      
+          
+
+         
+ */}
+
+<article>
+        <div className="date"> 05.10.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 05, Sonification</h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb05.zip" target="_blank">
@@ -231,11 +238,6 @@ class Pmb extends Component {
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb05.zip" target="_blank">Download materials</a></p>
       </article>
 
-      
-          
-
-         
- */}
 
 <article>
             <div className="date"> 28.09.2021 </div>
