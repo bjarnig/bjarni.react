@@ -229,6 +229,67 @@ class Pmb extends Component {
  */}
 
 <article>
+        <div className="date"> 06.12.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 11, OOP</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb11.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb11.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb11.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 30.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 10, Complexity</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb10.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb10.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb10.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 23.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 09, Workshop 2</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb09.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb09.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb09.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 16.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 08, Chaos</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb08.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb08.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb08.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 09.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 07, Grammars and Fractals</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb07.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb07.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb07.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 02.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 06, Micro-Examples</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb06.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb06.png" />
+        </a>
+        <p><a href="https://www.youtube.com/watch?v=VaVWoq0F1VA" target="_blank">View the class</a></p>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb06.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
         <div className="date"> 05.10.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 05, Sonification</h1>

@@ -219,10 +219,83 @@ class Cwa extends Component {
 
         */}
 
-<article>
-        <div className="date"> 26.11.2020 </div>
+    <article>
+        <div className="date"> 23.12.2021 </div>
         <div className="hr"><hr /></div>
-        <h1>Class 08, Xenakis</h1>
+        <h1>Class 13, Effects</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa13.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa13.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa13.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/manage/videos/405917465" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/manage/videos/405915122" target="_blank">Video 2</a></p>
+        <p>* access code to the videos is the same as for class</p>
+      </article>
+<article>
+        <div className="date"> 16.12.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 12, Workshop 2</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa12.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa12.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa12.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 09.12.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 11, Microtime</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa11.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa11.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa11.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 02.12.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 10, Processing</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa10.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa10.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa10.zip" target="_blank">Download materials</a></p>
+      </article>
+
+
+<article>
+        <div className="date"> 25.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 09, Signals</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa09.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa09.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa09.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 19.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 08, Synthesis</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa08.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa08.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa08.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 11.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 07, Koenig</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa07.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa07.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa07.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 26.10.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 06, Xenakis</h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa08.zip" target="_blank">
         <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa08.png" />
         </a>
@@ -237,9 +310,9 @@ class Cwa extends Component {
         <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa05.png" />
         </a>
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa05.zip" target="_blank">Download materials</a></p>
-        <p><a href="https://vimeo.com/481119970" target="_blank">Video 1</a></p>
+        {/* <p><a href="https://vimeo.com/481119970" target="_blank">Video 1</a></p>
         <p><a href="https://vimeo.com/481126680" target="_blank">Video 2</a></p>
-        <p>* access code to the videos is the same as for class</p>
+        <p>* access code to the videos is the same as for class</p> */}
       </article>
 
 <article>

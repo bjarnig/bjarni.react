@@ -173,10 +173,65 @@ class Pma extends Component {
 
       */
     
+      
         }
 
 <article>
-        <div className="date"> 14.10.2020 </div>
+    <div className="date"> 23.12.2021 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 11, Sampling </h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma12.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma12.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma12.zip" target="_blank">Download materials</a></p>
+    <p><a href="https://vimeo.com/manage/videos/405917708" target="_blank">Video 1</a></p>
+    <p><a href="https://vimeo.com/manage/videos/405914758" target="_blank">Video 2</a></p>
+    <p>* access code to the videos is the same as for class</p>
+  </article>
+
+<article>
+    <div className="date"> 02.12.2021 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 10, Synthesis </h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma11.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma11.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma11.zip" target="_blank">Download materials</a></p>
+  </article>
+
+
+<article>
+    <div className="date"> 25.11.2021 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 09, Signals </h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma09.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma09.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma09.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+        <div className="date"> 19.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 08, Clocks </h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma08.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma08.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma08.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 11.11.2021 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 07, Routines </h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma07.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma07.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma07.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 14.10.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 06, Strategies </h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma06.zip" target="_blank">
@@ -186,7 +241,7 @@ class Pma extends Component {
       </article>
 
  <article>
-        <div className="date"> 07.10.2020 </div>
+        <div className="date"> 07.10.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 05, Data Structures</h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma05.zip" target="_blank">

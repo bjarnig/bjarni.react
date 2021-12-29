@@ -13,7 +13,8 @@ import OpacityImage from './../common/OpacityImage';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
-// const anticlines = imageurl + 'anticlines.jpeg';
+const anticlines = imageurl + 'anticlines.jpg';
+const fracas = imageurl + 'fracas.png';
 //const anticlines = imageurl + 'anticlines3.png';
 const xcoax = imageurl + 'xcoax.jpg';
 const DC2020 = imageurl + 'discussion-concert-jan2020.jpg';
@@ -112,6 +113,57 @@ class Current extends Component {
   render() {
     return <div className="container">
       <div className="content">
+      
+      <article > <div className="date">29-11-2021</div>
+      <div className="hr"><hr/></div>
+      <p>
+     Anticlines
+      </p>
+      <div className="img-center">
+      <a href="https://bjarni.bandcamp.com" target="_blank">
+        <OpacityImage imageUrl= {anticlines} />
+        </a>
+      </div>
+      <p>'Anticlines' is released today on <a href="https://playneutral.bandcamp.com" target="_blank"> Playneutral </a></p>
+
+      <p>Digital synthesis based on dynamic waveforms and atomic sound operations.</p>
+
+      <p>Sound as behaviour, occurring through operations sequences and generative processes.</p>
+      <p>
+      <a href="https://bjarni.bandcamp.com" target="_blank"> bjarni.bandcamp.com </a><br/></p>
+      <p> <a href="https://playneutral.bandcamp.com" target="_blank"> playneutral.bandcamp.com </a>
+      </p>
+      <p>
+          <a href="https://bjarni.bandcamp.com/album/anticlines" target="_blank"> bjarni.bandcamp.com/album/anticlines </a>
+      </p>
+      <p>
+      </p>
+      </article> 
+
+      <article > <div className="date">15-11-2021</div>
+      <div className="hr"><hr/></div>
+      <p>
+     Fracas
+      </p>
+      <div className="img-center">
+      <a href="https://bjarni.bandcamp.com/album/fracas" target="_blank">
+        <OpacityImage imageUrl= {fracas} />
+        </a>
+      </div>
+      <p>'Fracas' is released today on <a href="https://superpang.bandcamp.com" target="_blank"> Superpang </a></p>
+
+      <p>A 17-minute recorded improvisation and released as part of Superpang's a new series of exclusive one-off live sessions by members of their roster celebrating their 100th release.</p>
+
+      <p>
+      <a href="https://bjarni.bandcamp.com" target="_blank"> bjarni.bandcamp.com </a><br/></p>
+      <p> <a href="https://superpang.bandcamp.com" target="_blank"> superpang.bandcamp.com </a>
+      </p>
+      <p>
+          <a href="https://bjarni.bandcamp.com/album/fracas" target="_blank"> bjarni.bandcamp.com/album/fracas </a>
+      </p>
+      <p>
+      </p>
+      </article> 
 
       <article > <div className="date">16-07-2021</div>
       <div className="hr"><hr/></div>
