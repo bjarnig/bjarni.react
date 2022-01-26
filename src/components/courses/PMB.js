@@ -220,13 +220,28 @@ class Pmb extends Component {
         </a>
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2020-2021/pmb05.zip" target="_blank">Download materials</a></p>
       </article>
-
-     
-      
-          
-
          
  */}
+
+<article>
+  <div className="date"> 25.01.2022 </div>
+  <div className="hr"><hr /></div>
+  <h1>CDP</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb13.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb13.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb13.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+  <div className="date"> 11.01.2022 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 12, CA + Genetic Algorithm</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb12.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb12.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb12.zip" target="_blank">Download materials</a></p>
+</article>
 
 <article>
         <div className="date"> 06.12.2021 </div>
@@ -236,6 +251,8 @@ class Pmb extends Component {
         <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb11.png" />
         </a>
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb11.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/660936533" target="_blank">Video</a></p>
+        <p>* access code to the videos is the same as for class</p>
       </article>
 
 <article>

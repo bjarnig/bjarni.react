@@ -177,6 +177,26 @@ class Pma extends Component {
         }
 
 <article>
+    <div className="date"> 27.01.2022 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 14, Synthesis 2</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma14.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma14.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma14.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 20.01.2022 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 13, Patterns </h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma13.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma13.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma13.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
     <div className="date"> 23.12.2021 </div>
     <div className="hr"><hr /></div>
     <h1>Class 11, Sampling </h1>
