@@ -224,6 +224,26 @@ class Pmb extends Component {
  */}
 
 <article>
+  <div className="date"> 06.02.2022 </div>
+  <div className="hr"><hr /></div>
+  <h1>Spectromorphology</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb15.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb15.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb15.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+  <div className="date"> 01.02.2022 </div>
+  <div className="hr"><hr /></div>
+  <h1>Analysis & CDP2</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb14.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb14.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb14.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
   <div className="date"> 25.01.2022 </div>
   <div className="hr"><hr /></div>
   <h1>CDP</h1>
