@@ -6,6 +6,7 @@ import SomeView from './views/view.js';
 import logo from './logo.svg';
 import Main from './components/Main';
 import Current from './components/info/Current';
+import Index from './components/info/Index';
 import Music from './components/music/Music';
 import Collaborations from './components/music/Collaborations';
 import Code from './components/music/Code';
@@ -25,6 +26,7 @@ import Works from './components/info/Works';
 import Pma from './components/courses/PMA';
 import Pmb from './components/courses/PMB';
 import Cwa from './components/courses/CWA';
+// import Hydra from './assets/js/hydra-synth.js';
 
 import './assets/css/style.css';
 import './assets/css/custom.css';
