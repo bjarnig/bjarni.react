@@ -220,6 +220,40 @@ class Cwa extends Component {
         */}
 
 <article>
+      <div className="date"> 24.03.2022</div>
+      <div className="hr"><hr /></div>
+      <h1>Class 20, Iannix</h1>
+      <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa20.zip" target="_blank">
+      <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa20.png" />
+      </a>
+      <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa20.zip" target="_blank">Download materials</a></p>
+    </article>
+
+
+
+<article>
+      <div className="date"> 24.02.2022</div>
+      <div className="hr"><hr /></div>
+      <h1>Class 19, Control and Interfaces</h1>
+      <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa19.zip" target="_blank">
+      <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa19.png" />
+      </a>
+      <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa19.zip" target="_blank">Download materials</a></p>
+    </article>
+
+
+
+<article>
+        <div className="date"> 17.02.2022</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 18, Sound Processes</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa18.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa18.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa18.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
         <div className="date"> 10.02.2022</div>
         <div className="hr"><hr /></div>
         <h1>Class 17, Workshop 3</h1>
@@ -228,6 +262,8 @@ class Cwa extends Component {
         </a>
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa17.zip" target="_blank">Download materials</a></p>
       </article>
+
+      
 
 <article>
         <div className="date"> 03.02.2022</div>
