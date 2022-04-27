@@ -220,6 +220,29 @@ class Cwa extends Component {
         */}
 
 <article>
+        <div className="date"> 11.02.2021</div>
+        <div className="hr"><hr /></div>
+        <h1>Class 23, Complexity</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa23.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa23.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa23.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/418393696" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/418393885" target="_blank">Video 2</a></p>
+        <p>* access code to the videos is the same as for class</p>
+      </article>
+
+      <article>
+      <div className="date"> 07.04.2022</div>
+      <div className="hr"><hr /></div>
+      <h1>Class 22, Spectromorphology</h1>
+      <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa22.zip" target="_blank">
+      <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa22.png" />
+      </a>
+      <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/cwa22.zip" target="_blank">Download materials</a></p>
+    </article>
+
+<article>
       <div className="date"> 31.03.2022</div>
       <div className="hr"><hr /></div>
       <h1>Class 21, CDP</h1>
