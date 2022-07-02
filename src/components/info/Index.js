@@ -2,9 +2,16 @@ import React, { Component } from "react";
 
 import OpacityImage from "./../common/OpacityImage";
 const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
-const about = imageurl + "hb.png";
+const brwn1 = imageurl + "brwn1.png";
+const brwn2 = imageurl + "brwn2.png";
+const brwn3 = imageurl + "brwn3.png";
+const brwn4 = imageurl + "brwn4.png";
+const brwn5 = imageurl + "brwn5.png";
+const brwn6 = imageurl + "brwn6.png";
+const brwn7 = imageurl + "brwn7.png";
+const brwn8 = imageurl + "brwn8.png";
+const brwn9 = imageurl + "brwn9.png";
 
-// const hydra = new Hydra({ detectAudio: false });
 
 class About extends Component {
   componentDidMount() {
@@ -15,32 +22,71 @@ class About extends Component {
     return (
       <div className="container">
         <div className="content">
-          {/* <ul className="nav nav-pills">
-            <li className="active">
-              <a href="/about">bio</a>
-            </li>
-            <li>
-              <a href="/works">works</a>
-            </li>
-          </ul> */}
-          {/* <div className="hr">
-            <hr />
-          </div> */}
-
-<iframe src="https://hydra.ojack.xyz/?sketch_id=wOCJUPsTZ9HDQSrN" height={600} width={800}></iframe>
-
           <div className="row">
-            <div className="col-lg-12">
-
-              
-              {/* <OpacityImage imageUrl={about} /> */}
-              {/* <div className="img-center"><img onload="this.style.opacity='1.0';" src={bjarni} alt="Bjarni Gunnarsson" className="img-responsive" /></div> */}
-            </div>
+            <div className="col-lg-12"></div>
           </div>
           <div className="bio">
             <div className="row">
-              <div className="col-lg-8"></div>
+              <div className="col-lg-4">
+                <a href="current">
+                <OpacityImage imageUrl={brwn1} />
+                <h5>News </h5>
+                </a>
+              </div>
+              <div className="col-lg-4">
+                <a href="music">
+                <OpacityImage imageUrl={brwn2} />
+                <h5>Pieces </h5>
+                </a>
+              </div>
+              <div className="col-lg-4">
+                <a href="code">
+                <OpacityImage imageUrl={brwn3} />
+                <h5>Code</h5>
+                </a>
+              </div>
             </div>
+            <div className="row">
+              <div className="col-lg-4">
+                <a href="writings">
+                <OpacityImage imageUrl={brwn4} />
+                <h5>Writings </h5>
+                </a>
+              </div>
+              <div className="col-lg-4">
+                <a href="courses">
+                <OpacityImage imageUrl={brwn5} />
+                <h5>Courses </h5>
+                </a>
+              </div>
+              <div className="col-lg-4">
+                <a href="press">
+                <OpacityImage imageUrl={brwn6} />
+                <h5>Press </h5>
+                </a>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-4">
+                <a href="releases">
+                <OpacityImage imageUrl={brwn7} />
+                <h5>Releases </h5>
+                </a>
+              </div>
+              <div className="col-lg-4">
+                <a href="visual">
+                <OpacityImage imageUrl={brwn8} />
+                <h5>Visual </h5>
+                </a>
+              </div>
+              <div className="col-lg-4">
+                <a href="works">
+                <OpacityImage imageUrl={brwn9} />
+                <h5>Works </h5>
+                </a>
+              </div>
+            </div>
+           
           </div>
         </div>
       </div>

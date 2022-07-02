@@ -144,7 +144,7 @@ render() {
           </ul>
           </div>
         </div>
-        <Route exact path="/" component={Current} />
+        <Route exact path="/" component={Index} />
         <Route path="/music" component={Music} />
         <Route path="/collaborations" component={Collaborations} />
         <Route path="/live" component={Live} />
@@ -160,7 +160,6 @@ render() {
         <Route path="/about" component={About} />
         <Route path="/works" component={Works} />
         <Route path="/paths" component={Paths} />
-        <Route path="/lueur" component={Lueur} />
         <Route path="/processes" component={Processes} />
         <PrivateRoute path="/pma" component={Pma} />
         <PrivateRoute path="/pmb" component={Pmb} />

@@ -19,6 +19,28 @@ class Pma extends Component {
         }
 
 <article>
+  <div className="date"> 12.05.2022 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 22, Examples</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma22.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma22.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma22.zip" target="_blank">Download materials</a></p>
+</article>
+
+
+<article>
+  <div className="date"> 28.04.2022 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 21, Examples</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma21.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma21.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma21.zip" target="_blank">Download materials</a></p>
+</article>
+
+
+<article>
   <div className="date"> 14.04.2022 </div>
   <div className="hr"><hr /></div>
   <h1>Class 20, Processing</h1>
