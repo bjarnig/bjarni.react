@@ -2,15 +2,15 @@ import React, { Component } from "react";
 
 import OpacityImage from "./../common/OpacityImage";
 const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
-const brwn1 = imageurl + "brwn1.png";
-const brwn2 = imageurl + "brwn2.png";
-const brwn3 = imageurl + "brwn3.png";
-const brwn4 = imageurl + "brwn4.png";
-const brwn5 = imageurl + "brwn5.png";
-const brwn6 = imageurl + "brwn6.png";
-const brwn7 = imageurl + "brwn7.png";
-const brwn8 = imageurl + "brwn8.png";
-const brwn9 = imageurl + "brwn9.png";
+const brwn1 = imageurl + "brwn1b.png";
+const brwn2 = imageurl + "brwn2b.png";
+const brwn3 = imageurl + "brwn3b.png";
+const brwn4 = imageurl + "brwn4b.png";
+const brwn5 = imageurl + "brwn5b.png";
+const brwn6 = imageurl + "brwn6b.png";
+const brwn7 = imageurl + "brwn7b.png";
+const brwn8 = imageurl + "brwn8b.png";
+const brwn9 = imageurl + "brwn9b.png";
 
 
 class About extends Component {
@@ -55,13 +55,13 @@ class About extends Component {
               </div>
               <div className="col-lg-4">
                 <a href="courses">
-                <OpacityImage imageUrl={brwn5} />
+                <OpacityImage imageUrl={brwn6} />
                 <h5>Courses </h5>
                 </a>
               </div>
               <div className="col-lg-4">
                 <a href="press">
-                <OpacityImage imageUrl={brwn6} />
+                <OpacityImage imageUrl={brwn8} />
                 <h5>Press </h5>
                 </a>
               </div>
@@ -75,7 +75,7 @@ class About extends Component {
               </div>
               <div className="col-lg-4">
                 <a href="visual">
-                <OpacityImage imageUrl={brwn8} />
+                <OpacityImage imageUrl={brwn5} />
                 <h5>Visual </h5>
                 </a>
               </div>
