@@ -27,19 +27,19 @@ class About extends Component {
           </div>
           <div className="bio">
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="current">
                 <OpacityImage imageUrl={brwn1} />
                 <h5>News </h5>
                 </a>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="music">
                 <OpacityImage imageUrl={brwn2} />
                 <h5>Pieces </h5>
                 </a>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="code">
                 <OpacityImage imageUrl={brwn3} />
                 <h5>Code</h5>
@@ -47,19 +47,19 @@ class About extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="writings">
                 <OpacityImage imageUrl={brwn4} />
                 <h5>Writings </h5>
                 </a>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="courses">
                 <OpacityImage imageUrl={brwn6} />
                 <h5>Courses </h5>
                 </a>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="press">
                 <OpacityImage imageUrl={brwn8} />
                 <h5>Press </h5>
@@ -67,19 +67,19 @@ class About extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="releases">
                 <OpacityImage imageUrl={brwn7} />
                 <h5>Releases </h5>
                 </a>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="visual">
                 <OpacityImage imageUrl={brwn5} />
                 <h5>Visual </h5>
                 </a>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="works">
                 <OpacityImage imageUrl={brwn9} />
                 <h5>Works </h5>

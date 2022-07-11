@@ -6,6 +6,7 @@ import SomeView from './views/view.js';
 import logo from './logo.svg';
 import Main from './components/Main';
 import Current from './components/info/Current';
+import Past from './components/info/Past';
 import Index from './components/info/Index';
 import Music from './components/music/Music';
 import Collaborations from './components/music/Collaborations';
@@ -152,6 +153,7 @@ render() {
         <Route path="/visual" component={Visual} />
         <Route path="/excerpts" component={Excerpts} />
         <Route path="/current" component={Current} />
+        <Route path="/past" component={Past} />
         <Route path="/releases" component={Releases} />
         <Route path="/code" component={Code} />
         <Route path="/writings" component={Writings} />
