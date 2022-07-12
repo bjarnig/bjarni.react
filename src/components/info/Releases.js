@@ -5,6 +5,8 @@ import OpacityImage from './../common/OpacityImage';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const anticlines = imageurl + "anticlines.jpg";
+const fracas = imageurl + "fracas.png";
 const albumPaths = imageurl + 'album-paths.jpg';
 const albumProcesses = imageurl + 'processes-potentials.jpg';
 const albumProcessesInserts = imageurl + 'inserts2.jpg';
@@ -33,6 +35,11 @@ class Releases extends Component {
         width: '100%',
         height: '220px'
       },
+      bandcampStyleAnticlines: {
+        border: '0',
+        width: '100%',
+        height: '307px'
+      },
       bandcampStyleTvenna: {
         border: '0', width: '100%', height: '1040px'}
     };
@@ -51,6 +58,52 @@ class Releases extends Component {
             <a href="/press">press</a>
           </li>
         </ul>
+
+        <div className="hr"><hr/></div>
+        <div className="release">
+        <div className="release-title">Anticlines (2021)</div>
+
+        <div className="img-center">
+          <a href="https://sovnrecords.bandcamp.com/album/cendres">
+          <OpacityImage imageUrl= {anticlines} />
+          </a>
+        </div>
+        <p> Anticlines released on <a href="https://sovnrecords.bandcamp.com/album/cendres"> Play Neutral </a></p>
+        <p>Explores digital synthesis based on dynamic waveforms and atomic sound operations.</p>
+        <p>Composed using software designed for sound streams and transformation pipelines.</p>
+        <p>Sound as behaviour, occurring through operations sequences and generative processes.</p>
+        <p></p>
+        <div className="bandcamp">
+        <iframe style={this.state.bandcampStyleAnticlines} src="https://bandcamp.com/EmbeddedPlayer/album=2637006102/size=large/bgcol=ffffff/linkcol=63b2cc/artwork=none/transparent=true/" seamless><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines by Bjarni Gunnarsson</a></iframe>
+        </div>
+        <p>
+        OF, synthesis framework available here: <br/>
+        <a href="https://github.com/bjarnig/OF">github.com/bjarnig/OF</a>
+        </p><p>
+        OF, paper accessible here: <br/>
+        <a href="https://bit.ly/3p4GBQb">bit.ly/3p4GBQb</a>
+        </p>
+        <br/>
+        </div>
+
+        <div className="hr"><hr/></div>
+        <div className="release">
+        <div className="release-title">Fracas (2021)</div>
+
+        <div className="img-center">
+          <a href="https://sovnrecords.bandcamp.com/album/cendres">
+          <OpacityImage imageUrl= {fracas} />
+          </a>
+        </div>
+        <p> Fracas released on <a href="https://superpang.bandcamp.com/"> Superpang </a></p>
+        <p>
+        An improvisation, recorded on 13.11.2021
+        </p>
+        <p></p>
+        <div className="bandcamp">
+        <iframe style={this.state.bandcampStyleCendres} src="https://bandcamp.com/EmbeddedPlayer/album=1253221369/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://bjarni.bandcamp.com/album/fracas">Fracas by Bjarni Gunnarsson</a></iframe>
+        </div>
+        </div>
 
         <div className="hr"><hr/></div>
         <div className="release">

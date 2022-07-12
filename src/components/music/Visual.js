@@ -89,12 +89,37 @@ class Visual extends Component {
 </div>
 
 </div> */}
-
-
+        
+        <div className="media">
+        <div className="date">Hydra and SuperCollider</div>
+        <br />
+        <iframe src="https://youtube.com/embed/-s_ivshe_Yo" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="hr"><hr/></div>
 
         <div className="media">
-        <div className="date">Copaline</div>
+        <div className="date">Simulation-driven synthesis</div>
+        <br />
+        <iframe src="https://youtube.com/embed/xudh-zwMoj0" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="hr"><hr/></div>
+
+        <div className="media">
+        <div className="date">SNDArchive</div>
+        <br />
+        <iframe src="https://youtube.com/embed/5q_3-A8dJ7Q" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="hr"><hr/></div>
         
+        <div className="media">
+        <div className="date">OF</div>
+        <br />
+        <iframe src="https://youtube.com/embed/Wv6qKqIKzLk" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="hr"><hr/></div>
+        
+        <div className="media">
+        <div className="date">Copaline</div>
         <br />
         <iframe src="https://player.vimeo.com/video/313406191" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>

@@ -13,12 +13,15 @@ import OpacityImage from "./../common/OpacityImage";
 
 // Images
 const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
+const culture_archive = imageurl + "culture_archive2.jpeg";
 const playneutralukraine = imageurl + "playneutral-ukraine.jpeg";
-const wfs2022 = imageurl + "wfs2022.png";
+const wfs2022 = imageurl + "wfsfestival2022.png";
 const anticlines = imageurl + "anticlines.jpg";
+const fracas = imageurl + "fracas.png";
+const pulsa = imageurl + "pulsa.jpeg";
+const pulsb = imageurl + "pulsb.jpeg";
 const mgbg_babylona = imageurl + "mgbg-babylona.png";
 const mgbg_babylonb = imageurl + "mgbg-babylonb.jpeg";
-const fracas = imageurl + "fracas.png";
 const xcoax = imageurl + "xcoax.jpg";
 const DC2020 = imageurl + "discussion-concert-jan2020.jpg";
 const superpang = imageurl + "superpang.jpg";
@@ -120,6 +123,40 @@ class Current extends Component {
         We’re all shocked by the tragic events in Ukraine and, following a conversation with Tom from Good Weather for an Airstrike, decided to ask artists if they would be able to contribute a track for a compilation to support the war victims in Ukraine.</p>
         <p>While this compilation is free, we’d like to encourage and invite you to give whatever you can.</p>
         <p>All money goes to the Red Cross Ukraine Crisis Appeal.y.{" "}</p>
+        </article>
+
+
+        
+
+        <article>
+            {" "}
+            <div className="date">16-03-2022</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>LP 1 Recordings from the Institute of Sonology</p>
+            
+            <div className="img-center">
+              <a href="http://sonology.org" target="_blank">
+                <OpacityImage imageUrl={culture_archive} />
+              </a>
+            </div>
+
+            
+            <p>
+            This collection of recordings aims to showcase music produced at the Institute of Sonology, including works with analogue modular synthesis, algorithmic compositions, live electronic music, and compositions based on field recordings.
+            </p><p>
+            Justin Bennett – Aura <br/>
+            Bjarni Gunnarsson – Cendres <br/>
+            Kees Tazelaar – Berglandschap <br/>
+            Sonology Electroacoustic Ensemble – 20200129 <br/>
+            </p>
+            <p>
+            Project & Artist information contained in the booklet that accompanies this LP has been included in Braille. The objective is for the contents to reach as many people as possible, this is also why the information has also been translated into 11 languages; Arabic, Dutch, French, German, Hebrew, Italian, Japanese, Mandarin, Portuguese, Russian, and Spanish (accessible via QR code provided in the last page of the booklet). </p>
+            <p><a href="https://clone.nl/item68063.html" target="_blank">https://clone.nl/item68063.html</a>
+
+            </p>
+            
         </article>
 
         <article>
@@ -265,6 +302,64 @@ class Current extends Component {
               </a>
             </p>
             <p></p>
+          </article>
+
+          <article>
+            {" "}
+            <div className="date">25-10-2021</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Tonband festival 2021</p>
+            <div className="img-center">
+              <a
+                href="https://www.audiorama.se/events/2021/tonband"
+                target="_blank"
+              >
+                <OpacityImage imageUrl={pulsa} />
+              </a>
+            </div>
+            <p>This week: Tonband festival 2021 in Gothenburg, Sweden. </p>
+            <p>Friday night Electric Audio Unit will present music by Mike McCormick, Bjarni Gunnarsson, Marie Guilleray, Juhani Silvola, Lola Ajima, Giuseppe Pisano, Frank Ekeberg, Natasha Barrett and Ernst van der Loo. 
+            </p>
+            <p>  </p>
+          <p><a href="https://www.audiorama.se/events/2021/tonband">https://www.audiorama.se/events/2021/tonband</a>
+            </p>
+            <p>
+            All pieces on Audiorama's 24.4 speaker set up.
+            </p>
+            
+          </article>
+
+          <article>
+            {" "}
+            <div className="date">22-08-2021</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Puls binaural stream concerts</p>
+            <div className="img-center">
+              <a
+                href="https://www.audiorama.se/events/2021/tonband"
+                target="_blank"
+              >
+                <OpacityImage imageUrl={pulsb} />
+              </a>
+            </div>
+            <p>
+            Electric Audio Unit (NO) and Audiorama present: <br/>
+            PULS BINAURAL HEADPHONE CONCERT #6 <br/>
+            Curated by Ernst van der Loo</p>
+            <p>
+            Program:<br/>
+            Bjarni Gunnarsson - Polytree (2018)<br/>
+            Edwin van der Heide - Pneumatic Soundfield (2006) (binaural recording from 2019)<br/>
+            Ji Youn Kang - Dong-Nae Gut (2013)<br/>
+            </p>
+            <p>  </p>
+          <p><a href="webstream.audiorama.se:7070/stream.m3u">webstream.audiorama.se:7070/stream.m3u</a>
+            </p>
+            
           </article>
 
           <article>
