@@ -28,6 +28,70 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
+                  <tr>
+                          <td>Wildfires</td>
+                          <td>2022</td>
+                          <td>12:10</td>
+                          <td>192 (WFS)</td>
+                          <td>-</td>
+                      </tr>
+                       <tr>
+                          <td><a href="https://playneutral.bandcamp.com/track/bjarni-gunnarsson-costest">Costest</a></td>
+                          <td>2022</td>
+                          <td>12:00</td>
+                          <td>2</td>
+                          <td><a href="https://playneutral.bandcamp.com/album/ukraine-appeal">Ukraine Appeal</a></td>
+                      </tr>
+                      <tr>
+                          <td>Judder</td>
+                          <td>2021</td>
+                          <td>11:42</td>
+                          <td>8</td>
+                          <td>-</td>
+                      </tr>
+                       <tr>
+                          <td><a href="https://bjarni.bandcamp.com/track/devise">Devise</a></td>
+                          <td>2021</td>
+                          <td>05:08</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/track/adopt">Adopt</a></td>
+                          <td>2021</td>
+                          <td>06:12</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/track/sustain">Sustain</a></td>
+                          <td>2021</td>
+                          <td>05:56</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/track/resist">Resist</a></td>
+                          <td>2021</td>
+                          <td>07:02</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/track/pursue">Pursue</a></td>
+                          <td>2021</td>
+                          <td>06:54</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
+                      </tr>
+
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
+                          <td>2021</td>
+                          <td>17:14</td>
+                          <td>2</td>
+                          <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
+                      </tr>
                       <tr>
                           <td><a href="https://bjarni.bandcamp.com/track/heap">Heap</a></td>
                           <td>2020</td>
@@ -144,13 +208,6 @@ class Works extends Component {
                           <td><a href="https://soundcloud.com/bjarni/ubieties">Ubieties</a></td>
                           <td>2015</td>
                           <td>11:38</td>
-                          <td>8 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/paths">Paths</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://grannyrecords.bandcamp.com/track/verlat">Verlat</a></td>
-                          <td>2014</td>
-                          <td>15:04</td>
                           <td>8 &amp; 2</td>
                           <td><a href="http://www.bjarni-gunnarsson.net/paths">Paths</a></td>
                       </tr>
@@ -366,6 +423,27 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
+                       <tr>
+                          <td><a href="https://playneutral.bandcamp.com/album/ukraine-appeal"> Ukraine Appeal </a></td>
+                          <td> <a href="https://playneutral.bandcamp.com"> PLAYNEUTRAL </a></td>
+                          <td>2022</td>
+                          <td>Compilation</td>
+                          <td>Digital</td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/album/anticlines"> Anticlines </a></td>
+                          <td> <a href="https://playneutral.bandcamp.com"> PLAYNEUTRAL </a></td>
+                          <td>2021</td>
+                          <td>Album</td>
+                          <td>Digital</td>
+                      </tr>
+                      <tr>
+                          <td><a href="https://bjarni.bandcamp.com/album/fracas"> Fracas </a></td>
+                          <td> <a href="https://superpang.bandcamp.com/"> SUPERPANG </a></td>
+                          <td>2021</td>
+                          <td>EP</td>
+                          <td>Digital</td>
+                      </tr>
                       <tr>
                           <td><a href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"> Music for queuing at the supermarket </a></td>
                           <td> <a href="https://sovnrecords.bandcamp.com"> SØVN </a></td>

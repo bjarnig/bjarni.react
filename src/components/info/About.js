@@ -30,11 +30,11 @@ class About extends Component {
       <div className="col-lg-8">
      
          <p>
-         Composer and Computer Scientist from Reykjavík, Iceland. Interested in process-based sound and algorithmic composition. How sound and programming interact and the relationship between algorithms and musical behaviour. Recently exploring adaptive synthetic environments, generative sound streams, digital interrupts, and machine-listening processes.
+         Composer and Computer Scientist from Reykjavík, Iceland. Interested in process-based sound and algorithmic composition. How sound and software interacts and the relationship between algorithms and musical behaviour. Recently exploring adaptive synthetic environments, generative sound streams, digital interrupts, and machine-listening applications.
         </p>
 
         <p>
-        Performed in festivals such as Tectonics, Rewire, Today's Art, Sonar and Presences Electroniques and in countries such as Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Switzerland, Italy, Ireland and Iceland. Released on labels such as Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny, Tartaruga, SUPERPANG and SØVN.  Collections of his solo works can be found on the releases “Safn 2006-2009” (2010), "Processes & Potentials" (2013), "Paths" (2016), "Lueur" (2018), "Volume & Void" (2020) and "Cendres" (2020). 
+        Performed in festivals such as Tectonics, Rewire, Today's Art, Sonar and Presences Electroniques and in countries such as Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Switzerland, Italy, Ireland and Iceland. Released on labels such as Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny, Tartaruga, SUPERPANG and SØVN.  Collections of his solo works can be found on the releases “Safn 2006-2009” (2010), "Processes & Potentials" (2013), "Paths" (2016), "Lueur" (2018), "Volume & Void" (2020), "Cendres" (2020) and  "Anticlines" (2021). 
         </p>
 
         <p>

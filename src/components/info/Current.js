@@ -44,6 +44,7 @@ const orpheus = imageurl + "bg-orpheus.jpg";
 const rc = imageurl + "rc.jpg";
 const SonologyConcert17October2018 =
   imageurl + "SonologyConcert17October2018.jpg";
+const sonoconcert = imageurl + "sonoconcert.jpg";
 const OrpheusMachine = imageurl + "orpheus-machines.jpeg";
 const lueur1 = imageurl + "lueura.jpg";
 const multiphonies = imageurl + "grm_multiphonies2019-20.jpg";
@@ -183,6 +184,30 @@ class Current extends Component {
             <p>Radio New Babylon, initiated by Justin Bennett, is a collection of audio pieces by local and international artists made specifically to be listened to in and around the "New Babylon" office and apartment complex in Den Haag.</p>  <p>The artists and musicians were encouraged to think about the connections and discrepancies between the contemporary building and Constant Nieuwenhuys' visionary city of play. The pieces include ambient soundtracks, spoken-word podcasts, electronic experiments, field recordings from deep caves, reggae songs, insect songs, compositions for piano, organ, strings and percussion, instructions to the listener etc, etc.</p>
             <p>This is an ongoing project. So far, artists include Topp & Dubio, Fani Konstantinidou, David Helbich, Roel Meelkop, Johan Nystrom, Jad Saliba, Anthony Blokdijk, Flavien Gillié, Barbara Ellison, BMB con., Francisco Lopez, Hendrik Hohlfeld, Yota Morimoto, Scanner, Bjarni Gunnarsson, Marie Guilleray, Felix Kubin, Ji Youn Kang, Double-W and Section 28. The collection also includes two excerpts from Constant's own 1960's soundtracks for New Babylon.</p>
         </article>
+
+
+        <article>
+            {" "}
+            <div className="date">08-12-2021</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Sonology Staff Concert</p>
+            
+            <div className="img-center">
+              <a href="http://sonology.org" target="_blank">
+                <OpacityImage imageUrl={sonoconcert} />
+              </a>
+            </div>
+            
+            <p>8 December 2021, 19:30, Arnold Schoenbergzaal: Concert with staff members. The last one in this hall.</p>
+            <p>I present a new piece, Judder, 8 channels. Fixed Media. 11:42 (2021) </p>
+            
+            <p>Through lines of repeated impulses, ‘Judder’ consists of enframing events and movements that emerge as the result of a shared agency and interconnected sounds. The idea is to gather simple resonances with repetitive rhythmic lines forming multiplicities through its layers, transformations, and juxtapositions.</p>
+            <p>'Judder' is part of an ongoing project focused on the use of interactive algorithms for scheduling and organizing generative sound processes.
+            </p>
+        </article>
+
 
           <article>
             {" "}
