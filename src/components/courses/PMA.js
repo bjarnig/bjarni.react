@@ -7,17 +7,7 @@ class Pma extends Component {
   render() { return<div className="container">
       <div className="content">
       
-      {
-      
-      /* 
-
-
-
-      */
-    
-      
-        }
-
+{/*    
 <article>
   <div className="date"> 12.05.2022 </div>
   <div className="hr"><hr /></div>
@@ -210,36 +200,41 @@ class Pma extends Component {
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma04.zip" target="_blank">Download materials</a></p>
       </article>
 
+
+
+*/}
+
 <article>
-            <div className="date"> 23.09.2021 </div>
+            <div className="date"> 22.09.2022 </div>
             <div className="hr"><hr /></div>
             <h1>Class 03, Control Flow</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma03.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma03.png" />
+            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma03.zip" target="_blank">
+            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma03.png" />
             </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma03.zip" target="_blank">Download materials</a></p>
+            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma03.zip" target="_blank">Download materials</a></p>
           </article>
 
+
+
 <article>
-        <div className="date"> 16.09.2021 </div>
+        <div className="date"> 15.09.2021 </div>
         <div className="hr"><hr /></div>
         <h1>Class 02, Syntax</h1>
-        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma02.zip" target="_blank">
-        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma02.png" />
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma02.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma02.png" />
         </a>
-        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma02.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma02.zip" target="_blank">Download materials</a></p>
       </article>
 
-
 <article>
-          <div className="date"> 09.09.2021 </div>
+          <div className="date"> 08.09.2022 </div>
           <div className="hr"><hr /></div>
           <h1>Class 01, Programming and Music 1</h1>
-          <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma01.zip" target="_blank">
-          <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma01.png" />
+          <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma01.zip" target="_blank">
+          <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma01.png" />
           </a>
-          <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pma01.zip" target="_blank">Download materials</a></p>
-        </article>
+          <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma01.zip" target="_blank">Download materials</a></p>
+        </article> 
 
       </div>
   </div>

@@ -15,7 +15,7 @@ import OpacityImage from "./../common/OpacityImage";
 const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
 const culture_archive = imageurl + "culture_archive2.jpeg";
 const playneutralukraine = imageurl + "playneutral-ukraine.jpeg";
-const wfs2022 = imageurl + "wfsfestival2022.png";
+const wfs2022 = imageurl + "wfs2022.png";
 const anticlines = imageurl + "anticlines.jpg";
 const fracas = imageurl + "fracas.png";
 const pulsa = imageurl + "pulsa.jpeg";

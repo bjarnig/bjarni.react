@@ -27,6 +27,7 @@ import Works from './components/info/Works';
 import Pma from './components/courses/PMA';
 import Pmb from './components/courses/PMB';
 import Cwa from './components/courses/CWA';
+import Workshops from './components/courses/Workshops';
 // import Hydra from './assets/js/hydra-synth.js';
 
 import './assets/css/style.css';
@@ -166,6 +167,7 @@ render() {
         <PrivateRoute path="/pma" component={Pma} />
         <PrivateRoute path="/pmb" component={Pmb} />
         <PrivateRoute path="/cwa" component={Cwa} />
+        <PrivateRoute path="/workshops" component={Workshops} />
         <Route path="/login" component={Login} />
         </div>
       </Router>
@@ -224,7 +226,11 @@ class Login extends React.Component {
         fakeAuth.authenticate('success', () => {
             this.setState({ redirectTo: '/cwa' });
         });
-     } else {
+     } else if(this.state.value === 'workshop') {
+      fakeAuth.authenticate('success', () => {
+          this.setState({ redirectTo: '/workshops' });
+      });
+    } else {
         console.log('No login!');
      }
   };
