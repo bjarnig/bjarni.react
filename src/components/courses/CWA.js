@@ -436,8 +436,10 @@ class Cwa extends Component {
         <p>* access code to the videos is the same as for class</p> 
       </article>
 
+         */}
+
 <article>
-            <div className="date"> 30.09.2021 </div>
+            <div className="date"> 29.09.2022 </div>
             <div className="hr"><hr /></div>
             <h1>Class 04, Workshop 1</h1>
             <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa04.zip" target="_blank">
@@ -445,7 +447,6 @@ class Cwa extends Component {
             </a>
             <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa04.zip" target="_blank">Download materials</a></p>
           </article>
-         */}
 
 <article>
             <div className="date"> 23.09.2022 </div>
