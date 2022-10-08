@@ -410,6 +410,7 @@ class Pmb extends Component {
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb05.zip" target="_blank">Download materials</a></p>
       </article>
 
+*/}
 
 <article>
             <div className="date"> 28.09.2021 </div>
@@ -421,7 +422,6 @@ class Pmb extends Component {
             <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2021-2022/pmb04.zip" target="_blank">Download materials</a></p>
           </article>
 
-*/}
 
 <article>
             <div className="date"> 27.09.2022 </div>
