@@ -116,7 +116,7 @@ class Pma extends Component {
   </article>
 
 <article>
-    <div className="date"> 23.12.2021 </div>
+    <div className="date"> 23.12.2022 </div>
     <div className="hr"><hr /></div>
     <h1>Class 11, Sampling </h1>
     <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma12.zip" target="_blank">
@@ -128,19 +128,20 @@ class Pma extends Component {
     <p>* access code to the videos is the same as for class</p>
   </article>
 
+*/}
+
 <article>
-    <div className="date"> 02.12.2021 </div>
+    <div className="date"> 15.12.2022 </div>
     <div className="hr"><hr /></div>
     <h1>Class 10, Synthesis </h1>
-    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma11.zip" target="_blank">
-    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma11.png" />
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma10.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma10.png" />
     </a>
-    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma11.zip" target="_blank">Download materials</a></p>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma10.zip" target="_blank">Download materials</a></p>
   </article>
 
-
 <article>
-    <div className="date"> 25.11.2021 </div>
+    <div className="date"> 08.12.2022 </div>
     <div className="hr"><hr /></div>
     <h1>Class 09, Signals </h1>
     <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma09.zip" target="_blank">
@@ -150,7 +151,7 @@ class Pma extends Component {
   </article>
 
 <article>
-        <div className="date"> 19.11.2021 </div>
+        <div className="date"> 30.11.2022 </div>
         <div className="hr"><hr /></div>
         <h1>Class 08, Clocks </h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma08.zip" target="_blank">
@@ -160,7 +161,7 @@ class Pma extends Component {
       </article>
 
 <article>
-        <div className="date"> 11.11.2021 </div>
+        <div className="date"> 17.11.2022 </div>
         <div className="hr"><hr /></div>
         <h1>Class 07, Routines </h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma07.zip" target="_blank">
@@ -170,26 +171,15 @@ class Pma extends Component {
       </article>
 
 <article>
-        <div className="date"> 14.10.2021 </div>
-        <div className="hr"><hr /></div>
-        <h1>Class 06, Strategies </h1>
-        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma06.zip" target="_blank">
-        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma06.png" />
-        </a>
-        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma06.zip" target="_blank">Download materials</a></p>
-      </article>
-
- <article>
-        <div className="date"> 07.10.2021 </div>
-        <div className="hr"><hr /></div>
-        <h1>Class 05, Data Structures</h1>
-        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma05.zip" target="_blank">
-        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma05.png" />
-        </a>
-        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma05.zip" target="_blank">Download materials</a></p>
-      </article>
+      <div className="date"> 20.10.2022 </div>
+      <div className="hr"><hr /></div>
+      <h1>Class 06, Strategies </h1>
+      <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma06.zip" target="_blank">
+      <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma06.png" />
+      </a>
+      <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma06.zip" target="_blank">Download materials</a></p>
+    </article>
       
-*/}
 
 <article>
         <div className="date"> 06.10.2022 </div>
@@ -224,7 +214,7 @@ class Pma extends Component {
 
 
 <article>
-        <div className="date"> 15.09.2021 </div>
+        <div className="date"> 15.09.2022 </div>
         <div className="hr"><hr /></div>
         <h1>Class 02, Syntax</h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma02.zip" target="_blank">

@@ -439,6 +439,59 @@ class Cwa extends Component {
          */}
 
 <article>
+        <div className="date"> 22.12.2022 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 10, Processing</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa10.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa10.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa10.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://vimeo.com/781115216" target="_blank">Video 1</a></p>
+        <p><a href="https://vimeo.com/781120122" target="_blank">Video 2</a></p>
+        <p>* access code to the videos is the same as for class</p> 
+      </article>
+
+<article>
+        <div className="date"> 08.12.2022 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 09, Signals</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa09.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa09.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa09.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 30.11.2022 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 09, Synthesis</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa08.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa08.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa08.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+        <div className="date"> 17.11.2022 </div>
+        <div className="hr"><hr /></div>
+        <h1>Class 07, Koenig</h1>
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa07.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa07.png" />
+        </a>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa07.zip" target="_blank">Download materials</a></p>
+      </article>
+
+<article>
+            <div className="date"> 20.10.2022 </div>
+            <div className="hr"><hr /></div>
+            <h1>Class 06, Xenakis</h1>
+            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa06.zip" target="_blank">
+            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa06.png" />
+            </a>
+            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa06.zip" target="_blank">Download materials</a></p>
+          </article>
+
+<article>
             <div className="date"> 06.10.2022 </div>
             <div className="hr"><hr /></div>
             <h1>Class 05, History</h1>

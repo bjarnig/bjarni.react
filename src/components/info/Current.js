@@ -51,6 +51,10 @@ const multiphonies = imageurl + "grm_multiphonies2019-20.jpg";
 const Crxssings = imageurl + "CRXSSINGS.jpg";
 const Rask2 = imageurl + "rask2poster2.jpg";
 const Sonix = imageurl + "sonix.jpg";
+const mda = imageurl + "MD-Curator.png";
+const mdb = imageurl + "MD-Lineup.png";
+const turina = imageurl + "turina.jpg";
+const turinb = imageurl + "turinb.jpg";
 
 class Current extends Component {
   constructor(props) {
@@ -76,6 +80,71 @@ class Current extends Component {
     return (
       <div className="container">
         <div className="content">
+
+        <article>
+            {" "}
+            <div className="date">25-11-2022</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>SØVN Records showcase, Turin</p>
+            
+            <div className="img-center">
+              <a href="https://archiviotipografico.it/" target="_blank">
+                <OpacityImage imageUrl={turina} />
+              </a>
+            
+            </div>
+            
+            <div className="img-center">
+              <a href="https://archiviotipografico.it/" target="_blank">
+                <OpacityImage imageUrl={turinb} />
+              </a>
+            
+            </div>
+            <p>
+            SØVN Records is throwing a showcase this month, Giulia Rae and I will take over the Archivio Tipografico for one night of algorithmic music at its purest.
+            
+            </p>
+            <p>
+            Multichannel sound system inside one of the most special place in Turin.
+            </p>
+            
+          </article>
+
+          <article>
+            {" "}
+            <div className="date">19-11-2022</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Moving Downstairs</p>
+            
+            <div className="col-lg-6">
+            <div className="img-center">
+              <a href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/" target="_blank">
+                <OpacityImage imageUrl={mda} />
+              </a>
+              </div>
+            </div>
+            
+            <div className="col-lg-6">
+            <div className="img-center">
+              <a href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/" target="_blank">
+                <OpacityImage imageUrl={mdb} />
+              </a>
+              </div>
+            </div>
+            <p>
+            Presented by The Grey Space, curated by Yota Morimoto.
+            </p>
+            <p>
+            'Music is a tool for communication and at The Grey Space, we seek to enhance the interaction with the audience. For this edition of Moving Downstairs, composer and researcher Yota Morimoto, informed by cutting-edge research and experiments in sound, brings you a night of refined hypnotic noises & chaotic audio swarms. The live acts revolve around new kinds of behavior in sound, a sonic flux; one that challenges the very static nature of electronic music. Immerse your ears with organic microsounds and AI-driven audio textures.'
+            </p>
+            <p>Live Acts by Mehrnaz Khorrami, Tselem Enosh, Bjarni Gunnarsson, and Axel Chemla—Romeu-Santos. DJ-set Anni Nöps
+            </p>
+          </article>
+
           <article>
             {" "}
             <div className="date">21-05-2022</div>

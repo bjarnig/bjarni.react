@@ -17,28 +17,28 @@ class Courses extends Component {
         <div className="hr"><hr /></div>
         <div className="row">
 
-          <div className="col-lg-3">
+          <div className="col-lg-6">
               <h5>Composing with Algorithms </h5>
               <OpacityImage imageUrl= {algorithms} />
               <br />
               <p><a className="btn btn-default" href="/cwa">Access</a></p>
           </div>
 
-          <div className="col-lg-3">
+          <div className="col-lg-6">
               <h5>Programming and Music 1</h5>
               <OpacityImage imageUrl= {programming} />
               <br />
               <p><a className="btn btn-default" href="/pma">Access</a></p>
           </div>
       
-          <div className="col-lg-3">
+          <div className="col-lg-6">
               <h5>Programming and Music 2</h5>
               <OpacityImage imageUrl= {music} />
               <br />
               <p><a className="btn btn-default" href="/pmb">Access</a></p>
           </div>
 
-          <div className="col-lg-3">
+          <div className="col-lg-6">
               <h5>Workshops</h5>
               <OpacityImage imageUrl= {workshop} />
               <br />
