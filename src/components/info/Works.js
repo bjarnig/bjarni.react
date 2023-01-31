@@ -28,7 +28,49 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
-                  <tr>
+                        <tr>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/track/vacuum">Vacuum</a></td>
+                          <td>2023</td>
+                          <td>08:08</td>
+                          <td>2</td>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
+                       </tr>
+                       <tr>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/track/distant">Distant</a></td>
+                          <td>2023</td>
+                          <td>07:54</td>
+                          <td>2</td>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
+                       </tr>
+                       <tr>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/track/pice">Pice</a></td>
+                          <td>2023</td>
+                          <td>07:25</td>
+                          <td>2</td>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
+                       </tr>
+                       <tr>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/track/fog">Fog</a></td>
+                          <td>2023</td>
+                          <td>07:44</td>
+                          <td>2</td>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
+                       </tr>
+                       <tr>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/track/sun">Sun</a></td>
+                          <td>2023</td>
+                          <td>12:56</td>
+                          <td>2</td>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
+                       </tr>
+                       <tr>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/track/micro">Micro</a></td>
+                          <td>2023</td>
+                          <td>11:04</td>
+                          <td>2</td>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
+                       </tr>
+                       <tr>
                           <td>Wildfires</td>
                           <td>2022</td>
                           <td>12:10</td>
@@ -423,6 +465,13 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
+                  <tr>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics"> UUPICS</a></td>
+                          <td> <a href="https://flagdayrecordings.bandcamp.com"> Flag Day Recordings </a></td>
+                          <td>2023</td>
+                          <td>Album</td>
+                          <td>CD / Digital</td>
+                      </tr>
                        <tr>
                           <td><a href="https://playneutral.bandcamp.com/album/ukraine-appeal"> Ukraine Appeal </a></td>
                           <td> <a href="https://playneutral.bandcamp.com"> PLAYNEUTRAL </a></td>

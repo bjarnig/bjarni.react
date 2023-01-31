@@ -5,6 +5,7 @@ import OpacityImage from './../common/OpacityImage';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const upicspic = imageurl + "DSC_0899.jpg";
 const anticlines = imageurl + "anticlines.jpg";
 const fracas = imageurl + "fracas.png";
 const albumPaths = imageurl + 'album-paths.jpg';
@@ -40,6 +41,11 @@ class Releases extends Component {
         width: '100%',
         height: '307px'
       },
+      bandcampStyleUpics: {
+        border: '0',
+        width: '100%',
+        height: '307px'
+      },
       bandcampStyleTvenna: {
         border: '0', width: '100%', height: '1040px'}
     };
@@ -61,14 +67,40 @@ class Releases extends Component {
 
         <div className="hr"><hr/></div>
         <div className="release">
+        <div className="release-title">UPICS (2023)</div>
+
+        <div className="img-center">
+          <a href="https://flagdayrecordings.bandcamp.com/album/upics">
+          <OpacityImage imageUrl= {upicspic} />
+          </a>
+        </div>
+        <p> UPICS released on <a href="https://flagdayrecordings.bandcamp.com/album/upics"> Flag Day Recordings</a></p>
+        <p>The pieces combined here have emerged as an outcome of my research into database-driven reconstructions based on sound analysis. All the source material has been created with the UPIC system (Iannis Xenakis) a graphical computer system where users draw shapes, waveforms, and modulations on ‘pages’ that form a composition or composed sound.</p>
+
+        <p>The material was recorded between September 2006 and March 2007 at the CCMIX institute in Paris. None of those recordings ever made it to a completed work until now, through the use of a newly developed system, SNDArchive (github.com/bjarnig/SNDArchive), that allows to recompose and combine sound parts based on different dimensions discovered through offline analysis processes.</p>
+
+        <p>Sounds are analyzed and read to a database. They form an archive that can be queried. The music then emerges through processes that interpret the sound or sound segments, transforming them or developing synthetic sound based on their properties. The idea was to create methods for engaging with sound archives in novel ways, to review them from a different angle, or to reveal previously unknown aspects of material already loaded with meaning.</p>
+        <p></p>
+        <div className="bandcamp">
+        <iframe style={this.state.bandcampStyleUpics} src="https://bandcamp.com/EmbeddedPlayer/album=415868467/size=large/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS by Bjarni Gunnarsson</a></iframe>
+        </div>
+        <p>
+        SNDArchive, software tool available here: <br/>
+        <a href="https://github.com/bjarnig/OF">github.com/bjarnig/OF</a>
+        </p>
+        <br/>
+        </div>
+
+        <div className="hr"><hr/></div>
+        <div className="release">
         <div className="release-title">Anticlines (2021)</div>
 
         <div className="img-center">
-          <a href="https://sovnrecords.bandcamp.com/album/cendres">
+          <a href="https://bjarni.bandcamp.com/album/anticlines">
           <OpacityImage imageUrl= {anticlines} />
           </a>
         </div>
-        <p> Anticlines released on <a href="https://sovnrecords.bandcamp.com/album/cendres"> Play Neutral </a></p>
+        <p> Anticlines released on <a href="https://bjarni.bandcamp.com/album/anticlines"> Play Neutral </a></p>
         <p>Explores digital synthesis based on dynamic waveforms and atomic sound operations.</p>
         <p>Composed using software designed for sound streams and transformation pipelines.</p>
         <p>Sound as behaviour, occurring through operations sequences and generative processes.</p>

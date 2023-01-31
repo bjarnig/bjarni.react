@@ -439,6 +439,36 @@ class Cwa extends Component {
          */}
 
 <article>
+    <div className="date"> 26.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 13, Workshop</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa13.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa13.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa13.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 19.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 12, Non-standard synthesis</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa12.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa12.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa12.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 12.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 11, Microsound</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa11.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa11.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa11.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
         <div className="date"> 22.12.2022 </div>
         <div className="hr"><hr /></div>
         <h1>Class 10, Processing</h1>
@@ -464,7 +494,7 @@ class Cwa extends Component {
 <article>
         <div className="date"> 30.11.2022 </div>
         <div className="hr"><hr /></div>
-        <h1>Class 09, Synthesis</h1>
+        <h1>Class 08, Synthesis</h1>
         <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa08.zip" target="_blank">
         <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa08.png" />
         </a>

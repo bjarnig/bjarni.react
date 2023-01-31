@@ -403,6 +403,46 @@ class Pmb extends Component {
 
 */}
 
+<article>
+    <div className="date"> 31.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 15, Spectromorphology</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb15.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb15.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb15.zip" target="_blank">Download materials</a></p>
+  </article>
+
+
+<article>
+    <div className="date"> 24.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 14, CDP 2</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb14.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb14.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb14.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 17.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 12, CDP</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb12.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb12.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb12.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 10.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 11, Examples</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb11.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb11.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb11.zip" target="_blank">Download materials</a></p>
+  </article>
 
 <article>
         <div className="date"> 13.11.2021 </div>
@@ -416,8 +456,6 @@ class Pmb extends Component {
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb10.zip" target="_blank">Download materials</a></p>
         <p>* access code to the videos is the same as for class</p>
       </article>
-
-
 
 <article>
     <div className="date"> 06.12.2022 </div>

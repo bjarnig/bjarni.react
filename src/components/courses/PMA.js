@@ -131,6 +131,36 @@ class Pma extends Component {
 */}
 
 <article>
+    <div className="date"> 26.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 14, Workshop </h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma14.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma14.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma14.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 19.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 13, Patterns </h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma13.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma13.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma13.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 12.01.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 11, Sampling </h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma11b.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma11b.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma11b.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
     <div className="date"> 15.12.2022 </div>
     <div className="hr"><hr /></div>
     <h1>Class 10, Synthesis </h1>
