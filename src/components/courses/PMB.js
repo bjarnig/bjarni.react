@@ -399,9 +399,28 @@ class Pmb extends Component {
         <p><a href="https://www.youtube.com/watch?v=VaVWoq0F1VA" target="_blank">View the class</a></p>
         <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb06.zip" target="_blank">Download materials</a></p>
       </article>
-
-
 */}
+
+<article>
+    <div className="date"> 14.02.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 17, Live Coding</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb17.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb17.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb17.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 07.02.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 16, CDP and Recap</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb16.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb16.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb16.zip" target="_blank">Download materials</a></p>
+  </article>
+
 
 <article>
     <div className="date"> 31.01.2023 </div>
