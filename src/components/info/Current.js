@@ -42,8 +42,7 @@ const crucial = imageurl + "crucial.jpg";
 const lectoraat = imageurl + "lectoraat.jpg";
 const orpheus = imageurl + "bg-orpheus.jpg";
 const rc = imageurl + "rc.jpg";
-const SonologyConcert17October2018 =
-  imageurl + "SonologyConcert17October2018.jpg";
+const SonologyConcert17October2018 = imageurl + "SonologyConcert17October2018.jpg";
 const sonoconcert = imageurl + "sonoconcert.jpg";
 const OrpheusMachine = imageurl + "orpheus-machines.jpeg";
 const lueur1 = imageurl + "lueura.jpg";
@@ -55,6 +54,10 @@ const mda = imageurl + "MD-Curator.png";
 const mdb = imageurl + "MD-Lineup.png";
 const turina = imageurl + "turina.jpg";
 const turinb = imageurl + "turinb.jpg";
+const bba = imageurl + "bba.png";
+const bbb = imageurl + "bbb.png";
+const upicsa = imageurl + "DSC_0893.jpg";
+const upicsb = imageurl + "DSC_0895.jpg";
 
 class Current extends Component {
   constructor(props) {
@@ -80,6 +83,67 @@ class Current extends Component {
     return (
       <div className="container">
         <div className="content">
+
+        <article>
+            {" "}
+            <div className="date">17-02-2023</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>New Article on Orpheus Institute’s ECHO journal</p>
+            
+            <div className="img-center">
+              <a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">
+                <OpacityImage imageUrl={bba} />
+              </a>
+            
+            </div>
+            
+            <div className="img-center">
+              <a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">
+                <OpacityImage imageUrl={bbb} />
+              </a>
+            
+            </div>
+          
+            <p>My new article “Balancing Behaviours” was published on 17 February 2023 as part of the Orpheus Institute’s ECHO journal and the New Mimesis edition curated by Jonathan Impett. </p>
+            <p>The article presents ideas relating to the creation of computer music using emergent systems based on rules and local interactions. It involves a reflection on algorithms, interaction, and the behaviour of sound processes. It questions the scope and potential boundaries of computational systems through the space relating compositional practice with the development of generative environments.</p> 
+            <p>Three open-source software systems are also introduced, including Wildfires, which can be used to generate WFSCollider scores.            
+            </p>
+            <p><a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">https://echo.orpheusinstituut.be/article/balancing-behaviours</a></p>
+            <p><a href="https://echo.orpheusinstituut.be/issue/4" target="_blank">https://echo.orpheusinstituut.be/issue/4</a></p>
+            
+          </article>
+          <article>
+            {" "}
+            <div className="date">10-01-2023</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>New Release, UPICS on Flag Day Recordings</p>
+            
+            <div className="img-center">
+              <a href="https://flagdayrecordings.bandcamp.com" target="_blank">
+                <OpacityImage imageUrl={upicsb} />
+              </a>
+            
+            </div>
+            
+            <div className="img-center">
+              <a href="https://bjarni.bandcamp.com/album/upics" target="_blank">
+                <OpacityImage imageUrl={upicsa} />
+              </a>
+            
+            </div>
+          
+            <p>My latest album UPICS was released on the American label Flag Day Recordings. The pieces on the album are the outcome of his research into database-driven reconstructions based on sound analysis. All the source material has been created with Iannis Xenakis’s UPIC system: a graphical computer system where users draw shapes, waveforms, and modulations on ‘pages’ which form a composition or composed sound. </p>
+            <p>The material was recorded between September 2006 and March 2007 at the CCMIX institute in Paris. None of those recordings ever made it to a completed work until now, through the use of a newly developed system, SNDArchive (github.com/bjarnig/SNDArchive), which allows to recompose and combine sound parts based on different dimensions discovered through offline analysis processes. </p> 
+            <p>The idea was to create methods for engaging with sound archives in novel ways, to review them from a different angle, or to reveal previously unknown aspects of material already loaded with meaning.            
+            </p>
+            <p><a href="https://flagdayrecordings.bandcamp.com/album/upics" target="_blank">https://flagdayrecordings.bandcamp.com/album/upics</a></p>
+            <p><a href="https://bjarni.bandcamp.com" target="_blank">https://bjarni.bandcamp.com</a></p>
+            
+          </article>
 
         <article>
             {" "}

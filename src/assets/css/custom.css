@@ -6,8 +6,8 @@ padding-top: 60px;
 /*background-color: #070806;*/
 /*background-color: #0e0d06;
 background-color:#0e0a07;
-background-color:rgb(25,24,25); */
-background-color: rgb(25,24,25);
+background-color:#171b21; */
+background-color: #171b21; 
 
 
 color: #ffffff;
@@ -83,7 +83,7 @@ table a {
 }
 
 .navbar {
-	background-color: rgb(25,24,25);
+	background-color: #171b21;
 	min-height: 60px;
 	border-bottom : 1px solid white;
 }
@@ -96,7 +96,7 @@ table a {
 	font-family: 'Abel', sans-serif;
 	font-size: 1.25em;
 	/* color: #2C2C2C; */
-	background-color: rgb(25,24,25);
+	background-color: #171b21;
 	color: #fff;
 }
 
@@ -115,22 +115,22 @@ table a {
 
 .navbar-nav > .active > a > a:hover, .navbar-nav > .active > a:focus {
 	color: #72b6ec;
-	background-color: rgb(25,24,25);
+	background-color: #171b21;
 }
 
 .navbar-nav > .active > a:focus {
 	color: #72b6ec;
-	background-color: rgb(25,24,25);
+	background-color: #171b21;
 }
 
 .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
 	color: #72b6ec;
-	background-color: rgb(25,24,25);
+	background-color: #171b21;
 }
 
 .navbar-nav > .active > a:hover  {
 	/*background: #212121;*/
-	background: rgb(25,24,25);
+	background: #171b21;
 	color: #72b6ec;
 }
 

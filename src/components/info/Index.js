@@ -2,22 +2,22 @@ import React, { Component } from "react";
 
 import OpacityImage from "./../common/OpacityImage";
 const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
-// const brwn1 = imageurl + "brwn1b.png";
-// const brwn2 = imageurl + "brwn2b.png";
-// const brwn3 = imageurl + "brwn3b.png";
-// const brwn4 = imageurl + "brwn4b.png";
-// const brwn5 = imageurl + "brwn5b.png";
-// const brwn6 = imageurl + "brwn6b.png";
-// const brwn7 = imageurl + "brwn7b.png";
-// const brwn8 = imageurl + "brwn8b.png";
-// const brwn9 = imageurl + "brwn9b.png";
+const brwn1 = imageurl + "brwn1b.png";
+const brwn2 = imageurl + "brwn2b.png";
+const brwn3 = imageurl + "brwn3b.png";
+const brwn4 = imageurl + "brwn4b.png";
+const brwn5 = imageurl + "brwn5b.png";
+const brwn6 = imageurl + "brwn6b.png";
+const brwn7 = imageurl + "brwn7b.png";
+const brwn8 = imageurl + "brwn8b.png";
+const brwn9 = imageurl + "brwn9b.png";
 
-const upic1 = imageurl + "DSC_0901.jpg";
-const upic2 = imageurl + "DSC_0899.jpg";
-const upic3 = imageurl + "DSC_0898.jpg";
-const upic4 = imageurl + "DSC_0895.jpg";
-const upic5 = imageurl + "DSC_0893.jpg";
-const upic6 = imageurl + "DSC_0891.jpg";
+// const upic1 = imageurl + "DSC_0901.jpg";
+// const upic2 = imageurl + "DSC_0899.jpg";
+// const upic3 = imageurl + "DSC_0898.jpg";
+// const upic4 = imageurl + "DSC_0895.jpg";
+// const upic5 = imageurl + "DSC_0893.jpg";
+// const upic6 = imageurl + "DSC_0891.jpg";
 
 
 class About extends Component {
@@ -33,7 +33,7 @@ class About extends Component {
             <div className="col-lg-12"></div>
           </div>
           <div className="bio">
-            {/* <div className="row">
+            <div className="row">
               <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="current">
                 <OpacityImage imageUrl={brwn1} />
@@ -92,8 +92,11 @@ class About extends Component {
                 <h5>Works </h5>
                 </a>
               </div>
-            </div> */}
+            </div> 
 
+
+
+ {/*
             <div className="row">
               <div className="col-lg-6 col-sm-6 col-xs-12">
                 <a href="https://flagdayrecordings.bandcamp.com/album/upics">
@@ -139,6 +142,7 @@ class About extends Component {
                 </a>
               </div>
             </div> 
+            */}
            
           </div>
         </div>
