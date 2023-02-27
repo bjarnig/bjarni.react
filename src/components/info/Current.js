@@ -90,7 +90,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>New Article on Orpheus Institute’s ECHO journal</p>
+            <p>Article on Orpheus Institute’s ECHO journal</p>
             
             <div className="img-center">
               <a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">
@@ -106,7 +106,7 @@ class Current extends Component {
             
             </div>
           
-            <p>My new article “Balancing Behaviours” was published on 17 February 2023 as part of the Orpheus Institute’s ECHO journal and the New Mimesis edition curated by Jonathan Impett. </p>
+            <p>“Balancing Behaviours” was published on 17 February 2023 as part of the Orpheus Institute’s ECHO journal and the New Mimesis edition curated by Jonathan Impett. </p>
             <p>The article presents ideas relating to the creation of computer music using emergent systems based on rules and local interactions. It involves a reflection on algorithms, interaction, and the behaviour of sound processes. It questions the scope and potential boundaries of computational systems through the space relating compositional practice with the development of generative environments.</p> 
             <p>Three open-source software systems are also introduced, including Wildfires, which can be used to generate WFSCollider scores.            
             </p>

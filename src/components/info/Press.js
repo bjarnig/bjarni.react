@@ -17,19 +17,29 @@ class Press extends Component {
           </li>
         </ul>
         <div className="hr"><hr/></div>
+        
         <article>
-          <div className="date">Lueur,
-            <a href="https://toneshift.net/2018/12/09/lueur-by-bjarni-gunnarsson/"> toneshift.net</a>
+          <div className="date">Upics,
+            <a href="https://audiocrackle.blogspot.com/2023/02/non-music-roundup-feb-23.html"> audiocracklet</a>
           </div>
           <br/>
-            <p>Icelandic composer and sound artist Bjarni Gunnarsson has just released his latest album, Lueur, four electroacoustic tracks, on London imprint Tartaruga Records in an edition of 200 copies (silkscreened by Luke Twyman, 16 ways). First up is the isolationist Prisme, which is quite chilling and sparse at first, but slowly dropping into the mix are granualized effects, and other abstractions. These pops and twists sound like a contortionist trying to undo a tight situation from several angles. Many might hear this initially as something topically atonal, but there are actually a whole lot of pieces that fit and flow like mercury, dazzling and dangerous.</p>
-            <p>Gunnarsson utilizes all sorts of strange accents of twisted flux, echo and silence to keep the listener as active as he is. There are plenty of crackling surface and aerated experiments. On Brackets the reverberations are distinct, it sounds like a jeweler working on a metallurgic lathe of some sort, where the pitch rises, and divides, and then dissipates. For all the glorious noise variants throughout it would seem clear that the composers greatest asset is his allowance of broken silences – which allow the recording to penetrate, and become more of a series of montage vignettes rather than a composition of one emotive color. Gunnarsson approaches this with poise, so patient and deliberate. It’s as if he has explored the acoustic properties of Earthly elements.</p>
-            <p>“​The music is derived from generative processes that often appear directly entangled, that are set in motion and activated while maintaining their own degree of autonomy. It takes a certain time for a process to manifest itself. To express its time-varying qualities. How it unfolds resembles a certain kind of evolution, a becoming that does not have a clear goal but that is based on a constant renewal and recreation.”</p>
-            <p>Once flipped this record becomes an even bolder form of minimalism on Epicycle. With any volume your average-sized room will be quaking. Though the obvious industrial underpinnings here do have their own sense of power, it’s what is hidden behind the drone and serrated sound wall that becomes the foil for its deepest tension. That irresistible blend of the un/seen. Here at the midpoint this is what I consider the peak of the recording, it’s also a breaking point, where the highs and lows start to separate, and its blunt shards of detritus start to settle. Though it is far from a calm and meditative setting – moreso the composer casts an atmosphere that is rich in dark alleys and distant reaches with electrified nerve endings.</p>
-            <p>The deeper you go the more peculiar the squeaky stops/starts follow. There is so much patience in the approach to detail. And as it opens, Aperture, the shortest work at under six minutes, brings us home. It warbles with a crippled slowness, leathery twists and airy rushes. At one point it sounds like a big exhalation. As the rugged dial turns to viscous microstatic and other circumstance, the record seems to blend the worlds of Nurse With Wound, Wolfgang Voigt and Basic Channel somehow, yet it is in its own lane.</p>
-            <p>Top pick for December.</p>
-          <div className="quote">toneshift.net</div>
+            <p>Bjarni Gunnarsson is an Icelandic composer and software engineer, based in The Netherlands, whose work is involved with computer music and algorithmic composition. It specifically concerns process-based ideas. He composes music focused on internal activity, fluid sound-structures of forms.</p>
+            <p>'UPICS' is his latest album, released on Flag Day Recordings. It is the outcome of Gunnarsson's research into database-driven reconstructions based on sound analysis, created with the UPIC system, which you can read about on the Bandcamp page.</p>
+            <p>These compositions are cold and unnerving eruptions of fuzzy synthetic noise patterns, erratic blips, glitchy ambience, laser-like frequencies, sinister rumblings, stuttering static, and a plethora of other unsettling and unpredictable sonic abstractions. They contain a dark inner world of rapidly fluctuating sound patterns, shapes, modulations and waveforms.</p>
+            <p>At times quiet and ominous, at other times violent and jarring...this album is a chaotic hive of bizarre artificial internal activity. This music is both frightening and dazzling. And undeniably unique listening experience.</p>
+          <div className="quote">audiocrackle</div>
         </article>
+        
+      <article>
+        <div className="date">Upics,
+          <a href="https://rateyourmusic.com/release/album/bjarni-gunnarsson/upics/"> https://rateyourmusic.com</a>
+        </div>
+        <br/>
+        <p>Whoever knows me a bit, knows how much I love Bjarni’s music. When in 2019 I moved to the Netherlands, one of the main reasons was to get the opportunity to follow his lessons on algorithmic composition at the Institute of Sonology. His maximalist noise creations are built from extremely appealing sonic processes obtained through algorithms that follow the tradition initiated by Ιάννης Ξενάκης [Iannis Xenakis], Gottfried Michael Koenig and Herbert Brün.</p> 
+        <p>Bjarni is a great enthusiast of non-linear synthesis techniques, that he carefully crafts through incredibly clever algorithmic structures and then arranges with a more linear editing approach. The result is always stunning, incredibly rich and vivid, with abstract sound surfaces morphing and colliding in a ceaseless flow of transformation. His sounds are like electrified mineral formations being quickly shaped by unknown meteorological events, possibly evoking the stunningly hostile Icelandic environment where he grew up.</p>
+        <p>Whereas in the last few years Bjarni has crystallized in more or less the same sonic world, Upics is clearly a different outcome. The sound materials for the album date from 2006-7, when he was at the CCMIX institute of Paris, where he used the UPIC software developed by Xenakis, a memorable environment that allowed to manually draw waveforms. These sounds apparently remained abandoned in a folder for years, until Bjarni came back to them using novel techniques of algorithmic manipulation of large sound databases, in a fashion that has recently become an interest for many electroacoustic composers such as James Bradbury and Pierre Alexandre Tremblay. Nevertheless, the music retains Bjarni’s characteristic aesthetic made of highly abstract, austere, and elegant inharmonic sound processes involving varying degrees of probability and inter-relatedness in their micro-sonic structure, while the overall form respects the traditional sections of different density and dynamics coming from acousmatic music.</p>
+        <div className="quote">Riccardo Ancona, https://rateyourmusic.com</div>
+      </article>
         <div className="hr"><hr/></div>
         <article>
           <div className="date">Lueur,
