@@ -58,6 +58,7 @@ const bba = imageurl + "bba.png";
 const bbb = imageurl + "bbb.png";
 const upicsa = imageurl + "DSC_0893.jpg";
 const upicsb = imageurl + "DSC_0895.jpg";
+const iclc2023 = imageurl + "iclc2023.png";
 
 class Current extends Component {
   constructor(props) {
@@ -83,6 +84,28 @@ class Current extends Component {
     return (
       <div className="container">
         <div className="content">
+
+        <article>
+            {" "}
+            <div className="date">20-04-2023</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>ICLC 2023</p>
+            
+            <div className="img-center">
+              <a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">
+                <OpacityImage imageUrl={iclc2023} />
+              </a>
+            
+            </div>
+           
+            <p>Playing as part of ICLC 2023 'Alternative Algorithms'. Doors 19:30 / Show: 20:00, EKKO in Utrecht.</p>
+            <p>‘Blocking Behaviours’ concerns the real-time interpretation of two simulations of complex behaviour through an agent-based system. The simulations enforce a way of thinking that revolves around balancing behaviours, an attitude that considers musical output as something that emerges from an interaction with an autonomous system. The simulation acts as a generative, rule-based system producing output that is subject to different kinds of observation algorithms. The idea is that evolving processes are set in motion where the creator/composer becomes an observer of various developments. The output can not always be controlled in detail but is instead interpreted and further processed. The interpretation involves a mapping between different modes of representations in order to simplify or combine. In ‘Blocking Behaviours’ the idea is to explore the boundary of generative behaviour, control and and direct access to computer sound synthesis.</p>
+            <p><a href="https://iclc.toplap.org/2023" target="_blank">https://iclc.toplap.org/2023</a></p>
+            <p><a href="https://ekko.nl/event/alternative-algorithms" target="_blank">https://ekko.nl/event/alternative-algorithms</a></p>
+            
+          </article>
 
         <article>
             {" "}

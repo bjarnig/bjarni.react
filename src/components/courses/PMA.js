@@ -131,6 +131,26 @@ class Pma extends Component {
 */}
 
 <article>
+  <div className="date"> 06.04.2023 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 19, MIDI and Mapping </h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma19.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma19.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma19.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+  <div className="date"> 23.03.2023 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 18, GUI </h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma18.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma18.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma18.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
   <div className="date"> 23.02.2023 </div>
   <div className="hr"><hr /></div>
   <h1>Class 17, Demand </h1>

@@ -402,6 +402,26 @@ class Pmb extends Component {
 */}
 
 <article>
+    <div className="date"> 25.04.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 20, Tidal Cycles 2</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb20.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb20.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb20.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+    <div className="date"> 11.04.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 19, Tidal Cycles</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb19.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb19.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb19.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
     <div className="date"> 21.03.2023 </div>
     <div className="hr"><hr /></div>
     <h1>Class 18, Live Coding</h1>
@@ -410,7 +430,6 @@ class Pmb extends Component {
     </a>
     <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb18.zip" target="_blank">Download materials</a></p>
 </article>
-
 
 <article>
     <div className="date"> 14.02.2023 </div>

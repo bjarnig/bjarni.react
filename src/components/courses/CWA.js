@@ -438,6 +438,47 @@ class Cwa extends Component {
 
          */}
 
+
+<article>
+  <div className="date"> 13.04.2023 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 20, Sound Processes</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa20.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa20.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa20.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+    <div className="date"> 06.04.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 19, Workshop, CDP</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa19.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa19.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa19.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 30.03.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 18, CDP</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa18.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa18.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa18.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 23.03.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 17, CDP</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa17.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa17.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa17.zip" target="_blank">Download materials</a></p>
+  </article>
+
 <article>
     <div className="date"> 23.02.2023 </div>
     <div className="hr"><hr /></div>
