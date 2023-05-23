@@ -2,6 +2,17 @@ import React, { Component } from "react";
 
 import OpacityImage from "./../common/OpacityImage";
 const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
+
+// const brwn1 = imageurl + "upics-small-fp.jpeg";
+// const brwn2 = imageurl + "anticlines-small-fp.jpeg";
+// const brwn3 = imageurl + "fracas-small-fp.jpg";
+// const brwn4 = imageurl + "cendres-small-fp.jpeg";
+// const brwn5 = imageurl + "vv-small-fp.jpeg";
+// const brwn6 = imageurl + "lueur-small-fp.jpeg";
+// const brwn7 = imageurl + "paths-small-fp.jpeg";
+// const brwn8 = imageurl + "pp-small-fp.jpeg";
+// const brwn9 = imageurl + "safn-small-fp.jpeg";
+
 const brwn1 = imageurl + "brwn1b.png";
 const brwn2 = imageurl + "brwn2b.png";
 const brwn3 = imageurl + "brwn3b.png";
