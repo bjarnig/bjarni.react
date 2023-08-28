@@ -214,25 +214,25 @@ class Login extends React.Component {
 
   login = () => {
 
-    if(this.state.value === 'programming') {
-        fakeAuth.authenticate('success', () => {
-            this.setState({ redirectTo: '/pma' });
-        });
-    } else if(this.state.value === 'music') {
-        fakeAuth.authenticate('success', () => {
-            this.setState({ redirectTo: '/pmb' });
-        });
-    } else if(this.state.value === 'composing') {
-        fakeAuth.authenticate('success', () => {
-            this.setState({ redirectTo: '/cwa' });
-        });
-     } else if(this.state.value === 'workshop') {
-      fakeAuth.authenticate('success', () => {
-          this.setState({ redirectTo: '/workshops' });
-      });
-    } else {
-        console.log('No login!');
-     }
+    // if(this.state.value === 'programming') {
+    //     fakeAuth.authenticate('success', () => {
+    //         this.setState({ redirectTo: '/pma' });
+    //     });
+    // } else if(this.state.value === 'music') {
+    //     fakeAuth.authenticate('success', () => {
+    //         this.setState({ redirectTo: '/pmb' });
+    //     });
+    // } else if(this.state.value === 'composing') {
+    //     fakeAuth.authenticate('success', () => {
+    //         this.setState({ redirectTo: '/cwa' });
+    //     });
+    //  } else if(this.state.value === 'workshop') {
+    //   fakeAuth.authenticate('success', () => {
+    //       this.setState({ redirectTo: '/workshops' });
+    //   });
+    // } else {
+    //     console.log('No login!');
+    //  }
   };
 
   change = (e) => {
