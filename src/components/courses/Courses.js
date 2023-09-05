@@ -5,10 +5,10 @@ import OpacityImage from './../common/OpacityImage';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
-const algorithms = imageurl + 'cwa.png';
-const programming = imageurl + 'pma.png';
-const music = imageurl + 'pmb.png';
-const workshop = imageurl + 'network.png';
+const algorithms = imageurl + 'xcwa.jpg';
+const programming = imageurl + 'xpma.jpg';
+const music = imageurl + 'xpmb.jpg';
+const workshop = imageurl + 'xworkshop.jpg';
 
 class Courses extends Component {
   render() { return<div className="container">
@@ -30,6 +30,10 @@ class Courses extends Component {
               <br />
               <p><a className="btn btn-default" href="/pma">Access</a></p>
           </div>
+
+          </div>
+
+          <div className="row">
       
           <div className="col-lg-6">
               <h5>Programming and Music 2</h5>
@@ -44,6 +48,8 @@ class Courses extends Component {
               <br />
               <p><a className="btn btn-default" href="/workshops">Access</a></p>
           </div>
+
+          
 
         </div>
 
