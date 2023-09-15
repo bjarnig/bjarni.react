@@ -12,7 +12,7 @@ class Pma extends Component {
   <div className="date"> 12.05.2022 </div>
   <div className="hr"><hr /></div>
   <h1>Class 22, Examples</h1>
-  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma22.zip" target="_blank">
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma22.zip" target="_blank">
   <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma22.png" />
   </a>
   <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma22.zip" target="_blank">Download materials</a></p>
@@ -128,7 +128,7 @@ class Pma extends Component {
     <p>* access code to the videos is the same as for class</p>
   </article>
 
-*/}
+
 <article>
   <div className="date"> 25.05.2023 </div>
   <div className="hr"><hr /></div>
@@ -320,26 +320,28 @@ class Pma extends Component {
             <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma03.zip" target="_blank">Download materials</a></p>
           </article>
 
-
+      */}
 
 <article>
-        <div className="date"> 15.09.2022 </div>
+        <div className="date"> 14.09.2023 </div>
         <div className="hr"><hr /></div>
         <h1>Class 02, Syntax</h1>
-        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma02.zip" target="_blank">
-        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma02.png" />
+        <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma02.zip" target="_blank">
+        <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma02.png" />
         </a>
-        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma02.zip" target="_blank">Download materials</a></p>
+        <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma02.zip" target="_blank">Download materials</a></p>
       </article>
 
+
+
 <article>
-          <div className="date"> 08.09.2022 </div>
+          <div className="date"> 07.09.2023 </div>
           <div className="hr"><hr /></div>
           <h1>Class 01, Programming and Music 1</h1>
-          <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma01.zip" target="_blank">
-          <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma01.png" />
+          <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma01.zip" target="_blank">
+          <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma01.png" />
           </a>
-          <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pma01.zip" target="_blank">Download materials</a></p>
+          <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma01.zip" target="_blank">Download materials</a></p>
         </article> 
 
       </div>
