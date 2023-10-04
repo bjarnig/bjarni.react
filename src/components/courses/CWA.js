@@ -643,49 +643,51 @@ class Cwa extends Component {
             <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa05.zip" target="_blank">Download materials</a></p>
           </article>
 
+          */}
+
 <article>
-            <div className="date"> 29.09.2022 </div>
+            <div className="date"> 28.09.2022 </div>
             <div className="hr"><hr /></div>
             <h1>Class 04, Workshop 1</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa04.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa04.png" />
+            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa04.zip" target="_blank">
+            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa04.png" />
             </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa04.zip" target="_blank">Download materials</a></p>
+            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa04.zip" target="_blank">Download materials</a></p>
           </article>
+
+   
 
 <article>
-            <div className="date"> 23.09.2022 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 03, Patterns</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa03.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa03.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/cwa03.zip" target="_blank">Download materials</a></p>
-          </article>
-
- */}
+    <div className="date"> 21.09.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 03, Patterns</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa03.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa03.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa03.zip" target="_blank">Download materials</a></p>
+  </article>
 
 <article>
-            <div className="date"> 14.09.2023 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 02, SuperCollider</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa02.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa02.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa02.zip" target="_blank">Download materials</a></p>
-          </article>
+    <div className="date"> 14.09.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 02, SuperCollider</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa02.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa02.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa02.zip" target="_blank">Download materials</a></p>
+  </article>
 
          
 
 <article>
-          <div className="date"> 07.09.2023 </div>
-          <div className="hr"><hr /></div>
-          <h1>Class 01, Composing with Algorithms</h1>
-          <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.zip" target="_blank">
-          <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.png" />
-          </a>
-          <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.zip" target="_blank">Download materials</a></p>
-        </article> 
+    <div className="date"> 07.09.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 01, Composing with Algorithms</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.zip" target="_blank">Download materials</a></p>
+  </article> 
 
       </div>
   </div>
