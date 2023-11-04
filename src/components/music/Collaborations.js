@@ -35,7 +35,7 @@ constructor(props) {
               <a href="live">live</a>
             </li>
             <li className="active">
-              <a href="collaborations">co</a>
+              <a href="collaborations">collaborations</a>
             </li>
            
             <li>

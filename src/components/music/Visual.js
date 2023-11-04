@@ -47,7 +47,7 @@ class Visual extends Component {
               <a href="live">live</a>
             </li>
             <li>
-              <a href="collaborations">co</a>
+              <a href="collaborations">collaborations</a>
             </li>
             <li className="active">
               <a href="visual">visual</a>
@@ -90,6 +90,13 @@ class Visual extends Component {
 
 </div> */}
         
+        <div className="media">
+        <div className="date">Blocking Behaviours, LIVE at ICLC 2023</div>
+        <br />
+        <iframe src="https://www.youtube.com/embed/NJQ1mNvPo9k?si=Slm7KUCS-aEkGQY2" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="hr"><hr/></div>
+
         <div className="media">
         <div className="date">Hydra and SuperCollider</div>
         <br />

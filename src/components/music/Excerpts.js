@@ -24,7 +24,7 @@ class Excerpts extends Component {
               <a href="live">live</a>
             </li>
             <li>
-              <a href="collaborations">co</a>
+              <a href="collaborations">collaborations</a>
             </li>
             <li>
               <a href="visual">visual</a>

@@ -29,6 +29,13 @@ class Works extends Component {
                   </thead>
                   <tbody>
                         <tr>
+                          <td><a href="https://soundcloud.com/bjarni/blocking-behaviours-iclc-example">Blocking Behaviours</a></td>
+                          <td>2023</td>
+                          <td>25:00</td>
+                          <td>4</td>
+                          <td>-</td>
+                       </tr>
+                        <tr>
                           <td><a href="https://flagdayrecordings.bandcamp.com/track/vacuum">Vacuum</a></td>
                           <td>2023</td>
                           <td>08:08</td>

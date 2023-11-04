@@ -59,6 +59,7 @@ const bbb = imageurl + "bbb.png";
 const upicsa = imageurl + "DSC_0893.jpg";
 const upicsb = imageurl + "DSC_0895.jpg";
 const iclc2023 = imageurl + "iclc2023.png";
+const iil = imageurl + "bg-iil.png";
 
 class Current extends Component {
   constructor(props) {
@@ -87,6 +88,30 @@ class Current extends Component {
 
         <article>
             {" "}
+            <div className="date">03-11-2023</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Talk at the IIL Open Lab</p>
+            
+            <div className="img-center">
+              <a href="https://iil.is/openlab/67" target="_blank">
+                <OpacityImage imageUrl={iil} />
+              </a>
+            
+            </div>
+           
+            <p>I will give a talk on Software, Sound Synthesis and Composition at the Intelligent Instruments Lab in Reykjavík. This Friday at 15:00. </p>
+            <p>´In this lecture, I will discuss my recent projects involving software making, sound synthesis, and composition. I will reflect on the use of algorithms and the nature of generative sound created through reconfiguration and live coding.
+The featured approaches highlight the scope and potential boundaries of computational systems by relating sound-making to the development of generative environments. I will outline the process of developing such systems, but also the act of using them within a dynamic musical context. The goal is to review and combine the thinking of sound, control and causality for compositional approaches in computer music.
+During the talk, software applications will be presented, the ideas behind them discussed and examples of music composed with them be played.´</p>
+            <p><a href="https://iclc.toplap.org/2023" target="_blank">https://iil.is/openlab/67</a></p>
+          
+            
+          </article>
+
+        <article>
+            {" "}
             <div className="date">20-04-2023</div>
             <div className="hr">
               <hr />
@@ -94,7 +119,7 @@ class Current extends Component {
             <p>ICLC 2023</p>
             
             <div className="img-center">
-              <a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">
+              <a href="https://iclc.toplap.org/2023" target="_blank">
                 <OpacityImage imageUrl={iclc2023} />
               </a>
             

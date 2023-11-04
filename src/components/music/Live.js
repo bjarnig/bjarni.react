@@ -30,7 +30,7 @@ class Live extends Component {
               <a href="live">live</a>
             </li>
             <li>
-              <a href="collaborations">co</a>
+              <a href="collaborations">collaborations</a>
             </li>
             <li>
               <a href="visual">visual</a>
@@ -43,6 +43,11 @@ class Live extends Component {
           <div className="hr"><hr/></div>
 
         </div>
+
+    <div className="media">
+    <p>ICLC</p>
+    <iframe width="100%" height="166" scrolling="no" frameBorder="no" src="http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1403082631&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    </div>
 
     <div className="media">
     <p>Ghent</p>
