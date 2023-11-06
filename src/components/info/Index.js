@@ -100,7 +100,7 @@ class About extends Component {
               <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="works">
                 <OpacityImage imageUrl={brwn9} />
-                <h5>Works </h5>
+                <h5>Catalog </h5>
                 </a>
               </div>
             </div> 

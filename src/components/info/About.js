@@ -15,7 +15,7 @@ class About extends Component {
   render() { return<div className="container">
     <div className="content">
         <ul className="nav nav-pills"><li className="active"><a href="/about">bio</a></li>
-        <li><a href="/works">works</a></li>
+        <li><a href="/works">catalog</a></li>
         </ul>
         <div className="hr"><hr /></div>
 

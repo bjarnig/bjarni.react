@@ -11,7 +11,7 @@ class Works extends Component {
 
   render() { return<div className="container">
     <div className="content">
-        <ul className="nav nav-pills"><li><a href="/about">bio</a></li><li className="active"><a href="/works">works</a></li></ul>
+        <ul className="nav nav-pills"><li><a href="/about">bio</a></li><li className="active"><a href="/works">catalog</a></li></ul>
         <div className="hr"><hr /></div>
 
       <div className="row">
