@@ -634,6 +634,16 @@ class Pmb extends Component {
 </article> */}
 
 <article>
+<div className="date"> 14.11.2023 </div>
+<div className="hr"><hr /></div>
+<h1>Class 07, Chaos</h1>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb07.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb07.png" />
+</a>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb07.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
 <div className="date"> 07.11.2023 </div>
 <div className="hr"><hr /></div>
 <h1>Class 06, Sonification</h1>
