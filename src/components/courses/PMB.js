@@ -634,7 +634,37 @@ class Pmb extends Component {
 </article> */}
 
 <article>
-<div className="date"> 09.01.2023 </div>
+<div className="date"> 30.01.2024 </div>
+<div className="hr"><hr /></div>
+<h1>Class 12, CDP 2</h1>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb12.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb12.png" />
+</a>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb12.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+<div className="date"> 23.01.2024 </div>
+<div className="hr"><hr /></div>
+<h1>Class 11, CDP</h1>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb11.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb11.png" />
+</a>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb11.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+<div className="date"> 16.01.2024 </div>
+<div className="hr"><hr /></div>
+<h1>Class 10, Evolution</h1>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb10.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb10.png" />
+</a>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb10.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+<div className="date"> 09.01.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 09, Networks</h1>
 <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb09.zip" target="_blank">
