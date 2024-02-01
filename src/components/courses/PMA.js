@@ -287,6 +287,16 @@ class Pma extends Component {
 */}
 
 <article>
+    <div className="date"> 01.02.2024 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 13, More Patterns </h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma13.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma13.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma13.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
     <div className="date"> 18.01.2024 </div>
     <div className="hr"><hr /></div>
     <h1>Class 12, Patterns </h1>
