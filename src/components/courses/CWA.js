@@ -626,6 +626,17 @@ class Cwa extends Component {
 */}
 
 <article>
+    <div className="date"> 15.02.2023 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 16, Workshop 3</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa16.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa16.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa16.zip" target="_blank">Download materials</a></p>
+  </article>
+
+
+<article>
     <div className="date"> 08.02.2024 </div>
     <div className="hr"><hr /></div>
     <h1>Class 15, Waveforms</h1>
@@ -649,7 +660,7 @@ class Cwa extends Component {
 <article>
     <div className="date"> 18.01.2024 </div>
     <div className="hr"><hr /></div>
-    <h1>Class 13, Interfaces</h1>
+    <h1>Class 13, MIDI & Mapping</h1>
     <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa13.zip" target="_blank">
     <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa13.png" />
     </a>
