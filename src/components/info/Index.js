@@ -13,15 +13,16 @@ const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
 // const brwn8 = imageurl + "pp-small-fp.jpeg";
 // const brwn9 = imageurl + "safn-small-fp.jpeg";
 
-const brwn1 = imageurl + "brwn1b.png";
-const brwn2 = imageurl + "brwn2b.png";
-const brwn3 = imageurl + "brwn3b.png";
-const brwn4 = imageurl + "brwn4b.png";
-const brwn5 = imageurl + "brwn5b.png";
-const brwn6 = imageurl + "brwn6b.png";
-const brwn7 = imageurl + "brwn7b.png";
-const brwn8 = imageurl + "brwn8b.png";
-const brwn9 = imageurl + "brwn9b.png";
+// const brwn1 = imageurl + "brwn1b.png";
+const brwn1 = imageurl + "gdla_blurb.png";
+const brwn2 = imageurl + "gdlb_blurb.png";
+const brwn3 = imageurl + "gdlf_blurb.png";
+const brwn4 = imageurl + "gdle_blurb.png";
+const brwn5 = imageurl + "gdld_blurb.png";
+const brwn6 = imageurl + "gdlc_blurb.png";
+const brwn7 = imageurl + "gdlg_blurb.png";
+const brwn8 = imageurl + "gdlh_blurb.png";
+const brwn9 = imageurl + "gdli_blurb.png";
 
 // const upic1 = imageurl + "DSC_0901.jpg";
 // const upic2 = imageurl + "DSC_0899.jpg";
@@ -73,13 +74,13 @@ class About extends Component {
               </div>
               <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="courses">
-                <OpacityImage imageUrl={brwn6} />
+                <OpacityImage imageUrl={brwn5} />
                 <h5>Courses </h5>
                 </a>
               </div>
               <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="press">
-                <OpacityImage imageUrl={brwn8} />
+                <OpacityImage imageUrl={brwn6} />
                 <h5>Press </h5>
                 </a>
               </div>
@@ -93,7 +94,7 @@ class About extends Component {
               </div>
               <div className="col-lg-4 col-sm-4 col-xs-2">
                 <a href="visual">
-                <OpacityImage imageUrl={brwn5} />
+                <OpacityImage imageUrl={brwn8} />
                 <h5>Visual </h5>
                 </a>
               </div>
