@@ -123,7 +123,7 @@ class Releases extends Component {
         <div className="release-title">Fracas (2021)</div>
 
         <div className="img-center">
-          <a href="https://sovnrecords.bandcamp.com/album/cendres">
+          <a href="https://superpang.bandcamp.com/album/no-catalogue-number-tracks">
           <OpacityImage imageUrl= {fracas} />
           </a>
         </div>
@@ -133,7 +133,7 @@ class Releases extends Component {
         </p>
         <p></p>
         <div className="bandcamp">
-        <iframe style={this.state.bandcampStyleCendres} src="https://bandcamp.com/EmbeddedPlayer/album=1253221369/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://bjarni.bandcamp.com/album/fracas">Fracas by Bjarni Gunnarsson</a></iframe>
+        <iframe style={this.state.bandcampStyleCendres} src="https://bandcamp.com/EmbeddedPlayer/album=3045698760/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=455979614/transparent=true/" seamless><a href="https://superpang.bandcamp.com/album/no-catalogue-number-tracks">Fracas by Bjarni Gunnarsson</a></iframe>
         </div>
         </div>
 

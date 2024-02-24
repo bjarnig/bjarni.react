@@ -14,15 +14,15 @@ const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
 // const brwn9 = imageurl + "safn-small-fp.jpeg";
 
 // const brwn1 = imageurl + "brwn1b.png";
-const brwn1 = imageurl + "gdla_blura.png";
+const brwn1 = imageurl + "gdlb_sharpen.png";
 const brwn2 = imageurl + "gdli_blurb.png";
-const brwn3 = imageurl + "gdlf_blura.png";
-const brwn4 = imageurl + "gdle_blura.png";
-const brwn5 = imageurl + "gdld.png";
-const brwn6 = imageurl + "gdlc_blura.png";
-const brwn7 = imageurl + "gdlh_blura.png";
-const brwn8 = imageurl + "gdlg.png";
-const brwn9 = imageurl + "gdlb_blura.png";
+const brwn3 = imageurl + "gdlf.png";
+const brwn4 = imageurl + "gdle.png";
+const brwn5 = imageurl + "gdlc_ripple.png";
+const brwn6 = imageurl + "gdlc.png";
+const brwn7 = imageurl + "gdlh.png";
+const brwn8 = imageurl + "gdla_dustb.png";
+const brwn9 = imageurl + "gdlb.png";
 
 // const upic1 = imageurl + "DSC_0901.jpg";
 // const upic2 = imageurl + "DSC_0899.jpg";

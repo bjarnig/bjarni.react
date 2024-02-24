@@ -24,32 +24,16 @@ class About extends Component {
         <OpacityImage imageUrl= {about} />
         {/* <div className="img-center"><img onload="this.style.opacity='1.0';" src={bjarni} alt="Bjarni Gunnarsson" className="img-responsive" /></div> */}
         </div>
+        
       </div>
       <div className="bio">
       <div className="row">
       <div className="col-lg-8">
      
-         <p>
-         Composer and Computer Scientist from Reykjavík, Iceland. Interested in process-based sound and algorithmic composition. How sound and software interacts and the relationship between algorithms and musical behaviour. Recently exploring adaptive synthetic environments, generative sound streams, digital interrupts, and machine-listening applications.
-        </p>
-
-        <p>
-        Performed in festivals such as Tectonics, Rewire, Today's Art, Sonar and Presences Electroniques and in countries such as Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Switzerland, Italy, Ireland and Iceland. Released on labels such as Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny, Tartaruga, SUPERPANG and SØVN.  Collections of his solo works can be found on the releases “Safn 2006-2009” (2010), "Processes & Potentials" (2013), "Paths" (2016), "Lueur" (2018), "Volume & Void" (2020), "Cendres" (2020), "Anticlines" (2021) and "UPICS" (2023). 
-        </p>
-
-        <p>
-        Interested in exploring the contact between composed computer sound structures and space. Has presented/worked in various spatial configurations such as at the WFS system in The Hague (192 speakers), the WFS system in Berlin (832 speakers), the BEAST system in Birmingham (up to 100 speakers), GRM Paris as well as recent 8 and 4 channel formations.
-        </p>
-
-        <p>
-        A faculty member at the Institute of Sonology, Royal Conservatory in The Hague and currently a teacher of algorithmic composition and computer music. Studied computer science at the University of Reykjavík and composition with Gerard Pape, Trevor Wishart, Agostino Di Scipio and Curtis Roads at the CCMIX music centre in Paris. Holds a masters degree from Sonology completed with Paul Berg, Kees Tazelaar and Richard Barrett.
-        </p>
-
-        <p>
-        Currently working with algorithmic composition, generative environments, compositions and live electronics. Also working on new material with his long-lasting electronic music duo Einóma, and for MGBG, a duo of voice and electronics with Marie Guilleray.
-        </p>
-
-    
+      <p>Bjarni Gunnarsson is an Icelandic Composer and Computer Scientist from Reykjavík, Iceland. He’s interested in process-based sound and algorithmic composition. How sound and software interact and the relationship between algorithms and musical behaviour. He creates compositions that put into foreground behaviours, actions, fluid sound structures, fuzzy materials, or forms. His recent research focus includes the construction of persistent synthetic environments, creative uses of digital interrupts, and machine-listening observers that react to computer-generated sound.</p>
+      <p>Bjarni has presented his research at conferences such as ICMC (International Computer Music Conference),  ICLC (International Conference on Live Coding), SMC (Sound and Music Computing) and xCoAx (Conference on Computation, Communication, Aesthetics & X). He has performed in festivals such as Tectonics, Rewire, Today's Art, Sonar and Presences Electroniques and released music on labels such as Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, LMALC, Shipwrec, 3LEAVES, Granny, Tartaruga, SUPERPANG and SØVN. Collections of his solo works can be found on the releases “Safn 2006-2009” (2010), "Processes & Potentials" (2013), "Paths" (2016), "Lueur" (2018), "Volume & Void" (2020), "Cendres" (2020), "Anticlines" (2021) and "UPICS" (2023).</p>
+      <p>Interested in exploring the contact between composed computer sound structures and space. Has presented/worked in various spatial configurations such as at the WFS system in The Hague (192 speakers), the WFS system in Berlin (832 speakers), the BEAST system in Birmingham (up to 100 speakers), GRM Paris as well as recent 8 and 4 channel formations.</p>
+      <p>Bjarni is a faculty member at the Institute of Sonology, Royal Conservatory in The Hague and a teacher of algorithmic composition and computer music. He studied computer science at the University of Reykjavík and composition with Gerard Pape, Trevor Wishart, Agostino Di Scipio and Curtis Roads at the CCMIX music centre in Paris. He holds a master’s degree from Sonology completed with Paul Berg, Kees Tazelaar and Richard Barrett.</p>
        
       </div>
       

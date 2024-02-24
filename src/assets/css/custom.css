@@ -14,11 +14,11 @@ color: #ffffff;
 /*font-family: "Lucida Grande","Lucida Sans Unicode","Trebuchet MS",Helvetica,Arial,Verdana,sans-serif;*/
 /*font-family: 'Abel', sans-serif;*/
 /*font-family: Georgia, serif;*/
-font-family: 'Oxygen', sans-serif;
+font-family: 'Poppins', sans-serif;
 }
 
 h1 {
-	font-family: 'Abel', sans-serif;
+	font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -88,18 +88,20 @@ table a {
 	border-bottom : 1px solid white;
 }
 
+/* menu */
 .navbar-nav > li > a {
 	margin-right: 0.12em;
 	padding: 1.5em;
 	text-decoration: none;
 	text-transform: none;
-	font-family: 'Abel', sans-serif;
-	font-size: 1.25em;
+	font-family: 'Assistant', sans-serif;
+	font-size: 1.2em;
 	/* color: #2C2C2C; */
 	background-color: #171b21;
 	color: #fff;
 }
 
+/* title */
 .navbar-brand {
 	float: left;
 	padding: 0.7em 0.25em 0em 0em;
@@ -107,8 +109,7 @@ table a {
 	text-transform: none;
 	font-family: 'Oswald', sans-serif;
 	font-size: 2.5em;
-	font-weight: 200;
-	/* color: #1C1C1C; */
+	font-weight: 100;
 	color: #fff;
 	max-width: 300px;
 }
@@ -156,9 +157,9 @@ right: 55px;
 }
 
 .music h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 300;
-    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    line-height: 1.5;
 }
 
 .music img {
@@ -250,7 +251,7 @@ right: 55px;
 }
 
 .content p {
-	line-height: 20px;
+	line-height: 25px;
 	font-size: 14px;
 	color: #FFFFFF;
 	text-align: justify;

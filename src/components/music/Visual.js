@@ -98,6 +98,13 @@ class Visual extends Component {
         <div className="hr"><hr/></div>
 
         <div className="media">
+        <div className="date">SuperCollider and the Terra.js</div>
+        <br />
+        <iframe src="https://www.youtube.com/embed/jX81DTc2FwU" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div className="hr"><hr/></div>
+
+        <div className="media">
         <div className="date">Hydra and SuperCollider</div>
         <br />
         <iframe src="https://youtube.com/embed/-s_ivshe_Yo" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
