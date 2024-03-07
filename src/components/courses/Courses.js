@@ -13,7 +13,7 @@ const workshop = imageurl + 'xworkshop.jpg';
 class Courses extends Component {
   render() { return<div className="container">
       <div className="music">
-        <div className="date">2022 - 2023</div>
+        <div className="date">2023 - 2024</div>
         <div className="hr"><hr /></div>
         <div className="row">
 
