@@ -626,7 +626,27 @@ class Cwa extends Component {
 */}
 
 <article>
-  <div className="date"> 11.04.2023 </div>
+  <div className="date"> 25.04.2024 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 22, Own Works</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa22.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa22.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa22.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+  <div className="date"> 18.04.2024 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 21, CDP Worksshop</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa21.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa21.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa21.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
+  <div className="date"> 11.04.2024 </div>
   <div className="hr"><hr /></div>
   <h1>Class 20, Spectromorphology</h1>
   <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa20.zip" target="_blank">
@@ -636,7 +656,7 @@ class Cwa extends Component {
 </article>
 
 <article>
-  <div className="date"> 04.04.2023 </div>
+  <div className="date"> 04.04.2024 </div>
   <div className="hr"><hr /></div>
   <h1>Class 19, CDP</h1>
   <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa19.zip" target="_blank">
@@ -646,7 +666,7 @@ class Cwa extends Component {
 </article>
 
 <article>
-  <div className="date"> 21.03.2023 </div>
+  <div className="date"> 21.03.2024 </div>
   <div className="hr"><hr /></div>
   <h1>Class 18, Live Coding</h1>
   <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa18.zip" target="_blank">
@@ -656,7 +676,7 @@ class Cwa extends Component {
 </article>
 
 <article>
-    <div className="date"> 14.03.2023 </div>
+    <div className="date"> 14.03.2024 </div>
     <div className="hr"><hr /></div>
     <h1>Class 17, Chaos</h1>
     <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa17.zip" target="_blank">
@@ -666,7 +686,7 @@ class Cwa extends Component {
   </article>
 
 <article>
-    <div className="date"> 15.02.2023 </div>
+    <div className="date"> 15.02.2024 </div>
     <div className="hr"><hr /></div>
     <h1>Class 16, Workshop 3</h1>
     <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa16.zip" target="_blank">
