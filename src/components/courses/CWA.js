@@ -625,6 +625,26 @@ class Cwa extends Component {
 
 */}
 
+<article>
+  <div className="date"> 06.06.2024 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 25, Examples</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa25.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa25.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa25.zip" target="_blank">Download materials</a></p>
+</article>
+
+
+<article>
+  <div className="date"> 30.05.2024 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 24, Iannix</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa24.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa24.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa24.zip" target="_blank">Download materials</a></p>
+</article>
 
 <article>
   <div className="date"> 16.05.2024 </div>
