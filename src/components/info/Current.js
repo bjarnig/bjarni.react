@@ -42,7 +42,8 @@ const crucial = imageurl + "crucial.jpg";
 const lectoraat = imageurl + "lectoraat.jpg";
 const orpheus = imageurl + "bg-orpheus.jpg";
 const rc = imageurl + "rc.jpg";
-const SonologyConcert17October2018 = imageurl + "SonologyConcert17October2018.jpg";
+const SonologyConcert17October2018 =
+  imageurl + "SonologyConcert17October2018.jpg";
 const sonoconcert = imageurl + "sonoconcert.jpg";
 const OrpheusMachine = imageurl + "orpheus-machines.jpeg";
 const lueur1 = imageurl + "lueura.jpg";
@@ -60,6 +61,8 @@ const upicsa = imageurl + "DSC_0893.jpg";
 const upicsb = imageurl + "DSC_0895.jpg";
 const iclc2023 = imageurl + "iclc2023.png";
 const iil = imageurl + "bg-iil.png";
+const adela = imageurl + "adela.jpg";
+const zaal = imageurl + "zaal.jpg";
 
 class Current extends Component {
   constructor(props) {
@@ -85,82 +88,197 @@ class Current extends Component {
     return (
       <div className="container">
         <div className="content">
+          <article>
+            {" "}
+            <div className="date">01-06-2024</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Live Performance at Adela festival</p>
+            <div className="img-center">
+              <a href="https://iil.is/openlab/67" target="_blank">
+                <OpacityImage imageUrl={adela} />
+              </a>
+            </div>
+            <p>
+            Performing a new live set in Ljubljana on June 1st as part of Adela, International Festival of Generative Arts along with Wolfgang Ernst, Joost Rekveld, Alexandra Cardenas, Saskia Freeke, beepblip, Timo Hoogland, Pondskater, Sol Sarratea, Sabrina Verhage and others.
+            </p>
+            <p>For about a week, in between Kino Šiška, osmo/za and Slovenska kinoteka, you will be able to catch a glimpse of Adela – a transitional state that, in its unravelling of generative systems, will this year lean towards the practices of sustainable computing (#permacomputing), establishing a media-archaeological dialogue with machines and invoking the latent potentials of analogicity.</p>
+            <p>
+              <a href="https://wiki.ljudmila.org/Adela_2024_(en)" target="_blank">
+              https://wiki.ljudmila.org/Adela_2024_(en)
+              </a>
+            </p>
+          </article>
 
-        <article>
+          <article>
+            {" "}
+            <div className="date">17-04-2024</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>'Ever Present Change' at Sonology Discussion Concert 4</p>
+            <div className="img-center">
+              <a href="https://iil.is/openlab/67" target="_blank">
+                <OpacityImage imageUrl={zaal} />
+              </a>
+            </div>
+            <p>
+            Performing a new live piece at Sonology Discussion Concert 4.
+            </p>
+            <p>Conceived as an experiment in dynamically evolving networks, 'Ever-Present Change' combines live coded sound with generative processes. This piece emerges from an observation process that responds to synthetic sound sources, exploring the relationship between algorithmic activity and manual configuration. 'Ever-Present Change' is part of an ongoing project on live coding and spatial behaviours.</p>
+            <p>
+              <a href="https://sonology.org/" target="_blank">
+              https://sonology.org/
+              </a>
+            </p>
+          </article>
+
+          <article>
             {" "}
             <div className="date">03-11-2023</div>
             <div className="hr">
               <hr />
             </div>
             <p>Talk at the IIL Open Lab</p>
-            
             <div className="img-center">
               <a href="https://iil.is/openlab/67" target="_blank">
                 <OpacityImage imageUrl={iil} />
               </a>
-            
             </div>
-           
-            <p>I will give a talk on Software, Sound Synthesis and Composition at the Intelligent Instruments Lab in Reykjavík. This Friday at 15:00. </p>
-            <p>´In this lecture, I will discuss my recent projects involving software making, sound synthesis, and composition. I will reflect on the use of algorithms and the nature of generative sound created through reconfiguration and live coding.
-The featured approaches highlight the scope and potential boundaries of computational systems by relating sound-making to the development of generative environments. I will outline the process of developing such systems, but also the act of using them within a dynamic musical context. The goal is to review and combine the thinking of sound, control and causality for compositional approaches in computer music.
-During the talk, software applications will be presented, the ideas behind them discussed and examples of music composed with them be played.´</p>
-            <p><a href="https://iclc.toplap.org/2023" target="_blank">https://iil.is/openlab/67</a></p>
-          
-            
+            <p>
+              I will give a talk on Software, Sound Synthesis and Composition at
+              the Intelligent Instruments Lab in Reykjavík. This Friday at
+              15:00.{" "}
+            </p>
+            <p>
+              ´In this lecture, I will discuss my recent projects involving
+              software making, sound synthesis, and composition. I will reflect
+              on the use of algorithms and the nature of generative sound
+              created through reconfiguration and live coding. The featured
+              approaches highlight the scope and potential boundaries of
+              computational systems by relating sound-making to the development
+              of generative environments. I will outline the process of
+              developing such systems, but also the act of using them within a
+              dynamic musical context. The goal is to review and combine the
+              thinking of sound, control and causality for compositional
+              approaches in computer music. During the talk, software
+              applications will be presented, the ideas behind them discussed
+              and examples of music composed with them be played.´
+            </p>
+            <p>
+              <a href="https://iclc.toplap.org/2023" target="_blank">
+                https://iil.is/openlab/67
+              </a>
+            </p>
           </article>
 
-        <article>
+          <article>
             {" "}
             <div className="date">20-04-2023</div>
             <div className="hr">
               <hr />
             </div>
             <p>ICLC 2023</p>
-            
             <div className="img-center">
               <a href="https://iclc.toplap.org/2023" target="_blank">
                 <OpacityImage imageUrl={iclc2023} />
               </a>
-            
             </div>
-           
-            <p>Playing as part of ICLC 2023 'Alternative Algorithms'. Doors 19:30 / Show: 20:00, EKKO in Utrecht.</p>
-            <p>‘Blocking Behaviours’ concerns the real-time interpretation of two simulations of complex behaviour through an agent-based system. The simulations enforce a way of thinking that revolves around balancing behaviours, an attitude that considers musical output as something that emerges from an interaction with an autonomous system. The simulation acts as a generative, rule-based system producing output that is subject to different kinds of observation algorithms. The idea is that evolving processes are set in motion where the creator/composer becomes an observer of various developments. The output can not always be controlled in detail but is instead interpreted and further processed. The interpretation involves a mapping between different modes of representations in order to simplify or combine. In ‘Blocking Behaviours’ the idea is to explore the boundary of generative behaviour, control and and direct access to computer sound synthesis.</p>
-            <p><a href="https://iclc.toplap.org/2023" target="_blank">https://iclc.toplap.org/2023</a></p>
-            <p><a href="https://ekko.nl/event/alternative-algorithms" target="_blank">https://ekko.nl/event/alternative-algorithms</a></p>
-            
+            <p>
+              Playing as part of ICLC 2023 'Alternative Algorithms'. Doors 19:30
+              / Show: 20:00, EKKO in Utrecht.
+            </p>
+            <p>
+              ‘Blocking Behaviours’ concerns the real-time interpretation of two
+              simulations of complex behaviour through an agent-based system.
+              The simulations enforce a way of thinking that revolves around
+              balancing behaviours, an attitude that considers musical output as
+              something that emerges from an interaction with an autonomous
+              system. The simulation acts as a generative, rule-based system
+              producing output that is subject to different kinds of observation
+              algorithms. The idea is that evolving processes are set in motion
+              where the creator/composer becomes an observer of various
+              developments. The output can not always be controlled in detail
+              but is instead interpreted and further processed. The
+              interpretation involves a mapping between different modes of
+              representations in order to simplify or combine. In ‘Blocking
+              Behaviours’ the idea is to explore the boundary of generative
+              behaviour, control and and direct access to computer sound
+              synthesis.
+            </p>
+            <p>
+              <a href="https://iclc.toplap.org/2023" target="_blank">
+                https://iclc.toplap.org/2023
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://ekko.nl/event/alternative-algorithms"
+                target="_blank"
+              >
+                https://ekko.nl/event/alternative-algorithms
+              </a>
+            </p>
           </article>
 
-        <article>
+          <article>
             {" "}
             <div className="date">17-02-2023</div>
             <div className="hr">
               <hr />
             </div>
             <p>Article on Orpheus Institute’s ECHO journal</p>
-            
             <div className="img-center">
-              <a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">
+              <a
+                href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
+                target="_blank"
+              >
                 <OpacityImage imageUrl={bba} />
               </a>
-            
             </div>
-            
             <div className="img-center">
-              <a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">
+              <a
+                href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
+                target="_blank"
+              >
                 <OpacityImage imageUrl={bbb} />
               </a>
-            
             </div>
-          
-            <p>“Balancing Behaviours” was published on 17 February 2023 as part of the Orpheus Institute’s ECHO journal and the New Mimesis edition curated by Jonathan Impett. </p>
-            <p>The article presents ideas relating to the creation of computer music using emergent systems based on rules and local interactions. It involves a reflection on algorithms, interaction, and the behaviour of sound processes. It questions the scope and potential boundaries of computational systems through the space relating compositional practice with the development of generative environments.</p> 
-            <p>Three open-source software systems are also introduced, including Wildfires, which can be used to generate WFSCollider scores.            
+            <p>
+              “Balancing Behaviours” was published on 17 February 2023 as part
+              of the Orpheus Institute’s ECHO journal and the New Mimesis
+              edition curated by Jonathan Impett.{" "}
             </p>
-            <p><a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">https://echo.orpheusinstituut.be/article/balancing-behaviours</a></p>
-            <p><a href="https://echo.orpheusinstituut.be/issue/4" target="_blank">https://echo.orpheusinstituut.be/issue/4</a></p>
-            
+            <p>
+              The article presents ideas relating to the creation of computer
+              music using emergent systems based on rules and local
+              interactions. It involves a reflection on algorithms, interaction,
+              and the behaviour of sound processes. It questions the scope and
+              potential boundaries of computational systems through the space
+              relating compositional practice with the development of generative
+              environments.
+            </p>
+            <p>
+              Three open-source software systems are also introduced, including
+              Wildfires, which can be used to generate WFSCollider scores.
+            </p>
+            <p>
+              <a
+                href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
+                target="_blank"
+              >
+                https://echo.orpheusinstituut.be/article/balancing-behaviours
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://echo.orpheusinstituut.be/issue/4"
+                target="_blank"
+              >
+                https://echo.orpheusinstituut.be/issue/4
+              </a>
+            </p>
           </article>
           <article>
             {" "}
@@ -169,59 +287,81 @@ During the talk, software applications will be presented, the ideas behind them 
               <hr />
             </div>
             <p>New Release, UPICS on Flag Day Recordings</p>
-            
             <div className="img-center">
               <a href="https://flagdayrecordings.bandcamp.com" target="_blank">
                 <OpacityImage imageUrl={upicsb} />
               </a>
-            
             </div>
-            
             <div className="img-center">
               <a href="https://bjarni.bandcamp.com/album/upics" target="_blank">
                 <OpacityImage imageUrl={upicsa} />
               </a>
-            
             </div>
-          
-            <p>My latest album UPICS was released on the American label Flag Day Recordings. The pieces on the album are the outcome of his research into database-driven reconstructions based on sound analysis. All the source material has been created with Iannis Xenakis’s UPIC system: a graphical computer system where users draw shapes, waveforms, and modulations on ‘pages’ which form a composition or composed sound. </p>
-            <p>The material was recorded between September 2006 and March 2007 at the CCMIX institute in Paris. None of those recordings ever made it to a completed work until now, through the use of a newly developed system, SNDArchive (github.com/bjarnig/SNDArchive), which allows to recompose and combine sound parts based on different dimensions discovered through offline analysis processes. </p> 
-            <p>The idea was to create methods for engaging with sound archives in novel ways, to review them from a different angle, or to reveal previously unknown aspects of material already loaded with meaning.            
+            <p>
+              My latest album UPICS was released on the American label Flag Day
+              Recordings. The pieces on the album are the outcome of his
+              research into database-driven reconstructions based on sound
+              analysis. All the source material has been created with Iannis
+              Xenakis’s UPIC system: a graphical computer system where users
+              draw shapes, waveforms, and modulations on ‘pages’ which form a
+              composition or composed sound.{" "}
             </p>
-            <p><a href="https://flagdayrecordings.bandcamp.com/album/upics" target="_blank">https://flagdayrecordings.bandcamp.com/album/upics</a></p>
-            <p><a href="https://bjarni.bandcamp.com" target="_blank">https://bjarni.bandcamp.com</a></p>
-            
+            <p>
+              The material was recorded between September 2006 and March 2007 at
+              the CCMIX institute in Paris. None of those recordings ever made
+              it to a completed work until now, through the use of a newly
+              developed system, SNDArchive (github.com/bjarnig/SNDArchive),
+              which allows to recompose and combine sound parts based on
+              different dimensions discovered through offline analysis
+              processes.{" "}
+            </p>
+            <p>
+              The idea was to create methods for engaging with sound archives in
+              novel ways, to review them from a different angle, or to reveal
+              previously unknown aspects of material already loaded with
+              meaning.
+            </p>
+            <p>
+              <a
+                href="https://flagdayrecordings.bandcamp.com/album/upics"
+                target="_blank"
+              >
+                https://flagdayrecordings.bandcamp.com/album/upics
+              </a>
+            </p>
+            <p>
+              <a href="https://bjarni.bandcamp.com" target="_blank">
+                https://bjarni.bandcamp.com
+              </a>
+            </p>
           </article>
 
-        <article>
+          <article>
             {" "}
             <div className="date">25-11-2022</div>
             <div className="hr">
               <hr />
             </div>
             <p>SØVN Records showcase, Turin</p>
-            
             <div className="img-center">
               <a href="https://archiviotipografico.it/" target="_blank">
                 <OpacityImage imageUrl={turina} />
               </a>
-            
             </div>
-            
             <div className="img-center">
               <a href="https://archiviotipografico.it/" target="_blank">
                 <OpacityImage imageUrl={turinb} />
               </a>
-            
             </div>
             <p>
-            SØVN Records is throwing a showcase this month, Giulia Rae and I will take over the Archivio Tipografico for one night of algorithmic music at its purest.
-            
+              SØVN Records is throwing a showcase this month, Giulia Rae and I
+              will take over the Archivio Tipografico for one night of
+              algorithmic music at its purest.
             </p>
             <p>
-            Multichannel sound system inside one of the most special place in Turin.
+              Multichannel sound system inside one of the most special place in
+              Turin.
             </p>
-            
           </article>
 
           <article>
@@ -231,29 +371,41 @@ During the talk, software applications will be presented, the ideas behind them 
               <hr />
             </div>
             <p>Moving Downstairs</p>
-            
             <div className="col-lg-6">
-            <div className="img-center">
-              <a href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/" target="_blank">
-                <OpacityImage imageUrl={mda} />
-              </a>
+              <div className="img-center">
+                <a
+                  href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/"
+                  target="_blank"
+                >
+                  <OpacityImage imageUrl={mda} />
+                </a>
               </div>
             </div>
-            
             <div className="col-lg-6">
-            <div className="img-center">
-              <a href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/" target="_blank">
-                <OpacityImage imageUrl={mdb} />
-              </a>
+              <div className="img-center">
+                <a
+                  href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/"
+                  target="_blank"
+                >
+                  <OpacityImage imageUrl={mdb} />
+                </a>
               </div>
             </div>
+            <p>Presented by The Grey Space, curated by Yota Morimoto.</p>
             <p>
-            Presented by The Grey Space, curated by Yota Morimoto.
+              'Music is a tool for communication and at The Grey Space, we seek
+              to enhance the interaction with the audience. For this edition of
+              Moving Downstairs, composer and researcher Yota Morimoto, informed
+              by cutting-edge research and experiments in sound, brings you a
+              night of refined hypnotic noises & chaotic audio swarms. The live
+              acts revolve around new kinds of behavior in sound, a sonic flux;
+              one that challenges the very static nature of electronic music.
+              Immerse your ears with organic microsounds and AI-driven audio
+              textures.'
             </p>
             <p>
-            'Music is a tool for communication and at The Grey Space, we seek to enhance the interaction with the audience. For this edition of Moving Downstairs, composer and researcher Yota Morimoto, informed by cutting-edge research and experiments in sound, brings you a night of refined hypnotic noises & chaotic audio swarms. The live acts revolve around new kinds of behavior in sound, a sonic flux; one that challenges the very static nature of electronic music. Immerse your ears with organic microsounds and AI-driven audio textures.'
-            </p>
-            <p>Live Acts by Mehrnaz Khorrami, Tselem Enosh, Bjarni Gunnarsson, and Axel Chemla—Romeu-Santos. DJ-set Anni Nöps
+              Live Acts by Mehrnaz Khorrami, Tselem Enosh, Bjarni Gunnarsson,
+              and Axel Chemla—Romeu-Santos. DJ-set Anni Nöps
             </p>
           </article>
 
@@ -297,51 +449,67 @@ During the talk, software applications will be presented, the ideas behind them 
             </div>
             <p>Ukraine Appeal</p>
             <div className="img-center">
-              <a href="https://playneutral.bandcamp.com/album/ukraine-appeal" target="_blank">
+              <a
+                href="https://playneutral.bandcamp.com/album/ukraine-appeal"
+                target="_blank"
+              >
                 <OpacityImage imageUrl={playneutralukraine} />
               </a>
             </div>
             <p>
-        We’re all shocked by the tragic events in Ukraine and, following a conversation with Tom from Good Weather for an Airstrike, decided to ask artists if they would be able to contribute a track for a compilation to support the war victims in Ukraine.</p>
-        <p>While this compilation is free, we’d like to encourage and invite you to give whatever you can.</p>
-        <p>All money goes to the Red Cross Ukraine Crisis Appeal.y.{" "}</p>
-        </article>
+              We’re all shocked by the tragic events in Ukraine and, following a
+              conversation with Tom from Good Weather for an Airstrike, decided
+              to ask artists if they would be able to contribute a track for a
+              compilation to support the war victims in Ukraine.
+            </p>
+            <p>
+              While this compilation is free, we’d like to encourage and invite
+              you to give whatever you can.
+            </p>
+            <p>All money goes to the Red Cross Ukraine Crisis Appeal.y. </p>
+          </article>
 
-
-        
-
-        <article>
+          <article>
             {" "}
             <div className="date">16-03-2022</div>
             <div className="hr">
               <hr />
             </div>
             <p>LP 1 Recordings from the Institute of Sonology</p>
-            
             <div className="img-center">
               <a href="http://sonology.org" target="_blank">
                 <OpacityImage imageUrl={culture_archive} />
               </a>
             </div>
-
-            
             <p>
-            This collection of recordings aims to showcase music produced at the Institute of Sonology, including works with analogue modular synthesis, algorithmic compositions, live electronic music, and compositions based on field recordings.
-            </p><p>
-            Justin Bennett – Aura <br/>
-            Bjarni Gunnarsson – Cendres <br/>
-            Kees Tazelaar – Berglandschap <br/>
-            Sonology Electroacoustic Ensemble – 20200129 <br/>
+              This collection of recordings aims to showcase music produced at
+              the Institute of Sonology, including works with analogue modular
+              synthesis, algorithmic compositions, live electronic music, and
+              compositions based on field recordings.
             </p>
             <p>
-            Project & Artist information contained in the booklet that accompanies this LP has been included in Braille. The objective is for the contents to reach as many people as possible, this is also why the information has also been translated into 11 languages; Arabic, Dutch, French, German, Hebrew, Italian, Japanese, Mandarin, Portuguese, Russian, and Spanish (accessible via QR code provided in the last page of the booklet). </p>
-            <p><a href="https://clone.nl/item68063.html" target="_blank">https://clone.nl/item68063.html</a>
-
+              Justin Bennett – Aura <br />
+              Bjarni Gunnarsson – Cendres <br />
+              Kees Tazelaar – Berglandschap <br />
+              Sonology Electroacoustic Ensemble – 20200129 <br />
             </p>
-            
-        </article>
+            <p>
+              Project & Artist information contained in the booklet that
+              accompanies this LP has been included in Braille. The objective is
+              for the contents to reach as many people as possible, this is also
+              why the information has also been translated into 11 languages;
+              Arabic, Dutch, French, German, Hebrew, Italian, Japanese,
+              Mandarin, Portuguese, Russian, and Spanish (accessible via QR code
+              provided in the last page of the booklet).{" "}
+            </p>
+            <p>
+              <a href="https://clone.nl/item68063.html" target="_blank">
+                https://clone.nl/item68063.html
+              </a>
+            </p>
+          </article>
 
-        <article>
+          <article>
             {" "}
             <div className="date">02-03-2022</div>
             <div className="hr">
@@ -349,46 +517,78 @@ During the talk, software applications will be presented, the ideas behind them 
             </div>
             <p>Radio New Babylon</p>
             <div className="col-lg-6">
-            <div className="img-center">
-              <a href="http://radionewbabylon.net" target="_blank">
-                <OpacityImage imageUrl={mgbg_babylona} />
-              </a>
-            </div>
+              <div className="img-center">
+                <a href="http://radionewbabylon.net" target="_blank">
+                  <OpacityImage imageUrl={mgbg_babylona} />
+                </a>
+              </div>
             </div>
             <div className="col-lg-6">
-            <div className="img-center">
-              <a href="http://radionewbabylon.net" target="_blank">
-                <OpacityImage imageUrl={mgbg_babylonb} />
-              </a>
+              <div className="img-center">
+                <a href="http://radionewbabylon.net" target="_blank">
+                  <OpacityImage imageUrl={mgbg_babylonb} />
+                </a>
+              </div>
             </div>
-            </div>
-            <p>Radio New Babylon, initiated by Justin Bennett, is a collection of audio pieces by local and international artists made specifically to be listened to in and around the "New Babylon" office and apartment complex in Den Haag.</p>  <p>The artists and musicians were encouraged to think about the connections and discrepancies between the contemporary building and Constant Nieuwenhuys' visionary city of play. The pieces include ambient soundtracks, spoken-word podcasts, electronic experiments, field recordings from deep caves, reggae songs, insect songs, compositions for piano, organ, strings and percussion, instructions to the listener etc, etc.</p>
-            <p>This is an ongoing project. So far, artists include Topp & Dubio, Fani Konstantinidou, David Helbich, Roel Meelkop, Johan Nystrom, Jad Saliba, Anthony Blokdijk, Flavien Gillié, Barbara Ellison, BMB con., Francisco Lopez, Hendrik Hohlfeld, Yota Morimoto, Scanner, Bjarni Gunnarsson, Marie Guilleray, Felix Kubin, Ji Youn Kang, Double-W and Section 28. The collection also includes two excerpts from Constant's own 1960's soundtracks for New Babylon.</p>
-        </article>
+            <p>
+              Radio New Babylon, initiated by Justin Bennett, is a collection of
+              audio pieces by local and international artists made specifically
+              to be listened to in and around the "New Babylon" office and
+              apartment complex in Den Haag.
+            </p>{" "}
+            <p>
+              The artists and musicians were encouraged to think about the
+              connections and discrepancies between the contemporary building
+              and Constant Nieuwenhuys' visionary city of play. The pieces
+              include ambient soundtracks, spoken-word podcasts, electronic
+              experiments, field recordings from deep caves, reggae songs,
+              insect songs, compositions for piano, organ, strings and
+              percussion, instructions to the listener etc, etc.
+            </p>
+            <p>
+              This is an ongoing project. So far, artists include Topp & Dubio,
+              Fani Konstantinidou, David Helbich, Roel Meelkop, Johan Nystrom,
+              Jad Saliba, Anthony Blokdijk, Flavien Gillié, Barbara Ellison, BMB
+              con., Francisco Lopez, Hendrik Hohlfeld, Yota Morimoto, Scanner,
+              Bjarni Gunnarsson, Marie Guilleray, Felix Kubin, Ji Youn Kang,
+              Double-W and Section 28. The collection also includes two excerpts
+              from Constant's own 1960's soundtracks for New Babylon.
+            </p>
+          </article>
 
-
-        <article>
+          <article>
             {" "}
             <div className="date">08-12-2021</div>
             <div className="hr">
               <hr />
             </div>
             <p>Sonology Staff Concert</p>
-            
             <div className="img-center">
               <a href="http://sonology.org" target="_blank">
                 <OpacityImage imageUrl={sonoconcert} />
               </a>
             </div>
-            
-            <p>8 December 2021, 19:30, Arnold Schoenbergzaal: Concert with staff members. The last one in this hall.</p>
-            <p>I present a new piece, Judder, 8 channels. Fixed Media. 11:42 (2021) </p>
-            
-            <p>Through lines of repeated impulses, ‘Judder’ consists of enframing events and movements that emerge as the result of a shared agency and interconnected sounds. The idea is to gather simple resonances with repetitive rhythmic lines forming multiplicities through its layers, transformations, and juxtapositions.</p>
-            <p>'Judder' is part of an ongoing project focused on the use of interactive algorithms for scheduling and organizing generative sound processes.
+            <p>
+              8 December 2021, 19:30, Arnold Schoenbergzaal: Concert with staff
+              members. The last one in this hall.
             </p>
-        </article>
-
+            <p>
+              I present a new piece, Judder, 8 channels. Fixed Media. 11:42
+              (2021){" "}
+            </p>
+            <p>
+              Through lines of repeated impulses, ‘Judder’ consists of enframing
+              events and movements that emerge as the result of a shared agency
+              and interconnected sounds. The idea is to gather simple resonances
+              with repetitive rhythmic lines forming multiplicities through its
+              layers, transformations, and juxtapositions.
+            </p>
+            <p>
+              'Judder' is part of an ongoing project focused on the use of
+              interactive algorithms for scheduling and organizing generative
+              sound processes.
+            </p>
+          </article>
 
           <article>
             {" "}
@@ -413,8 +613,6 @@ During the talk, software applications will be presented, the ideas behind them 
                   </a>
                 </div>
               </div> */}
-
-
             </div>
             <p>
               'Anticlines' is released today on{" "}
@@ -526,15 +724,19 @@ During the talk, software applications will be presented, the ideas behind them 
               </a>
             </div>
             <p>This week: Tonband festival 2021 in Gothenburg, Sweden. </p>
-            <p>Friday night Electric Audio Unit will present music by Mike McCormick, Bjarni Gunnarsson, Marie Guilleray, Juhani Silvola, Lola Ajima, Giuseppe Pisano, Frank Ekeberg, Natasha Barrett and Ernst van der Loo. 
-            </p>
-            <p>  </p>
-          <p><a href="https://www.audiorama.se/events/2021/tonband">https://www.audiorama.se/events/2021/tonband</a>
-            </p>
             <p>
-            All pieces on Audiorama's 24.4 speaker set up.
+              Friday night Electric Audio Unit will present music by Mike
+              McCormick, Bjarni Gunnarsson, Marie Guilleray, Juhani Silvola,
+              Lola Ajima, Giuseppe Pisano, Frank Ekeberg, Natasha Barrett and
+              Ernst van der Loo.
             </p>
-            
+            <p> </p>
+            <p>
+              <a href="https://www.audiorama.se/events/2021/tonband">
+                https://www.audiorama.se/events/2021/tonband
+              </a>
+            </p>
+            <p>All pieces on Audiorama's 24.4 speaker set up.</p>
           </article>
 
           <article>
@@ -553,19 +755,27 @@ During the talk, software applications will be presented, the ideas behind them 
               </a>
             </div>
             <p>
-            Electric Audio Unit (NO) and Audiorama present: <br/>
-            PULS BINAURAL HEADPHONE CONCERT #6 <br/>
-            Curated by Ernst van der Loo</p>
+              Electric Audio Unit (NO) and Audiorama present: <br />
+              PULS BINAURAL HEADPHONE CONCERT #6 <br />
+              Curated by Ernst van der Loo
+            </p>
             <p>
-            Program:<br/>
-            Bjarni Gunnarsson - Polytree (2018)<br/>
-            Edwin van der Heide - Pneumatic Soundfield (2006) (binaural recording from 2019)<br/>
-            Ji Youn Kang - Dong-Nae Gut (2013)<br/>
+              Program:
+              <br />
+              Bjarni Gunnarsson - Polytree (2018)
+              <br />
+              Edwin van der Heide - Pneumatic Soundfield (2006) (binaural
+              recording from 2019)
+              <br />
+              Ji Youn Kang - Dong-Nae Gut (2013)
+              <br />
             </p>
-            <p>  </p>
-          <p><a href="webstream.audiorama.se:7070/stream.m3u">webstream.audiorama.se:7070/stream.m3u</a>
+            <p> </p>
+            <p>
+              <a href="webstream.audiorama.se:7070/stream.m3u">
+                webstream.audiorama.se:7070/stream.m3u
+              </a>
             </p>
-            
           </article>
 
           <article>
@@ -1612,40 +1822,25 @@ During the talk, software applications will be presented, the ideas behind them 
           </article>
 
           <article>
-           
             <div className="hr">
               <hr />
             </div>
 
-            <div className="col-lg-5">  
-            </div>
-
+            <div className="col-lg-5"></div>
 
             <div className="col-lg-5">
-
-            <p>
-              <a href="/Past">
-                - PAST - 
-              </a>
-            </p>
-
+              <p>
+                <a href="/Past">- PAST -</a>
+              </p>
             </div>
 
-            <div className="col-lg-5">
-            </div>
-              
-           
+            <div className="col-lg-5"></div>
           </article>
+        </div>
 
-                 </div>
-
-                 <div className="hr">
-              <hr />
-            </div>
-
-          
-
-         
+        <div className="hr">
+          <hr />
+        </div>
       </div>
     );
   }
