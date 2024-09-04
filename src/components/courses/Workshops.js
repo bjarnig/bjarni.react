@@ -8,7 +8,7 @@ class Workshops extends Component {
       <div className="content">
 
     <article>
-        <div className="date"> 30.08.2023</div>
+        <div className="date"> 05.09.2024</div>
         <div className="hr"><hr /></div>
         <h1> Live Coding, Synthesis and Programming</h1>
         <a href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/2023-2024/StartupWeek.zip" target="_blank">
