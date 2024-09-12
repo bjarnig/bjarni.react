@@ -107,8 +107,8 @@ class Current extends Component {
               the The International Conference on AI and Musical Creativity @
               The University of Oxford, AIMC 2024.
             </p>
-            <p> 
-            ‘Streamlines’ is a software, piece and performance created using
+            <p>
+              ‘Streamlines’ is a software, piece and performance created using
               SuperCollider, the Keras API and P5.js. The piece is based on an
               inference process that has been trained using synthetic sound
               sources mapping to custom data structures that are designed to
@@ -118,18 +118,21 @@ class Current extends Component {
               dynamically growing network of short, articulated sequences that
               form a counterpart to the synthetic sound.
             </p>
-            <br/>
-            <OpacityImage imageUrl={sl} />
+            <br />
+            <div className="img-center-noborder">
+              <OpacityImage imageUrl={sl} style={this.state.noBorder} />
+            </div>
             <p>
-             
-              The idea is to critically question the use of generative algorithms within the creative process
-and how the training and creating of data for machine learning can become an important part
-of that process.
-I try to think of the presented tools as a gateway to access material from different points in
-time. Defining such procedures involves an exploration of the intersection between selection
-processes and generative means for representing the selected as something original.
+              The idea is to critically question the use of generative
+              algorithms within the creative process and how the training and
+              creating of data for machine learning can become an important part
+              of that process. I try to think of the presented tools as a
+              gateway to access material from different points in time. Defining
+              such procedures involves an exploration of the intersection
+              between selection processes and generative means for representing
+              the selected as something original.
             </p>
-            <br/>
+            <br />
             <p>
               <a href="https://aimc2024.pubpub.org/schedule" target="_blank">
                 https://aimc2024.pubpub.org
