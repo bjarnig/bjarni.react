@@ -624,7 +624,7 @@ class Cwa extends Component {
       </article>
 
 */}
-
+{/* 
 <article>
   <div className="date"> 06.06.2024 </div>
   <div className="hr"><hr /></div>
@@ -871,18 +871,18 @@ class Cwa extends Component {
     <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa02.png" />
     </a>
     <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa02.zip" target="_blank">Download materials</a></p>
-  </article>
+  </article> */}
 
          
 
 <article>
-    <div className="date"> 07.09.2023 </div>
+    <div className="date"> 12.09.2024 </div>
     <div className="hr"><hr /></div>
     <h1>Class 01, Composing with Algorithms</h1>
-    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.zip" target="_blank">
-    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.png" />
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa01.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa01.png" />
     </a>
-    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/cwa01.zip" target="_blank">Download materials</a></p>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa01.zip" target="_blank">Download materials</a></p>
   </article> 
 
       </div>

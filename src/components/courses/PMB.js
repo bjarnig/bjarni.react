@@ -632,7 +632,7 @@ class Pmb extends Component {
 </a>
 <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2022-2023/pmb02.zip" target="_blank">Download materials</a></p>
 </article> */}
-
+{/* 
 <article>
 <div className="date"> 28.05.2024 </div>
 <div className="hr"><hr /></div>
@@ -844,7 +844,7 @@ class Pmb extends Component {
 <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb01.png" />
 </a>
 <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb01.zip" target="_blank">Download materials</a></p>
-</article>
+</article> */}
 
 
       </div>

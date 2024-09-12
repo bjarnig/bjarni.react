@@ -283,7 +283,7 @@ class Pma extends Component {
   
 */}
 
-<article>
+{/* <article>
     <div className="date"> 02.05.2024 </div>
     <div className="hr"><hr /></div>
     <h1>Class 21, Examples 2</h1>
@@ -487,16 +487,16 @@ class Pma extends Component {
     <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma02.png" />
     </a>
     <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma02.zip" target="_blank">Download materials</a></p>
-  </article>
+  </article> */}
 
 <article>
-    <div className="date"> 07.09.2023 </div>
+    <div className="date"> 12.09.2024 </div>
     <div className="hr"><hr /></div>
     <h1>Class 01, Programming and Music 1</h1>
-    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma01.zip" target="_blank">
-    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma01.png" />
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pma01.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pma01.png" />
     </a>
-    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pma01.zip" target="_blank">Download materials</a></p>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pma01.zip" target="_blank">Download materials</a></p>
   </article> 
 
       </div>

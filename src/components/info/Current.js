@@ -63,6 +63,8 @@ const iclc2023 = imageurl + "iclc2023.png";
 const iil = imageurl + "bg-iil.png";
 const adela = imageurl + "adela.jpg";
 const zaal = imageurl + "zaal.jpg";
+const aimc2024 = imageurl + "aimc2024.png";
+const sl = imageurl + "sl.png";
 
 class Current extends Component {
   constructor(props) {
@@ -90,23 +92,86 @@ class Current extends Component {
         <div className="content">
           <article>
             {" "}
+            <div className="date">09-09-2024</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Presentation and Performance at aimc2024</p>
+            <div className="img-center">
+              <a href="https://aimc2024.pubpub.org/schedule" target="_blank">
+                <OpacityImage imageUrl={aimc2024} />
+              </a>
+            </div>
+            <p>
+              Presenting and Performing a new piece and system 'Streamlines' at
+              the The International Conference on AI and Musical Creativity @
+              The University of Oxford, AIMC 2024.
+            </p>
+            <p> 
+            ‘Streamlines’ is a software, piece and performance created using
+              SuperCollider, the Keras API and P5.js. The piece is based on an
+              inference process that has been trained using synthetic sound
+              sources mapping to custom data structures that are designed to
+              appear as nodes in a network. During a performance, a stream of
+              live-coded sonorities is produced that is analyzed and then used
+              to make predictions of suitable nodes. These then recall a
+              dynamically growing network of short, articulated sequences that
+              form a counterpart to the synthetic sound.
+            </p>
+            <br/>
+            <OpacityImage imageUrl={sl} />
+            <p>
+             
+              The idea is to critically question the use of generative algorithms within the creative process
+and how the training and creating of data for machine learning can become an important part
+of that process.
+I try to think of the presented tools as a gateway to access material from different points in
+time. Defining such procedures involves an exploration of the intersection between selection
+processes and generative means for representing the selected as something original.
+            </p>
+            <br/>
+            <p>
+              <a href="https://aimc2024.pubpub.org/schedule" target="_blank">
+                https://aimc2024.pubpub.org
+              </a>
+            </p>
+          </article>
+          <article>
+            {" "}
             <div className="date">01-06-2024</div>
             <div className="hr">
               <hr />
             </div>
             <p>Live Performance at Adela festival</p>
             <div className="img-center">
-              <a href="https://iil.is/openlab/67" target="_blank">
+              <a
+                href="https://wiki.ljudmila.org/Adela_2024_(en)"
+                target="_blank"
+              >
                 <OpacityImage imageUrl={adela} />
               </a>
             </div>
             <p>
-            Performing a new live set in Ljubljana on June 1st as part of Adela, International Festival of Generative Arts along with Wolfgang Ernst, Joost Rekveld, Alexandra Cardenas, Saskia Freeke, beepblip, Timo Hoogland, Pondskater, Sol Sarratea, Sabrina Verhage and others.
+              Performing a new live set in Ljubljana on June 1st as part of
+              Adela, International Festival of Generative Arts along with
+              Wolfgang Ernst, Joost Rekveld, Alexandra Cardenas, Saskia Freeke,
+              beepblip, Timo Hoogland, Pondskater, Sol Sarratea, Sabrina Verhage
+              and others.
             </p>
-            <p>For about a week, in between Kino Šiška, osmo/za and Slovenska kinoteka, you will be able to catch a glimpse of Adela – a transitional state that, in its unravelling of generative systems, will this year lean towards the practices of sustainable computing (#permacomputing), establishing a media-archaeological dialogue with machines and invoking the latent potentials of analogicity.</p>
             <p>
-              <a href="https://wiki.ljudmila.org/Adela_2024_(en)" target="_blank">
-              https://wiki.ljudmila.org/Adela_2024_(en)
+              For about a week, in between Kino Šiška, osmo/za and Slovenska
+              kinoteka, you will be able to catch a glimpse of Adela – a
+              transitional state that, in its unravelling of generative systems,
+              will this year lean towards the practices of sustainable computing
+              (#permacomputing), establishing a media-archaeological dialogue
+              with machines and invoking the latent potentials of analogicity.
+            </p>
+            <p>
+              <a
+                href="https://wiki.ljudmila.org/Adela_2024_(en)"
+                target="_blank"
+              >
+                https://wiki.ljudmila.org/Adela_2024_(en)
               </a>
             </p>
           </article>
@@ -123,13 +188,19 @@ class Current extends Component {
                 <OpacityImage imageUrl={zaal} />
               </a>
             </div>
+            <p>Performing a new live piece at Sonology Discussion Concert 4.</p>
             <p>
-            Performing a new live piece at Sonology Discussion Concert 4.
+              Conceived as an experiment in dynamically evolving networks,
+              'Ever-Present Change' combines live coded sound with generative
+              processes. This piece emerges from an observation process that
+              responds to synthetic sound sources, exploring the relationship
+              between algorithmic activity and manual configuration.
+              'Ever-Present Change' is part of an ongoing project on live coding
+              and spatial behaviours.
             </p>
-            <p>Conceived as an experiment in dynamically evolving networks, 'Ever-Present Change' combines live coded sound with generative processes. This piece emerges from an observation process that responds to synthetic sound sources, exploring the relationship between algorithmic activity and manual configuration. 'Ever-Present Change' is part of an ongoing project on live coding and spatial behaviours.</p>
             <p>
               <a href="https://sonology.org/" target="_blank">
-              https://sonology.org/
+                https://sonology.org/
               </a>
             </p>
           </article>
