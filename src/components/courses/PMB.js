@@ -637,70 +637,70 @@ class Pmb extends Component {
 <div className="date"> 28.05.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 21, Machine Learning 2</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb21.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb21.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb21.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb21.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb21.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb21.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 21.05.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 20, Machine Learning</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb20.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb20.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb20.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb20.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb20.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb20.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 23.04.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 19, Tidal Cycles</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb19.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb19.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb19.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb19.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb19.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb19.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 09.04.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 18, Spatialisation</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb18.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb18.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb18.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb18.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb18.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb18.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 02.04.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 17, Examples</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb17.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb17.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb17.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb17.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb17.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb17.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 26.03.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 16, Live Coding 2</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb16.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb16.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb16.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb16.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb16.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb16.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 12.03.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 15, Live Coding 1</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb15.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb15.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb15.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb15.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb15.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb15.zip" target="_blank">Download materials</a></p>
 </article>
 
 
@@ -708,10 +708,10 @@ class Pmb extends Component {
 <div className="date"> 13.02.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 14, Analysis</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb14.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb14.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb14.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb14.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb14.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb14.zip" target="_blank">Download materials</a></p>
 </article>
 
 
@@ -719,100 +719,100 @@ class Pmb extends Component {
 <div className="date"> 06.02.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 13, Spectromorphology</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb13.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb13.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb13.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb13.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb13.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb13.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 30.01.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 12, CDP 2</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb12.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb12.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb12.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb12.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb12.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb12.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 23.01.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 11, CDP</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb11.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb11.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb11.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb11.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb11.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb11.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 16.01.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 10, Evolution</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb10.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb10.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb10.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb10.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb10.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb10.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 09.01.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 09, Networks</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb09.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb09.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb09.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb09.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb09.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb09.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 05.12.2023 </div>
 <div className="hr"><hr /></div>
 <h1>Class 08, Grammars and Fractals</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb08.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb08.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb08.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb08.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb08.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb08.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 14.11.2023 </div>
 <div className="hr"><hr /></div>
 <h1>Class 07, Chaos</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb07.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb07.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb07.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb07.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb07.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb07.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 07.11.2023 </div>
 <div className="hr"><hr /></div>
 <h1>Class 06, Sonification</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb06.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb06.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb06.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb06.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb06.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb06.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 03.10.2023 </div>
 <div className="hr"><hr /></div>
 <h1>Class 05, Waveform Examples</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb05.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb05.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb05.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb05.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb05.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb05.zip" target="_blank">Download materials</a></p>
 </article>
 
 <article>
 <div className="date"> 26.09.2023 </div>
 <div className="hr"><hr /></div>
 <h1>Class 04, Non-standard Synthesis</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb04.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb04.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb04.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb04.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb04.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb04.zip" target="_blank">Download materials</a></p>
 </article>
 
 
@@ -820,23 +820,25 @@ class Pmb extends Component {
 <div className="date"> 19.09.2023 </div>
 <div className="hr"><hr /></div>
 <h1>Class 03, Granular Examples</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb03.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb03.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb03.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb03.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb03.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb03.zip" target="_blank">Download materials</a></p>
 </article>
+
+*/}
 
 <article>
 <div className="date"> 12.09.2023 </div>
 <div className="hr"><hr /></div>
 <h1>Class 02, Granularity</h1>
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb02.zip" target="_blank">
-<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb02.png" />
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb02.zip" target="_blank">
+<OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb02.png" />
 </a>
-<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2023-2024/pmb02.zip" target="_blank">Download materials</a></p>
+<p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb02.zip" target="_blank">Download materials</a></p>
 </article>
 
-*/}
+
 
 <article>
 <div className="date"> 17.09.2024 </div>
