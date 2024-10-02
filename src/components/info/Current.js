@@ -65,6 +65,8 @@ const adela = imageurl + "adela.jpg";
 const zaal = imageurl + "zaal.jpg";
 const aimc2024 = imageurl + "aimc2024.png";
 const sl = imageurl + "sl.png";
+const tolistento = imageurl + "tolistento.jpg";
+const tolistento2 = imageurl + "tolistento2.jpg";
 
 class Current extends Component {
   constructor(props) {
@@ -90,13 +92,54 @@ class Current extends Component {
     return (
       <div className="container">
         <div className="content">
+        <article>
+            {" "}
+            <div className="date">04-10-2024</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>'Ever-present change' at To Listen To, festival of experimental listening – Third edition, in Turin, Italy.</p>
+            <div className="col-lg-6">
+              <div className="img-center">
+                <a
+                  href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/"
+                  target="_blank"
+                >
+                  <OpacityImage imageUrl={tolistento} />
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="img-center">
+                <a
+                  href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/"
+                  target="_blank"
+                >
+                  <OpacityImage imageUrl={tolistento2} />
+                </a>
+              </div>
+            </div>
+            <p>.</p>
+            <p>
+            Developed as an experiment in dynamically evolving networks, Ever-Present Change merges live coded sound with generative processes, creating a piece that evolves through continuous interaction between algorithmic activity and manual intervention. Rather than simply presenting collections of successive sounds, the work delves into formative principles, emphasizing how sonic elements develop relationships through the technical processes that shape them. This exploration responds to synthetic sound sources, observing the interplay between human agency and automated systems.
+            </p>
+            <p>
+            As part of an ongoing project on live coding and spatial behaviors, Ever-Present Change seeks to explore the underlying principles that drive the flow of events in time. Echoing a reflection on causality as a cognitive construction, the work questions how listeners attribute order and control, revealing that what seems like a predetermined sequence may actually emerge from the fluid, real-time interaction of the processes themselves. In this way, the piece not only comments on its own formation but also invites the audience to engage with the unfolding relationships that give rise to a sensation of causality and structure.
+            </p>
+            <br />
+            <p>
+              <a href="https://www.to-listen-to.it/" target="_blank">
+              https://www.to-listen-to.it
+              </a>
+            </p>
+          </article>
           <article>
             {" "}
             <div className="date">09-09-2024</div>
             <div className="hr">
               <hr />
             </div>
-            <p>Presentation and Performance at aimc2024</p>
+            <p>Presentation and Performance at AIMC 2024</p>
             <div className="img-center">
               <a href="https://aimc2024.pubpub.org/schedule" target="_blank">
                 <OpacityImage imageUrl={aimc2024} />

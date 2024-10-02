@@ -815,9 +815,10 @@ class Pmb extends Component {
 <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb04.zip" target="_blank">Download materials</a></p>
 </article>
 
+*/}
 
 <article>
-<div className="date"> 19.09.2023 </div>
+<div className="date"> 1.10.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 03, Granular Examples</h1>
 <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb03.zip" target="_blank">
@@ -826,10 +827,9 @@ class Pmb extends Component {
 <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb03.zip" target="_blank">Download materials</a></p>
 </article>
 
-*/}
 
 <article>
-<div className="date"> 12.09.2023 </div>
+<div className="date"> 24.09.2024 </div>
 <div className="hr"><hr /></div>
 <h1>Class 02, Granularity</h1>
 <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb02.zip" target="_blank">
