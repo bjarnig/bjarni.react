@@ -841,20 +841,22 @@ class Cwa extends Component {
             <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa05.zip" target="_blank">Download materials</a></p>
           </article>
 
+          */}
+
 <article>
-            <div className="date"> 28.09.2022 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 04, Workshop 1</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa04.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa04.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa04.zip" target="_blank">Download materials</a></p>
-          </article>
- */}
+    <div className="date"> 10.100.2024 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 04, Workshop 1</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa04.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa04.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa04.zip" target="_blank">Download materials</a></p>
+  </article>
+ 
    
 
 <article>
-    <div className="date"> 26.09.2023 </div>
+    <div className="date"> 26.09.2024 </div>
     <div className="hr"><hr /></div>
     <h1>Class 03, Patterns</h1>
     <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa03.zip" target="_blank">
