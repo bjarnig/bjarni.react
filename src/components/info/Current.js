@@ -67,6 +67,9 @@ const aimc2024 = imageurl + "aimc2024.png";
 const sl = imageurl + "sl.png";
 const tolistento = imageurl + "tolistento.jpg";
 const tolistento2 = imageurl + "tolistento2.jpg";
+const colloquiuma = imageurl + "colloquiuma.png";
+const colloquiumb = imageurl + "colloquiumb.png";
+const soundartfestival = imageurl + "sound-art-festival.png";
 
 class Current extends Component {
   constructor(props) {
@@ -92,13 +95,108 @@ class Current extends Component {
     return (
       <div className="container">
         <div className="content">
-        <article>
+          <article>
+            {" "}
+            <div className="date">20-10-2024</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Perfromance at Zaal3 / STUDIO LOOS</p>
+            <div className="img-center">
+              <a
+                href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024"
+                target="_blank"
+              >
+                <OpacityImage imageUrl={soundartfestival} />
+              </a>
+            </div>
+            <p>Arsis vs Thesis, The Hague International Sound Art Festival</p>
+            <p>
+              The 2nd Annual Hague International Sound Art Festival invites
+              audiences to explore the captivating contrasts of sound through
+              the theme "Arsis vs Thesis."
+            </p>
+            <p>
+              The concept delves into extreme opposites, like fast versus slow,
+              high versus low, and heavy versus light, using sound as a powerful
+              medium for expression.
+            </p>
+            <p>
+              The festival brings together these stark dichotomies to craft a
+              sonic experience that challenges perceptions and invites
+              reflection. Audiences will witness performances that transition
+              from serious to cheerful, from short bursts to elongated
+              compositions, highlighting the dynamic range of sound art.
+            </p>
+            <p>
+              It’s a celebration of contrast, where boundaries blur, and sound
+              shapes meaning in profound, unexpected ways.
+            </p>
+            <p>
+              <a href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024" target="_blank">
+              Arsis vs Thesis, The Hague International Sound Art Festival
+              </a>
+            </p>
+            <br />
+          </article>
+          <article>
+            {" "}
+            <div className="date">10-10-2024</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Presentation at Sonology</p>
+            <div className="col-lg-6">
+              <div className="img-center">
+                <a
+                  href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2024.pdf"
+                  target="_blank"
+                >
+                  <OpacityImage imageUrl={colloquiuma} />
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="img-center">
+                <a
+                  href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2024.pdf"
+                  target="_blank"
+                >
+                  <OpacityImage imageUrl={colloquiumb} />
+                </a>
+              </div>
+            </div>
+            <p>.</p>
+            <p>Selective Retention: Sound and Process</p>
+            <p>
+              `In this presentation, I will explore recent projects involving
+              live-coded sound, dynamic networks, and generative processes with
+              machine learning. The models presented aim to blur the boundaries
+              between tool-making, creation, and research, while also seeking to
+              uncover their possible meanings. Central to this exploration is
+              the idea of perceiving a tool as a gateway to accessing material
+              across different points in time. The talk includes reflections on
+              the interaction between algorithmic activity and manual
+              intervention, themes of relational causality, and the dynamic
+              interplay between algorithmic processes and creative agency.`
+            </p>
+            <br />
+            <p>
+              <a href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2024.pdf" target="_blank">
+                Presentation Slides
+              </a>
+            </p>
+          </article>
+          <article>
             {" "}
             <div className="date">04-10-2024</div>
             <div className="hr">
               <hr />
             </div>
-            <p>'Ever-present change' at To Listen To, festival of experimental listening – Third edition, in Turin, Italy.</p>
+            <p>
+              'Ever-present change' at To Listen To, festival of experimental
+              listening – Third edition, in Turin, Italy.
+            </p>
             <div className="col-lg-6">
               <div className="img-center">
                 <a
@@ -121,15 +219,34 @@ class Current extends Component {
             </div>
             <p>.</p>
             <p>
-            Developed as an experiment in dynamically evolving networks, Ever-Present Change merges live coded sound with generative processes, creating a piece that evolves through continuous interaction between algorithmic activity and manual intervention. Rather than simply presenting collections of successive sounds, the work delves into formative principles, emphasizing how sonic elements develop relationships through the technical processes that shape them. This exploration responds to synthetic sound sources, observing the interplay between human agency and automated systems.
+              Developed as an experiment in dynamically evolving networks,
+              Ever-Present Change merges live coded sound with generative
+              processes, creating a piece that evolves through continuous
+              interaction between algorithmic activity and manual intervention.
+              Rather than simply presenting collections of successive sounds,
+              the work delves into formative principles, emphasizing how sonic
+              elements develop relationships through the technical processes
+              that shape them. This exploration responds to synthetic sound
+              sources, observing the interplay between human agency and
+              automated systems.
             </p>
             <p>
-            As part of an ongoing project on live coding and spatial behaviors, Ever-Present Change seeks to explore the underlying principles that drive the flow of events in time. Echoing a reflection on causality as a cognitive construction, the work questions how listeners attribute order and control, revealing that what seems like a predetermined sequence may actually emerge from the fluid, real-time interaction of the processes themselves. In this way, the piece not only comments on its own formation but also invites the audience to engage with the unfolding relationships that give rise to a sensation of causality and structure.
+              As part of an ongoing project on live coding and spatial
+              behaviors, Ever-Present Change seeks to explore the underlying
+              principles that drive the flow of events in time. Echoing a
+              reflection on causality as a cognitive construction, the work
+              questions how listeners attribute order and control, revealing
+              that what seems like a predetermined sequence may actually emerge
+              from the fluid, real-time interaction of the processes themselves.
+              In this way, the piece not only comments on its own formation but
+              also invites the audience to engage with the unfolding
+              relationships that give rise to a sensation of causality and
+              structure.
             </p>
             <br />
             <p>
               <a href="https://www.to-listen-to.it/" target="_blank">
-              https://www.to-listen-to.it
+                https://www.to-listen-to.it
               </a>
             </p>
           </article>
