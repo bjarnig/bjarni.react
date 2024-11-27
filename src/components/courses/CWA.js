@@ -831,17 +831,27 @@ class Cwa extends Component {
             <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa06.zip" target="_blank">Download materials</a></p>
           </article>
 
-<article>
-            <div className="date"> 05.10.2023 </div>
-            <div className="hr"><hr /></div>
-            <h1>Class 05, History</h1>
-            <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa05.zip" target="_blank">
-            <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa05.png" />
-            </a>
-            <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa05.zip" target="_blank">Download materials</a></p>
-          </article>
-
           */}
+
+<article>
+    <div className="date"> 28.11.2024 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 06, Xenakis</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa06.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa06.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa06.zip" target="_blank">Download materials</a></p>
+  </article>
+
+<article>
+    <div className="date"> 21.11.2024 </div>
+    <div className="hr"><hr /></div>
+    <h1>Class 05, History</h1>
+    <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa05.zip" target="_blank">
+    <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa05.png" />
+    </a>
+    <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa05.zip" target="_blank">Download materials</a></p>
+  </article>
 
 <article>
     <div className="date"> 10.100.2024 </div>
@@ -852,8 +862,6 @@ class Cwa extends Component {
     </a>
     <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/cwa04.zip" target="_blank">Download materials</a></p>
   </article>
- 
-   
 
 <article>
     <div className="date"> 26.09.2024 </div>
