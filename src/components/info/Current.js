@@ -71,6 +71,11 @@ const colloquiuma = imageurl + "colloquiuma.png";
 const colloquiumb = imageurl + "colloquiumb.png";
 const soundartfestival = imageurl + "sound-art-festival.png";
 
+const spectrograms = imageurl + "combined_spectrograms.png";
+const article = imageurl + "article.png";
+const keuken = imageurl + "keuken.jpg";
+const jrd = imageurl + "2024_jrd.jpg";
+
 class Current extends Component {
   constructor(props) {
     super(props);
@@ -95,6 +100,139 @@ class Current extends Component {
     return (
       <div className="container">
         <div className="content">
+
+        <article>
+            {" "}
+            <div className="date">07-02-2025</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Lectorate Research Presentation</p>
+
+ <div className="col-lg-6">
+              <div className="img-center">
+                <a
+                  href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879"
+                  target="_blank"
+                >
+                  <OpacityImage imageUrl={article} />
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="img-center">
+                <a
+                  href="https://researchplatform.art/projects/crafting-creativity-uniting-neural-synthesis-machine-learning-and-algorithmic-composition-for-innovative-music-creation/"
+                  target="_blank"
+                >
+                  <OpacityImage imageUrl={spectrograms} />
+                </a>
+              </div>
+            </div>
+            <p>
+            On 7 February, the lectorate ‘Music, Education and Society’ will present the outcomes of the research projects of 2024, as well as introduce the research group of 2025. The meeting is also the festive closing of the lectorate year.
+            </p>
+            <p>I will present my project: 'Recomposing Data: Machine Learning As Compositional Process'</p>
+            <p>
+            This research proposal concerns an approach to computer music that seeks to combine modern approaches in machine learning with established processes of algorithmic composition. The idea is to critically question the use of generative algorithms within the creative process and how the training and creation of data for machine learning can become an important part of that process.
+            </p>
+            <p>
+              <a
+                href="https://researchplatform.art/events/lectorate-event-music-education-society-2025/"
+                target="_blank"
+              >Event in Amare
+              </a>
+            </p>  
+            <p>
+              <a
+                href="https://researchplatform.art/projects/crafting-creativity-uniting-neural-synthesis-machine-learning-and-algorithmic-composition-for-innovative-music-creation/"
+                target="_blank"
+              >The Project
+              </a>
+            </p>  
+            <p>
+              <a
+                href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879"
+                target="_blank"
+              >Article on the Research Catalogue 
+              </a>
+            </p>  
+          </article>
+          <article>
+            {" "}
+            <div className="date">20-01-2025</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>Live at De Keuken with Marie Guilleray</p>
+            <div className="img-center">
+              <a
+                href="https://www.youtube.com/watch?v=GsNuHaQWITc"
+                target="_blank"
+              >
+                <OpacityImage imageUrl={keuken} />
+              </a>
+            </div>
+            <p>
+            A collaborative project between Marie Guilleray and Bjarni Gunnarsson, the duo explores diverse musical formats including fixed-media electronic compositions, improvised performances, site-specific residencies and field recording experiments.
+            </p>
+            <p>Their focus is on voice and live electronics through composed and improvised music.</p>
+            <p>
+              <a
+                href="https://www.youtube.com/watch?v=GsNuHaQWITc"
+                target="_blank"
+              >
+                Live at De Keuken
+              </a>
+            </p>
+          </article>
+
+          <article>
+            {" "}
+            <div className="date">22-11-2024</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <p>
+              Joint Research Day '24 (JRD24) - On Collective Practices &
+              Collaboration
+            </p>
+            <div className="img-center">
+              <a
+                href="https://researchplatform.art/events/research-day-24/"
+                target="_blank"
+              >
+                <OpacityImage imageUrl={jrd} />
+              </a>
+            </div>
+            <p>
+              The Joint Research Day 2024 (JRD24) will take place on Friday, 22
+              November at the Royal Academy of Art (KABK) and Royal
+              Conservatoire (KC) in The Hague, in collaboration with the Academy
+              of Creative and Performing Arts (ACPA) of Leiden University. This
+              year’s theme, Collective Practices & Collaboration in Research in
+              the Arts, will feature over 50 artist-researchers from the
+              KABK/KC/ACPA network sharing their work through workshops,
+              roundtables, a soundwalk, performance lectures, PhD info sessions,
+              research presentations, discussions, and screenings. The final
+              programme booklet is now available online, and registration is
+              open until Tuesday, 19 November 2024.
+            </p>
+            <p>
+              During the session Relationships & Networks in Music, moderated by
+              Paul Craenen, research group 2024 member Bjarni Gunnarsson will
+              present and perform the progress of his project Striations.
+            </p>
+            <p>
+              <a
+                href="https://researchplatform.art/events/research-day-24/"
+                target="_blank"
+              >
+                Joint Research Day '24 (JRD24)
+              </a>
+            </p>
+            <br />
+          </article>
           <article>
             {" "}
             <div className="date">20-10-2024</div>
@@ -133,8 +271,11 @@ class Current extends Component {
               shapes meaning in profound, unexpected ways.
             </p>
             <p>
-              <a href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024" target="_blank">
-              Arsis vs Thesis, The Hague International Sound Art Festival
+              <a
+                href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024"
+                target="_blank"
+              >
+                Arsis vs Thesis, The Hague International Sound Art Festival
               </a>
             </p>
             <br />
@@ -182,7 +323,10 @@ class Current extends Component {
             </p>
             <br />
             <p>
-              <a href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2024.pdf" target="_blank">
+              <a
+                href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2024.pdf"
+                target="_blank"
+              >
                 Presentation Slides
               </a>
             </p>
