@@ -129,6 +129,7 @@ class Current extends Component {
                 </a>
               </div>
             </div>
+            <p>.<br/></p>
             <p>
             On 7 February, the lectorate ‘Music, Education and Society’ will present the outcomes of the research projects of 2024, as well as introduce the research group of 2025. The meeting is also the festive closing of the lectorate year.
             </p>
