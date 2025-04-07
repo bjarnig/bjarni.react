@@ -107,9 +107,9 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Research Presentation</p>
+            <p>Lectorate Presentation</p>
 
- <div className="col-lg-6">
+ <div className="col-lg-12">
               <div className="img-center">
                 <a
                   href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879"
@@ -119,7 +119,7 @@ class Current extends Component {
                 </a>
               </div>
             </div>
-            <div className="col-lg-6">
+            {/* <div className="col-lg-6">
               <div className="img-center">
                 <a
                   href="https://researchplatform.art/projects/crafting-creativity-uniting-neural-synthesis-machine-learning-and-algorithmic-composition-for-innovative-music-creation/"
@@ -128,8 +128,8 @@ class Current extends Component {
                   <OpacityImage imageUrl={spectrograms} />
                 </a>
               </div>
-            </div>
-            <p>.<br/></p>
+            </div> */}
+            {/* <p>.<br/></p> */}
             <p>
             On 7 February, the lectorate ‘Music, Education and Society’ will present the outcomes of the research projects of 2024, as well as introduce the research group of 2025. The meeting is also the festive closing of the lectorate year.
             </p>
