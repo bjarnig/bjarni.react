@@ -788,6 +788,16 @@ class Pmb extends Component {
 */}
 
 <article>
+  <div className="date"> 15.04.2025 </div>
+  <div className="hr"><hr /></div>
+  <h1>Class 17, Network</h1>
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb17.zip" target="_blank">
+  <OpacityImage imageUrl= "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb17.png" />
+  </a>
+  <p><a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2024-2025/pmb17.zip" target="_blank">Download materials</a></p>
+</article>
+
+<article>
   <div className="date"> 01.04.2025 </div>
   <div className="hr"><hr /></div>
   <h1>Class 16, Spatialisation</h1>
