@@ -72,7 +72,7 @@ const colloquiumb = imageurl + "colloquiumb.png";
 const soundartfestival = imageurl + "sound-art-festival.png";
 
 const spectrograms = imageurl + "combined_spectrograms.png";
-const article = imageurl + "article.png";
+const article = imageurl + "articleml.png";
 const keuken = imageurl + "keuken.jpg";
 const jrd = imageurl + "2024_jrd.jpg";
 
@@ -110,7 +110,7 @@ class Current extends Component {
             <p>Lectorate Presentation</p>
 
  <div className="col-lg-12">
-              <div className="img-center">
+              <div className="img-center-noborder">
                 <a
                   href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879"
                   target="_blank"
