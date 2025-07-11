@@ -1124,12 +1124,7 @@ class Works extends Component {
                           <td>Lausanne, Switzerland</td>
                           <td>18.10.2012</td>
                       </tr>
-                      <tr>
-                          <td class="performance">MGBG Residency Concert</td>
-                          <td>Studio Loos</td>
-                          <td>Den Haag, Netherlands</td>
-                          <td>04.10.2012</td>
-                      </tr>
+                      
                       <tr>
                           <td class="performance">MGBG Residency Concert</td>
                           <td>Studio Loos</td>
