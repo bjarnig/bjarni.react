@@ -36,6 +36,56 @@ table a {
 	text-decoration: none;
 }
 
+/* Fix table header styling - ensure headers don't get link colors */
+table th {
+	color: #ffffff !important;
+	/* background-color: #2c3e50; */
+	/* border: 1px solid #34495e; */
+	text-align: center;
+	/* font-weight: bold; */
+}
+
+/* Fix hr tag styling - ensure it doesn't inherit link colors */
+hr {
+	color: #ffffff !important;
+	border-color: #ffffff !important;
+	background-color: #ffffff !important;
+}
+
+/* Fix .hr class styling - ensure the container doesn't inherit link colors */
+.hr {
+	color: #ffffff !important;
+}
+
+.hr hr {
+	color: #ffffff !important;
+	border-color: #ffffff !important;
+	background-color: #ffffff !important;
+	border-top: 1px solid #ffffff !important;
+}
+
+/* More specific targeting for Works.js hr */
+.container .content .hr hr {
+	color: #ffffff !important;
+	border-color: #ffffff !important;
+	background-color: #ffffff !important;
+	border-top: 1px solid #ffffff !important;
+	border-bottom: none !important;
+	border-left: none !important;
+	border-right: none !important;
+}
+
+/* Nuclear option - override ALL hr elements */
+hr {
+	color: #ffffff !important;
+	border-color: #ffffff !important;
+	background-color: #ffffff !important;
+	border-top: 1px solid #ffffff !important;
+	border-bottom: none !important;
+	border-left: none !important;
+	border-right: none !important;
+}
+
 .jumbotron {
 	margin-top: 20px;
 }
@@ -250,22 +300,107 @@ right: 55px;
 	margin-bottom: 2%;
 }
 
-.content p {
-	line-height: 25px;
-	font-size: 14px;
-	color: #FFFFFF;
-	text-align: justify;
+/* Works page specific styles */
+.content .table {
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.content .quote {
-	display: block;
-	font-style: italic;
-	padding-bottom: 3%;
+.content .table th,
+.content .table td {
+	padding: 8px 12px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid #333;
+}
+
+.content .table th {
+	font-weight: bold;
+	color: #A3CEF1;
+	border-bottom: 2px solid #A3CEF1;
+}
+
+.content .table tbody tr:hover {
+	background-color: rgba(163, 206, 241, 0.1);
+}
+
+.content .table tbody tr td:first-child {
+	font-weight: 500;
+}
+
+.content .table tbody tr td:nth-child(2) {
 	text-align: center;
 }
 
+.content .table tbody tr td:nth-child(3) {
+	text-align: center;
+}
+
+.content .table tbody tr td:nth-child(4) {
+	text-align: center;
+}
+
+.content .table tbody tr td:last-child {
+	text-align: center;
+}
+
+/* Fix for the compositions header alignment */
+.content .date[style*="float: right"] {
+	float: right !important;
+	margin-bottom: 20px;
+}
+
+/* Responsive table adjustments */
+@media screen and (max-width: 768px) {
+	.content .table {
+		font-size: 0.9em;
+	}
+	
+	.content .table th,
+	.content .table td {
+		padding: 6px 8px;
+	}
+	
+	.content .table th:nth-child(3),
+	.content .table td:nth-child(3),
+	.content .table th:nth-child(4),
+	.content .table td:nth-child(4) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.content .table {
+		font-size: 0.8em;
+	}
+	
+	.content .table th,
+	.content .table td {
+		padding: 4px 6px;
+	}
+	
+	.content .table th:nth-child(2),
+	.content .table td:nth-child(2) {
+		display: none;
+	}
+}
+
+.content p {
+	margin-bottom: 1.5em;
+	line-height: 1.6;
+}
+
+.content .quote {
+	font-style: italic;
+	margin: 2em 0;
+	padding-left: 2em;
+	border-left: 3px solid #A3CEF1;
+}
+
 .content .media {
-	padding-top: 2%;
+	margin: 2em 0;
 }
 
 .bio { padding-top: 1%; padding-left : 1%}
@@ -273,65 +408,61 @@ right: 55px;
 .biolinks a { font-size: 11px; }
 
 .soundcloud {
-	margin-top: -5%;
-	margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin: 2em auto;
+	text-align: center;
 }
 
 .thesis {
-	padding-top: 10%;
-	margin-left: 20%;
-    margin-right: auto;
+	margin: 2em 0;
+	padding: 1em;
+	background-color: rgba(163, 206, 241, 0.1);
+	border-left: 4px solid #A3CEF1;
 }
 
 .thesis a {
-	font-size: 2em;
+	color: #BCE7FD;
+	text-decoration: underline;
 }
 
 .main {
-	margin-top: -2%;
+	margin: 5% 5%;
 }
 
 .main img {
-	margin-top: 5%;
+	border: 1px solid #333333;
 }
 
 @media screen and (max-width: 767px) {
-
 	.frontImage {
-	position:relative;
-	margin: 5% 15%;
-	top: 50px;
+		position:relative;
+		margin: 6% 5%;
 	}
-
+	
 	.content .date { font-size: 16px;}
-
+	
 	.content h1 { font-size: 14px;}
-
+	
 	.content p { font-size: 12px; }
-
+	
 	.navbar-brand { font-size: 2em; }
-
-	/* .music-submenu { display: none; } */
-
+	
 	.release-info { display: none; }
-
+	
 	.bandcamp { margin-left: 0%; }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px)  {
-
 	.frontImage {
 		position:relative;
-		margin: 10% 15%;
+		margin: 6% 10%;
 	}
-
+	
 	.navbar-brand {
-		font-size: 2em;
-		margin-top: 6px;
-		margin-left: 4px;
+		font-size: 2.2em;
+		max-width: 250px;
 	}
-
+	
 	.bandcamp { margin-left: 0%; }
 }
 /* 

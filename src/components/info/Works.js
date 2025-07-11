@@ -9,39 +9,72 @@ class Works extends Component {
 
   componentDidMount() { window.scrollTo(0, 0) };
 
-  render() { return<div className="container">
-    <div className="content">
-        <ul className="nav nav-pills"><li><a href="/about">bio</a></li><li className="active"><a href="/works">catalog</a></li></ul>
-        <div className="hr"><hr /></div>
+  render() {
+    return (
+      <div className="container">
+        <div className="content">
+          <ul className="nav nav-pills">
+            <li><a href="/about">bio</a></li>
+            <li className="active"><a href="/works">catalog</a></li>
+          </ul>
+          <div className="hr"><hr /></div>
 
-      <div className="row">
-          <div className="col-lg-12">
-              <div className="date" style={this.state.compositionsStyle}>Compositions</div><br /><br /><br />
-              <table class="table">
-                  <thead>
-                      <tr>
-                          <th>Title</th>
-                          <th>Year</th>
-                          <th>Duration</th>
-                          <th>Format (channels)</th>
-                          <th>Release</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                        <tr>
-                          <td><a href="https://soundcloud.com/bjarni/blocking-behaviours-iclc-example">Blocking Behaviours</a></td>
-                          <td>2023</td>
-                          <td>25:00</td>
-                          <td>4</td>
-                          <td>-</td>
-                       </tr>
-                        <tr>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/track/vacuum">Vacuum</a></td>
-                          <td>2023</td>
-                          <td>08:08</td>
-                          <td>2</td>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
-                       </tr>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="date" style={this.state.compositionsStyle}>Compositions</div>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Duration</th>
+                    <th>Format (channels)</th>
+                    <th>Release</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="https://www.researchcatalogue.net/view/2532879/2532880">Wither</a></td>
+                    <td>2025</td>
+                    <td>11:15</td>
+                    <td>4</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://www.researchcatalogue.net/view/2532879/2532880">Interstice</a></td>
+                    <td>2025</td>
+                    <td>09:14</td>
+                    <td>2</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://www.youtube.com/watch?v=QQ9tnpmB_Ok">Streamlines</a></td>
+                    <td>2024</td>
+                    <td>16:02</td>
+                    <td>8</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://www.youtube.com/watch?v=WBoomju6l-o">Ever-Present Change</a></td>
+                    <td>2024</td>
+                    <td>22:28</td>
+                    <td>8</td>
+                    <td>-</td>
+                </tr>
+                  <tr>
+                    <td><a href="https://soundcloud.com/bjarni/blocking-behaviours-iclc-example">Blocking Behaviours</a></td>
+                    <td>2023</td>
+                    <td>25:00</td>
+                    <td>4</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://flagdayrecordings.bandcamp.com/track/vacuum">Vacuum</a></td>
+                    <td>2023</td>
+                    <td>08:08</td>
+                    <td>2</td>
+                    <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
+                  </tr>
                        <tr>
                           <td><a href="https://flagdayrecordings.bandcamp.com/track/distant">Distant</a></td>
                           <td>2023</td>
@@ -460,8 +493,8 @@ class Works extends Component {
     
       <div className="row">
           <div className="col-lg-12">
-              <div className="date" style={this.state.compositionsStyle}>Releases</div><br /><br /><br />
-              <table class="table">
+              <div className="date" style={this.state.compositionsStyle}>Releases</div>
+              <table className="table">
                   <thead>
                       <tr>
                           <th>Title</th>
@@ -473,7 +506,7 @@ class Works extends Component {
                   </thead>
                   <tbody>
                   <tr>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics"> UUPICS</a></td>
+                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics"> UPICS</a></td>
                           <td> <a href="https://flagdayrecordings.bandcamp.com"> Flag Day Recordings </a></td>
                           <td>2023</td>
                           <td>Album</td>
@@ -688,6 +721,20 @@ class Works extends Component {
                   </thead>
                   <tbody>
                       <tr>
+                          <td>Recomposing Data: Machine Learning As Compositional Process</td>
+                          <td>2025</td>
+                          <td><a href="https://researchplatform.art/people/bjarni-gunnarsson/">KC Research Group, 2025</a></td>
+                          <td>-</td>
+                          <td><a href="https://www.researchcatalogue.net/view/2532879/2532880">Research Catalogue</a></td>
+                      </tr>
+                      <tr>
+                          <td>Balancing Behaviours</td>
+                          <td>2023</td>
+                          <td><a href="https://echo.orpheusinstituut.be/article/balancing-behaviours">ECHO journal by Orpheus Instituut</a></td>
+                          <td>-</td>
+                          <td><a href="https://echo.orpheusinstituut.be/article/balancing-behaviours">ECHO</a></td>
+                      </tr>
+                      <tr>
                           <td>Synthesis and Operation Flows</td>
                           <td>2021</td>
                           <td><a href="https://2021.xcoax.org/papers2/">xCoAx 2021 Proceedings, 2021</a></td>
@@ -717,7 +764,7 @@ class Works extends Component {
                       </tr>
                       <tr>
                           <td>Processes and Potentials</td>
-                          <td>2021</td>
+                          <td>2013</td>
                           <td><a href="http://sonology.org/">Institute of Sonology</a></td>
                           <td>-</td>
                           <td><a href="https://www.academia.edu/50016473/Processes_and_Potentials">Academia.edu</a></td>
@@ -731,8 +778,7 @@ class Works extends Component {
       <div className="row">
           <div className="col-lg-12">
               <div className="date" style={this.state.compositionsStyle}>Selected Performances</div>
-              <br /><br /><br />
-              <table class="table">
+              <table className="table">
                   <thead>
                       <tr>
                           <th>Event</th>
@@ -743,7 +789,109 @@ class Works extends Component {
                   </thead>
                   <tbody>
                       <tr>
-                          <td class="performance">Sonix #9</td>
+                          <td className="performance">Lectorate Presentation</td>
+                          <td>Amare</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>07.02.2025</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Live at De Keuken</td>
+                          <td>De Keuken</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>20.01.2025</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Joint Research Day 2024</td>
+                          <td>Royal Academy of Art & Royal Conservatoire</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>22.11.2024</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">The Hague International Sound Art Festival</td>
+                          <td>Zaal3 / STUDIO LOOS</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>20.10.2024</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Sonology Colloquium</td>
+                          <td>Sonology</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>10.10.2024</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">To Listen To festival</td>
+                          <td>Festival of experimental listening</td>
+                          <td>Turin, Italy</td>
+                          <td>04.10.2024</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">AIMC 2024</td>
+                          <td>University of Oxford</td>
+                          <td>Oxford, UK</td>
+                          <td>09.09.2024</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Adela festival</td>
+                          <td>Kino Šiška</td>
+                          <td>Ljubljana, Slovenia</td>
+                          <td>01.06.2024</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Sonology Discussion Concert 4</td>
+                          <td>Sonology</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>17.04.2024</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">IIL Open Lab</td>
+                          <td>Intelligent Instruments Lab</td>
+                          <td>Reykjavík, Iceland</td>
+                          <td>03.11.2023</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">ICLC 2023</td>
+                          <td>EKKO</td>
+                          <td>Utrecht, Netherlands</td>
+                          <td>20.04.2023</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Moving Downstairs</td>
+                          <td>The Grey Space</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>19.11.2022</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">WFS Festival</td>
+                          <td>New Music Lab at Sonology</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>03.06.2022</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">xCoAx 2021</td>
+                          <td>xCoAx Conference</td>
+                          <td>Graz, Austria</td>
+                          <td>16.07.2021</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Puls binaural stream concerts</td>
+                          <td>Electric Audio Unit & Audiorama</td>
+                          <td>Online</td>
+                          <td>22.08.2021</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Tonband festival 2021</td>
+                          <td>Electric Audio Unit</td>
+                          <td>Gothenburg, Sweden</td>
+                          <td>25.10.2021</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Sonology Staff Concert</td>
+                          <td>Arnold Schoenbergzaal</td>
+                          <td>Den Haag, Netherlands</td>
+                          <td>08.12.2021</td>
+                      </tr>
+                      <tr>
+                          <td className="performance">Sonix #9</td>
                           <td>Sonix #9</td>
                           <td>Brno, Czech Republic</td>
                           <td>21.02.2020</td>
@@ -1265,14 +1413,13 @@ class Works extends Component {
                           <td>15.01.2010</td>
                       </tr>
 
-                  </tbody>
-
-          </table>
-      </div><br /></div>
-
-
-    </div>
-    </div>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
