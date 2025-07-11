@@ -2,20 +2,42 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "react": "^16.14.0",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
     "react-router": "^4.3.1",
     "react-router-bootstrap": "^0.24.4",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^3.4.4"
+    "react-scripts": "^3.4.4",
+    "react-snap": "^1.23.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "export": "npm run build && react-snap",
+    "deploy": "npm run export && aws s3 sync build/ s3://your-bucket-name --delete",
+    "generate-sitemap": "node -e \"const { generateSitemap } = require('./src/utils/sitemapGenerator.js'); const fs = require('fs'); fs.writeFileSync('public/sitemap.xml', generateSitemap());\"",
+    "build-with-sitemap": "npm run generate-sitemap && npm run build"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/current",
+      "/music",
+      "/releases",
+      "/courses",
+      "/about"
+    ],
+    "destination": "build",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    }
   },
   "browserslist": {
     "production": [

@@ -28,6 +28,7 @@ import Pma from './components/courses/PMA';
 import Pmb from './components/courses/PMB';
 import Cwa from './components/courses/CWA';
 import Workshops from './components/courses/Workshops';
+import GoogleAnalytics from './components/GoogleAnalytics';
 // import Hydra from './assets/js/hydra-synth.js';
 
 import './assets/css/style.css';
@@ -78,97 +79,100 @@ render() {
     return (
       <Router>
         <div>
-        <div className="navbar navbar-fixed-top">
-          <div className="container">
-            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse" onClick={this.navbarToggleClick}>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-            <a className="navbar-brand" href="/">bjarni gunnarsson</a>
-              <div className="nav-collapse collapse">
-                <ul className="nav navbar-nav pull-right">
-                  <LinkContainer to="/current" activeClassName="active">
-                    <NavItem>
-                      current
-                    </NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/music" activeClassName="active">
-                    <NavItem>
-                      works
-                    </NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/releases" activeClassName="active">
-                    <NavItem>
-                      releases
-                    </NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/courses" activeClassName="active">
-                    <NavItem>
-                      courses
-                    </NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/about" activeClassName="active">
-                    <NavItem>
-                      about
-                    </NavItem>
-                  </LinkContainer>
+          <GoogleAnalytics />
+          <div>
+            <div className="navbar navbar-fixed-top">
+              <div className="container">
+                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse" onClick={this.navbarToggleClick}>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                </button>
+                <a className="navbar-brand" href="/">bjarni gunnarsson</a>
+                  <div className="nav-collapse collapse">
+                    <ul className="nav navbar-nav pull-right">
+                      <LinkContainer to="/current" activeClassName="active">
+                        <NavItem>
+                          current
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/music" activeClassName="active">
+                        <NavItem>
+                          works
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/releases" activeClassName="active">
+                        <NavItem>
+                          releases
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/courses" activeClassName="active">
+                        <NavItem>
+                          courses
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/about" activeClassName="active">
+                        <NavItem>
+                          about
+                        </NavItem>
+                      </LinkContainer>
+                    </ul>
+                  </div>
+              </div>
+              <div id="phonemenu" style={this.state.divStyle}>
+                <ul class="nav navbar-nav pull-right">
+                <LinkContainer to="/current" activeClassName="active" onClick={this.navbarToggleClick}>
+                        <NavItem>
+                          current
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/music" activeClassName="active" onClick={this.navbarToggleClick}>
+                        <NavItem>
+                          works
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/releases" activeClassName="active" onClick={this.navbarToggleClick}>
+                        <NavItem>
+                          releases
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/courses" activeClassName="active" onClick={this.navbarToggleClick}>
+                        <NavItem>
+                          courses
+                        </NavItem>
+                      </LinkContainer>
+                      <LinkContainer to="/about" activeClassName="active" onClick={this.navbarToggleClick}>
+                        <NavItem>
+                          about
+                        </NavItem>
+                      </LinkContainer>
                 </ul>
               </div>
+            </div>
+            <Route exact path="/" component={Index} />
+            <Route path="/music" component={Music} />
+            <Route path="/collaborations" component={Collaborations} />
+            <Route path="/live" component={Live} />
+            <Route path="/mixes" component={Mixes} />
+            <Route path="/visual" component={Visual} />
+            <Route path="/excerpts" component={Excerpts} />
+            <Route path="/current" component={Current} />
+            <Route path="/past" component={Past} />
+            <Route path="/releases" component={Releases} />
+            <Route path="/code" component={Code} />
+            <Route path="/writings" component={Writings} />
+            <Route path="/press" component={Press} />
+            <Route path="/courses" component={Courses} />
+            <Route path="/about" component={About} />
+            <Route path="/works" component={Works} />
+            <Route path="/paths" component={Paths} />
+            <Route path="/processes" component={Processes} />
+            <PrivateRoute path="/pma" component={Pma} />
+            <PrivateRoute path="/pmb" component={Pmb} />
+            <PrivateRoute path="/cwa" component={Cwa} />
+            <PrivateRoute path="/workshops" component={Workshops} />
+            <Route path="/login" component={Login} />
           </div>
-          <div id="phonemenu" style={this.state.divStyle}>
-            <ul class="nav navbar-nav pull-right">
-            <LinkContainer to="/current" activeClassName="active" onClick={this.navbarToggleClick}>
-                    <NavItem>
-                      current
-                    </NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/music" activeClassName="active" onClick={this.navbarToggleClick}>
-                    <NavItem>
-                      works
-                    </NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/releases" activeClassName="active" onClick={this.navbarToggleClick}>
-                    <NavItem>
-                      releases
-                    </NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/courses" activeClassName="active" onClick={this.navbarToggleClick}>
-                    <NavItem>
-                      courses
-                    </NavItem>
-                  </LinkContainer>
-                  <LinkContainer to="/about" activeClassName="active" onClick={this.navbarToggleClick}>
-                    <NavItem>
-                      about
-                    </NavItem>
-                  </LinkContainer>
-          </ul>
-          </div>
-        </div>
-        <Route exact path="/" component={Index} />
-        <Route path="/music" component={Music} />
-        <Route path="/collaborations" component={Collaborations} />
-        <Route path="/live" component={Live} />
-        <Route path="/mixes" component={Mixes} />
-        <Route path="/visual" component={Visual} />
-        <Route path="/excerpts" component={Excerpts} />
-        <Route path="/current" component={Current} />
-        <Route path="/past" component={Past} />
-        <Route path="/releases" component={Releases} />
-        <Route path="/code" component={Code} />
-        <Route path="/writings" component={Writings} />
-        <Route path="/press" component={Press} />
-        <Route path="/courses" component={Courses} />
-        <Route path="/about" component={About} />
-        <Route path="/works" component={Works} />
-        <Route path="/paths" component={Paths} />
-        <Route path="/processes" component={Processes} />
-        <PrivateRoute path="/pma" component={Pma} />
-        <PrivateRoute path="/pmb" component={Pmb} />
-        <PrivateRoute path="/cwa" component={Cwa} />
-        <PrivateRoute path="/workshops" component={Workshops} />
-        <Route path="/login" component={Login} />
         </div>
       </Router>
     )

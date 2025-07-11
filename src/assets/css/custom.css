@@ -14,11 +14,11 @@ color: #ffffff;
 /*font-family: "Lucida Grande","Lucida Sans Unicode","Trebuchet MS",Helvetica,Arial,Verdana,sans-serif;*/
 /*font-family: 'Abel', sans-serif;*/
 /*font-family: Georgia, serif;*/
-font-family: 'Poppins', sans-serif;
+font-family: 'Muli', sans-serif;
 }
 
 h1 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 
 a {
@@ -270,7 +270,7 @@ right: 55px;
 
 .bio { padding-top: 1%; padding-left : 1%}
 .biolinks { padding-left : 10%}
-.biolinks a { color: #dfdfdf; }
+.biolinks a { font-size: 11px; }
 
 .soundcloud {
 	margin-top: -5%;
