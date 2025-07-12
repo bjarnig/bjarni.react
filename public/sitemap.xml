@@ -1,105 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bjarni-gunnarsson.net/</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bjarni-gunnarsson.net/current</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/current</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bjarni-gunnarsson.net/music</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/music</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bjarni-gunnarsson.net/releases</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bjarni-gunnarsson.net/courses</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/releases</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bjarni-gunnarsson.net/about</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/courses</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bjarni-gunnarsson.net/collaborations</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://bjarni-gunnarsson.net/live</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://bjarni-gunnarsson.net/mixes</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://bjarni-gunnarsson.net/visual</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://bjarni-gunnarsson.net/excerpts</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://bjarni-gunnarsson.net/code</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bjarni-gunnarsson.net/writings</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://bjarni-gunnarsson.net/press</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/about</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bjarni-gunnarsson.net/works</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/works</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bjarni-gunnarsson.net/paths</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/collaborations</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://bjarni-gunnarsson.net/processes</loc>
-    <lastmod>2025-07-11T19:25:11.151Z</lastmod>
+    <loc>http://www.bjarni-gunnarsson.net/live</loc>
+    <lastmod>2025-07-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/mixes</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/visual</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/excerpts</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/past</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/code</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/writings</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/press</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/works</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/paths</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>http://www.bjarni-gunnarsson.net/processes</loc>
+    <lastmod>2025-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>

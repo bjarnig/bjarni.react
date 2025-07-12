@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://bjarni-gunnarsson.net/sitemap.xml
+Sitemap: http://www.bjarni-gunnarsson.net/sitemap.xml
 
 # Disallow private routes
 Disallow: /pma
