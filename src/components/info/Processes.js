@@ -93,9 +93,9 @@ class Processes extends Component {
             <br /><br />
             <hr />
             <div className="bandcamp">
-            <iframe style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1997432359/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://bjarni.bandcamp.com/album/processes-potentials">Processes &amp; Potentials by Bjarni Gunnarsson</a></iframe></div>
+            <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1997432359/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://bjarni.bandcamp.com/album/processes-potentials">Processes &amp; Potentials by Bjarni Gunnarsson</a></iframe></div>
             <hr />
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F108329364&amp;color=333333&amp;auto_play=false&amp;show_artwork=true"></iframe>
+            <iframe title="Embedded content" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F108329364&amp;color=333333&amp;auto_play=false&amp;show_artwork=true"></iframe>
             <br /><br />
 
         </div>

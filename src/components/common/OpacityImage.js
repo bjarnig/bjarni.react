@@ -21,6 +21,7 @@ class OpacityImage extends React.Component {
           style={this.state.style}
           className={this.state.className}
           src={this.props.imageUrl}
+          alt={this.props.alt || ""}
           onLoad={this.handleImageLoaded.bind(this)}
           onError={this.handleImageErrored.bind(this)}
         />

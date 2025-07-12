@@ -650,7 +650,7 @@ class Past extends Component {
               </p>
             </div>
 
-            <a hreaf="http://spoutnik.info/film/cine-concert-bjarni-gunnarsson-joue-sur-les-courts-metrages-de-cedric-dupire/">
+            <a href="http://spoutnik.info/film/cine-concert-bjarni-gunnarsson-joue-sur-les-courts-metrages-de-cedric-dupire/">
               Spoutnik cinema
             </a>
           </article>
@@ -1490,14 +1490,14 @@ class Past extends Component {
 
             <OpacityImage imageUrl={gsluff} />
 
-            <span class="quote">
+            <span className="quote">
               "The physical imprint of nature in images and sound provides an
               astonishing microcosm."
             </span>
 
             <p>
               The film 'Grey Seeds' by Cédric Dupire and me will be presented at{" "}
-              <a class="bgLink" href="http://www.luff.ch/fr/2012/programme/">
+              <a className="bgLink" href="http://www.luff.ch/fr/2012/programme/">
                 {" "}
                 LUFF, the Lausanne underground film & music festival
               </a>
@@ -1530,7 +1530,7 @@ class Past extends Component {
             <p>
               Acousmatic concert at{" "}
               <a
-                class="bgLink"
+                className="bgLink"
                 href="http://www.city.ac.uk/events/2012/october/acousmatic-concert-alchemy-and-the-transmutation-of-sonic-matter"
               >
                 City University
@@ -1580,7 +1580,7 @@ class Past extends Component {
               well as solo work from both created especially for this occasion.
               <br />
               <br />
-              <a class="bgLink" href="http://www.studioloos.com/residencies">
+              <a className="bgLink" href="http://www.studioloos.com/residencies">
                 Studio Loos Residencies
               </a>
             </p>
@@ -1599,7 +1599,7 @@ class Past extends Component {
 
             <p>
               Einóma will play at the{" "}
-              <a class="bgLink" href="http://todaysart.org/2012/">
+              <a className="bgLink" href="http://todaysart.org/2012/">
                 {" "}
                 Todays Art festival
               </a>{" "}
@@ -1637,7 +1637,7 @@ class Past extends Component {
 
             <p>
               I will be giving a lecture at the{" "}
-              <a class="bgLink" href="http://unm.is/">
+              <a className="bgLink" href="http://unm.is/">
                 UNM music festival
               </a>
               , a festival of young Nordic composers which will be held in
@@ -1672,7 +1672,7 @@ class Past extends Component {
 
             <p>
               My piece 'Aukera' has been nominated by the Grand Jury of the{" "}
-              <a class="bgLink" href="http://www.fundestellos.org/pageone.htm">
+              <a className="bgLink" href="http://www.fundestellos.org/pageone.htm">
                 Competition Destellos 2012.
               </a>
               <br />
@@ -1715,7 +1715,7 @@ class Past extends Component {
               handmade artwork, the tape comes along with a download voucher."
               <br />
               <br />
-              <iframe
+              <iframe title="Embedded content"
                 width="400"
                 height="100"
                 style={this.state.bandcampStyle}
@@ -1729,7 +1729,7 @@ class Past extends Component {
               </iframe>
               <br />
               <br />
-              <iframe
+              <iframe title="Embedded content"
                 width="400"
                 height="100"
                 style={this.state.bandcampStyle}
@@ -1743,7 +1743,7 @@ class Past extends Component {
               </iframe>
               <br />
               <a
-                class="bgLink"
+                className="bgLink"
                 href="http://www.lamadameaveclechien.com/Joomla/index.php?option=com_content&view=article&id=87%3Adog010&catid=36%3Apages-releases&Itemid=2"
               >
                 DOG010 / V.A. - Soundtrack to the End of the World
@@ -1767,7 +1767,7 @@ class Past extends Component {
             <p>
               The film 'O Sal Da Lua, A outra experiência' by Cédric Dupire and
               Cristiana Miranda will be screened at the{" "}
-              <a class="bgLink" href="http://www.cotecourt.org/">
+              <a className="bgLink" href="http://www.cotecourt.org/">
                 Côté court festival
               </a>{" "}
               in the competition of 'Expérimental – Essai – Art vidéo'.
@@ -1797,7 +1797,7 @@ class Past extends Component {
 
             <p>
               The Wave Field Synthesis system will be shown in the 2012{" "}
-              <a class="bgLink" href="http://www.sonar.es">
+              <a className="bgLink" href="http://www.sonar.es">
                 Sonar Festival
               </a>{" "}
               in Barcelona from the 14th to 16th of June. <br />

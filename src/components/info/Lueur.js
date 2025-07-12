@@ -60,7 +60,7 @@ class Paths extends Component {
 
               <div className="bandcamp">
 
-              <iframe style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1223447919/size=large/bgcol=ffffff/linkcol=de270f/transparent=true/" seamless><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur by Bjarni Gunnarsson</a></iframe>
+              <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1223447919/size=large/bgcol=ffffff/linkcol=de270f/transparent=true/" seamless><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur by Bjarni Gunnarsson</a></iframe>
               </div>
               <hr />
 
@@ -87,7 +87,7 @@ class Paths extends Component {
               <p><a href="http://soundcloud.com/bjarni">soundcloud.com/bjarni</a></p>
               <p><a href="https://tartarugarecords.bandcamp.com/album/lueur">tartarugarecords.bandcamp.com/album/lueur</a></p>
               <hr />
-              <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535356630&color=%234c4655&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+              <iframe title="Embedded content" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535356630&color=%234c4655&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
               <br />
               <hr />
               <div className="img-center">

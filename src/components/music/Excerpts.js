@@ -43,22 +43,22 @@ class Excerpts extends Component {
 
         <h1>excerpts from other pieces</h1>
 
-<div class="contentleft">
-  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Undrun(excerpt).mp3" target="_blank">Undrun</a>
+<div className="contentleft">
+  <a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Undrun(excerpt).mp3" target="_blank" rel="noopener noreferrer">Undrun</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Migrateur(excerpt).mp3" target="_blank">Migrateur</a>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Migrateur(excerpt).mp3" target="_blank" rel="noopener noreferrer">Migrateur</a>
 </div>
 <br /><br />
-<div class="contentleft">
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Timeout(excerpt).mp3" target="_blank">Timeout</a>
+<div className="contentleft">
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Timeout(excerpt).mp3" target="_blank" rel="noopener noreferrer">Timeout</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Omniscient(excerpt).mp3" target="_blank">Omniscient</a>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Omniscient(excerpt).mp3" target="_blank" rel="noopener noreferrer">Omniscient</a>
 </div>
 <br /><br />
-<div class="contentleft">
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/DettaSaman(excerpt).mp3" target="_blank">Detta saman</a>
+<div className="contentleft">
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/DettaSaman(excerpt).mp3" target="_blank" rel="noopener noreferrer">Detta saman</a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Pice(excerpt).mp3" target="_blank">Pice</a>
+<a href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/excerpts/Pice(excerpt).mp3" target="_blank" rel="noopener noreferrer">Pice</a>
 </div>
 <br /><br /><br/><br/>
 

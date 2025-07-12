@@ -11,11 +11,9 @@ import OpacityImage from './../common/OpacityImage';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
-const research = imageurl + 'research.png';
-const academia = imageurl + 'academia.png';
-const iclc2023 = imageurl + "iclc2023.png";
+const article = imageurl + "articleml.png";
 
-class Collaborations extends Component {
+class Writings extends Component {
 
 constructor(props) {
   super(props);
@@ -55,30 +53,67 @@ constructor(props) {
 
         </div>
 
-        {/* <article>
+        <article>
             {" "}
-            <div className="date">Balancing Behaviours</div>
+            <div className="date">07-02-2025</div>
             <div className="hr">
               <hr />
-            </div> 
-            <p>ICLC 2023</p>
-            
-            <div className="img-center">
-              <a href="https://echo.orpheusinstituut.be/article/balancing-behaviours" target="_blank">
-                <OpacityImage imageUrl={iclc2023} />
-              </a>
-            
             </div>
-           
-            <p>Playing as part of ICLC 2023 'Alternative Algorithms'. Doors 19:30 / Show: 20:00, EKKO in Utrecht.</p>
-            <p>‘Blocking Behaviours’ concerns the real-time interpretation of two simulations of complex behaviour through an agent-based system. The simulations enforce a way of thinking that revolves around balancing behaviours, an attitude that considers musical output as something that emerges from an interaction with an autonomous system. The simulation acts as a generative, rule-based system producing output that is subject to different kinds of observation algorithms. The idea is that evolving processes are set in motion where the creator/composer becomes an observer of various developments. The output can not always be controlled in detail but is instead interpreted and further processed. The interpretation involves a mapping between different modes of representations in order to simplify or combine. In ‘Blocking Behaviours’ the idea is to explore the boundary of generative behaviour, control and and direct access to computer sound synthesis.</p>
-            <p><a href="https://iclc.toplap.org/2023" target="_blank">https://iclc.toplap.org/2023</a></p>
-            <p><a href="https://ekko.nl/event/alternative-algorithms" target="_blank">https://ekko.nl/event/alternative-algorithms</a></p>
-            
-          </article>*/}
+            <p>Lectorate Presentation</p>
+
+ <div className="col-lg-12">
+              <div className="img-center-noborder">
+                <a
+                  href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <OpacityImage imageUrl={article} />
+                </a>
+              </div>
+            </div>
+            {/* <div className="col-lg-6">
+              <div className="img-center">
+                <a
+                  href="https://researchplatform.art/projects/crafting-creativity-uniting-neural-synthesis-machine-learning-and-algorithmic-composition-for-innovative-music-creation/"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <OpacityImage imageUrl={spectrograms} />
+                </a>
+              </div>
+            </div> */}
+            {/* <p>.<br/></p> */}
+            <p>
+            On 7 February, the lectorate ‘Music, Education and Society’ will present the outcomes of the research projects of 2024, as well as introduce the research group of 2025. The meeting is also the festive closing of the lectorate year.
+            </p>
+            <p>I will present my project: 'Recomposing Data: Machine Learning As Compositional Process'</p>
+            <p>
+            This research proposal concerns an approach to computer music that seeks to combine modern approaches in machine learning with established processes of algorithmic composition. The idea is to critically question the use of generative algorithms within the creative process and how the training and creation of data for machine learning can become an important part of that process.
+            </p>
+            <p>
+              <a
+                href="https://researchplatform.art/events/lectorate-event-music-education-society-2025/"
+                target="_blank" rel="noopener noreferrer"
+              >Event in Amare
+              </a>
+            </p>  
+            <p>
+              <a
+                href="https://researchplatform.art/projects/crafting-creativity-uniting-neural-synthesis-machine-learning-and-algorithmic-composition-for-innovative-music-creation/"
+                target="_blank" rel="noopener noreferrer"
+              >The Project
+              </a>
+            </p>  
+            <p>
+              <a
+                href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879"
+                target="_blank" rel="noopener noreferrer"
+              >Article on the Research Catalogue 
+              </a>
+            </p>  
+          </article>
 
 
-        <div className="media">
+        {/* <div className="media">
           <p>Research Catalogue</p>
           <div className="img-center">
           <a href="https://www.researchcatalogue.net/profile/?person=427702">
@@ -94,7 +129,7 @@ constructor(props) {
             <OpacityImage imageUrl= {academia} />
             </a>
           </div>
-        </div>
+        </div> */}
 
 
     </div>
@@ -102,4 +137,4 @@ constructor(props) {
   }
 }
 
-export default Collaborations;
+export default Writings;

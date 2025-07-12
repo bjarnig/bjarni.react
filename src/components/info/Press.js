@@ -82,7 +82,7 @@ class Press extends Component {
         <div className="hr"><hr/></div>
         <article>
           <div className="date">Paths,
-            <a href="">A Closer Listen</a>
+            <a href="http://acloserlisten.com">A Closer Listen</a>
           </div>
           <br/>
           <p>With Paths, Bjarni Gunnarsson continues on an even pace of releasing an album every three years, collecting works that debuted in various festivals and installations. The new set is remarkably consistent, albeit difficult to predict; and that’s where the title comes into play.</p>
@@ -447,7 +447,7 @@ class Press extends Component {
           <br/>
           <p>"Reykjavík’s born music composer and major in computer science has released his first solo effort on Belgium Lamadameaveclechien label. Bjarni Gunnarsson is best known as a member of the electronic duo Einóma with which released several LP’s and CD’s on labels such as Vertical Form, Thule, Spezial Material, among others. "Safn 2006-2009" is a collection of improv pieces and live sets. It’s less beat-driven than Einóma and more focused on organic sounds but a cinematic feeling, haunting music for a dark film. The synthetic sounds are made out of thick layers of abstract noises, echoes, kind of metal percussion and hints of 70’s cosmic music. www.bjarni-gunnarsson.net and www.lamadameaveclechien.com"
             <br/><br/>
-            <div className="quote">Guillermo Escudero December 2010></div>
+            <div className="quote">Guillermo Escudero December 2010</div>
           </p>
         </article>
 

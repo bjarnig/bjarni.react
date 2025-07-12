@@ -22,7 +22,7 @@ h1 {
 }
 
 a {
-	color: #A3CEF1;
+	color: #A3CEF1;  
 	text-decoration: none;
 }
 
@@ -404,6 +404,15 @@ right: 55px;
 }
 
 .bio { padding-top: 1%; padding-left : 1%}
+
+/* Index page specific link colors - brighter for index page */
+.bio .row .col-lg-4 a,
+.bio .row .col-sm-4 a,
+.bio .row .col-xs-2 a {
+	color: #BCE7FD !important;
+	font-weight: bold;
+	text-decoration: none;
+}
 .biolinks { padding-left : 10%}
 .biolinks a { font-size: 11px; }
 

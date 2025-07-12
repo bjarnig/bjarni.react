@@ -10,6 +10,17 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Satisfy&family=Oswald:wght@300;400&family=Poppins:wght@100&family=Assistant&family=Muli&display=swap" rel="stylesheet">
+    
+    <!-- Resource hints for faster loading -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://s3.eu-central-1.amazonaws.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://s3.eu-central-1.amazonaws.com">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,13 +35,13 @@
 
     <meta name="keywords" content="Bjarni Gunnarsson, Einóma, MGBG, electronic music, sonic art, electroacoustic, computer music, acousmatic music, SuperCollider, CDP, Safn 2006-2009, Vertical Form, Thule, Uni:form, Spezial Material, Trachanik records, Lamadameaveclechien, composition, Gerard Pape, Trevor Wishart, Agostino Di Scipio, Curtis Roads, CCMIX music center, Sonology course, Royal Conservatory of music, Den Haag, icelandic music, sound art, wavefield synthesis, sound artist, composer, music" />
 
-    <meta name="description" content="Icelandic Composer and Software Engineer. Released on labels such as Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, Lamadameaveclechien and Shipwrec. Perfomed his music in concerts and festivals in Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Ireland and Iceland. A recent collection of his solo works can be found on the CD "Safn 2006-2009" which was released by the Belgium label Lamadameaveclechien in January 2010. Currently concerned with process-based ideas. Sounds focusing on internal activity and motion. Compositions that put into foreground behaviors, actions, fluid sound structures, fuzzy materials or forms. Music without sharp boundaries." />
+    <meta name="description" content="Icelandic Composer and Software Engineer. Released on labels such as Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, Lamadameaveclechien and Shipwrec. Perfomed his music in concerts and festivals in Belgium, Canada, Croatia, Denmark, England, France, Germany, Greece, Holland, Ireland and Iceland. A recent collection of his solo works can be found on the CD &quot;Safn 2006-2009&quot; which was released by the Belgium label Lamadameaveclechien in January 2010. Currently concerned with process-based ideas. Sounds focusing on internal activity and motion. Compositions that put into foreground behaviors, actions, fluid sound structures, fuzzy materials or forms. Music without sharp boundaries." />
 
-    <meta id="ogTitle" property="og:title" content="Bjarni Gunnarsson"></meta>
+    <meta id="ogTitle" property="og:title" content="Bjarni Gunnarsson">
     <meta property="og:type" content="website">
-    <meta property="og:url" content='http://www.bjarni-gunnarsson.net'>
-    <meta id="ogImage" property="og:image" content="http://bjarni-gunnarsson.net/bg.jpg"></meta>
-    <meta id="ogdesc" property="og:description" content="Icelandic Composer and Software Engineer. Concerned with process-based ideas. Sounds focusing on internal activity and motion. Compositions that put into foreground behaviors, actions, fluid sound structures, fuzzy materials or forms."></meta>
+    <meta property="og:url" content="http://www.bjarni-gunnarsson.net">
+    <meta id="ogImage" property="og:image" content="http://bjarni-gunnarsson.net/bg.jpg">
+    <meta id="ogdesc" property="og:description" content="Icelandic Composer and Software Engineer. Concerned with process-based ideas. Sounds focusing on internal activity and motion. Compositions that put into foreground behaviors, actions, fluid sound structures, fuzzy materials or forms.">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
@@ -43,13 +54,22 @@
 
     <title>Bjarni Gunnarsson</title>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <!-- Google Analytics - Load after page load for better performance -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
+      // Defer Google Analytics loading
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+        document.head.appendChild(script);
+        
+        script.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GA_MEASUREMENT_ID');
+        };
+      });
     </script>
   </head>
   <body>

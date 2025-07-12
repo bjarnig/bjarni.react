@@ -8,19 +8,22 @@
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
-    "react-router": "^4.3.1",
-    "react-router-bootstrap": "^0.24.4",
-    "react-router-dom": "^4.3.1",
+    "react-router": "^5.3.4",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.3.4",
     "react-scripts": "^3.4.4",
     "react-snap": "^1.23.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build:analyze": "npm run build && npx webpack-bundle-analyzer build/static/js/*.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "export": "npm run build && react-snap",
+    "export": "npm run build",
     "deploy": "npm run export && aws s3 sync build/ s3://your-bucket-name --delete",
+    "deploy:full": "./deploy.sh",
+    "deploy:advanced": "./deploy-advanced.sh",
     "generate-sitemap": "node -e \"const { generateSitemap } = require('./src/utils/sitemapGenerator.js'); const fs = require('fs'); fs.writeFileSync('public/sitemap.xml', generateSitemap());\"",
     "build-with-sitemap": "npm run generate-sitemap && npm run build"
   },
@@ -37,7 +40,13 @@
     "minifyHtml": {
       "collapseWhitespace": false,
       "removeComments": false
-    }
+    },
+    "inlineCss": false,
+    "removeBlobs": true,
+    "removeScriptTags": false,
+    "fixWebpackChunksIssue": false,
+    "skipThirdPartyRequests": true,
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"]
   },
   "browserslist": {
     "production": [
@@ -50,5 +59,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }

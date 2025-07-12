@@ -5,16 +5,7 @@ import './../../assets/css/login.css';
 import './../../assets/css/admin.css';
 import './../../assets/css/app.css';
 import './../../assets/css/main.css';
-import OpacityImage from './../common/OpacityImage';
 
-import context from './../../assets/images/context.png';
-import copaline from './../../assets/images/copaline.png';
-
-
-const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
-const algorithms = imageurl + 'cwa.png';
-const programming = imageurl + 'pma.png';
-const music = imageurl + 'pmb.png';
 
 
 
@@ -93,91 +84,91 @@ class Visual extends Component {
         <div className="media">
         <div className="date">Blocking Behaviours, LIVE at ICLC 2023</div>
         <br />
-        <iframe src="https://www.youtube.com/embed/NJQ1mNvPo9k?si=Slm7KUCS-aEkGQY2" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://www.youtube.com/embed/NJQ1mNvPo9k?si=Slm7KUCS-aEkGQY2" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">SuperCollider and the Terra.js</div>
         <br />
-        <iframe src="https://www.youtube.com/embed/jX81DTc2FwU" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://www.youtube.com/embed/jX81DTc2FwU" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">Hydra and SuperCollider</div>
         <br />
-        <iframe src="https://youtube.com/embed/-s_ivshe_Yo" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://youtube.com/embed/-s_ivshe_Yo" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">Simulation-driven synthesis</div>
         <br />
-        <iframe src="https://youtube.com/embed/xudh-zwMoj0" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://youtube.com/embed/xudh-zwMoj0" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">SNDArchive</div>
         <br />
-        <iframe src="https://youtube.com/embed/5q_3-A8dJ7Q" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://youtube.com/embed/5q_3-A8dJ7Q" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
         
         <div className="media">
         <div className="date">OF</div>
         <br />
-        <iframe src="https://youtube.com/embed/Wv6qKqIKzLk" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://youtube.com/embed/Wv6qKqIKzLk" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
         
         <div className="media">
         <div className="date">Copaline</div>
         <br />
-        <iframe src="https://player.vimeo.com/video/313406191" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://player.vimeo.com/video/313406191" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">Synthetic Environment</div>
         <br />
-        <iframe src="https://player.vimeo.com/video/325550871" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://player.vimeo.com/video/325550871" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">GRM Présences électronique</div>
         <br />
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/XRnw5RrwtxQ" frameborder="0" allowfullscreen></iframe>
+        <iframe title="Embedded content" width="100%" height="500" src="https://www.youtube.com/embed/XRnw5RrwtxQ" frameborder="0" allowfullscreen></iframe>
         </div>
         <div className="hr"><hr/></div>
 
           <div className="media">
           <div className="date">Journal Afghan</div>
-            <iframe src="https://player.vimeo.com/video/152695407" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe title="Embedded content" src="https://player.vimeo.com/video/152695407" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <p><a href="https://vimeo.com/152695407">JOURNAL AFGHAN TRAILER</a> from <a href="https://vimeo.com/user2695439">Cedric Dupire</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
           </div>
           <br /><br /><div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">Grey Seeds</div>
-        <iframe src="https://player.vimeo.com/video/62161204" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+        <iframe title="Embedded content" src="https://player.vimeo.com/video/62161204" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
         </div>
         <br /><br /><div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">O Sal Da Lua, A outra experiência</div>
         <br />
-        <iframe src="https://player.vimeo.com/video/76064055" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
-        {/* <iframe src="https://player.vimeo.com/video/76064055" width="100%" height="600" frameborder="0" mozallowfullscreen allowfullscreen></iframe> */}
+        <iframe title="Embedded content" src="https://player.vimeo.com/video/76064055" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+        {/* <iframe title="Embedded content" src="https://player.vimeo.com/video/76064055" width="100%" height="600" frameborder="0" mozallowfullscreen allowfullscreen></iframe> */}
         </div>
         <br /><br /><div className="hr"><hr/></div>
 
         <div className="media">
         <div className="date">Dried Up</div>
         <br />
-          <iframe src="https://player.vimeo.com/video/8992814" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe title="Embedded content" src="https://player.vimeo.com/video/8992814" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           <p><a href="https://vimeo.com/8992814">DRIED UP - Bjarni Gunnarsson / Super 8 by Cedric Dupire</a> from <a href="https://vimeo.com/user2695439">Cedric Dupire</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
         </div>
 
@@ -186,7 +177,7 @@ class Visual extends Component {
           <div className="media">
           <div className="date">Azimuth documentary</div>
           <br />
-            <iframe src="https://player.vimeo.com/video/291798789" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe title="Embedded content" src="https://player.vimeo.com/video/291798789" width="100%" height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             <p><a href="https://vimeo.com/291798789">Azimuth</a> from <a href="https://vimeo.com/user89839883">Azimuth</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
           </div>
 
@@ -195,7 +186,7 @@ class Visual extends Component {
 
         <div className="media">
         <p><a href="http://vimeo.com/8825907">Timeless</a> from <a href="http://vimeo.com/user1678659"> Toni Polkowski (FKSD)</a>. Music by me.</p>
-          <iframe src="https://player.vimeo.com/video/8825907" width="1000" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe title="Embedded content" src="https://player.vimeo.com/video/8825907" width="1000" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           <p><a href="https://vimeo.com/8825907">Timeless</a> from <a href="https://vimeo.com/user1678659">FKSD</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
         </div>
 
@@ -204,7 +195,7 @@ class Visual extends Component {
       <div className="media">
         <p>MGBG live</p>
         <div className="video-container">
-        <iframe width="100%" height="600" src="http://www.youtube.com/embed/wXbM0ajiTuA" frameborder="0" allowfullscreen></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="http://www.youtube.com/embed/wXbM0ajiTuA" frameborder="0" allowfullscreen></iframe>
         </div></div>
 
       </div>

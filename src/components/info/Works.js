@@ -709,7 +709,7 @@ class Works extends Component {
       <div className="row">
           <div className="col-lg-12">
               <div className="date" style={this.state.compositionsStyle}>Writings</div><br /><br /><br />
-              <table class="table">
+              <table className="table">
                   <thead>
                       <tr>
                           <th>Title</th>
@@ -897,512 +897,512 @@ class Works extends Component {
                           <td>21.02.2020</td>
                       </tr>
                       <tr>
-                          <td class="performance">Sonology Concert #1</td>
+                          <td className="performance">Sonology Concert #1</td>
                           <td>KC / Institute of Sonology</td>
                           <td>Den Haag, Netherlands</td>
                           <td>29.01.2020</td>
                       </tr>
                       <tr>
-                          <td class="performance">RASK #2</td>
+                          <td className="performance">RASK #2</td>
                           <td>Loft Hostel & Mengi</td>
                           <td>Reykjavík, Ísland</td>
                           <td>28.12.2019</td>
                       </tr>
                       <tr>
-                          <td class="performance">Concert Institut de Sonologie de La Haye @ GRM</td>
+                          <td className="performance">Concert Institut de Sonologie de La Haye @ GRM</td>
                           <td>Akousma, Mpaa Saint-germain</td>
                           <td>Paris, France</td>
                           <td>18.10.2019</td>
                       </tr>
                       <tr>
-                          <td class="performance">Music, Humans and Machines (ODC 2019)</td>
+                          <td className="performance">Music, Humans and Machines (ODC 2019)</td>
                           <td>Orpheus Institute</td>
                           <td>Ghent, Belgium</td>
                           <td>22.05.2019</td>
                       </tr>
                       <tr>
-                          <td class="performance">Simulation and Computer Experimentation</td>
+                          <td className="performance">Simulation and Computer Experimentation</td>
                           <td>Orpheus Institute</td>
                           <td>Ghent, Belgium</td>
                           <td>21.03.2019</td>
                       </tr>
                       <tr>
-                          <td class="performance">Lectorate - Festive Presentation</td>
+                          <td className="performance">Lectorate - Festive Presentation</td>
                           <td>Royal Conservatory, The Hague</td>
                           <td>Den Haag, Netherlands</td>
                           <td>25.01.2019</td>
                       </tr>
                       <tr>
-                          <td class="performance">Sonology Concert #1</td>
+                          <td className="performance">Sonology Concert #1</td>
                           <td>KC / Institute of Sonology</td>
                           <td>Den Haag, Netherlands</td>
                           <td>21.09.2018</td>
                       </tr>
                     <tr>
-                        <td class="performance">Sound and Music Computing 2018</td>
+                        <td className="performance">Sound and Music Computing 2018</td>
                         <td>SMC2018</td>
                         <td>Limasol, Cyprus</td>
                         <td>06.07.2018</td>
                     </tr>
                     <tr>
-                        <td class="performance">ARC (art_research_convergence) kickoff</td>
+                        <td className="performance">ARC (art_research_convergence) kickoff</td>
                         <td>ARC kickoff</td>
                         <td>Den Haag, Netherlands</td>
                         <td>02.07.2018</td>
                     </tr>
                     <tr>
-                        <td class="performance">Azimuth #6 Weekender</td>
+                        <td className="performance">Azimuth #6 Weekender</td>
                         <td>iii @WD4X</td>
                         <td>Den Haag, Netherlands</td>
                         <td>24.03.2018</td>
                     </tr>
                       <tr>
-                          <td class="performance">Solo Live set at Ephémère</td>
+                          <td className="performance">Solo Live set at Ephémère</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>08.11.2017</td>
                       </tr>
                       <tr>
-                          <td class="performance">Sonology, discussion concert 4</td>
+                          <td className="performance">Sonology, discussion concert 4</td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>22.03.2017</td>
                       </tr>
                       <tr>
-                          <td class="performance">Vulkaanuitbarsting</td>
+                          <td className="performance">Vulkaanuitbarsting</td>
                           <td>Extrapool</td>
                           <td>Nijmegen, Netherlands</td>
                           <td>05.11.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance">Forum of new music</td>
+                          <td className="performance">Forum of new music</td>
                           <td>Janáček Academy of Music and Performing Arts</td>
                           <td>Brno, Czech Republic</td>
                           <td>11.10.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance">Sonology, first years festival</td>
+                          <td className="performance">Sonology, first years festival</td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>08.09.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Côté court festival</td>
+                          <td className="performance"> Côté court festival</td>
                           <td>CINÉ 104</td>
                           <td>Paris, France</td>
                           <td>20.06.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance">Ephémère</td>
+                          <td className="performance">Ephémère</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>09.06.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Segnali Festival</td>
+                          <td className="performance"> Segnali Festival</td>
                           <td>Cinema PostModernissimo</td>
                           <td>Perugia, Italy.</td>
                           <td>07.05.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Sonology Showlab</td>
+                          <td className="performance"> Sonology Showlab</td>
                           <td>De Vinger</td>
                           <td>Den Haag, Netherlands</td>
                           <td>26.03.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Fluister</td>
+                          <td className="performance"> Fluister</td>
                           <td>De Helling</td>
                           <td>Utrecht, Netherlands</td>
                           <td>21.02.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Azimuth #0</td>
+                          <td className="performance"> Azimuth #0</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>20.02.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance"> MiniBEAST</td>
+                          <td className="performance"> MiniBEAST</td>
                           <td>Birmingham ElectroAcoustic Sound Theatre</td>
                           <td>Birmingham, UK</td>
                           <td>17.02.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance">Live Ciné-Concert</td>
+                          <td className="performance">Live Ciné-Concert</td>
                           <td>Spoutnik Cinema</td>
                           <td>Genève, Switzerland</td>
                           <td>16.01.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance">The San Francisco Tape Music Festival</td>
+                          <td className="performance">The San Francisco Tape Music Festival</td>
                           <td>SFTMC</td>
                           <td>San Francisco, USA</td>
                           <td>08.01.2016</td>
                       </tr>
                       <tr>
-                          <td class="performance">Kraak Helder</td>
+                          <td className="performance">Kraak Helder</td>
                           <td>Concertzender Nederland</td>
                           <td>Utrecht, Netherlands</td>
                           <td>08.11.2015</td>
                       </tr>
                       <tr>
-                          <td class="performance">MGBG & Einóma</td>
+                          <td className="performance">MGBG & Einóma</td>
                           <td>Mengi</td>
                           <td>Reykjavík, Ísland</td>
                           <td>08.11.2015</td>
                       </tr>
                       <tr>
-                          <td class="performance">Rewire Festival</td>
+                          <td className="performance">Rewire Festival</td>
                           <td>Korzo Theater</td>
                           <td>Den Haag, Netherlands</td>
                           <td>01.05.2015</td>
                       </tr>
                       <tr>
-                          <td class="performance">Présences Électronique</td>
+                          <td className="performance">Présences Électronique</td>
                           <td>Centquatre</td>
                           <td>Paris, France</td>
                           <td>07.03.2015</td>
                       </tr>
                       <tr>
-                          <td class="performance">FALK new years concert</td>
+                          <td className="performance">FALK new years concert</td>
                           <td>Mengi</td>
                           <td>Reykjavík, Ísland</td>
                           <td>30.12.2014</td>
                       </tr>
                       <tr>
-                          <td class="performance">Sonology at Volkspaleis</td>
+                          <td className="performance">Sonology at Volkspaleis</td>
                           <td>Volkspaleis</td>
                           <td>Den Haag, Netherlands</td>
                           <td>24.10.2014</td>
                       </tr>
                       <tr>
-                          <td class="performance">Ephémère</td>
+                          <td className="performance">Ephémère</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>13.06.2014</td>
                       </tr>
                       <tr>
-                          <td class="performance">Tectonics</td>
+                          <td className="performance">Tectonics</td>
                           <td>Harpa</td>
                           <td>Reykjavík, Ísland</td>
                           <td>12.04.2014</td>
                       </tr>
                       <tr>
-                          <td class="performance">bi.pola.re</td>
+                          <td className="performance">bi.pola.re</td>
                           <td>Mix Arts Myrys</td>
                           <td>Toulouse, France</td>
                           <td>07.03.2014</td>
                       </tr>
                       <tr>
-                          <td class="performance">Sónar</td>
+                          <td className="performance">Sónar</td>
                           <td>Harpa</td>
                           <td>Reykjavík, Ísland</td>
                           <td>15.02.2014</td>
                       </tr>
                       <tr>
-                          <td class="performance">Extreme Chill</td>
+                          <td className="performance">Extreme Chill</td>
                           <td>Kafffibarinn</td>
                           <td>Reykjavík, Ísland</td>
                           <td>05.06.2013</td>
                       </tr>
                       <tr>
-                          <td class="performance">Digital is dead</td>
+                          <td className="performance">Digital is dead</td>
                           <td>Gallery of modern art </td>
                           <td>Oxford, UK</td>
                           <td>03.05.2013</td>
                       </tr>
                       <tr>
-                          <td class="performance">'Composing Spaces' symposium</td>
+                          <td className="performance">'Composing Spaces' symposium</td>
                           <td>Institute of Sonology</td>
                           <td>Den Haag, Netherlands</td>
                           <td>09.04.2013</td>
                       </tr>
                       <tr>
-                          <td class="performance">LUFF</td>
+                          <td className="performance">LUFF</td>
                           <td>Cinéma Oblò</td>
                           <td>Lausanne, Switzerland</td>
                           <td>18.10.2012</td>
                       </tr>
                       
                       <tr>
-                          <td class="performance">MGBG Residency Concert</td>
+                          <td className="performance">MGBG Residency Concert</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>04.10.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance">Today's Art</td>
+                          <td className="performance">Today's Art</td>
                           <td>TodaysArt</td>
                           <td>Den Haag, Netherlands</td>
                           <td>20.09.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance">UNM 2012</td>
+                          <td className="performance">UNM 2012</td>
                           <td>LHÍ</td>
                           <td>Reykjavík, Ísland</td>
                           <td>28.10.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance">Sonar</td>
+                          <td className="performance">Sonar</td>
                           <td>MACBA</td>
                           <td>Barcelona, Spain</td>
                           <td>14.06.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance">Final Concert</td>
+                          <td className="performance">Final Concert</td>
                           <td>Korzo Theater </td>
                           <td>Den Haag, Netherlands</td>
                           <td>12.06.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance"> LMALC night</td>
+                          <td className="performance"> LMALC night</td>
                           <td>Les ateliers claus</td>
                           <td>Bruxelles, Belgium</td>
                           <td>11.05.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Sonology Concert </td>
+                          <td className="performance"> Sonology Concert </td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>18.04.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance"> WFS concert</td>
+                          <td className="performance"> WFS concert</td>
                           <td>ANNA@KV20</td>
                           <td>Den Haag, Netherlands</td>
                           <td>13.03.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Comme un lundi</td>
+                          <td className="performance"> Comme un lundi</td>
                           <td>Bar du matin</td>
                           <td>Bruxelles, Belgium</td>
                           <td>09.01.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance">Freemote festival</td>
+                          <td className="performance">Freemote festival</td>
                           <td>Nudigital/Borndigital</td>
                           <td>Utrecht, Netherlands</td>
                           <td>08.12.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">Freemote festival</td>
+                          <td className="performance">Freemote festival</td>
                           <td>Nudigital/Borndigital</td>
                           <td>Utrecht, Netherlands</td>
                           <td>08.12.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">Sonology Concert</td>
+                          <td className="performance">Sonology Concert</td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>17.11.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">Ephémère</td>
+                          <td className="performance">Ephémère</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>08.11.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">MGBG concert release</td>
+                          <td className="performance">MGBG concert release</td>
                           <td>Souffle Continue</td>
                           <td>Paris, France</td>
                           <td>11.10.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">MGBG live</td>
+                          <td className="performance">MGBG live</td>
                           <td>Gallery Abilene</td>
                           <td>Bruxelles, Berlgium</td>
                           <td>20.04.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">LIVEWIRE festival</td>
+                          <td className="performance">LIVEWIRE festival</td>
                           <td>University of Maryland</td>
                           <td>Baltimore, USA</td>
                           <td>09.10.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Sonology Concert </td>
+                          <td className="performance"> Sonology Concert </td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>13.10.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Lost Theory festival</td>
+                          <td className="performance"> Lost Theory festival</td>
                           <td>Deringaj</td>
                           <td>Croatia</td>
                           <td>17.08.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> ICMC </td>
+                          <td className="performance"> ICMC </td>
                           <td>University of Huddersfield</td>
                           <td>Huddersfield, UK</td>
                           <td>01.08.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">MGBG live</td>
+                          <td className="performance">MGBG live</td>
                           <td>After Mars der Beschaving</td>
                           <td>Den Haag, Netherlands</td>
                           <td>26.06.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Sonology Concert </td>
+                          <td className="performance"> Sonology Concert </td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>23.06.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> SSSP </td>
+                          <td className="performance"> SSSP </td>
                           <td>De Montfort University</td>
                           <td>Leicester, UK</td>
                           <td>09.06.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">Ephémère</td>
+                          <td className="performance">Ephémère</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>24.05.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">MGBG live</td>
+                          <td className="performance">MGBG live</td>
                           <td>Trashvortex series</td>
                           <td>Paris, France</td>
                           <td>30.04.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> CASS Concert </td>
+                          <td className="performance"> CASS Concert </td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>28.03.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> CCRMT </td>
+                          <td className="performance"> CCRMT </td>
                           <td>McGill University</td>
                           <td>Montreal, Canada</td>
                           <td>15.03.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Sonology Concert </td>
+                          <td className="performance"> Sonology Concert </td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>10.03.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> BEAST Festival </td>
+                          <td className="performance"> BEAST Festival </td>
                           <td>Birmingham University</td>
                           <td>Birmingham, UK</td>
                           <td>02.03.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance"> LMALC living room concerts</td>
+                          <td className="performance"> LMALC living room concerts</td>
                           <td>Rue Alphonse Hottat</td>
                           <td>Bruxelles, Belgium</td>
                           <td>22.02.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">Monophonic</td>
+                          <td className="performance">Monophonic</td>
                           <td>330 Live</td>
                           <td>Den Haag, Netherlands</td>
                           <td>18.02.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">Icelandic Music Days</td>
+                          <td className="performance">Icelandic Music Days</td>
                           <td>Zaal 100</td>
                           <td>Amsterdam, Netherlands</td>
                           <td>08.02.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">Ephémère</td>
+                          <td className="performance">Ephémère</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>10.02.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">WFS Concert</td>
+                          <td className="performance">WFS Concert</td>
                           <td>Scheltema Complex</td>
                           <td>Leiden, Netherlands</td>
                           <td>10.02.2011</td>
                       </tr>
                       <tr>
-                          <td class="performance">Einóma livet</td>
+                          <td className="performance">Einóma livet</td>
                           <td>Cramers</td>
                           <td>Den Haag, Netherlands</td>
                           <td>08.12.2012</td>
                       </tr>
                       <tr>
-                          <td class="performance">STRP festival</td>
+                          <td className="performance">STRP festival</td>
                           <td>STRP</td>
                           <td>Eindhoven, Netherlands</td>
                           <td>24.11.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance">Einóma live </td>
+                          <td className="performance">Einóma live </td>
                           <td>Pure magnetic</td>
                           <td>Den Haag, Netherlands</td>
                           <td>23.11.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance"> CASS Concert </td>
+                          <td className="performance"> CASS Concert </td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>28.10.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Z-zondag </td>
+                          <td className="performance"> Z-zondag </td>
                           <td>Villa Ockenburgh</td>
                           <td>Den Haag, Netherlands</td>
                           <td>01.10.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance"> SuperCollider Symposium</td>
+                          <td className="performance"> SuperCollider Symposium</td>
                           <td>TU Berlin</td>
                           <td>Berlin, Germany</td>
                           <td>22.09.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance">MGBG live</td>
+                          <td className="performance">MGBG live</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>22.09.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance">Einóma live</td>
+                          <td className="performance">Einóma live</td>
                           <td>Pipp</td>
                           <td>Den Haag, Netherlands</td>
                           <td>01.06.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance">FESTIVAL 360</td>
+                          <td className="performance">FESTIVAL 360</td>
                           <td> LILAS EN SCENE</td>
                           <td> Les Lilas, France</td>
                           <td>03.06.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance">LMALC livingroom concerts</td>
+                          <td className="performance">LMALC livingroom concerts</td>
                           <td>LMALC studios</td>
                           <td>Bruxelles, Belgium</td>
                           <td>06.04.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance">Einóma live</td>
+                          <td className="performance">Einóma live</td>
                           <td>Bazaar Club</td>
                           <td>Bruxelles, Belgium</td>
                           <td>03.04.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance">Wonderwerp</td>
+                          <td className="performance">Wonderwerp</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>05.03.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance">Wonderwerp</td>
+                          <td className="performance">Wonderwerp</td>
                           <td>Studio Loos</td>
                           <td>Den Haag, Netherlands</td>
                           <td>05.03.2010</td>
                       </tr>
                       <tr>
-                          <td class="performance"> Sonology Concert</td>
+                          <td className="performance"> Sonology Concert</td>
                           <td>Royal Conservatory</td>
                           <td>Den Haag, Netherlands</td>
                           <td>15.01.2010</td>

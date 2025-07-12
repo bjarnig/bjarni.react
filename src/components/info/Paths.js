@@ -59,7 +59,7 @@ class Paths extends Component {
               <hr />
 
               <div className="bandcamp">
-              <iframe style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=3447722096/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/" seamless><a href="http://grannyrecords.bandcamp.com/album/paths">Paths by Bjarni Gunnarsson</a></iframe>
+              <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=3447722096/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/" seamless><a href="http://grannyrecords.bandcamp.com/album/paths">Paths by Bjarni Gunnarsson</a></iframe>
               </div>
               <hr />
 
@@ -79,7 +79,7 @@ class Paths extends Component {
               <hr />
                 <br />
 
-              <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259066161&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+              <iframe title="Embedded content" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259066161&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
               <br />
               <hr />
 
