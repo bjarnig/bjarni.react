@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <url>
+    <loc>https://bjarni-gunnarsson.net/about</loc>
+    <image:image>
+      <image:loc>https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/bjarni-gunnarsson.png</image:loc>
+      <image:title>Bjarni Gunnarsson - Composer and Programmer</image:title>
+      <image:caption>Portrait of Bjarni Gunnarsson, composer and programmer exploring generative sound through computational processes</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://bjarni-gunnarsson.net/writings</loc>
+    <image:image>
+      <image:loc>https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/recomposing-data.png</image:loc>
+      <image:title>Recomposing Data: Machine Learning As Compositional Process</image:title>
+      <image:caption>Research on combining machine learning with algorithmic composition techniques</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/bba.png</image:loc>
+      <image:title>Balancing Behaviours - ECHO Journal</image:title>
+      <image:caption>Article on emergent systems and algorithmic behaviors in computer music</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/bbb.png</image:loc>
+      <image:title>Balancing Behaviours - ECHO Journal</image:title>
+      <image:caption>Research on process-based approaches to sound and behavioral dimensions</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://bjarni-gunnarsson.net/</loc>
+    <image:image>
+      <image:loc>https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/bjarni-gunnarsson.png</image:loc>
+      <image:title>Bjarni Gunnarsson - Composer and Programmer</image:title>
+      <image:caption>Portrait of Bjarni Gunnarsson, composer and programmer exploring generative sound through computational processes</image:caption>
+    </image:image>
+  </url>
+  
+</urlset> 
