@@ -470,6 +470,20 @@ iframe {
 .biolinks { padding-left : 10%}
 .biolinks a { font-size: 11px; }
 
+/* Responsive bio divider - only shows on mobile */
+.bio-divider {
+	margin: 2em 0;
+	text-align: center;
+}
+
+.bio-divider hr {
+	border: 0;
+	height: 1px;
+	background: linear-gradient(to right, transparent, #A3CEF1, transparent);
+	margin: 0 auto;
+	max-width: 80%;
+}
+
 .soundcloud {
 	display: block;
 	margin: 2em auto;
