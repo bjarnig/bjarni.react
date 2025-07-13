@@ -66,11 +66,11 @@ class About extends Component {
             <div className="bio">
               <div className="row">
                 <div className="col-lg-8">
-                <p>Bjarni Gunnarsson is a composer and programmer whose work focuses on the generative potential of sound through computational processes. He explores how sound can emerge from the behaviour of interacting processes, engaging with the conditions, thresholds, and responses that shape its presence. He creates environments where sound materials form, shift, and dissolve, shaped by systems that evolve through interaction, memory, and internal transformation.</p>
-                <p>His systems are exploratory rather than fixed, with feedback, inference, and temporal layering functioning as musical parameters. Sound in this context emerges through process, shaped by both the machine and the composer, as systems unfold and relations take shape over time.</p>
+                <p>Bjarni Gunnarsson is a composer and programmer whose work focuses on the generative potential of sound through computational processes. He explores how sound can emerge from interacting behaviours, engaging with the conditions, thresholds, and responses that shape how it unfolds. He creates environments where sound materials form, shift, and dissolve, shaped by systems that evolve through interaction, memory, and internal transformation.</p>
+                <p>His systems are exploratory rather than fixed, with feedback, inference, and temporal layering functioning as musical parameters. Music in this context emerges through process, shaped by both the machine and the composer, as a network of interacting elements where tools, code, decisions, and responses evolve together over time.</p>
                 <p>Recent projects include database-driven recomposition, machine-listening classification systems, parametric synthesis using multidimensional control spaces, latent space interpolation via variational autoencoders, sequential inference models for audio-to-structure mapping, classification-based branching systems, and real-time network growth algorithms integrated with live coding environments.</p>
                 <p>His work has been presented at ICMC, ICLC, SMC, and xCoAx, and performed at festivals including Tectonics, Rewire, Today’s Art, Sonar, and Présences Électroniques. His music appears on labels such as SUPERPANG, SØVN, 3LEAVES, Flag Day Recordings, Tartaruga, and Shipwrec. Solo releases include Safn 2006–2009, Processes & Potentials, Paths, Lueur, Volume & Void, Cendres, Anticlines, and UPICS. His writings have been published in ECHO – Orpheus Instituut Journal and the Journal for Artistic Research (JAR).</p>
-                <p>He teaches algorithmic composition and computer music at the Institute of Sonology, Royal Conservatory in The Hague. He studied computer science at the University of Reykjavík, composition with Gerard Pape, Trevor Wishart, Agostino Di Scipio, and Curtis Roads at CCMIX in Paris, and completed a master’s degree at Sonology under Paul Berg, Kees Tazelaar, and Richard Barrett.</p>
+                <p>He teaches algorithmic composition and computer music at the Institute of Sonology, Royal Conservatory in The Hague. He studied computer science at the University of Reykjavík and composition with Gerard Pape, Trevor Wishart, Agostino Di Scipio, and Curtis Roads at CCMIX in Paris. He also completed a master’s degree in Sonology under Paul Berg, Kees Tazelaar, and Richard Barrett.</p>
                 </div>
                 
                 <div className="col-lg-4">
@@ -88,7 +88,7 @@ class About extends Component {
                     <p> <a href="https://vimeo.com/blindni" target="_blank" rel="noopener noreferrer">Vimeo</a></p>
                     <p> <a href="https://www.mixcloud.com/bjarnig/" target="_blank" rel="noopener noreferrer">Mixcloud</a></p>
                     <p> <a href="https://instagram.com/blindni" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-                    <p> <a href="https://twitter.com/blindni" target="_blank" rel="noopener noreferrer">Twitter</a></p>
+                    {/* <p> <a href="https://twitter.com/blindni" target="_blank" rel="noopener noreferrer">Twitter</a></p> */}
                     <p> <a href="https://www.facebook.com/xbjarni.gunnarsson" target="_blank" rel="noopener noreferrer">Facebook</a></p>
                     <p style={{ fontSize: '11px' }}> bjarnig@gmail.com </p>
                     {/* <p> [ Photo from <a href="https://www.azimuthfoundation.net/6-2/">Azimuth #6-2</a> ]</p> */}
