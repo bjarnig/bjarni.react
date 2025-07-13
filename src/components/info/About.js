@@ -19,22 +19,30 @@ class About extends Component {
       <>
         <StructuredData type="person" />
         <Helmet>
-          <title>About Bjarni Gunnarsson - Icelandic Composer and Computer Scientist</title>
-          <meta name="description" content="Bjarni Gunnarsson is an Icelandic Composer and Computer Scientist from Reykjavík, Iceland. Faculty member at the Institute of Sonology, Royal Conservatory in The Hague. Expert in process-based sound and algorithmic composition." />
-          <meta name="keywords" content="Bjarni Gunnarsson, Icelandic composer, computer scientist, algorithmic composition, process-based sound, Sonology, Royal Conservatory, The Hague, electronic music, computer music, spatial audio, wavefield synthesis" />
+          <title>About Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition</title>
+          <meta name="description" content="Bjarni Gunnarsson is a composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
+          <meta name="keywords" content="Bjarni Gunnarsson, composer, programmer, algorithmic composition, process-based sound, generative music, computational processes, Institute of Sonology, The Hague, electronic music, computer music, machine learning, database-driven composition, variational autoencoders, live coding, SUPERPANG, SØVN, 3LEAVES, Flag Day Recordings, Tartaruga, Shipwrec" />
           
           {/* Open Graph */}
-          <meta property="og:title" content="About Bjarni Gunnarsson - Icelandic Composer and Computer Scientist" />
-          <meta property="og:description" content="Bjarni Gunnarsson is an Icelandic Composer and Computer Scientist from Reykjavík, Iceland. Faculty member at the Institute of Sonology, Royal Conservatory in The Hague." />
+          <meta property="og:title" content="About Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition" />
+          <meta property="og:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
           <meta property="og:type" content="profile" />
           <meta property="og:url" content="https://bjarni-gunnarsson.net/about" />
           <meta property="og:image" content={about} />
+          <meta property="og:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
           
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="About Bjarni Gunnarsson - Icelandic Composer and Computer Scientist" />
-          <meta name="twitter:description" content="Bjarni Gunnarsson is an Icelandic Composer and Computer Scientist from Reykjavík, Iceland. Faculty member at the Institute of Sonology." />
+          <meta name="twitter:title" content="About Bjarni Gunnarsson - Composer and Programmer" />
+          <meta name="twitter:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague." />
           <meta name="twitter:image" content={about} />
+          <meta name="twitter:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
+          
+          {/* Additional SEO meta tags */}
+          <meta name="author" content="Bjarni Gunnarsson" />
+          <meta name="robots" content="index, follow" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="7 days" />
           
           {/* Canonical URL */}
           <link rel="canonical" href="https://bjarni-gunnarsson.net/about" />

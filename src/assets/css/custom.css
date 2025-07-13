@@ -392,6 +392,54 @@ right: 55px;
 	line-height: 1.6;
 }
 
+/* Press page specific styling for better readability */
+.content article {
+	margin-bottom: 2em;
+	padding: 0.5em 0;
+}
+
+/* More specific styling for Press page articles */
+.content article .date {
+	font-size: 1.2em;
+	margin-bottom: 0.5em;
+	font-weight: 500;
+}
+
+.content article p {
+	margin-bottom: 1.2em;
+	line-height: 1.6;
+}
+
+/* Press page specific overrides - these will only apply to Press page */
+.press-page article {
+	margin-bottom: 3em;
+	padding: 1.5em 0;
+}
+
+.press-page article .date {
+	font-size: 1.3em;
+	margin-bottom: 1em;
+	font-weight: 500;
+	color: #A3CEF1;
+}
+
+.press-page article p {
+	margin-bottom: 1.8em;
+	line-height: 1.7;
+	text-align: justify;
+	max-width: 100%;
+}
+
+.press-page article .quote {
+	font-style: italic;
+	margin: 2.5em 0 1em 0;
+	padding: 1em 0 1em 2em;
+	border-left: 3px solid #A3CEF1;
+	background-color: rgba(163, 206, 241, 0.05);
+	font-size: 0.95em;
+	color: #BCE7FD;
+}
+
 .content .quote {
 	font-style: italic;
 	margin: 2em 0;
@@ -459,6 +507,30 @@ right: 55px;
 	.release-info { display: none; }
 	
 	.bandcamp { margin-left: 0%; }
+	
+	/* Press page mobile adjustments */
+	.press-page article {
+		margin-bottom: 2em;
+		padding: 1em 0;
+	}
+	
+	.press-page article .date {
+		font-size: 1.1em;
+		margin-bottom: 0.8em;
+	}
+	
+	.press-page article p {
+		margin-bottom: 1.5em;
+		line-height: 1.6;
+		text-align: left;
+		font-size: 13px;
+	}
+	
+	.press-page article .quote {
+		margin: 2em 0 0.8em 0;
+		padding: 0.8em 0 0.8em 1.5em;
+		font-size: 0.9em;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px)  {

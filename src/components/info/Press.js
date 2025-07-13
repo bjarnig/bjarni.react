@@ -6,7 +6,7 @@ class Press extends Component {
   
   render() {
     return <div className="container">
-      <div className="content">
+      <div className="content press-page">
 
         <ul className="nav nav-pills">
           <li>

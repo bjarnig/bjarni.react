@@ -55,22 +55,30 @@ class About extends Component {
       <>
         <StructuredData type="homepage" />
         <Helmet>
-          <title>Bjarni Gunnarsson - Icelandic Composer and Software Engineer</title>
-          <meta name="description" content="Icelandic Composer and Software Engineer. Released on labels such as Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, Lamadameaveclechien and Shipwrec. Currently concerned with process-based ideas and fluid sound structures." />
-          <meta name="keywords" content="Bjarni Gunnarsson, electronic music, sonic art, electroacoustic, computer music, acousmatic music, SuperCollider, composition, sound art, wavefield synthesis, sound artist, composer, music" />
+          <title>Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition</title>
+          <meta name="description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
+          <meta name="keywords" content="Bjarni Gunnarsson, composer, programmer, algorithmic composition, process-based sound, generative music, computational processes, Institute of Sonology, The Hague, electronic music, computer music, machine learning, database-driven composition, variational autoencoders, live coding, SUPERPANG, SØVN, 3LEAVES, Flag Day Recordings, Tartaruga, Shipwrec" />
           
           {/* Open Graph */}
-          <meta property="og:title" content="Bjarni Gunnarsson - Icelandic Composer and Software Engineer" />
-          <meta property="og:description" content="Icelandic Composer and Software Engineer. Concerned with process-based ideas. Sounds focusing on internal activity and motion." />
+          <meta property="og:title" content="Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition" />
+          <meta property="og:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://bjarni-gunnarsson.net" />
           <meta property="og:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta property="og:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
           
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Bjarni Gunnarsson - Icelandic Composer and Software Engineer" />
-          <meta name="twitter:description" content="Icelandic Composer and Software Engineer. Concerned with process-based ideas and fluid sound structures." />
+          <meta name="twitter:title" content="Bjarni Gunnarsson - Composer and Programmer" />
+          <meta name="twitter:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague." />
           <meta name="twitter:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta name="twitter:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
+          
+          {/* Additional SEO meta tags */}
+          <meta name="author" content="Bjarni Gunnarsson" />
+          <meta name="robots" content="index, follow" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="7 days" />
           
           {/* Canonical URL */}
           <link rel="canonical" href="https://bjarni-gunnarsson.net" />
