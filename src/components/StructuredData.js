@@ -8,7 +8,7 @@ const StructuredData = ({ type = 'homepage' }) => {
       "@type": "Person",
       "name": "Bjarni Gunnarsson",
       "url": "https://bjarni-gunnarsson.net",
-      "image": "https://bjarni-gunnarsson.net/bg.jpg",
+      "image": "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/bjarni-gunnarsson.png",
       "sameAs": [
         "https://bjarni.bandcamp.com",
         "https://soundcloud.com/bjarni",
@@ -55,6 +55,14 @@ const StructuredData = ({ type = 'homepage' }) => {
       "alumniOf": {
         "@type": "Sonology",
         "name": "Royal Conservatory of Music, Den Haag"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/bjarni-gunnarsson.png",
+        "name": "Bjarni Gunnarsson Portrait",
+        "description": "Portrait of Bjarni Gunnarsson, composer and programmer exploring generative sound through computational processes",
+        "width": 1200,
+        "height": 630
       }
     };
 

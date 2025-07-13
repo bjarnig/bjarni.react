@@ -29,7 +29,10 @@ class About extends Component {
           <meta property="og:type" content="profile" />
           <meta property="og:url" content="https://bjarni-gunnarsson.net/about" />
           <meta property="og:image" content={about} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           <meta property="og:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
+          <meta property="og:image:type" content="image/png" />
           
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
