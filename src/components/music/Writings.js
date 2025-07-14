@@ -73,15 +73,11 @@ constructor(props) {
               <OpacityImage imageUrl={article} />
             </a>
           </div>
-          <p>
-            This research proposal tackles a common problem in computer music: current AI approaches like deep learning create powerful but hard-to-control music generation tools, while traditional algorithmic composition methods are more intuitive but less flexible. The idea here is to combine the best of both worlds by integrating machine learning with established algorithmic composition techniques, making the data creation process itself part of the creative workflow rather than just using pre-existing datasets.
-          </p>
-          <p>
-            The research focuses on two main areas: using machine learning to analyze musical data from algorithmic processes (like control parameters and sound analysis), and training neural synthesis on digital sounds created through algorithmic composition. The goal is to merge sound synthesis, machine learning, and algorithmic composition into new creative approaches that address current limitations in AI-generated music, which often lacks the convincing realism and innovation found in other AI fields.
-          </p>
-          <p>
-            Rather than just reproducing familiar patterns, this practice-oriented approach aims to overcome musicians' skepticism about AI music tools by making the technology more accessible and creatively useful. By drawing from algorithmic composition traditions while exploring new collaborative methods, the research seeks to enhance creative training processes and discover fresh possibilities for musical expression that emerge from this fusion of old and new techniques.
-          </p>
+          <p>This research explores new ways of composing computer music by combining algorithmic techniques, sound synthesis, and live coding with the use of machine learning. Rather than relying on large external datasets or aiming for automation, the project focuses on artistic processes that include data-making, model training, and real-time performance as interconnected creative activities. </p>
+
+<p>The work places strong emphasis on how material is created, interpreted, and transformed through interaction with generative systems. These systems are built from modular components, drawing on personal sound archives, parametric control spaces, and feedback mechanisms. Performances become situations where the composer and the system respond to one another, shaping the music in ways that evolve. Rather than following fixed structures, the pieces unfold through a mix of intuition, analysis, and system behaviour.</p>
+
+<p>A central aim of the research is to examine how compositional methods can adapt when learning models and algorithmic processes are treated as part of a broader musical practice. The focus is on how these methods affect the shaping of sound, form, and interaction. This opens a space where artistic judgment, unpredictability, and system design work together to support experimental approaches to composition.</p>
           <p>
             <a href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879" target="_blank" rel="noopener noreferrer">
               Research Catalogue

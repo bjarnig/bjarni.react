@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { Helmet } from 'react-helmet';
+import StructuredData from '../StructuredData';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
@@ -54,7 +56,31 @@ class Releases extends Component {
   componentDidMount() { window.scrollTo(0, 0) }
 
   render() {
-    return <div className="container">
+    return (
+      <>
+        <StructuredData type="music" />
+        <Helmet>
+          <title>Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs</title>
+          <meta name="description" content="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur. Process-based electronic music exploring computational sound generation." />
+          <meta name="keywords" content="Bjarni Gunnarsson releases, UPICS, Anticlines, Cendres, Volume & Void, Lueur, electronic music albums, process-based music, Flag Day Recordings, Superpang, SØVN, Tartaruga" />
+          
+          {/* Open Graph */}
+          <meta property="og:title" content="Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs" />
+          <meta property="og:description" content="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur. Process-based electronic music." />
+          <meta property="og:type" content="music.album" />
+          <meta property="og:url" content="https://bjarni-gunnarsson.net/releases" />
+          <meta property="og:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs" />
+          <meta name="twitter:description" content="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur." />
+          <meta name="twitter:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          
+          {/* Canonical URL */}
+          <link rel="canonical" href="https://bjarni-gunnarsson.net/releases" />
+        </Helmet>
+        <div className="container">
       <div className="content">
         <ul className="nav nav-pills">
           <li className="active">
@@ -399,7 +425,8 @@ class Releases extends Component {
       </div>
       </div>
     </div>
-
+      </>
+    )
   }
 }
 

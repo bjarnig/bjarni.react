@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Bjarni Gunnarsson",
+  "name": "Bjarni Gunnarsson - Composer and Programmer",
+  "description": "Composer and programmer exploring generative sound through computational processes",
   "icons": [
     {
       "src": "favicon.ico",

@@ -1,6 +1,6 @@
 // Sitemap generator for SEO
 const generateSitemap = () => {
-  const baseUrl = 'http://www.bjarni-gunnarsson.net';
+  const baseUrl = 'https://bjarni-gunnarsson.net';
   const currentDate = new Date().toISOString().split('T')[0];
   
   const routes = [
