@@ -203,7 +203,7 @@ class Current extends Component {
                 <OpacityImage imageUrl={ruv} />
               </a>
             </div>
-            <p>A radio interview with the important journalist Árni Matthíasson on RÚV.</p>
+            <p>A radio interview with the journalist Árni Matthíasson on RÚV.</p>
             <p>
               <a href="https://www.ruv.is/utvarp/spila/straumar/34464/a8liir" target="_blank" rel="noopener noreferrer">
                 Radio Interview on RÚV
