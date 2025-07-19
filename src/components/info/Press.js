@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class Press extends Component {
 
   componentDidMount() { window.scrollTo(0, 0) };
-  
+
   render() {
     return <div className="container">
       <div className="content press-page">
@@ -19,7 +19,7 @@ class Press extends Component {
         <div className="hr"><hr/></div>
         
         <article>
-          <div className="date">Upics,
+          <div className="date h4">Upics,
             <a href="https://audiocrackle.blogspot.com/2023/02/non-music-roundup-feb-23.html"> audiocracklet</a>
           </div>
           <br/>
@@ -31,7 +31,7 @@ class Press extends Component {
         </article>
         
       <article>
-        <div className="date">Upics,
+        <div className="date h4">Upics,
           <a href="https://rateyourmusic.com/release/album/bjarni-gunnarsson/upics/"> https://rateyourmusic.com</a>
         </div>
         <br/>
@@ -42,7 +42,7 @@ class Press extends Component {
       </article>
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Lueur,
+                    <div className="date h4">Lueur, 
             <a href="https://acloserlisten.com/2018/11/25/bjarni-gunnarsson-lueur/?fbclid=IwAR2988v93KPbxAue4d72IlhXOcUsjQk7b8JwASFzy-RxrNo0P9zrHzZuYBk"> A closer listen</a>
           </div>
           <br/>
@@ -53,45 +53,45 @@ class Press extends Component {
         </article>
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Lueur,
-            <a href="https://www.ambientblog.net/blog/2019-01-01/gunnarsson-pauline/">Ambientblog.net</a>
+          <div className="date h4">Lueur, 
+            <a href="https://www.ambientblog.net/blog/2019-01-01/gunnarsson-pauline/"> Ambientblog.net</a>
           </div>
           <br/>
-            <p>After Safn 2006-2009, Processes & Potentials and Paths, this is the fourth full release by Bjarni Gunnarsson, and it is no coincidence that each of them are recommended here at Ambientblog. I’m a dedicated ‘fan’ of the sound of the Icelandic composer (now based in Den Haag, teaching algorithmic composition and computer based music at the Institute Of Sonology).  Not only for his impressive albums but also after seeing him perform live (a part of this particular live-set can still be heard on this Concertzender recording of the Fluister show).</p>
-            <p>Gunnarsson has a distinct personal sound signature that is hard to describe. It is not at all ‘ambient’ because there are many layers of noise, yet the electroacoustic compositions are calming in their own way. The ‘exploration of process as much as tone and texture’ uses ‘generative processes that often appear directly entangled, that are set in motion and activated while maintaining their own degree of autonomy.’</p>
-            <p>Lueur (‘glow’) refers to ‘faint, quiet but unsteady light sources’. The four compositions on this album follows its own ‘unpredictable’ path, ever-changing paths with a lot of adventurous sounds. But they fit together very well – it is not a collection of conflicting extremes. It’s a bit like walking through a forest , observing every detail, without losing sight of the complete picture of the forest. (If this sounds like gibberish to you, I suggest you start the Bandcamp stream and listen for yourself.)</p>
-            <p>For vinyl collectors: the vinyl’s sleeve artwork is ‘procedurally-generated’, meaning that ‘variations of each layer are combined to make 16 unique sleeve designs.’</p>
+            <p>After Safn 2006-2009, Processes & Potentials and Paths, this is the fourth full release by Bjarni Gunnarsson, and it is no coincidence that each of them are recommended here at Ambientblog. I'm a dedicated 'fan' of the sound of the Icelandic composer (now based in Den Haag, teaching algorithmic composition and computer based music at the Institute Of Sonology).  Not only for his impressive albums but also after seeing him perform live (a part of this particular live-set can still be heard on this Concertzender recording of the Fluister show).</p>
+            <p>Gunnarsson has a distinct personal sound signature that is hard to describe. It is not at all 'ambient' because there are many layers of noise, yet the electroacoustic compositions are calming in their own way. The 'exploration of process as much as tone and texture' uses 'generative processes that often appear directly entangled, that are set in motion and activated while maintaining their own degree of autonomy.'</p>
+            <p>Lueur ('glow') refers to 'faint, quiet but unsteady light sources'. The four compositions on this album follows its own 'unpredictable' path, ever-changing paths with a lot of adventurous sounds. But they fit together very well – it is not a collection of conflicting extremes. It's a bit like walking through a forest , observing every detail, without losing sight of the complete picture of the forest. (If this sounds like gibberish to you, I suggest you start the Bandcamp stream and listen for yourself.)</p>
+            <p>For vinyl collectors: the vinyl's sleeve artwork is 'procedurally-generated', meaning that 'variations of each layer are combined to make 16 unique sleeve designs.'</p>
           <div className="quote">Ambientblog.net</div>
         </article>
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Paths,
+          <div className="date h4">Paths, 
             <a href="http://www.attnmagazine.co.uk/music/10218"> ATTN Magazine</a>
           </div>
           <br/>
 
-          <p>“It’s about the journey, not the destination.” As I listen to the record, my mind drifts helplessly toward this cliché. I wince as I feel it happening. Yet perhaps thanks to the album title, my experience of Paths centres on this notion; the thrill of unforeseeable turns and ruptures in progress, embracing unexpected diversion as an essential and inevitable means of reaching an end objective. While the destination may reside at a fixed point in the future/distance, the path has the potential to be riddled with erratic chicanes and sudden obstacles.</p>
+          <p>"It's about the journey, not the destination." As I listen to the record, my mind drifts helplessly toward this cliché. I wince as I feel it happening. Yet perhaps thanks to the album title, my experience of Paths centres on this notion; the thrill of unforeseeable turns and ruptures in progress, embracing unexpected diversion as an essential and inevitable means of reaching an end objective. While the destination may reside at a fixed point in the future/distance, the path has the potential to be riddled with erratic chicanes and sudden obstacles.</p>
           <p>
             The album is pocketed with fierce shifts in state – explosions of change that sabotage the idle trundle of time, demolishing gentle blooms of sound to lay the atmosphere to waste all over again. Abstract sound design can be as much a process of destruction as assembly, and Paths manifests as a visceral embrace of this fact.</p>
-          <p>For an album released at the scorching peak of summer (in England, at least), this feels remarkably like a record built for winter. Many of Gunnarsson’s environments are ravaged by harsh blizzards and gale-force winds, blasting their way through passages of stillness like storms blowing windows open in a quiet room. Even the stretches of comparative calm are scenes of imbalance and imminent ruin; sine waves roll like marbles upon table-tops of low drone, while cogs whirr stiffly in the generation of hostile, intermittent jets of cyclically-powered feedback. “Pulsinato” sounds like a broken lightshow, with lighthouse beams painting the darkness with dim illuminations, and busted strobes shivering and waning into the sky. Noises burst into life after stretches of prolonged failure, while drones tilt in and out of microtonal alignment. “Verlat” scans between glutinous dead air, flailing sines and the purrs of alien transmission, with the hands of Gunnarsson flitting anxiously over the dials in restless, sonically nomadic lurches. Within each moment resides the instruments of its own oblivion, pressing against the loose screws of synth chassis and announcing themselves in throbs of electronic alarm.</p>
+          <p>For an album released at the scorching peak of summer (in England, at least), this feels remarkably like a record built for winter. Many of Gunnarsson's environments are ravaged by harsh blizzards and gale-force winds, blasting their way through passages of stillness like storms blowing windows open in a quiet room. Even the stretches of comparative calm are scenes of imbalance and imminent ruin; sine waves roll like marbles upon table-tops of low drone, while cogs whirr stiffly in the generation of hostile, intermittent jets of cyclically-powered feedback. "Pulsinato" sounds like a broken lightshow, with lighthouse beams painting the darkness with dim illuminations, and busted strobes shivering and waning into the sky. Noises burst into life after stretches of prolonged failure, while drones tilt in and out of microtonal alignment. "Verlat" scans between glutinous dead air, flailing sines and the purrs of alien transmission, with the hands of Gunnarsson flitting anxiously over the dials in restless, sonically nomadic lurches. Within each moment resides the instruments of its own oblivion, pressing against the loose screws of synth chassis and announcing themselves in throbs of electronic alarm.</p>
           <p>The path is never completely straight, and Gunnarsson uses every bend as an opportunity to smack me in the face, leaping out of the darkness just as I fall into lulls of faux-stillness, leaving me stinging and blinking in bewilderment as he heaves the music through episodes of guttural overhaul. A violently unpredictable record.</p>
           <div className="quote">ATTN Magazine</div>
         </article>
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Paths,
-            <a href="http://acloserlisten.com">A Closer Listen</a>
+          <div className="date h4">Paths, 
+            <a href="http://acloserlisten.com"> A Closer Listen</a>
           </div>
           <br/>
-          <p>With Paths, Bjarni Gunnarsson continues on an even pace of releasing an album every three years, collecting works that debuted in various festivals and installations. The new set is remarkably consistent, albeit difficult to predict; and that’s where the title comes into play.</p>
+          <p>With Paths, Bjarni Gunnarsson continues on an even pace of releasing an album every three years, collecting works that debuted in various festivals and installations. The new set is remarkably consistent, albeit difficult to predict; and that's where the title comes into play.</p>
 
-          <p>The average music listener is accustomed to hearing songs that follow a specified pattern: for Top 40 music, various permutations of verse-chorus-bridge. Even in experimental music, form is typically easy to discern. Gunnarsson’s goal here is to explore other paths, to see where the music takes him instead of the other way around. Opora’s cover art, simple at first glance, becomes more complex when viewed as the map of a song or album. It doesn’t seem to make sense; but then it does. The same holds true for Gunnarsson’s music.</p>
+          <p>The average music listener is accustomed to hearing songs that follow a specified pattern: for Top 40 music, various permutations of verse-chorus-bridge. Even in experimental music, form is typically easy to discern. Gunnarsson's goal here is to explore other paths, to see where the music takes him instead of the other way around. Opora's cover art, simple at first glance, becomes more complex when viewed as the map of a song or album. It doesn't seem to make sense; but then it does. The same holds true for Gunnarsson's music.</p>
 
-          <p>The first play is the most surprising, as the only constants are the slow, non-tempoed pace and the tonal cluster. Gunnarsson favors a mixture of low rumble and higher pitch, with granular textures and clouds of drone. And clearly – because this must happen in any piece – certain sections are louder than others. But the direction of each track – duration, amount of repetition, timing, stereo effect – is impossible to predict. This makes that very first spin a fascination. Fortunately, the complexity of these five pieces allows for a number of repeated plays before any familiarity sets in. This is where interpretation becomes a little dicey, because the path is now set in the listener’s mind. One knows exactly when to expect the high frequency, the low drone, the momentary silence, the drift from left speaker to right. The effect is akin to that of a physical path, which typically begins with a crunch through underbrush, a few trampled blades of grass, a footprint where rain can collect. As more people discover the path, it grows cleaner, more predictable, well-trodden, even paved.</p>
+          <p>The first play is the most surprising, as the only constants are the slow, non-tempoed pace and the tonal cluster. Gunnarsson favors a mixture of low rumble and higher pitch, with granular textures and clouds of drone. And clearly – because this must happen in any piece – certain sections are louder than others. But the direction of each track – duration, amount of repetition, timing, stereo effect – is impossible to predict. This makes that very first spin a fascination. Fortunately, the complexity of these five pieces allows for a number of repeated plays before any familiarity sets in. This is where interpretation becomes a little dicey, because the path is now set in the listener's mind. One knows exactly when to expect the high frequency, the low drone, the momentary silence, the drift from left speaker to right. The effect is akin to that of a physical path, which typically begins with a crunch through underbrush, a few trampled blades of grass, a footprint where rain can collect. As more people discover the path, it grows cleaner, more predictable, well-trodden, even paved.</p>
 
-          <p>Not that music like this will ever become popular; the tracks are too long for radio, the entry points too narrow. The music takes a while to comprehend, and even then, one wonders how much is composed and how much is the result of random interface, adopted into composition. Use whatever phrase you prefer: off the beaten path, blazes its own trail, the road less traveled. Gunnarsson’s paths are worth investigating for the sonic discoveries they reveal. (Richard Allen)</p>
+          <p>Not that music like this will ever become popular; the tracks are too long for radio, the entry points too narrow. The music takes a while to comprehend, and even then, one wonders how much is composed and how much is the result of random interface, adopted into composition. Use whatever phrase you prefer: off the beaten path, blazes its own trail, the road less traveled. Gunnarsson's paths are worth investigating for the sonic discoveries they reveal. (Richard Allen)</p>
           <div className="quote">A Closer Listen</div>
 
         </article>
@@ -99,14 +99,14 @@ class Press extends Component {
         <div className="hr"><hr/></div>
         <article>
 
-          <div className="date">Paths,
-            <a href="http://www.ambientblog.net/blog/2016-06-20/shortlist-2016-23/">Ambientblog</a>
+          <div className="date h4">Paths, 
+            <a href="http://www.ambientblog.net/blog/2016-06-20/shortlist-2016-23/"> Ambientblog</a>
           </div>
           <br/>
 
-          <p>The tracks on this album are ‘reduced, combined and rearranged’ stereo versions of various multichannel compositions created for festivals in Reykjavík, The Hague and Paris. Which raises one question in particular: why not release a multichannel 5.1 version of these pieces too? I understand this of course: stereo recording is still the main way to go for most listeners, but listening to this music I cannot stop thinking how devastating this must have sounded in multichannel surround. But even ‘reduced’ to stereo versions, these pieces display a fascinating ‘spatial configuration’, ‘exploring the contact between composed computer sound structures and space’.</p>
+          <p>The tracks on this album are 'reduced, combined and rearranged' stereo versions of various multichannel compositions created for festivals in Reykjavík, The Hague and Paris. Which raises one question in particular: why not release a multichannel 5.1 version of these pieces too? I understand this of course: stereo recording is still the main way to go for most listeners, but listening to this music I cannot stop thinking how devastating this must have sounded in multichannel surround. But even 'reduced' to stereo versions, these pieces display a fascinating 'spatial configuration', 'exploring the contact between composed computer sound structures and space'.</p>
 
-          <p>If you’re familiar with his previous albums Safn and Processed and Potentials you’ll know what to expect, but if you’re not you should be prepared for an immersive, highly energetic stream of electro-acoustic sounds: Bjarni Gunnarsson‘s trademark ‘sounds focussing on internal activity and motion. Compositions that put into foreground behaviors, actions, fluid sound structures, fuzzy materials or forms. Music without sharp boundaries’. There are only few moments of rest (like in Pulsatiles) – most of the album is highly dynamic, like travelling at high speed. At véry high speed, not knowing what you might encounter the very next moment! This album is definitely at its best when played at a high volume.</p>
+          <p>If you're familiar with his previous albums Safn and Processed and Potentials you'll know what to expect, but if you're not you should be prepared for an immersive, highly energetic stream of electro-acoustic sounds: Bjarni Gunnarsson's trademark 'sounds focussing on internal activity and motion. Compositions that put into foreground behaviors, actions, fluid sound structures, fuzzy materials or forms. Music without sharp boundaries'. There are only few moments of rest (like in Pulsatiles) – most of the album is highly dynamic, like travelling at high speed. At véry high speed, not knowing what you might encounter the very next moment! This album is definitely at its best when played at a high volume.</p>
 
           <p>Apart from being a faculty member at the Institute of Sonology (The Hague) and teaching algorithmic compositions and computer music, Bjarni Gunnarsson is also known as one half of Einoma.</p>
           <div className="quote">Ambientblog</div>
@@ -116,8 +116,8 @@ class Press extends Component {
         <div className="hr"><hr/></div>
         <article>
 
-          <div className="date">Paths,
-            <a href="http://www.vitalweekly.net/1033.html">Vital Weekly</a>
+          <div className="date h4">Paths, 
+            <a href="http://www.vitalweekly.net/1033.html"> Vital Weekly</a>
           </div>
           <br/>
           <p>Of course I might be wrong, and I did hear of Bjarni Gunnarsson, but a quick survey of the old weeklies learned that this might be my first introduction to his work, despite having releases on Vertical Form, Thule, Uni:form, Spezial Material, Trachanik, Lamadameaveclechien, Shipwrec and 3LEAVES — and some of these labels actually make it to these pages.
@@ -132,13 +132,13 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Paths,
-            <a href="http://grisli.canalblog.com/archives/2016/06/16/33975124.html">Le son du grisli</a>
+          <div className="date h4">Paths, 
+            <a href="http://grisli.canalblog.com/archives/2016/06/16/33975124.html"> Le son du grisli</a>
           </div>
           <br/>
-          <p>Le moins que l’on puisse dire (je pense) à propos de Bjarni Gunnarsson (live electronics, trois disques à son actif pour le moment) c’est qu’il sait travailler les sons. La preuve avec le CD Paths dont les figures sont composées d’aigus qui frétillent et de basses qui vous enveloppent plus que chaleureusement… mais est-ce suffisant?</p>
+          <p>Le moins que l'on puisse dire (je pense) à propos de Bjarni Gunnarsson (live electronics, trois disques à son actif pour le moment) c'est qu'il sait travailler les sons. La preuve avec le CD Paths dont les figures sont composées d'aigus qui frétillent et de basses qui vous enveloppent plus que chaleureusement… mais est-ce suffisant?</p>
 
-          <p>Car si les sons rappellent (par exemple) ceux de Strotter Inst., les compositions du Suédois ne donnent pas dans le répétitif crescendo. Non, mais plutôt dans une abstraction à géométrie variable avec son lot d’élucubrations soniques, de percées lumineuses et de chausse-trappes sordides, jusqu’à ce que Gunnarsson nous plante là, en plein milieu d’une ambient à vous donner le tournis (et c’est ce qui arrive). Que faire d’autre si ce n’est entendre / regarder / profiter de ce que l’Islandais nous a préparé? Spatial et plus que spécial!
+          <p>Car si les sons rappellent (par exemple) ceux de Strotter Inst., les compositions du Suédois ne donnent pas dans le répétitif crescendo. Non, mais plutôt dans une abstraction à géométrie variable avec son lot d'élucubrations soniques, de percées lumineuses et de chausse-trappes sordides, jusqu'à ce que Gunnarsson nous plante là, en plein milieu d'une ambient à vous donner le tournis (et c'est ce qui arrive). Que faire d'autre si ce n'est entendre / regarder / profiter de ce que l'Islandais nous a préparé? Spatial et plus que spécial!
           </p>
           <div className="quote">Le son du grisli</div>
 
@@ -148,8 +148,8 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Paths,
-            <a href="http://nordische-musik.de/4076-Bjarni-Gunnarsson.html">Nordische Musik</a>
+          <div className="date h4">Paths, 
+            <a href="http://nordische-musik.de/4076-Bjarni-Gunnarsson.html"> Nordische Musik</a>
           </div>
           <br/>
 
@@ -164,14 +164,14 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Paths,
-            <a href="http://www.loop.cl/index.php?option=com_content&task=view&id=1259&Itemid=27">Loop.cl</a>
+          <div className="date h4">Paths, 
+            <a href="http://www.loop.cl/index.php?option=com_content&task=view&id=1259&Itemid=27"> Loop.cl</a>
           </div>
           <br/>
 
           <p>
-            The first time I heard Bjarni Gunnarsson’s Icelandic composer and sound artist was under the moniker of Einóma with his releases in the English Vertical Form imprint and also for his albums that were released on Lamadameaveclechien and 3LEAVES. He also has published on Thule, Spezial Material and Shipwrec, among other labels. He is a member of the faculty at the Institute of Sonology, Royal Conservatory of The Hague and currently professor of algorithmic composition and computer music.</p>
-          <p>Gunnarsson is interested in composed computer sound structures and space. His works have been featured in several spatial configurations as at the WFS system in Leiden (192 speakers), the WFS system in Berlin (with 832 speakers), the BEAST system in Birmingham (up to 100 speakers) and the GRM in Paris, among other performances. “Paths” is a five piece album of minimalist compositions that unfold in a space where the computer generated sounds shape microscopic and granular textures. Sometimes almost imperceptible, however, its depth allowed delve into disquieting and cold atmospheres.</p>
+            The first time I heard Bjarni Gunnarsson's Icelandic composer and sound artist was under the moniker of Einóma with his releases in the English Vertical Form imprint and also for his albums that were released on Lamadameaveclechien and 3LEAVES. He also has published on Thule, Spezial Material and Shipwrec, among other labels. He is a member of the faculty at the Institute of Sonology, Royal Conservatory of The Hague and currently professor of algorithmic composition and computer music.</p>
+          <p>Gunnarsson is interested in composed computer sound structures and space. His works have been featured in several spatial configurations as at the WFS system in Leiden (192 speakers), the WFS system in Berlin (with 832 speakers), the BEAST system in Birmingham (up to 100 speakers) and the GRM in Paris, among other performances. "Paths" is a five piece album of minimalist compositions that unfold in a space where the computer generated sounds shape microscopic and granular textures. Sometimes almost imperceptible, however, its depth allowed delve into disquieting and cold atmospheres.</p>
           <div className="quote">Loop.cl</div>
 
         </article>
@@ -179,16 +179,16 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Processes & Potentials,
-            <a href="http://acloserlisten.com/2013/10/16/bjarni-gunnarsson-processes-potentials/">A Closer Listen</a>
+          <div className="date h4">Processes & Potentials, 
+            <a href="http://acloserlisten.com/2013/10/16/bjarni-gunnarsson-processes-potentials/"> A Closer Listen</a>
           </div>
           <br/>
 
-          <p>3leaves is known for their experimental leanings, but their latest release is one of their most abrasive yet, a far cry from the field recordings that have been their bread and butter. It’s also one of the label’s finest releases to date.</p>
+          <p>3leaves is known for their experimental leanings, but their latest release is one of their most abrasive yet, a far cry from the field recordings that have been their bread and butter. It's also one of the label's finest releases to date.</p>
 
-          <p>Fans of Icelandic musician Bjarni Gunnarsson have been waiting a long time for Processes & Potentials to appear. Some of these tracks have been percolating on Soundcloud for months, tantalizingly close but just out of reach. The album forms a perfect bookend to Safn 2006-2009, as these new pieces were recorded in the ensuing years. (A personal plea to Gunnarsson: we’re still missing “Samarin”, “Angst” and “Grey Seeds”; please consider an audiovisual release!)</p>
+          <p>Fans of Icelandic musician Bjarni Gunnarsson have been waiting a long time for Processes & Potentials to appear. Some of these tracks have been percolating on Soundcloud for months, tantalizingly close but just out of reach. The album forms a perfect bookend to Safn 2006-2009, as these new pieces were recorded in the ensuing years. (A personal plea to Gunnarsson: we're still missing "Samarin", "Angst" and "Grey Seeds"; please consider an audiovisual release!)</p>
 
-          <p>Gunnarsson’s primary interest is in “process-based ideas … sounds based on internal activity and motion”. This is a perfect description for his solo work, although he also applies this approach to collaborative projects including mgbg (electronic / vocal improvisation) and Einóma (IDM). It’s easy to see where the line has been drawn, as beats and vocals would seem out of place on Processes & Potentials. On this album, drone is the home base from which every sound is free to wander. And wander they do. Whether crunch or warble, pierce or ping, these electronic sounds travel the full length of the spectrum, loud to soft, high to low, thick to thin. Glitch is involved, but not in IDM fashion; the pops provide impressions of spark plugs and static surges. The music often reboots, allowing new patterns to emerge from silence. While no linear narrative is apparent, the use of related tones ties the album together. The collection’s best asset is its refusal to play by the rules. Melodies can be gleaned where no melodies have been written. A mind in search of clarity may perceive a sense of order, but even Gunnarsson admits that these pieces began as half-maps and mazes. To listen is to be lost on a small island; one knows that one will always find the shore. (Richard Allen)</p>
+          <p>Gunnarsson's primary interest is in "process-based ideas … sounds based on internal activity and motion". This is a perfect description for his solo work, although he also applies this approach to collaborative projects including mgbg (electronic / vocal improvisation) and Einóma (IDM). It's easy to see where the line has been drawn, as beats and vocals would seem out of place on Processes & Potentials. On this album, drone is the home base from which every sound is free to wander. And wander they do. Whether crunch or warble, pierce or ping, these electronic sounds travel the full length of the spectrum, loud to soft, high to low, thick to thin. Glitch is involved, but not in IDM fashion; the pops provide impressions of spark plugs and static surges. The music often reboots, allowing new patterns to emerge from silence. While no linear narrative is apparent, the use of related tones ties the album together. The collection's best asset is its refusal to play by the rules. Melodies can be gleaned where no melodies have been written. A mind in search of clarity may perceive a sense of order, but even Gunnarsson admits that these pieces began as half-maps and mazes. To listen is to be lost on a small island; one knows that one will always find the shore. (Richard Allen)</p>
 
           <div className="quote">A Closer Listen</div>
 
@@ -197,16 +197,16 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Processes & Potentials,
-            <a href="http://sonicfield.org/2013/10/312/">Acousmatic Composition Journal</a>
+          <div className="date h4">Processes & Potentials, 
+            <a href="http://sonicfield.org/2013/10/312/"> Acousmatic Composition Journal</a>
           </div>
           <br/>
 
-          <p>“Processes and Potentials” is the latest work by Icelandic composer Bjarni Gunnarsson. Meticulously presented by the 3Leaves label “Processes and Potentials” is Gunnarsson’s attempt to explore theories of compositional practise within the realm of computer-generated sound. Over the course of 6-tracks we hear minimalist clicks, airy drones, rumbles and scratches panning from left to right. Elements that would normally create cohesion, such as rhythms and melodic structures, are missing. Instead continuity is achieved through the sounds themselves, all of which are heavily dependent upon computer synthesis. A relationship exists between their timbre and tone unifying what could otherwise have been a muddle of disparate sound.</p>
+          <p>"Processes and Potentials" is the latest work by Icelandic composer Bjarni Gunnarsson. Meticulously presented by the 3Leaves label "Processes and Potentials" is Gunnarsson's attempt to explore theories of compositional practise within the realm of computer-generated sound. Over the course of 6-tracks we hear minimalist clicks, airy drones, rumbles and scratches panning from left to right. Elements that would normally create cohesion, such as rhythms and melodic structures, are missing. Instead continuity is achieved through the sounds themselves, all of which are heavily dependent upon computer synthesis. A relationship exists between their timbre and tone unifying what could otherwise have been a muddle of disparate sound.</p>
 
-          <p>In 2012 Gunnarsson completed his Masters Thesis titled “Processes and Potentials: composing through objects, networks and interactions” at the Institute of Sonology in The Hague. The tracks on Processes and Potentials were composed to support Gunnarsson’s thesis. Although Gunnarsson’s work can be enjoyed as a stand-alone project, a more informed listening experience can be gained by reading the thoughts that influenced his creative process. Gunnarsson writes about the need to change his compositional process from one that is “goal-oriented” to one which allows musical moments to unfold more naturally. One of the first steps in this process is to acknowledge the ways in which material elements should instruct the compositional process. In addition Gunnarsson questions the relationship between the psychological perception of time and music. What creates the feeling of “now”? Does music hold a single “now”? Do we understand music through a series of non-linear memories? Just as we construct memory Gunnarsson believes that music can be experienced as “being like a chain of musical events. How these chains are formed and how the links between elements are made is what makes the whole for a piece of music”. This theory guides Gunnarsson’s compositional process in “Processes and Potentials”.</p>
+          <p>In 2012 Gunnarsson completed his Masters Thesis titled "Processes and Potentials: composing through objects, networks and interactions" at the Institute of Sonology in The Hague. The tracks on Processes and Potentials were composed to support Gunnarsson's thesis. Although Gunnarsson's work can be enjoyed as a stand-alone project, a more informed listening experience can be gained by reading the thoughts that influenced his creative process. Gunnarsson writes about the need to change his compositional process from one that is "goal-oriented" to one which allows musical moments to unfold more naturally. One of the first steps in this process is to acknowledge the ways in which material elements should instruct the compositional process. In addition Gunnarsson questions the relationship between the psychological perception of time and music. What creates the feeling of "now"? Does music hold a single "now"? Do we understand music through a series of non-linear memories? Just as we construct memory Gunnarsson believes that music can be experienced as "being like a chain of musical events. How these chains are formed and how the links between elements are made is what makes the whole for a piece of music". This theory guides Gunnarsson's compositional process in "Processes and Potentials".</p>
 
-          <p>Theories aside, the success of “Processes and Potentials” is that it exists as its own entity independent from Gunnarsson’s academic realm of production. A dark, almost claustrophobic, world of miniatures crackles from beneath the surface of walls and earth. The mood continues from one piece to another without ever rising to any dramatic moments of crescendos or diminuendos or noticeable melodic structures. This could be suspenseful or monotonous depending on your personal taste. For those who are interested in minimalist computer generated sounds this is one release that is definitely worth listening to.</p>
+          <p>Theories aside, the success of "Processes and Potentials" is that it exists as its own entity independent from Gunnarsson's academic realm of production. A dark, almost claustrophobic, world of miniatures crackles from beneath the surface of walls and earth. The mood continues from one piece to another without ever rising to any dramatic moments of crescendos or diminuendos or noticeable melodic structures. This could be suspenseful or monotonous depending on your personal taste. For those who are interested in minimalist computer generated sounds this is one release that is definitely worth listening to.</p>
 
           <div className="quote">Acousmatic Composition Journal</div>
 
@@ -214,13 +214,12 @@ class Press extends Component {
         <div className="hr"><hr/></div>
 
         <article>
-          <div className="date">Processes & Potentials
-            <a href="http://www.textura.org/reviews/gunnarsson_mufire.htm">Textura</a>
+          <div className="date h4">Processes & Potentials, 
+            <a href="http://www.textura.org/reviews/gunnarsson_mufire.htm"> Textura</a>
           </div>
           <br/>
 
-          <p>Titles for the six pieces on Gunnarsson's Processes & Potentials are included, as are six square inserts displaying nature-based photos by Cedric Dupire. But while both are allusive, the material is otherwise free of informational context, and one thus engages with the album more at the level of pure listening. The product of three years work, Processes & Potentials is a combustible affair of fluid, mutating sounds that, as astutely noted by its creator, “consists not of things, but of events, and as such is best understood as being a process.” Compared to the MUfi.re release, Gunnarsson's is considerably denser and often suggests an accelerated transformational flow of geological design. The hardness of certain sounds draws a connection to earth materials, whereas the rapid changes are more suggestive of liquids. Restless and dynamic, the six settings are volatile constructions that can induce some degree of delirium in the listener attending closely to their rapid-fire fluctuations. Sensitive to the benefits of contrast, Gunnarsson follows the aggressive pitch of the opening two settings with an initially quieter excursion (the woozy “Momentaries”), even if blasts and cavernous rumblings eventually surface. Interestingly, as the recording progresses, one comes to realize that the wealth of micro-detail packed into its pieces makes Processes & Potentials as much resemble a computer-based collection (by someone such as Florian Hecker or Francisco Lopez) as a field recordings-based one. Finally, on presentation grounds, both releases are packaged in 3LEAVES' by now standard but nevertheless distinctive black case design.
-          </p>
+          <p>Titles for the six pieces on Gunnarsson's Processes & Potentials are included, as are six square inserts displaying nature-based photos by Cedric Dupire. But while both are allusive, the material is otherwise free of informational context, and one thus engages with the album more at the level of pure listening. The product of three years work, Processes & Potentials is a combustible affair of fluid, mutating sounds that, as astutely noted by its creator, "consists not of things, but of events, and as such is best understood as being a process." Compared to the MUfi.re release, Gunnarsson's is considerably denser and often suggests an accelerated transformational flow of geological design. The hardness of certain sounds draws a connection to earth materials, whereas the rapid changes are more suggestive of liquids. Restless and dynamic, the six settings are volatile constructions that can induce some degree of delirium in the listener attending closely to their rapid-fire fluctuations. Sensitive to the benefits of contrast, Gunnarsson follows the aggressive pitch of the opening two settings with an initially quieter excursion (the woozy "Momentaries"), even if blasts and cavernous rumblings eventually surface. Interestingly, as the recording progresses, one comes to realize that the wealth of micro-detail packed into its pieces makes Processes & Potentials as much resemble a computer-based collection (by someone such as Florian Hecker or Francisco Lopez) as a field recordings-based one. Finally, on presentation grounds, both releases are packaged in 3LEAVES' by now standard but nevertheless distinctive black case design.</p>
 
           <div className="quote">Textura</div>
 
@@ -229,13 +228,12 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Processes & Potentials,
-            <a href="http://www.compulsiononline.com/BjarniGunnarsson_Processes.htm">Compulsion</a>
+          <div className="date h4">Processes & Potentials, 
+            <a href="http://www.compulsiononline.com/BjarniGunnarsson_Processes.htm"> Compulsion</a>
           </div>
           <br/>
 
-          <p>Processes & Potentials is the work of Icelandic composer Bjarni Gunnarsson. Gunnarsson works with process based ideas and Processes & Potentials is concerned with internal activity and motion. The sounds are intricate and detailed but it's the drone that underpins much of this, cut with glitches, static surges, fizzing tones, and micro tones, both harsh and soft, that makes the entire thing sound cohesive.
-          </p>
+          <p>Processes & Potentials is the work of Icelandic composer Bjarni Gunnarsson. Gunnarsson works with process based ideas and Processes & Potentials is concerned with internal activity and motion. The sounds are intricate and detailed but it's the drone that underpins much of this, cut with glitches, static surges, fizzing tones, and micro tones, both harsh and soft, that makes the entire thing sound cohesive.</p>
 
           <p>On 'Aukera' textured tones scrape and crackle with quieter passages of atmospheric hum, which shimmer and circle. It's physical, almost like Pan Sonic's experimental noise, but there are no dance beats or obvious melodies on Processes & Potentials to make this palatable. Processes & Potentials is deeply immersive due to its intricate blending of micro detail. Sounds appear and reappear in what may appear an almost indiscriminate manner, but as Gunnarsson states "On this album it is important how sound processes behave, how they relate and how they occur. The seemingly organic sound-world of the work is all created from ideas that favour process-based approach to sound and composition." You could listen to Processes & Potentials on random, and the effect wouldn't be diminished, as Processes & Potentials is unified by its use of drones and tones. You can hear that in the following 'Portholes' which carries the crackling and atmospheric hum from the previous track, which at points is like raindrops falling into a industrial hinterland. At other times the sound is much more grainy. Even with its cut-ins and drop-outs there's a fluidity and a constant sense of motion, largely as a result of the drone that runs through most of this. For all of its theorizing, Processes & Potentials isn't even a dry listen. Much of it tends towards harsher sounds, sometimes dropped-in abruptly alongside some hazy droning atmospherics. There's much here that noise and experimental listeners would enjoy.</p>
 
@@ -251,8 +249,8 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Processes & Potentials,
-            <a href="http://nordische-musik.de/">Nordische-musik</a>
+          <div className="date h4">Processes & Potentials, 
+            <a href="http://nordische-musik.de/"> Nordische-musik</a>
           </div>
           <br/>
 
@@ -272,7 +270,7 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Processes & Potentials,
+          <div className="date h4">Processes & Potentials, 
             <a href="http://www.ambientblog.net/blog/2013-10-05/bjarni-gunnarsson-processes-and-potentials">Ambientblog</a>
           </div>
           <br/>
@@ -299,7 +297,7 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Processes & Potentials,
+          <div className="date h4">Processes & Potentials, 
             <a href="http://makeyourowntaste.com/2013/09/30/september-netaudio-roundup/">makeyourowntaste</a>
           </div>
           <br/>
@@ -314,13 +312,12 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Processes & Potentials,
+          <div className="date h4">Processes & Potentials, 
             <a href="http://peterwullen.blogspot.nl/2013/09/bjarni-gunnarsson-processes-and.html">Peter Wullen</a>
           </div>
           <br/>
 
-          <p>Talking about Icelandic music. This is an excerpt from 'Processes and Potentials', the new Bjarni Gunnarsson album on 3Leaves. Bjarni is one half of the duo Einóma, who released some very distinctive yet quite obscure albums the last 10 years. Releases by Einóma have become a bit scarser lately, but the two members have been working on their solo projects for a while now. Bjarni did some great audiovisual stuff with Cedric Dupire lately. 'Processes and Potentials' could be the nonlinear & experimental core sound of Einóma, but unwilling to give in to anything you ever heard before. It's excellent: full of grainy textures & microsounds that flitter all over the place. The detailed meticulous sound reminded me a bit of Rashad Becker's recent, appraised album on PAN. It is maybe even more singleminded. Standout tracks are 'Momentaries', firmly held together by some kind of deep drone & 'Concomitance' with it's metallic dehumanized voices at the end. I still haven't absorbed everything. Have to listen again a couple of times. Bjarni's 'music' is demanding & extremely complicated. But for me this is definitely one of the best experimental albums of this year. Out on October 1rst.
-          </p>
+          <p>Talking about Icelandic music. This is an excerpt from 'Processes and Potentials', the new Bjarni Gunnarsson album on 3Leaves. Bjarni is one half of the duo Einóma, who released some very distinctive yet quite obscure albums the last 10 years. Releases by Einóma have become a bit scarser lately, but the two members have been working on their solo projects for a while now. Bjarni did some great audiovisual stuff with Cedric Dupire lately. 'Processes and Potentials' could be the nonlinear & experimental core sound of Einóma, but unwilling to give in to anything you ever heard before. It's excellent: full of grainy textures & microsounds that flitter all over the place. The detailed meticulous sound reminded me a bit of Rashad Becker's recent, appraised album on PAN. It is maybe even more singleminded. Standout tracks are 'Momentaries', firmly held together by some kind of deep drone & 'Concomitance' with it's metallic dehumanized voices at the end. I still haven't absorbed everything. Have to listen again a couple of times. Bjarni's 'music' is demanding & extremely complicated. But for me this is definitely one of the best experimental albums of this year. Out on October 1rst.</p>
 
           <div className="quote">Peter Wullen</div>
 
@@ -330,7 +327,7 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Processes & Potentials,
+          <div className="date h4">Processes & Potentials, 
             <a href="https://jimmy2hats.wordpress.com/2013/10/21/bjarni-gunnarsson-processes-potentials-2013/">Fouter & Swick</a>
           </div>
           <br/>
@@ -364,7 +361,7 @@ class Press extends Component {
 
         <article>
 
-          <div className="date">Bjarni Gunnarsson - Safn 2006-2009, 5/5 ,
+          <div className="date h4">Bjarni Gunnarsson - Safn 2006-2009, 5/5 ,
             <a href="http://www.themilkfactory.co.uk/st/2010/11/bjarni-gunnarsson-safn-2006-2009einoma-tvenna-lamadameaveclechien/">The milk factory</a>
           </div>
           <br/>
@@ -377,7 +374,7 @@ class Press extends Component {
 
             Right from the opening moments of Aftur, the listener is subjected to an assault of statics, threatening noises, unsightly electronics and thunderous percussive slabs. The mood never veers much from this, whether the soundscapes are temporarily softened with ghostly female vocals (Blindni), injected with recordings of wildlife and intricate noise formations (Dried Up), subjected to the regular pounding of a minimal beat (Time Out) or caught in a dense electrical storm (Fingrafjall). As the album progresses, it is as if Gunnarsson was constantly reiterating the nature of his sonic constructions, ensuring that each aspect of the record remains perfectly in sync with the rest for maximum impact.<br/><br/>
 
-            It is with his solo album that Bjarni Gunnarsson impresses the most though. Its dark, mangled electronics and broken organic soundscapes are so utterly complex yet so fascinating, making this an outstanding record from beginning to end.<br/>
+            It is with his solo album that Bjarni  Gunnarsson impresses the most though. Its dark, mangled electronics and broken organic soundscapes are so utterly complex yet so fascinating, making this an outstanding record from beginning to end.<br/>
 
             SAFN 2006-2009: 5/5
           </p>
@@ -388,7 +385,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Electroacoustics from Iceland,
+          <div className="date h4">Electroacoustics from Iceland,
             <a href="http://http://classicaldrone.blogspot.com/2011/03/electroacoustics-from-iceland.html">Classical Drone</a>
           </div>
           <br/>
@@ -407,7 +404,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Bjarni Gunnarsson, Safn,
+          <div className="date h4">Bjarni Gunnarsson, Safn,
             <a href="http://www.vancooten.com/blog/?e=281">Ambientblog.net</a>
           </div>
           <br/>
@@ -426,7 +423,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Bjarni Gunnarsson, Safn 2006-2009,
+          <div className="date h4">Bjarni Gunnarsson, Safn 2006-2009,
             <a href="http://woundsoftheearth.blogspot.com/2010/10/bjarni-gunnarsson-safn.html">Wounds Of The Earth</a>
           </div>
           <br/>
@@ -440,7 +437,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Bjarni Gunnarsson, “Safn 2006-2009”, 2010,
+          <div className="date h4">Bjarni Gunnarsson, “Safn 2006-2009”, 2010,
             <a href="http://www.loop.cl/index.php?option=com_content&task=view&id=717&Itemid=27">loop.cl</a>
           </div>
           <br/>
@@ -453,7 +450,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">MGBG - Korabie</div>
+          <div className="date h4">MGBG - Korabie</div>
           <br/>
           <br/>
           <p>For the past two years MGBG (aka Marie Guilleray and Bjarni Gunnarsson) have kept themselves occupied with improvisations based around the integration of voices and electronics on their final six-pack production entitled Korabie.
@@ -464,7 +461,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Einóma - Milli Tónverka</div>
+          <div className="date h4">Einóma - Milli Tónverka</div>
           <br/>
           <br/>
           <p>"This is music created with the heart of high technology and the soul of a spirit world not usually seen with human eyes. The songs here create an emotional resonance that goes beyond just saying they make haunting music. Instead, they offer a fleeting glimpse of the other, the in-between. A presence that makes itself felt with every listen. Special things happen when the lights go dim. Welcome the darkness and let the magic begin. Highly Recommended."
@@ -474,7 +471,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Einóma - Milli Tónverka</div>
+          <div className="date h4">Einóma - Milli Tónverka</div>
           <br/>
           <br/>
           <p>"If their 2002 debut "Undir Feilnotum" announced Einoma's severe splendour with jaw-dropping audacity, then Milli Tonverka ("music that lies between" is the rough translation), goes one better, expanding the palette to include echoes of Coil's distopian grind here, Brian Eno's most exotic ambient tone poems there, though always retaining something uniquely,ineffably icelandic at its core. "Milli Tonverka" is an album of uncompromising highlights. There's the almost jaunty motorik undertow of "Khanin" for example, overlaid with gorgeous, alpine keyboards that suddenly cede to stark caverns of crunching, tactile electronics... this being a courageous second album that takes the sound leaps and bounds into new icy territory. Highly Recommended."</p>
@@ -483,7 +480,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Einóma - Milli Tónverka</div>
+          <div className="date h4">Einóma - Milli Tónverka</div>
           <br/>
           <br/>
           <p>"The clicks are often intense, like the upper regions of a Squarepusher breakdown, which combine with strategically deployed synths and waves of static to create barren, unpopulated synthesized volcanic soundscapes. Where Autechre achieve a kind of equally bleak sci-fi mathematically precise chaos, Einoma tap into something similar but far more primordial. Einoma pack a punch, and one that I'm getting addicted to."
@@ -493,7 +490,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Einóma - Milli Tónverka</div>
+          <div className="date h4">Einóma - Milli Tónverka</div>
           <br/>
           <br/>
           <p>"Iceland's Einóma are one of the very few musicians who craft their audio sculptures with precision in every form of the word... Milli Tonverka stands alone as a highly evocative, inspirational album of deep electronic listening. Stretching through dark corridors of subliminally corrupt digital behavior, Einóma has, once again, planted the seeds for the next generation of constructive musical engineering."
@@ -503,7 +500,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Einóma - Undir Feilnótum</div>
+          <div className="date h4">Einóma - Undir Feilnótum</div>
           <br/>
           <br/>
           <p>"It may all sound cliched, but never has it sounded better. it's almost a summary of all that's happened in the genre. the mind-twisting sounds, the punkish attitude represented by glitch and distortion, the clever melodies that's present in all great techno.... there are times when something comes along to reaffirm everything you knew about the genre. this is one of those times; a classic and future benchmark."
@@ -522,7 +519,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Einóma - Undir Feilnótum</div>
+          <div className="date h4">Einóma - Undir Feilnótum</div>
           <br/>
           <br/>
           <p>
@@ -533,7 +530,7 @@ class Press extends Component {
 
         <div className="hr"><hr/></div>
         <article>
-          <div className="date">Einóma - Undir Feilnótum</div>
+          <div className="date h4">Einóma - Undir Feilnótum</div>
           <br/>
           <br/>
           <p>"Calling their sound "chilly", "frozen", "foreboding", and the like may be a gross oversimplification, but Einóma's music has an almost clinical precision. The cavernous yet crisp beats sometimes have the sound of calving icebergs, with combinations of faint, tinkling chimes, icy drones and electronic sighs suggesting frozen, wind-swept vistas populated with flickering entities not seen, but sensed...The two members of Einóma are in a early stage of their career, but on the strength of this release, they are already headed resolutely for the uncharted frontiers. The strength of the music of this CD is that it lets you just far enough in, and shows just enough of itself, that it becomes hard to ignore or dismiss. Fall asleep with this playing on the stereo, and unquiet dreams are almost guaranteed."

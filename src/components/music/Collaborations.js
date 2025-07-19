@@ -47,37 +47,37 @@ constructor(props) {
         </div>
 
         <div className="media">
-        <p>La philosophie du langage (with Marie Guilleray)</p>
+        <h4>La philosophie du langage (with Marie Guilleray)</h4>
         <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/569538492&amp;color=%234c4655&amp;auto_play=false&amp;show_artwork=true"></iframe>
         </div>
 
         <div className="media">
-        <p>Vetrarvélin (with Steindór Kristinsson)</p>
+        <h4>Vetrarvélin (with Steindór Kristinsson)</h4>
         <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/27065952&amp;color=%234c4655&amp;auto_play=false&amp;show_artwork=true"></iframe>
         </div>
 
         <div className="media">
-        <p>L'imaginaire du parleur (with Marie Guilleray)</p>
+        <h4>L'imaginaire du parleur (with Marie Guilleray)</h4>
         <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/97481416&amp;color=%234c4655&amp;auto_play=false&amp;show_artwork=true"></iframe>
         </div>
 
         <div className="media">
-        <p>Fallacies (with Miguel Negrão)</p>
+        <h4>Fallacies (with Miguel Negrão)</h4>
         <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/76737385&amp;color=%234c4655&amp;auto_play=false&amp;show_artwork=true"></iframe>
         </div>
 
         <div className="media">
-        <p>Goshawk (with Marie Guilleray)</p>
+        <h4>Goshawk (with Marie Guilleray)</h4>
         <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/26872506&amp;color=%234c4655&amp;auto_play=false&amp;show_artwork=true"></iframe>
         </div>
 
         <div className="media">
-        <p>Wall (with Jaike Stambach)</p>
+        <h4>Wall (with Jaike Stambach)</h4>
         <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=2710841064/size=medium/bgcol=ffffff/linkcol=1C6E8C/t=11/transparent=true/" seamless><a href="https://lamadameaveclechien.bandcamp.com/album/dog010-soundtrack-to-the-end-of-the-world">DOG010 / Soundtrack To The End Of The World by Bjarni Gunnarsson &amp; Jaike Stambach</a></iframe>
         </div>
 
         <div className="media">
-        <p>Orgel (with Steindór Kristinsson)</p>
+        <h4>Orgel (with Steindór Kristinsson)</h4>
         <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=2710841064/size=medium/bgcol=ffffff/linkcol=1C6E8C/t=10/transparent=true/" seamless><a href="https://lamadameaveclechien.bandcamp.com/album/dog010-soundtrack-to-the-end-of-the-world">DOG010 / Soundtrack To The End Of The World by Einóma</a></iframe>
         </div>
 

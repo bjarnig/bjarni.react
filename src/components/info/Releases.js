@@ -93,7 +93,7 @@ class Releases extends Component {
 
         <div className="hr"><hr/></div>
         <div className="release">
-        <div className="release-title">UPICS (2023)</div>
+        <div className="release-title"><h4>UPICS (2023)</h4></div>
 
         <div className="img-center">
           <a href="https://flagdayrecordings.bandcamp.com/album/upics">
@@ -119,7 +119,7 @@ class Releases extends Component {
 
         <div className="hr"><hr/></div>
         <div className="release">
-        <div className="release-title">Anticlines (2021)</div>
+        <div className="release-title"><h4>Anticlines (2021)</h4></div>
 
         <div className="img-center">
           <a href="https://bjarni.bandcamp.com/album/anticlines">
@@ -146,7 +146,7 @@ class Releases extends Component {
 
         <div className="hr"><hr/></div>
         <div className="release">
-        <div className="release-title">Fracas (2021)</div>
+        <div className="release-title"><h4>Fracas (2021)</h4></div>
 
         <div className="img-center">
           <a href="https://superpang.bandcamp.com/album/no-catalogue-number-tracks">
@@ -165,7 +165,7 @@ class Releases extends Component {
 
         <div className="hr"><hr/></div>
         <div className="release">
-        <div className="release-title">Cendres (2020)</div>
+        <div className="release-title"><h4>Cendres (2020)</h4></div>
 
         <div className="img-center">
           <a href="https://sovnrecords.bandcamp.com/album/cendres">
@@ -193,7 +193,7 @@ class Releases extends Component {
         <div className="hr"><hr/></div>
         <div className="release">
 
-          <div className="release-title">Volume & Void (2020)</div>
+          <div className="release-title"><h4>Volume & Void (2020)</h4></div>
 
         <div className="bandcamp">
               <iframe title="Embedded content" style={this.state.bandcampStyleVV} src="https://bandcamp.com/EmbeddedPlayer/album=1204087134/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://superpang.bandcamp.com/album/volume-void">Volume &amp; Void by Bjarni Gunnarsson</a></iframe>
@@ -211,7 +211,7 @@ class Releases extends Component {
         <div className="hr"><hr/></div>
         <div className="release">
 
-          <div className="release-title">Lueur (2018)</div>
+          <div className="release-title"><h4>Lueur (2018)</h4></div>
 
           <div className="img-center">
             <OpacityImage imageUrl={albumLueur}/>
@@ -241,7 +241,7 @@ class Releases extends Component {
         <div className="hr"><hr/></div>
           <div className="release">
 
-            <div className="release-title">Paths (2016)</div>
+            <div className="release-title"><h4>Paths (2016)</h4></div>
 
             <div className="img-center">
               <OpacityImage imageUrl={albumPaths}/>
@@ -271,7 +271,7 @@ class Releases extends Component {
           <div className="hr"><hr/></div>
         <div className="release">
 
-          <div className="release-title">Processes & Potentials (2013)</div>
+          <div className="release-title"><h4>Processes & Potentials (2013)</h4></div>
 
           <div className="img-center">
             <OpacityImage imageUrl={albumProcesses}/>
@@ -301,7 +301,7 @@ class Releases extends Component {
         </div>
         <div className="hr"><hr/></div>
         <div className="release">
-            <div className="release-title">Safn 2006 - 2009 (2010)</div>
+                         <div className="release-title"><h4>Safn 2006 - 2009 (2010)</h4></div>
             <div className="img-center">
               <OpacityImage imageUrl={safn1}/>
             </div>
@@ -338,7 +338,7 @@ class Releases extends Component {
         </div>
         <div className="hr"><hr/></div>
         <div className="release">
-            <div className="release-title">MGBG - Korabie</div>
+            <div className="release-title"><h4>MGBG - Korabie</h4></div>
             <div className="bandcamp">
             <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=2529408612/size=large/bgcol=ffffff/linkcol=111111/transparent=true/" seamless><a href="http://mgbg.bandcamp.com/album/korabie">Korabie by mgbg</a></iframe>
             </div>
@@ -354,7 +354,7 @@ class Releases extends Component {
 
         <div className="hr"><hr></hr></div>
         <div className="release">
-            <div className="release-title">Einóma - Lost & Found</div>
+            <div className="release-title"><h4>Einóma - Lost & Found</h4></div>
             <div className="bandcamp">
               <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=3023602503/size=large/bgcol=ffffff/linkcol=111111/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/lost-found">Lost &amp; Found by Einóma</a></iframe>
             </div>
@@ -368,7 +368,7 @@ class Releases extends Component {
           <div className="hr"><hr></hr></div>
           <div className="release">
 
-              <div className="release-title"> Encam</div>
+                <div className="release-title"><h4> Encam (2006)</h4></div>
 
                 <div className="bandcamp">
                <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=1431377201/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/encam">Encam by Einóma</a></iframe>
@@ -384,7 +384,7 @@ class Releases extends Component {
 
           <div className="hr"><hr></hr></div>
           <div className="release">
-              <div className="release-title"> Milli Tónverka</div>
+              <div className="release-title"><h4> Milli Tónverka (2003)</h4></div>
                 <div className="bandcamp">
                 <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=4183570667/size=large/bgcol=ffffff/linkcol=111111/notracklist=false/transparent=true/" seamless=""><a href="http://einoma.bandcamp.com/album/milli-t-nverka">Milli Tónverka by Einóma</a></iframe>
               </div>
@@ -398,7 +398,7 @@ class Releases extends Component {
 
           <div className="hr"><hr></hr></div>
           <div className="release">
-              <div className="release-title">Undir Feilnótum</div>
+              <div className="release-title"><h4>Undir Feilnótum (2002)</h4></div>
               <div className="bandcamp">
                 <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=124760611/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/undir-feiln-tum">Undir Feilnótum by Einóma</a></iframe>
               </div>
@@ -412,7 +412,7 @@ class Releases extends Component {
 
           <div className="hr"><hr></hr></div>
           <div className="release">
-          <div className="release-title"> Floating Point by Zero</div>
+          <div className="release-title"><h4> Floating Point by Zero (2001)</h4></div>
             <div className="bandcamp">
               <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=727902579/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/floating-point-by-zero">Floating Point By Zero by Einóma</a></iframe>
             </div>

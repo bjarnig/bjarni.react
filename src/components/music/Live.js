@@ -43,38 +43,38 @@ class Live extends Component {
         </div>
 
     <div className="media">
-    <p>ICLC</p>
-    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1403082631&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    <h4>ICLC</h4>
+    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1403082631&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
     </div>
 
     <div className="media">
-    <p>Ghent</p>
-    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/640450551&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    <h4>Ghent</h4>
+    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/640450551&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
     </div>
 
     <div className="media">
-    <p>Utrecht</p>
-    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="http://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/248736798&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    <h4>Utrecht</h4>
+    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/248736798&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
     </div>
 
     <div className="media">
-    <p>Brussels</p>
-    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F27069515&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    <h4>Brussels</h4>
+    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F27069515&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
     </div>
 
     <div className="media">
-    <p>Den Haag</p>
-    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F10416675&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    <h4>Den Haag</h4>
+    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F10416675&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
     </div>
 
     <div className="media">
-    <p>MGBG, live set, Brussels</p>
-    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26870332&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    <h4>MGBG, live set, Brussels</h4>
+    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26870332&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
     </div>
 
     <div className="media">
-    <p>Einóma, live set, Netherlands</p>
-    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F27067420&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
+    <h4>Einóma, live set, Netherlands</h4>
+    <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F27067420&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
     </div>
 
 

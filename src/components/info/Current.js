@@ -111,7 +111,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-                         <p>Recomposing Data: Machine Learning As Compositional Process</p>
+                         <h4>Recomposing Data: Machine Learning As Compositional Process</h4>
 
  <div className="col-lg-12">
                <div className="img-center-noborder">
@@ -145,7 +145,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Misplaced Objects</p>
+            <h4>Misplaced Objects</h4>
             <div className="img-center">
               <a
                 href="https://www.echobox.radio/shows/misplaced-objects"
@@ -170,7 +170,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Kudos to Living Artists 06 – Farzané – Bjarni Gunnarsson</p>
+            <h4>Kudos to Living Artists 06 – Farzané – Bjarni Gunnarsson</h4>
             <div className="img-center">
               <a
                 href="https://soundcloud.com/radiofantasia/kudos-to-living-artists-06-farzane-bjarni-gunnarsson"
@@ -194,7 +194,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Radio Interview with Árni Matthíasson</p>
+            <h4>Radio Interview with Árni Matthíasson</h4>
             <div className="img-center">
               <a
                 href="https://www.ruv.is/utvarp/spila/straumar/34464/a8liir"
@@ -217,7 +217,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Presentation</p>
+            <h4>Lectorate Presentation</h4>
 
  <div className="col-lg-12">
               <div className="img-center-noborder">
@@ -262,7 +262,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Live at De Keuken with Marie Guilleray</p>
+            <h4>Live at De Keuken with Marie Guilleray</h4>
             <div className="img-center">
               <a
                 href="https://www.youtube.com/watch?v=GsNuHaQWITc"
@@ -291,10 +291,10 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>
+            <h4>
               Joint Research Day '24 (JRD24) - On Collective Practices &
               Collaboration
-            </p>
+            </h4>
             <div className="img-center">
               <a
                 href="https://researchplatform.art/events/research-day-24/"
@@ -337,7 +337,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Perfromance at Zaal3 / STUDIO LOOS</p>
+            <h4>Perfromance at Zaal3 / STUDIO LOOS</h4>
             <div className="img-center">
               <a
                 href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024"
@@ -384,7 +384,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Presentation at Sonology</p>
+            <h4>Presentation at Sonology</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a
@@ -435,10 +435,10 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>
+            <h4>
               'Ever-present change' at To Listen To, festival of experimental
               listening – Third edition, in Turin, Italy.
-            </p>
+            </h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a
@@ -459,7 +459,7 @@ class Current extends Component {
                 </a>
               </div>
             </div>
-            <p>.</p>
+            <h4>.</h4>
             <p>
               Developed as an experiment in dynamically evolving networks,
               Ever-Present Change merges live coded sound with generative
@@ -498,7 +498,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Presentation and Performance at AIMC 2024</p>
+            <h4>Presentation and Performance at AIMC 2024</h4>
             <div className="img-center">
               <a href="https://aimc2024.pubpub.org/schedule" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={aimc2024} />
@@ -547,7 +547,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Live Performance at Adela festival</p>
+            <h4>Live Performance at Adela festival</h4>
             <div className="img-center">
               <a
                 href="https://wiki.ljudmila.org/Adela_2024_(en)"
@@ -587,13 +587,13 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Ever Present Change' at Sonology Discussion Concert 4</p>
+            <h4>'Ever Present Change' at Sonology Discussion Concert 4</h4>
             <div className="img-center">
               <a href="https://iil.is/openlab/67" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={zaal} />
               </a>
             </div>
-            <p>Performing a new live piece at Sonology Discussion Concert 4.</p>
+            <h4>Performing a new live piece at Sonology Discussion Concert 4.</h4>
             <p>
               Conceived as an experiment in dynamically evolving networks,
               'Ever-Present Change' combines live coded sound with generative
@@ -616,7 +616,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Talk at the IIL Open Lab</p>
+            <h4>Talk at the IIL Open Lab</h4>
             <div className="img-center">
               <a href="https://iil.is/openlab/67" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={iil} />
@@ -655,7 +655,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ICLC 2023</p>
+            <h4>ICLC 2023</h4>
             <div className="img-center">
               <a href="https://iclc.toplap.org/2023" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={iclc2023} />
@@ -704,7 +704,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Article on Orpheus Institute's ECHO journal</p>
+            <h4>Article on Orpheus Institute's ECHO journal</h4>
             <div className="img-center">
               <a
                 href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
@@ -762,7 +762,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>New Release, UPICS on Flag Day Recordings</p>
+            <h4>New Release, UPICS on Flag Day Recordings</h4>
             <div className="img-center">
               <a href="https://flagdayrecordings.bandcamp.com" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={upicsb} />
@@ -818,7 +818,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>SØVN Records showcase, Turin</p>
+            <h4>SØVN Records showcase, Turin</h4>
             <div className="img-center">
               <a href="https://archiviotipografico.it/" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={turina} />
@@ -846,7 +846,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Moving Downstairs</p>
+            <h4>Moving Downstairs</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a
@@ -891,7 +891,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>WFS Festival</p>
+            <h4>WFS Festival</h4>
             <div className="img-center">
               <a href="http://sonology.org/" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={wfs2022} />
@@ -923,7 +923,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Ukraine Appeal</p>
+            <h4>Ukraine Appeal</h4>
             <div className="img-center">
               <a
                 href="https://playneutral.bandcamp.com/album/ukraine-appeal"
@@ -951,7 +951,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>LP 1 Recordings from the Institute of Sonology</p>
+            <h4>LP 1 Recordings from the Institute of Sonology</h4>
             <div className="img-center">
               <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={culture_archive} />
@@ -991,7 +991,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Radio New Babylon</p>
+            <h4>Radio New Babylon</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a href="http://radionewbabylon.net" target="_blank" rel="noopener noreferrer">
@@ -1038,7 +1038,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Staff Concert</p>
+            <h4>Sonology Staff Concert</h4>
             <div className="img-center">
               <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={sonoconcert} />
@@ -1072,7 +1072,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Anticlines</p>
+            <h4>Anticlines</h4>
             <div className="row">
               <div className="col-lg-12">
                 <div className="img-center">
@@ -1137,7 +1137,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Fracas</p>
+            <h4>Fracas</h4>
             <div className="img-center">
               <a
                 href="https://bjarni.bandcamp.com/album/fracas"
@@ -1190,7 +1190,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Tonband festival 2021</p>
+            <h4>Tonband festival 2021</h4>
             <div className="img-center">
               <a
                 href="https://www.audiorama.se/events/2021/tonband"
@@ -1221,7 +1221,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Puls binaural stream concerts</p>
+            <h4>Puls binaural stream concerts</h4>
             <div className="img-center">
               <a
                 href="https://www.audiorama.se/events/2021/tonband"
@@ -1260,7 +1260,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Synthesis and Operation Flows' at xCoaX 2021.</p>
+            <h4>'Synthesis and Operation Flows' at xCoaX 2021.</h4>
             <div className="img-center-noborder">
               <a href="https://2021.xcoax.org/#program">
                 <OpacityImage imageUrl={xcoax} />
@@ -1347,7 +1347,7 @@ class Current extends Component {
               Celebrating their 30th release SØVN releases the compilation
               'Music for queuing at the supermarket'.{" "}
             </p>
-            <p>It includes my piece 'FIFO'.</p>
+            <h4>It includes my piece 'FIFO'.</h4>
             <p>
               <a
                 href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"
@@ -1411,7 +1411,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Festival Ecoutes</p>
+            <h4>Festival Ecoutes</h4>
             <div className="img-center">
               <a href="http://festivalecoute.org/">
                 <OpacityImage imageUrl={festival_ecoutes} />
@@ -1452,7 +1452,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Cendres' on SØVN Records</p>
+            <h4>'Cendres' on SØVN Records</h4>
             <div className="img-center">
               <a href="https://sovnrecords.bandcamp.com/album/cendres">
                 <OpacityImage imageUrl={cendres_sovn2} />
@@ -1485,7 +1485,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Audiosfera 1980-2020</p>
+            <h4>Audiosfera 1980-2020</h4>
             <div className="img-center">
               <a href="https://www.museoreinasofia.es/en/exhibitions/audiosphere?fbclid=IwAR1zjs351-j-vaGF8GDuCTAcj1i2WZAg8OptU8lzyVtG1cFScyQc3OeFyxw">
                 <OpacityImage imageUrl={audiosphere} />
@@ -1507,7 +1507,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Volume & Void</p>
+            <h4>Volume & Void</h4>
             <div className="img-center">
               <OpacityImage imageUrl={superpang} />
             </div>
@@ -1540,7 +1540,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ATTN Compilation</p>
+            <h4>ATTN Compilation</h4>
             <div className="img-center">
               <a href="https://attnspancompilation.bandcamp.com/album/attn-span">
                 <OpacityImage imageUrl={attn} />
@@ -1568,7 +1568,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>LKS</p>
+            <h4>LKS</h4>
             <p>
               <iframe title="Embedded content"
                 width="100%"
@@ -1586,7 +1586,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonix #9</p>
+            <h4>Sonix #9</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Sonix} />
             </div>
@@ -1627,7 +1627,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Discussion Concert #3</p>
+            <h4>Discussion Concert #3</h4>
             <div className="img-center">
               <OpacityImage imageUrl={DC2020} />
             </div>
@@ -1661,7 +1661,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>RASK #2</p>
+            <h4>RASK #2</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Rask2} />
             </div>
@@ -1728,7 +1728,7 @@ class Current extends Component {
             <div className="img-center">
               <OpacityImage imageUrl={multiphonies} />
             </div>
-            <p>Concert Institut de Sonologie de La Haye</p>
+            <h4>Concert Institut de Sonologie de La Haye</h4>
             <p>
               L'Institut de Sonologie adopte une position claire concernant
               l'utilisation de la technologie en musique : la technologie n'est
@@ -1751,7 +1751,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>CRXSSINGS (fundraiser for City Plaza)</p>
+            <h4>CRXSSINGS (fundraiser for City Plaza)</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Crxssings} />
             </div>
@@ -1790,7 +1790,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Music, Humans and Machines (ODC 2019)</p>
+            <h4>Music, Humans and Machines (ODC 2019)</h4>
             <div className="img-center">
               <OpacityImage imageUrl={OrpheusMachine} />
             </div>
@@ -1908,7 +1908,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Publications on the Research Catalogue</p>
+            <h4>Publications on the Research Catalogue</h4>
             <div className="img-center">
               <OpacityImage imageUrl={rc} />
             </div>
@@ -1944,7 +1944,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Music, Education and Society - Festive Presentation</p>
+            <h4>Lectorate Music, Education and Society - Festive Presentation</h4>
             <div className="img-center">
               <OpacityImage imageUrl={lectoraat} />
             </div>
@@ -1977,7 +1977,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ATTN, Crucial Listening interview</p>
+            <h4>ATTN, Crucial Listening interview</h4>
             <div className="img-center">
               <OpacityImage imageUrl={crucial} />
             </div>
@@ -1996,7 +1996,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>New LP, Lueur released by Tartaruga records</p>
+            <h4>New LP, Lueur released by Tartaruga records</h4>
             <div className="img-center">
               <OpacityImage imageUrl={lueur1} />
             </div>
@@ -2017,7 +2017,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Concert 17 October 2018, Arnold Schoenbergzaal</p>
+            <h4>Sonology Concert 17 October 2018, Arnold Schoenbergzaal</h4>
             <div className="img-center">
               <OpacityImage imageUrl={SonologyConcert17October2018} />
             </div>
@@ -2036,7 +2036,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Today's Art 2018</p>
+            <h4>Today's Art 2018</h4>
             <div className="img-center">
               <OpacityImage imageUrl={todaysart2018} />
             </div>
@@ -2076,7 +2076,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sound and Music Computing 2018</p>
+            <h4>Sound and Music Computing 2018</h4>
             <div className="img-center">
               <OpacityImage imageUrl={smc2018} />
             </div>
@@ -2109,7 +2109,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Frá Íslandi/ From Iceland/Uit IJsland</p>
+            <h4>Frá Íslandi/ From Iceland/Uit IJsland</h4>
             <div className="img-center">
               <OpacityImage imageUrl={fraislandi} />
             </div>
@@ -2134,7 +2134,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ARC kickoff event</p>
+            <h4>ARC kickoff event</h4>
             <div className="img-center">
               <OpacityImage imageUrl={arc_power} />
             </div>
@@ -2180,7 +2180,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Hisolat - Various Artists One</p>
+            <h4>Hisolat - Various Artists One</h4>
             <div className="img-center">
               <OpacityImage imageUrl={hisolat_k7} />
             </div>
@@ -2216,7 +2216,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Discussion Concert 5</p>
+            <h4>Sonology Discussion Concert 5</h4>
             <div className="img-center">
               <OpacityImage imageUrl={sonologyConcert12May2018} />
             </div>
@@ -2256,7 +2256,7 @@ class Current extends Component {
               <hr />
             </div>
 
-            <p>Azimuth #6 Weekender</p>
+            <h4>Azimuth #6 Weekender</h4>
 
             <div className="img-center">
               <OpacityImage imageUrl={azimuth_mgbg} />
@@ -2319,7 +2319,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Presentation</p>
+            <h4>Lectorate Presentation</h4>
 
  <div className="col-lg-12">
                <div className="img-center-noborder">
@@ -2368,7 +2368,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Radio Fantasia</p>
+            <h4>Radio Fantasia</h4>
             <div className="img-center">
               <a
                 href="#"
@@ -2388,7 +2388,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Misplaced Objects</p>
+            <h4>Misplaced Objects</h4>
             <div className="img-center">
               <a
                 href="#"
@@ -2408,7 +2408,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Presentation</p>
+            <h4>Lectorate Presentation</h4>
 
  <div className="col-lg-12">
               <div className="img-center-noborder">
@@ -2455,7 +2455,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Live at De Keuken with Marie Guilleray</p>
+            <h4>Live at De Keuken with Marie Guilleray</h4>
             <div className="img-center">
               <a
                 href="https://www.youtube.com/watch?v=GsNuHaQWITc"
@@ -2530,7 +2530,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Perfromance at Zaal3 / STUDIO LOOS</p>
+            <h4>Perfromance at Zaal3 / STUDIO LOOS</h4>
             <div className="img-center">
               <a
                 href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024"
@@ -2577,7 +2577,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Presentation at Sonology</p>
+            <h4>Presentation at Sonology</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a
@@ -2652,7 +2652,7 @@ class Current extends Component {
                 </a>
               </div>
             </div>
-            <p>.</p>
+            <h4>.</h4>
             <p>
               Developed as an experiment in dynamically evolving networks,
               Ever-Present Change merges live coded sound with generative
@@ -2691,7 +2691,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Presentation and Performance at AIMC 2024</p>
+            <h4>Presentation and Performance at AIMC 2024</h4>
             <div className="img-center">
               <a href="https://aimc2024.pubpub.org/schedule" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={aimc2024} />
@@ -2740,7 +2740,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Live Performance at Adela festival</p>
+            <h4>Live Performance at Adela festival</h4>
             <div className="img-center">
               <a
                 href="https://wiki.ljudmila.org/Adela_2024_(en)"
@@ -2780,13 +2780,13 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Ever Present Change' at Sonology Discussion Concert 4</p>
+            <h4>'Ever Present Change' at Sonology Discussion Concert 4</h4>
             <div className="img-center">
               <a href="https://iil.is/openlab/67" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={zaal} />
               </a>
             </div>
-            <p>Performing a new live piece at Sonology Discussion Concert 4.</p>
+            <h4>Performing a new live piece at Sonology Discussion Concert 4.</h4>
             <p>
               Conceived as an experiment in dynamically evolving networks,
               'Ever-Present Change' combines live coded sound with generative
@@ -2809,7 +2809,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Talk at the IIL Open Lab</p>
+            <h4>Talk at the IIL Open Lab</h4>
             <div className="img-center">
               <a href="https://iil.is/openlab/67" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={iil} />
@@ -2848,7 +2848,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ICLC 2023</p>
+            <h4>ICLC 2023</h4>
             <div className="img-center">
               <a href="https://iclc.toplap.org/2023" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={iclc2023} />
@@ -2897,7 +2897,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Article on Orpheus Institute's ECHO journal</p>
+            <h4>Article on Orpheus Institute's ECHO journal</h4>
             <div className="img-center">
               <a
                 href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
@@ -2955,7 +2955,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>New Release, UPICS on Flag Day Recordings</p>
+            <h4>New Release, UPICS on Flag Day Recordings</h4>
             <div className="img-center">
               <a href="https://flagdayrecordings.bandcamp.com" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={upicsb} />
@@ -3011,7 +3011,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>SØVN Records showcase, Turin</p>
+            <h4>SØVN Records showcase, Turin</h4>
             <div className="img-center">
               <a href="https://archiviotipografico.it/" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={turina} />
@@ -3039,7 +3039,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Moving Downstairs</p>
+            <h4>Moving Downstairs</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a
@@ -3084,7 +3084,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>WFS Festival</p>
+            <h4>WFS Festival</h4>
             <div className="img-center">
               <a href="http://sonology.org/" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={wfs2022} />
@@ -3116,7 +3116,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Ukraine Appeal</p>
+            <h4>Ukraine Appeal</h4>
             <div className="img-center">
               <a
                 href="https://playneutral.bandcamp.com/album/ukraine-appeal"
@@ -3144,7 +3144,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>LP 1 Recordings from the Institute of Sonology</p>
+            <h4>LP 1 Recordings from the Institute of Sonology</h4>
             <div className="img-center">
               <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={culture_archive} />
@@ -3184,7 +3184,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Radio New Babylon</p>
+            <h4>Radio New Babylon</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a href="http://radionewbabylon.net" target="_blank" rel="noopener noreferrer">
@@ -3231,7 +3231,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Staff Concert</p>
+            <h4>Sonology Staff Concert</h4>
             <div className="img-center">
               <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={sonoconcert} />
@@ -3265,7 +3265,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Anticlines</p>
+            <h4>Anticlines</h4>
             <div className="row">
               <div className="col-lg-12">
                 <div className="img-center">
@@ -3330,7 +3330,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Fracas</p>
+            <h4>Fracas</h4>
             <div className="img-center">
               <a
                 href="https://bjarni.bandcamp.com/album/fracas"
@@ -3383,7 +3383,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Tonband festival 2021</p>
+            <h4>Tonband festival 2021</h4>
             <div className="img-center">
               <a
                 href="https://www.audiorama.se/events/2021/tonband"
@@ -3414,7 +3414,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Puls binaural stream concerts</p>
+            <h4>Puls binaural stream concerts</h4>
             <div className="img-center">
               <a
                 href="https://www.audiorama.se/events/2021/tonband"
@@ -3453,7 +3453,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Synthesis and Operation Flows' at xCoaX 2021.</p>
+            <h4>'Synthesis and Operation Flows' at xCoaX 2021.</h4>
             <div className="img-center-noborder">
               <a href="https://2021.xcoax.org/#program">
                 <OpacityImage imageUrl={xcoax} />
@@ -3540,7 +3540,7 @@ class Current extends Component {
               Celebrating their 30th release SØVN releases the compilation
               'Music for queuing at the supermarket'.{" "}
             </p>
-            <p>It includes my piece 'FIFO'.</p>
+            <h4>It includes my piece 'FIFO'.</h4>
             <p>
               <a
                 href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"
@@ -3604,7 +3604,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Festival Ecoutes</p>
+            <h4>Festival Ecoutes</h4>
             <div className="img-center">
               <a href="http://festivalecoute.org/">
                 <OpacityImage imageUrl={festival_ecoutes} />
@@ -3645,7 +3645,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Cendres' on SØVN Records</p>
+            <h4>'Cendres' on SØVN Records</h4>
             <div className="img-center">
               <a href="https://sovnrecords.bandcamp.com/album/cendres">
                 <OpacityImage imageUrl={cendres_sovn2} />
@@ -3678,7 +3678,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Audiosfera 1980-2020</p>
+            <h4>Audiosfera 1980-2020</h4>
             <div className="img-center">
               <a href="https://www.museoreinasofia.es/en/exhibitions/audiosphere?fbclid=IwAR1zjs351-j-vaGF8GDuCTAcj1i2WZAg8OptU8lzyVtG1cFScyQc3OeFyxw">
                 <OpacityImage imageUrl={audiosphere} />
@@ -3700,7 +3700,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Volume & Void</p>
+            <h4>Volume & Void</h4>
             <div className="img-center">
               <OpacityImage imageUrl={superpang} />
             </div>
@@ -3733,7 +3733,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ATTN Compilation</p>
+            <h4>ATTN Compilation</h4>
             <div className="img-center">
               <a href="https://attnspancompilation.bandcamp.com/album/attn-span">
                 <OpacityImage imageUrl={attn} />
@@ -3761,7 +3761,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>LKS</p>
+            <h4>LKS</h4>
             <p>
               <iframe title="Embedded content"
                 width="100%"
@@ -3779,7 +3779,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonix #9</p>
+            <h4>Sonix #9</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Sonix} />
             </div>
@@ -3820,7 +3820,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Discussion Concert #3</p>
+            <h4>Discussion Concert #3</h4>
             <div className="img-center">
               <OpacityImage imageUrl={DC2020} />
             </div>
@@ -3854,7 +3854,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>RASK #2</p>
+            <h4>RASK #2</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Rask2} />
             </div>
@@ -3921,7 +3921,7 @@ class Current extends Component {
             <div className="img-center">
               <OpacityImage imageUrl={multiphonies} />
             </div>
-            <p>Concert Institut de Sonologie de La Haye</p>
+            <h4>Concert Institut de Sonologie de La Haye</h4>
             <p>
               L'Institut de Sonologie adopte une position claire concernant
               l'utilisation de la technologie en musique : la technologie n'est
@@ -3944,7 +3944,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>CRXSSINGS (fundraiser for City Plaza)</p>
+            <h4>CRXSSINGS (fundraiser for City Plaza)</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Crxssings} />
             </div>
@@ -3983,7 +3983,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Music, Humans and Machines (ODC 2019)</p>
+            <h4>Music, Humans and Machines (ODC 2019)</h4>
             <div className="img-center">
               <OpacityImage imageUrl={OrpheusMachine} />
             </div>
@@ -4101,7 +4101,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Publications on the Research Catalogue</p>
+            <h4>Publications on the Research Catalogue</h4>
             <div className="img-center">
               <OpacityImage imageUrl={rc} />
             </div>
@@ -4137,7 +4137,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Music, Education and Society - Festive Presentation</p>
+            <h4>Lectorate Music, Education and Society - Festive Presentation</h4>
             <div className="img-center">
               <OpacityImage imageUrl={lectoraat} />
             </div>
@@ -4170,7 +4170,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ATTN, Crucial Listening interview</p>
+            <h4>ATTN, Crucial Listening interview</h4>
             <div className="img-center">
               <OpacityImage imageUrl={crucial} />
             </div>
@@ -4189,7 +4189,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>New LP, Lueur released by Tartaruga records</p>
+            <h4>New LP, Lueur released by Tartaruga records</h4>
             <div className="img-center">
               <OpacityImage imageUrl={lueur1} />
             </div>
@@ -4210,7 +4210,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Concert 17 October 2018, Arnold Schoenbergzaal</p>
+            <h4>Sonology Concert 17 October 2018, Arnold Schoenbergzaal</h4>
             <div className="img-center">
               <OpacityImage imageUrl={SonologyConcert17October2018} />
             </div>
@@ -4229,7 +4229,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Today's Art 2018</p>
+            <h4>Today's Art 2018</h4>
             <div className="img-center">
               <OpacityImage imageUrl={todaysart2018} />
             </div>
@@ -4269,7 +4269,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sound and Music Computing 2018</p>
+            <h4>Sound and Music Computing 2018</h4>
             <div className="img-center">
               <OpacityImage imageUrl={smc2018} />
             </div>
@@ -4302,7 +4302,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Frá Íslandi/ From Iceland/Uit IJsland</p>
+            <h4>Frá Íslandi/ From Iceland/Uit IJsland</h4>
             <div className="img-center">
               <OpacityImage imageUrl={fraislandi} />
             </div>
@@ -4327,7 +4327,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ARC kickoff event</p>
+            <h4>ARC kickoff event</h4>
             <div className="img-center">
               <OpacityImage imageUrl={arc_power} />
             </div>
@@ -4373,7 +4373,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Hisolat - Various Artists One</p>
+            <h4>Hisolat - Various Artists One</h4>
             <div className="img-center">
               <OpacityImage imageUrl={hisolat_k7} />
             </div>
@@ -4409,7 +4409,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Discussion Concert 5</p>
+            <h4>Sonology Discussion Concert 5</h4>
             <div className="img-center">
               <OpacityImage imageUrl={sonologyConcert12May2018} />
             </div>
@@ -4449,7 +4449,7 @@ class Current extends Component {
               <hr />
             </div>
 
-            <p>Azimuth #6 Weekender</p>
+            <h4>Azimuth #6 Weekender</h4>
 
             <div className="img-center">
               <OpacityImage imageUrl={azimuth_mgbg} />
@@ -4512,7 +4512,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Presentation</p>
+            <h4>Lectorate Presentation</h4>
 
  <div className="col-lg-12">
                <div className="img-center-noborder">
@@ -4561,7 +4561,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Radio Fantasia</p>
+            <h4>Radio Fantasia</h4>
             <div className="img-center">
               <a
                 href="#"
@@ -4581,7 +4581,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Misplaced Objects</p>
+            <h4>Misplaced Objects</h4>
             <div className="img-center">
               <a
                 href="#"
@@ -4601,7 +4601,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Presentation</p>
+            <h4>Lectorate Presentation</h4>
 
  <div className="col-lg-12">
               <div className="img-center-noborder">
@@ -4648,7 +4648,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Live at De Keuken with Marie Guilleray</p>
+            <h4>Live at De Keuken with Marie Guilleray</h4>
             <div className="img-center">
               <a
                 href="https://www.youtube.com/watch?v=GsNuHaQWITc"
@@ -4723,7 +4723,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Perfromance at Zaal3 / STUDIO LOOS</p>
+            <h4>Perfromance at Zaal3 / STUDIO LOOS</h4>
             <div className="img-center">
               <a
                 href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024"
@@ -4770,7 +4770,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Presentation at Sonology</p>
+            <h4>Presentation at Sonology</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a
@@ -4845,7 +4845,7 @@ class Current extends Component {
                 </a>
               </div>
             </div>
-            <p>.</p>
+            <h4>.</h4>
             <p>
               Developed as an experiment in dynamically evolving networks,
               Ever-Present Change merges live coded sound with generative
@@ -4884,7 +4884,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Presentation and Performance at AIMC 2024</p>
+            <h4>Presentation and Performance at AIMC 2024</h4>
             <div className="img-center">
               <a href="https://aimc2024.pubpub.org/schedule" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={aimc2024} />
@@ -4933,7 +4933,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Live Performance at Adela festival</p>
+            <h4>Live Performance at Adela festival</h4>
             <div className="img-center">
               <a
                 href="https://wiki.ljudmila.org/Adela_2024_(en)"
@@ -4973,13 +4973,13 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Ever Present Change' at Sonology Discussion Concert 4</p>
+            <h4>'Ever Present Change' at Sonology Discussion Concert 4</h4>
             <div className="img-center">
               <a href="https://iil.is/openlab/67" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={zaal} />
               </a>
             </div>
-            <p>Performing a new live piece at Sonology Discussion Concert 4.</p>
+            <h4>Performing a new live piece at Sonology Discussion Concert 4.</h4>
             <p>
               Conceived as an experiment in dynamically evolving networks,
               'Ever-Present Change' combines live coded sound with generative
@@ -5002,7 +5002,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Talk at the IIL Open Lab</p>
+            <h4>Talk at the IIL Open Lab</h4>
             <div className="img-center">
               <a href="https://iil.is/openlab/67" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={iil} />
@@ -5041,7 +5041,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ICLC 2023</p>
+            <h4>ICLC 2023</h4>
             <div className="img-center">
               <a href="https://iclc.toplap.org/2023" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={iclc2023} />
@@ -5090,7 +5090,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Article on Orpheus Institute's ECHO journal</p>
+            <h4>Article on Orpheus Institute's ECHO journal</h4>
             <div className="img-center">
               <a
                 href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
@@ -5148,7 +5148,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>New Release, UPICS on Flag Day Recordings</p>
+            <h4>New Release, UPICS on Flag Day Recordings</h4>
             <div className="img-center">
               <a href="https://flagdayrecordings.bandcamp.com" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={upicsb} />
@@ -5204,7 +5204,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>SØVN Records showcase, Turin</p>
+            <h4>SØVN Records showcase, Turin</h4>
             <div className="img-center">
               <a href="https://archiviotipografico.it/" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={turina} />
@@ -5232,7 +5232,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Moving Downstairs</p>
+            <h4>Moving Downstairs</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a
@@ -5277,7 +5277,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>WFS Festival</p>
+            <h4>WFS Festival</h4>
             <div className="img-center">
               <a href="http://sonology.org/" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={wfs2022} />
@@ -5309,7 +5309,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Ukraine Appeal</p>
+            <h4>Ukraine Appeal</h4>
             <div className="img-center">
               <a
                 href="https://playneutral.bandcamp.com/album/ukraine-appeal"
@@ -5337,7 +5337,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>LP 1 Recordings from the Institute of Sonology</p>
+            <h4>LP 1 Recordings from the Institute of Sonology</h4>
             <div className="img-center">
               <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={culture_archive} />
@@ -5377,7 +5377,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Radio New Babylon</p>
+            <h4>Radio New Babylon</h4>
             <div className="col-lg-6">
               <div className="img-center">
                 <a href="http://radionewbabylon.net" target="_blank" rel="noopener noreferrer">
@@ -5424,7 +5424,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Staff Concert</p>
+            <h4>Sonology Staff Concert</h4>
             <div className="img-center">
               <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">
                 <OpacityImage imageUrl={sonoconcert} />
@@ -5458,7 +5458,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Anticlines</p>
+            <h4>Anticlines</h4>
             <div className="row">
               <div className="col-lg-12">
                 <div className="img-center">
@@ -5523,7 +5523,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Fracas</p>
+            <h4>Fracas</h4>
             <div className="img-center">
               <a
                 href="https://bjarni.bandcamp.com/album/fracas"
@@ -5576,7 +5576,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Tonband festival 2021</p>
+            <h4>Tonband festival 2021</h4>
             <div className="img-center">
               <a
                 href="https://www.audiorama.se/events/2021/tonband"
@@ -5607,7 +5607,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Puls binaural stream concerts</p>
+            <h4>Puls binaural stream concerts</h4>
             <div className="img-center">
               <a
                 href="https://www.audiorama.se/events/2021/tonband"
@@ -5646,7 +5646,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Synthesis and Operation Flows' at xCoaX 2021.</p>
+            <h4>'Synthesis and Operation Flows' at xCoaX 2021.</h4>
             <div className="img-center-noborder">
               <a href="https://2021.xcoax.org/#program">
                 <OpacityImage imageUrl={xcoax} />
@@ -5733,7 +5733,7 @@ class Current extends Component {
               Celebrating their 30th release SØVN releases the compilation
               'Music for queuing at the supermarket'.{" "}
             </p>
-            <p>It includes my piece 'FIFO'.</p>
+            <h4>It includes my piece 'FIFO'.</h4>
             <p>
               <a
                 href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"
@@ -5797,7 +5797,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Festival Ecoutes</p>
+            <h4>Festival Ecoutes</h4>
             <div className="img-center">
               <a href="http://festivalecoute.org/">
                 <OpacityImage imageUrl={festival_ecoutes} />
@@ -5838,7 +5838,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>'Cendres' on SØVN Records</p>
+            <h4>'Cendres' on SØVN Records</h4>
             <div className="img-center">
               <a href="https://sovnrecords.bandcamp.com/album/cendres">
                 <OpacityImage imageUrl={cendres_sovn2} />
@@ -5871,7 +5871,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Audiosfera 1980-2020</p>
+            <h4>Audiosfera 1980-2020</h4>
             <div className="img-center">
               <a href="https://www.museoreinasofia.es/en/exhibitions/audiosphere?fbclid=IwAR1zjs351-j-vaGF8GDuCTAcj1i2WZAg8OptU8lzyVtG1cFScyQc3OeFyxw">
                 <OpacityImage imageUrl={audiosphere} />
@@ -5893,7 +5893,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Volume & Void</p>
+            <h4>Volume & Void</h4>
             <div className="img-center">
               <OpacityImage imageUrl={superpang} />
             </div>
@@ -5926,7 +5926,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ATTN Compilation</p>
+            <h4>ATTN Compilation</h4>
             <div className="img-center">
               <a href="https://attnspancompilation.bandcamp.com/album/attn-span">
                 <OpacityImage imageUrl={attn} />
@@ -5954,7 +5954,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>LKS</p>
+            <h4>LKS</h4>
             <p>
               <iframe title="Embedded content"
                 width="100%"
@@ -5972,7 +5972,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonix #9</p>
+            <h4>Sonix #9</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Sonix} />
             </div>
@@ -6013,7 +6013,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Discussion Concert #3</p>
+            <h4>Discussion Concert #3</h4>
             <div className="img-center">
               <OpacityImage imageUrl={DC2020} />
             </div>
@@ -6047,7 +6047,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>RASK #2</p>
+            <h4>RASK #2</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Rask2} />
             </div>
@@ -6114,7 +6114,7 @@ class Current extends Component {
             <div className="img-center">
               <OpacityImage imageUrl={multiphonies} />
             </div>
-            <p>Concert Institut de Sonologie de La Haye</p>
+            <h4>Concert Institut de Sonologie de La Haye</h4>
             <p>
               L'Institut de Sonologie adopte une position claire concernant
               l'utilisation de la technologie en musique : la technologie n'est
@@ -6137,7 +6137,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>CRXSSINGS (fundraiser for City Plaza)</p>
+            <h4>CRXSSINGS (fundraiser for City Plaza)</h4>
             <div className="img-center">
               <OpacityImage imageUrl={Crxssings} />
             </div>
@@ -6176,7 +6176,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Music, Humans and Machines (ODC 2019)</p>
+            <h4>Music, Humans and Machines (ODC 2019)</h4>
             <div className="img-center">
               <OpacityImage imageUrl={OrpheusMachine} />
             </div>
@@ -6294,7 +6294,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Publications on the Research Catalogue</p>
+            <h4>Publications on the Research Catalogue</h4>
             <div className="img-center">
               <OpacityImage imageUrl={rc} />
             </div>
@@ -6330,7 +6330,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Lectorate Music, Education and Society - Festive Presentation</p>
+            <h4>Lectorate Music, Education and Society - Festive Presentation</h4>
             <div className="img-center">
               <OpacityImage imageUrl={lectoraat} />
             </div>
@@ -6363,7 +6363,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ATTN, Crucial Listening interview</p>
+            <h4>ATTN, Crucial Listening interview</h4>
             <div className="img-center">
               <OpacityImage imageUrl={crucial} />
             </div>
@@ -6382,7 +6382,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>New LP, Lueur released by Tartaruga records</p>
+            <h4>New LP, Lueur released by Tartaruga records</h4>
             <div className="img-center">
               <OpacityImage imageUrl={lueur1} />
             </div>
@@ -6403,7 +6403,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Concert 17 October 2018, Arnold Schoenbergzaal</p>
+            <h4>Sonology Concert 17 October 2018, Arnold Schoenbergzaal</h4>
             <div className="img-center">
               <OpacityImage imageUrl={SonologyConcert17October2018} />
             </div>
@@ -6422,7 +6422,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Today's Art 2018</p>
+            <h4>Today's Art 2018</h4>
             <div className="img-center">
               <OpacityImage imageUrl={todaysart2018} />
             </div>
@@ -6462,7 +6462,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sound and Music Computing 2018</p>
+            <h4>Sound and Music Computing 2018</h4>
             <div className="img-center">
               <OpacityImage imageUrl={smc2018} />
             </div>
@@ -6495,7 +6495,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Frá Íslandi/ From Iceland/Uit IJsland</p>
+            <h4>Frá Íslandi/ From Iceland/Uit IJsland</h4>
             <div className="img-center">
               <OpacityImage imageUrl={fraislandi} />
             </div>
@@ -6520,7 +6520,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>ARC kickoff event</p>
+            <h4>ARC kickoff event</h4>
             <div className="img-center">
               <OpacityImage imageUrl={arc_power} />
             </div>
@@ -6566,7 +6566,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Hisolat - Various Artists One</p>
+            <h4>Hisolat - Various Artists One</h4>
             <div className="img-center">
               <OpacityImage imageUrl={hisolat_k7} />
             </div>
@@ -6602,7 +6602,7 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <p>Sonology Discussion Concert 5</p>
+            <h4>Sonology Discussion Concert 5</h4>
             <div className="img-center">
               <OpacityImage imageUrl={sonologyConcert12May2018} />
             </div>
@@ -6642,7 +6642,7 @@ class Current extends Component {
               <hr />
             </div>
 
-            <p>Azimuth #6 Weekender</p>
+            <h4>Azimuth #6 Weekender</h4>
 
             <div className="img-center">
               <OpacityImage imageUrl={azimuth_mgbg} />

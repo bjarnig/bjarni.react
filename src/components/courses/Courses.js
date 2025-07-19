@@ -45,14 +45,14 @@ class Courses extends Component {
             <div className="row">
 
               <div className="col-lg-6">
-                  <h5>Composing with Algorithms </h5>
+                  <h4>Composing with Algorithms </h4>
                   <OpacityImage imageUrl= {algorithms} />
                   <br />
                   <p><a className="btn btn-default" href="/cwa">Access</a></p>
               </div>
 
               <div className="col-lg-6">
-                  <h5>Programming and Music 1</h5>
+                  <h4>Programming and Music 1</h4>
                   <OpacityImage imageUrl= {programming} />
                   <br />
                   <p><a className="btn btn-default" href="/pma">Access</a></p>
@@ -63,14 +63,14 @@ class Courses extends Component {
               <div className="row">
           
               <div className="col-lg-6">
-                  <h5>Programming and Music 2</h5>
+                  <h4>Programming and Music 2</h4>
                   <OpacityImage imageUrl= {music} />
                   <br />
                   <p><a className="btn btn-default" href="/pmb">Access</a></p>
               </div>
 
               <div className="col-lg-6">
-                  <h5>Workshops</h5>
+                  <h4>Workshops</h4>
                   <OpacityImage imageUrl= {workshop} />
                   <br />
                   <p><a className="btn btn-default" href="/workshops">Access</a></p>

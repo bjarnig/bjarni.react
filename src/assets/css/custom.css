@@ -144,6 +144,7 @@ hr {
 	padding: 1.5em;
 	text-decoration: none;
 	text-transform: none;
+	/* font-family: 'Assistant', sans-serif; */
 	font-family: 'Assistant', sans-serif;
 	font-size: 1.2em;
 	/* color: #2C2C2C; */
@@ -208,8 +209,33 @@ right: 55px;
 
 .music h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     line-height: 1.5;
+}
+
+/* Make h4 headers more readable on mobile */
+@media screen and (max-width: 767px) {
+    .content .date.h4,
+    .content .release-title h4,
+    .music h4 {
+        font-weight: 300 !important;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content .date.h4,
+    .content .release-title h4,
+    .music h4 {
+        font-weight: 400 !important;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* Apply Poppins font to all links on the Works page while keeping blue color */
+.container .content a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 
 .music img {
@@ -290,7 +316,7 @@ iframe {
 }
 
 .content strong {
-	color: #c42e6b;
+	color: #A3CEF1;
 	font-weight: bold;
 }
 
@@ -425,7 +451,7 @@ iframe {
 .press-page article .date {
 	font-size: 1.3em;
 	margin-bottom: 1em;
-	font-weight: 500;
+	font-weight: 200;
 	color: #A3CEF1;
 }
 

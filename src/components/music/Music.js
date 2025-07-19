@@ -70,65 +70,65 @@ class Music extends Component {
             </div>
 
             <div className="media">
-            <p>Vacuum (UPICS)</p>
+            <h4>Vacuum (UPICS)</h4>
             <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1376658418&color=%234c4655&auto_play=false&;show_artwork=true"></iframe>
             
             </div>
 
 
             <div className="media">
-            <p>Anticlines</p>
+            <h4>Anticlines</h4>
             <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1168878487&color=%234c4655&auto_play=false&;show_artwork=true"></iframe>
             </div>
 
 
             <div className="media">
-            <p>Polytree</p>
+            <h4>Polytree</h4>
             <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/937805527&color=%234c4655&auto_play=false&;show_artwork=true"></iframe>
             </div>
 
             <div className="media">
-              <p>Volume and Void</p>
+              <h4>Volume and Void</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/899657986&color=%234c4655&auto_play=false&;show_artwork=true"></iframe>
             </div>
 
             <div className="media">
-              <p>Prisme</p>
+              <h4>Prisme</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535356630&color=%234c4655&auto_play=false&;show_artwork=true"></iframe>
             </div>
 
             <div className="media">
-              <p>Ubieties</p>
+              <h4>Ubieties</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259066161&amp;color=1C6E8C&amp;auto_play=false&amp;show_artwork=true"></iframe>
             </div>
 
             <div className="media">
-              <p>Aukera</p>
+              <h4>Aukera</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F108329364&amp;color=1C6E8C&amp;auto_play=false&amp;show_artwork=true"></iframe>
             </div>
 
             <div className="media">
-              <p>Grey Seeds</p>
+              <h4>Grey Seeds</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F91176605&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
             </div>
 
             <div className="media">
-              <p>Angst</p>
+              <h4>Angst</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F27070454&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
             </div>
 
             <div className="media">
-              <p>Fingrafjall</p>
+              <h4>Fingrafjall</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8429288&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
             </div>
 
             <div className="media">
-              <p>Aftur</p>
+              <h4>Aftur</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8228363&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
             </div>
 
             <div className="media">
-              <p>Samtimis</p>
+              <h4>Samtimis</h4>
               <iframe title="Embedded content" width="100%" height="166" scrolling="no"  src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F8428732&amp;auto_play=false&amp;show_artwork=true&amp;color=1C6E8C"></iframe>
             </div>
 
