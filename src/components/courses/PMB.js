@@ -9,7 +9,7 @@ class Pmb extends Component {
       <div className="container">
         <div className="content">
           <article>
-            <div className="date"> 09.09.2025 </div>
+            <div className="date"> 11.09.2025 </div>
             <div className="hr">
               <hr />
             </div>
