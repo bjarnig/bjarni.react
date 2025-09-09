@@ -40,7 +40,7 @@ class Courses extends Component {
         </Helmet>
         <div className="container">
           <div className="music">
-            <div className="date">2024 - 2025</div>
+            <div className="date">2025 - 2026</div>
             <div className="hr"><hr /></div>
             <div className="row">
 
