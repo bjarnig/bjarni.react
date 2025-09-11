@@ -18,12 +18,13 @@ class OpacityImage extends React.Component {
     return (
       <div>
         <img
-          style={this.state.style}
+          style={{...this.state.style, cursor: this.props.onClick ? 'pointer' : 'default'}}
           className={this.state.className}
           src={this.props.imageUrl}
           alt={this.props.alt || ""}
           onLoad={this.handleImageLoaded.bind(this)}
           onError={this.handleImageErrored.bind(this)}
+          onClick={this.props.onClick}
         />
       </div>
     );

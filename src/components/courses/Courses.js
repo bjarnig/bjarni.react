@@ -13,6 +13,10 @@ const music = imageurl + 'xpmb.jpg';
 const workshop = imageurl + 'xworkshop.jpg';
 
 class Courses extends Component {
+  handleImageClick = (url) => {
+    window.location.href = url;
+  }
+
   render() { 
     return (
       <>
@@ -46,14 +50,14 @@ class Courses extends Component {
 
               <div className="col-lg-6">
                   <h4>Composing with Algorithms </h4>
-                  <OpacityImage imageUrl= {algorithms} />
+                  <OpacityImage imageUrl= {algorithms} onClick={() => this.handleImageClick('/cwa')} />
                   <br />
                   <p><a className="btn btn-default" href="/cwa">Access</a></p>
               </div>
 
               <div className="col-lg-6">
                   <h4>Programming and Music 1</h4>
-                  <OpacityImage imageUrl= {programming} />
+                  <OpacityImage imageUrl= {programming} onClick={() => this.handleImageClick('/pma')} />
                   <br />
                   <p><a className="btn btn-default" href="/pma">Access</a></p>
               </div>
@@ -64,14 +68,14 @@ class Courses extends Component {
           
               <div className="col-lg-6">
                   <h4>Programming and Music 2</h4>
-                  <OpacityImage imageUrl= {music} />
+                  <OpacityImage imageUrl= {music} onClick={() => this.handleImageClick('/pmb')} />
                   <br />
                   <p><a className="btn btn-default" href="/pmb">Access</a></p>
               </div>
 
               <div className="col-lg-6">
                   <h4>Workshops</h4>
-                  <OpacityImage imageUrl= {workshop} />
+                  <OpacityImage imageUrl= {workshop} onClick={() => this.handleImageClick('/workshops')} />
                   <br />
                   <p><a className="btn btn-default" href="/workshops">Access</a></p>
               </div>
