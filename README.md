@@ -210,14 +210,8 @@ This is a personal portfolio website. For suggestions or issues, please contact 
 
 ## License
 
-This project is for personal use. All content and materials are owned by Bjarni Gunnarsson.
+This project is for personal use.
 
-## Links
-
-- **Live Site**: [bjarni.react](https://your-domain.com)
-- **Contact**: [bjarni@example.com](mailto:bjarni@example.com)
-- **Music**: [SoundCloud](https://soundcloud.com/bjarni)
-- **Research**: [Academic Profile](https://example.com)
 
 ---
 
