@@ -1,6 +1,6 @@
 # Bjarni Gunnarsson - Portfolio Website
 
-A modern React-based portfolio website showcasing algorithmic composition, computer music, and educational content by Bjarni Gunnarsson.
+A modern React-based portfolio website showcasing algorithmic composition, computer music, and educational content.
 
 ## About
 
