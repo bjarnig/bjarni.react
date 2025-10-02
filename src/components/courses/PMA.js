@@ -27,6 +27,31 @@ class Pma extends Component {
     return (
       <div className="container">
         <div className="content">
+        {shouldShowArticle("01.10.2025") && (
+            <article>
+              <div className="date"> 02.10.2025 </div>
+              <div className="hr">
+                <hr />
+              </div>
+              <h1>Class 04, Functions</h1>
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma04.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma04.png" />
+              </a>
+              <p>
+                <a
+                  href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma04.zip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download materials
+                </a>
+              </p>
+            </article>
+          )}
         {shouldShowArticle("25.09.2025") && (
             <article>
               <div className="date"> 25.09.2025 </div>
