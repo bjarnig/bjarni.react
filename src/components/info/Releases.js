@@ -57,7 +57,7 @@ class Releases extends Component {
 
   render() {
     return (
-      <>
+      <React.Fragment>
         <StructuredData type="music" />
         <Helmet>
           <title>Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs</title>
@@ -81,7 +81,7 @@ class Releases extends Component {
           <link rel="canonical" href="https://bjarni-gunnarsson.net/releases" />
         </Helmet>
         <div className="container">
-      <div className="content">
+          <div className="content">
         <ul className="nav nav-pills">
           <li className="active">
             <a href="/releases">info</a>
@@ -90,6 +90,31 @@ class Releases extends Component {
             <a href="/press">press</a>
           </li>
         </ul>
+
+        <div className="hr"><hr/></div>
+        <div className="release">
+        <div className="release-title"><h4>Fracas (2025)</h4></div>
+
+        <div className="img-center">
+          <a href="https://bjarni.bandcamp.com/album/fracas">
+          <OpacityImage imageUrl= {fracas} />
+          </a>
+        </div>
+        <p>My research catalogue exposition, “Selective Retention: Interfacing the Past through Queries and Graphs”, is now published in the 36th edition of The Journal for Artistic Research (JAR).</p> 
+        <p>Fracas is an accompanying Bandcamp release of four 'network pieces' exploring graphs, emergence, and relationships between sound material as it evolves through computational systems.</p>
+        <p>The title track was first released as a one-track album on Superpang and later as part of their No Catalogue compilation. This new edition places Fracas alongside three related works that have grown from the same research environment.</p>
+        <p>- - -</p>
+        <p>JAR, Issue 36:</p> 
+        <p><a href="https://www.jar-online.net/en/issues/36">www.jar-online.net/en/issues/36</a> <br/></p>
+        <p>JAR article available here: <br/></p>
+        <p><a href="https://www.researchcatalogue.net/view/2938321/3620117">www.researchcatalogue.net/view/2938321/3620117</a> <br/></p>
+        <p>Fracas: <br/></p>
+        <p><a href="https://bjarni.bandcamp.com/album/fracas">bjarni.bandcamp.com/album/fracas</a> <br/></p>
+        <p>- - -</p>
+        <div className="bandcamp">
+        <iframe title="Embedded content" style={this.state.bandcampStyleUpics} src="https://bandcamp.com/EmbeddedPlayer/album=48616606/size=large/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://bjarni.bandcamp.com/album/fracas">Fracas by Bjarni Gunnarsson</a></iframe>
+        </div>
+        </div>
 
         <div className="hr"><hr/></div>
         <div className="release">
@@ -142,25 +167,6 @@ class Releases extends Component {
         <a href="https://bit.ly/3p4GBQb">bit.ly/3p4GBQb</a>
         </p>
         <br/>
-        </div>
-
-        <div className="hr"><hr/></div>
-        <div className="release">
-        <div className="release-title"><h4>Fracas (2021)</h4></div>
-
-        <div className="img-center">
-          <a href="https://superpang.bandcamp.com/album/no-catalogue-number-tracks">
-          <OpacityImage imageUrl= {fracas} />
-          </a>
-        </div>
-        <p> Fracas released on <a href="https://superpang.bandcamp.com/"> Superpang </a></p>
-        <p>
-        An improvisation, recorded on 13.11.2021
-        </p>
-        <p></p>
-        <div className="bandcamp">
-        <iframe title="Embedded content" style={this.state.bandcampStyleCendres} src="https://bandcamp.com/EmbeddedPlayer/album=3045698760/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=455979614/transparent=true/" seamless><a href="https://superpang.bandcamp.com/album/no-catalogue-number-tracks">Fracas by Bjarni Gunnarsson</a></iframe>
-        </div>
         </div>
 
         <div className="hr"><hr/></div>
@@ -412,7 +418,7 @@ class Releases extends Component {
 
           <div className="hr"><hr></hr></div>
           <div className="release">
-          <div className="release-title"><h4> Floating Point by Zero (2001)</h4></div>
+            <div className="release-title"><h4> Floating Point by Zero (2001)</h4></div>
             <div className="bandcamp">
               <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=727902579/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/floating-point-by-zero">Floating Point By Zero by Einóma</a></iframe>
             </div>
@@ -425,7 +431,7 @@ class Releases extends Component {
       </div>
       </div>
     </div>
-      </>
+      </React.Fragment>
     )
   }
 }
