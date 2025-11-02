@@ -11,6 +11,9 @@ import OpacityImage from './../common/OpacityImage';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
+const jar4 = imageurl + "JAR4.jpg";
+const selective_retentions_a = imageurl + "selective-retentions-a.jpg";
+const selective_retentions_b = imageurl + "selective-retentions-b.jpg";
 const article = imageurl + "recomposing-data.png";
 const bba = imageurl + "bba.png";
 const bbb = imageurl + "bbb.png";
@@ -59,6 +62,32 @@ constructor(props) {
           <div className="hr"><hr/></div>
 
         </div>
+
+        <article>
+          <div className="date">2025</div>
+          <div className="hr"><hr /></div>
+          <h3>Selective Retention: Composing through Queries and Graphs</h3>
+          <p>The Journal for Artistic Research (JAR), Issue 36</p>
+          <div className="img-center-noborder">
+            <a
+              href="https://www.researchcatalogue.net/view/2938321/3620117"
+              target="_blank" rel="noopener noreferrer"
+            >
+              <OpacityImage imageUrl={selective_retentions_b} />
+            </a>
+          </div>
+          <p>'Selective Retention: Composing through Queries and Graphs' reflects on composing through software systems while focusing on reinterpreting musical materials through computational methods. The exposition examines two projects that utilise software tools as temporal portals, merging algorithms with composition to create new musical contexts. It highlights the evolving relationship between these tools and their source materials, emphasising a process of iterative approaches and adaptation. The text also explores the emergent nature of creative intention and the importance of addressing local details in sound and coded data. Within the exposition, software applications are exposed, the ideas behind them are discussed, and examples of music composed with them are presented.</p>
+          <p>
+            <a href="https://www.jar-online.net/en/issues/36" target="_blank" rel="noopener noreferrer">
+              JAR, Issue 36
+            </a>
+          </p>
+          <p>
+            <a href="https://www.researchcatalogue.net/view/2938321/3620117" target="_blank" rel="noopener noreferrer">
+              Research Catalogue
+            </a>
+          </p>
+        </article>
 
         <article>
           <div className="date">2025</div>

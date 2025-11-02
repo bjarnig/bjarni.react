@@ -18,6 +18,7 @@ const playneutralukraine = imageurl + "playneutral-ukraine.jpeg";
 const wfs2022 = imageurl + "wfs2022.png";
 const anticlines = imageurl + "anticlines.jpg";
 const fracas = imageurl + "fracas.png";
+const jar4 = imageurl + "JAR4.jpg";
 const pulsa = imageurl + "pulsa.jpeg";
 const pulsb = imageurl + "pulsb.jpeg";
 const mgbg_babylona = imageurl + "mgbg-babylona.png";
@@ -71,7 +72,6 @@ const colloquiuma = imageurl + "colloquiuma.png";
 const colloquiumb = imageurl + "colloquiumb.png";
 const soundartfestival = imageurl + "sound-art-festival.png";
 
-
 const article = imageurl + "articleml.png";
 const keuken = imageurl + "keuken.jpg";
 const jrd = imageurl + "2024_jrd.jpg";
@@ -107,39 +107,111 @@ class Current extends Component {
 
         <article>
             {" "}
+            <div className="date">02-11-2025</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h4>Selective Retention: Interfacing the Past through Queries and Graphs</h4>
+            <div className="col-lg-6">
+              <div className="img-center-noborder">
+                <a
+                  href="https://www.researchcatalogue.net/view/2938321/3620117"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <OpacityImage imageUrl={jar4} />
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="img-center-noborder">
+                <a
+                  href="https://bjarni.bandcamp.com/album/fracas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <OpacityImage imageUrl={fracas} />
+                </a>
+              </div>
+            </div>
+            <p>
+              My research catalogue exposition, "Selective Retention: Interfacing the Past through Queries and Graphs", 
+              is now published in the 36th edition of The Journal for Artistic Research (JAR). 
+              It examines two projects that utilise queries, graphs, and networked relations in a musical context.
+            </p>
+            <p>
+              Fracas is an accompanying Bandcamp release featuring four of the network pieces connected to the research. 
+              The title track was first released as a one-track album on @superpanghq and later as part of their No Catalogue compilation. 
+              This new edition places Fracas alongside three related works that have grown from the same research environment.
+            </p>
+            <p>
+              <a
+                href="https://www.jar-online.net/en/issues/36"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                JAR, Issue 36
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://www.researchcatalogue.net/view/2938321/3620117"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Article on the Research Catalogue
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://bjarni.bandcamp.com/album/fracas"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fracas on Bandcamp
+              </a>
+            </p>
+          </article>
+
+          <article>
+            {" "}
             <div className="date">01-06-2025</div>
             <div className="hr">
               <hr />
             </div>
-                         <h4>Recomposing Data: Machine Learning As Compositional Process</h4>
-
- <div className="col-lg-12">
-               <div className="img-center-noborder">
-                  <a
-                    href="https://www.researchcatalogue.net/view/2532879/2532880"
-                    target="_blank" rel="noopener noreferrer"
-                  >
-                    <OpacityImage imageUrl={article} />
-                  </a>
-                </div>
+            <h4>Recomposing Data: Machine Learning As Compositional Process</h4>
+            <div className="col-lg-12">
+              <div className="img-center-noborder">
+                <a
+                  href="https://www.researchcatalogue.net/view/2532879/2532880"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <OpacityImage imageUrl={article} />
+                </a>
               </div>
+            </div>
+            <p>Article published on the Research Catalogue.</p>
             <p>
-            Article published on the Research Catalogue.
+              This research proposal concerns an approach to computer music that
+              seeks to combine modern approaches in machine learning with
+              established processes of algorithmic composition. The idea is to
+              critically question the use of generative algorithms within the
+              creative process and how the training and creation of data for
+              machine learning can become an important part of that process.
             </p>
-            <p>
-            This research proposal concerns an approach to computer music that seeks to combine modern approaches in machine learning with established processes of algorithmic composition. The idea is to critically question the use of generative algorithms within the creative process and how the training and creation of data for machine learning can become an important part of that process.
-            </p>
-          
             <p>
               <a
                 href="https://www.researchcatalogue.net/view/2532879/2532880"
-                target="_blank" rel="noopener noreferrer"
-              >Article on the Research Catalogue 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Article on the Research Catalogue
               </a>
-            </p>  
+            </p>
           </article>
 
-        <article>
+          <article>
             {" "}
             <div className="date">22-02-2025</div>
             <div className="hr">
@@ -149,16 +221,34 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://www.echobox.radio/shows/misplaced-objects"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={misplaced_objects} />
               </a>
             </div>
-            <p>Guest appearance on Misplaced Objects, a radio show on Amsterdam's independent Echobox Radio.</p>
-            <p>Hosted by Anahit, the program explores electroacoustic music and composition, examining the intersection of sound, art, and technology through interviews and discussions with composers and sound artists.</p>
-            <p>During the broadcast, we discussed recent research projects including 'Recomposing Data: Machine Learning as Compositional Process' and explored the broader implications of combining machine learning with algorithmic composition techniques.</p>
             <p>
-              <a href="https://www.echobox.radio/shows/misplaced-objects" target="_blank" rel="noopener noreferrer">
+              Guest appearance on Misplaced Objects, a radio show on Amsterdam's
+              independent Echobox Radio.
+            </p>
+            <p>
+              Hosted by Anahit, the program explores electroacoustic music and
+              composition, examining the intersection of sound, art, and
+              technology through interviews and discussions with composers and
+              sound artists.
+            </p>
+            <p>
+              During the broadcast, we discussed recent research projects
+              including 'Recomposing Data: Machine Learning as Compositional
+              Process' and explored the broader implications of combining
+              machine learning with algorithmic composition techniques.
+            </p>
+            <p>
+              <a
+                href="https://www.echobox.radio/shows/misplaced-objects"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Misplaced Objects on Echobox Radio
               </a>
             </p>
@@ -174,15 +264,31 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://soundcloud.com/radiofantasia/kudos-to-living-artists-06-farzane-bjarni-gunnarsson"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={radio_fantasia} />
               </a>
             </div>
-            <p>Farzané (Farzaneh Nouri) is a sound artist, composer, and researcher based in the Netherlands. Her work delves into speculative approaches to sound, science, and technology, encompassing various disciplines such as electroacoustic music composition, computer science, instrument development, epistemology, and linguistics.</p>
-            <p>For this episode, Farzané created a one-hour mix featuring exclusively my music, including tracks from Heap, Blindni, Blur, Signac, Dried Up, Ubieties, Wreck, and Pedicel.</p>
             <p>
-              <a href="https://soundcloud.com/radiofantasia/kudos-to-living-artists-06-farzane-bjarni-gunnarsson" target="_blank" rel="noopener noreferrer">
+              Farzané (Farzaneh Nouri) is a sound artist, composer, and
+              researcher based in the Netherlands. Her work delves into
+              speculative approaches to sound, science, and technology,
+              encompassing various disciplines such as electroacoustic music
+              composition, computer science, instrument development,
+              epistemology, and linguistics.
+            </p>
+            <p>
+              For this episode, Farzané created a one-hour mix featuring
+              exclusively my music, including tracks from Heap, Blindni, Blur,
+              Signac, Dried Up, Ubieties, Wreck, and Pedicel.
+            </p>
+            <p>
+              <a
+                href="https://soundcloud.com/radiofantasia/kudos-to-living-artists-06-farzane-bjarni-gunnarsson"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Kudos to Living Artists 06 – Farzané – Bjarni Gunnarsson
               </a>
             </p>
@@ -198,63 +304,81 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://www.ruv.is/utvarp/spila/straumar/34464/a8liir"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={ruv} />
               </a>
             </div>
-            <p>A radio interview with the journalist Árni Matthíasson on RÚV.</p>
             <p>
-              <a href="https://www.ruv.is/utvarp/spila/straumar/34464/a8liir" target="_blank" rel="noopener noreferrer">
+              A radio interview with the journalist Árni Matthíasson on RÚV.
+            </p>
+            <p>
+              <a
+                href="https://www.ruv.is/utvarp/spila/straumar/34464/a8liir"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Radio Interview on RÚV
               </a>
             </p>
           </article>
 
-        <article>
+          <article>
             {" "}
             <div className="date">07-02-2025</div>
             <div className="hr">
               <hr />
             </div>
             <h4>Lectorate Presentation</h4>
-
- <div className="col-lg-12">
+            <div className="col-lg-12">
               <div className="img-center-noborder">
                 <a
                   href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <OpacityImage imageUrl={lectorate_event} />
                 </a>
               </div>
             </div>
             <p>
-            On 7 February, the lectorate 'Music, Education and Society' will present the outcomes of the research projects of 2024, as well as introduce the research group of 2025. The meeting is also the festive closing of the lectorate year.
+              On 7 February, the lectorate 'Music, Education and Society' will
+              present the outcomes of the research projects of 2024, as well as
+              introduce the research group of 2025. The meeting is also the
+              festive closing of the lectorate year.
             </p>
-            <p>I will present my project: 'Recomposing Data: Machine Learning As Compositional Process'</p>
-            
+            <p>
+              I will present my project: 'Recomposing Data: Machine Learning As
+              Compositional Process'
+            </p>
             <p>
               <a
                 href="https://researchplatform.art/events/lectorate-event-music-education-society-2025/"
-                target="_blank" rel="noopener noreferrer"
-              >Event in Amare
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Event in Amare
               </a>
-            </p>  
+            </p>
             <p>
               <a
                 href="https://researchplatform.art/projects/crafting-creativity-uniting-neural-synthesis-machine-learning-and-algorithmic-composition-for-innovative-music-creation/"
-                target="_blank" rel="noopener noreferrer"
-              >The Project
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                The Project
               </a>
-            </p>  
+            </p>
             <p>
               <a
                 href="https://www.researchcatalogue.net/profile/show-exposition?exposition=2532879"
-                target="_blank" rel="noopener noreferrer"
-              >Article on the Research Catalogue 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Article on the Research Catalogue
               </a>
-            </p>  
+            </p>
           </article>
           <article>
             {" "}
@@ -266,19 +390,27 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://www.youtube.com/watch?v=GsNuHaQWITc"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={keuken} />
               </a>
             </div>
             <p>
-            A collaborative project between Marie Guilleray and Bjarni Gunnarsson, the duo explores diverse musical formats including fixed-media electronic compositions, improvised performances, site-specific residencies and field recording experiments.
+              A collaborative project between Marie Guilleray and Bjarni
+              Gunnarsson, the duo explores diverse musical formats including
+              fixed-media electronic compositions, improvised performances,
+              site-specific residencies and field recording experiments.
             </p>
-            <p>Their focus is on voice and live electronics through composed and improvised music.</p>
+            <p>
+              Their focus is on voice and live electronics through composed and
+              improvised music.
+            </p>
             <p>
               <a
                 href="https://www.youtube.com/watch?v=GsNuHaQWITc"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Live at De Keuken
               </a>
@@ -298,7 +430,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://researchplatform.art/events/research-day-24/"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={jrd} />
               </a>
@@ -324,7 +457,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://researchplatform.art/events/research-day-24/"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Joint Research Day '24 (JRD24)
               </a>
@@ -341,7 +475,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={soundartfestival} />
               </a>
@@ -371,7 +506,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://www.loosdenhaag.com/2nd-the-hague-international-sound-art-festival-2024"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Arsis vs Thesis, The Hague International Sound Art Festival
               </a>
@@ -389,7 +525,8 @@ class Current extends Component {
               <div className="img-center">
                 <a
                   href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2024.pdf"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <OpacityImage imageUrl={colloquiuma} />
                 </a>
@@ -399,7 +536,8 @@ class Current extends Component {
               <div className="img-center">
                 <a
                   href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2024.pdf"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <OpacityImage imageUrl={colloquiumb} />
                 </a>
@@ -423,7 +561,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2024.pdf"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Presentation Slides
               </a>
@@ -443,7 +582,8 @@ class Current extends Component {
               <div className="img-center">
                 <a
                   href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <OpacityImage imageUrl={tolistento} />
                 </a>
@@ -453,7 +593,8 @@ class Current extends Component {
               <div className="img-center">
                 <a
                   href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <OpacityImage imageUrl={tolistento2} />
                 </a>
@@ -487,7 +628,11 @@ class Current extends Component {
             </p>
             <br />
             <p>
-              <a href="https://www.to-listen-to.it/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.to-listen-to.it/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://www.to-listen-to.it
               </a>
             </p>
@@ -500,7 +645,11 @@ class Current extends Component {
             </div>
             <h4>Presentation and Performance at AIMC 2024</h4>
             <div className="img-center">
-              <a href="https://aimc2024.pubpub.org/schedule" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://aimc2024.pubpub.org/schedule"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={aimc2024} />
               </a>
             </div>
@@ -536,7 +685,11 @@ class Current extends Component {
             </p>
             <br />
             <p>
-              <a href="https://aimc2024.pubpub.org/schedule" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://aimc2024.pubpub.org/schedule"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://aimc2024.pubpub.org
               </a>
             </p>
@@ -551,7 +704,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://wiki.ljudmila.org/Adela_2024_(en)"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={adela} />
               </a>
@@ -574,7 +728,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://wiki.ljudmila.org/Adela_2024_(en)"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 https://wiki.ljudmila.org/Adela_2024_(en)
               </a>
@@ -589,11 +744,17 @@ class Current extends Component {
             </div>
             <h4>'Ever Present Change' at Sonology Discussion Concert 4</h4>
             <div className="img-center">
-              <a href="https://iil.is/openlab/67" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://iil.is/openlab/67"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={zaal} />
               </a>
             </div>
-            <h4>Performing a new live piece at Sonology Discussion Concert 4.</h4>
+            <h4>
+              Performing a new live piece at Sonology Discussion Concert 4.
+            </h4>
             <p>
               Conceived as an experiment in dynamically evolving networks,
               'Ever-Present Change' combines live coded sound with generative
@@ -604,7 +765,11 @@ class Current extends Component {
               and spatial behaviours.
             </p>
             <p>
-              <a href="https://sonology.org/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://sonology.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://sonology.org/
               </a>
             </p>
@@ -618,7 +783,11 @@ class Current extends Component {
             </div>
             <h4>Talk at the IIL Open Lab</h4>
             <div className="img-center">
-              <a href="https://iil.is/openlab/67" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://iil.is/openlab/67"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={iil} />
               </a>
             </div>
@@ -643,7 +812,11 @@ class Current extends Component {
               and examples of music composed with them be played.´
             </p>
             <p>
-              <a href="https://iclc.toplap.org/2023" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://iclc.toplap.org/2023"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://iil.is/openlab/67
               </a>
             </p>
@@ -657,7 +830,11 @@ class Current extends Component {
             </div>
             <h4>ICLC 2023</h4>
             <div className="img-center">
-              <a href="https://iclc.toplap.org/2023" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://iclc.toplap.org/2023"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={iclc2023} />
               </a>
             </div>
@@ -684,14 +861,19 @@ class Current extends Component {
               synthesis.
             </p>
             <p>
-              <a href="https://iclc.toplap.org/2023" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://iclc.toplap.org/2023"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://iclc.toplap.org/2023
               </a>
             </p>
             <p>
               <a
                 href="https://ekko.nl/event/alternative-algorithms"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 https://ekko.nl/event/alternative-algorithms
               </a>
@@ -708,7 +890,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={bba} />
               </a>
@@ -716,7 +899,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={bbb} />
               </a>
@@ -742,7 +926,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://echo.orpheusinstituut.be/article/balancing-behaviours"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 https://echo.orpheusinstituut.be/article/balancing-behaviours
               </a>
@@ -750,7 +935,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://echo.orpheusinstituut.be/issue/4"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 https://echo.orpheusinstituut.be/issue/4
               </a>
@@ -764,12 +950,20 @@ class Current extends Component {
             </div>
             <h4>New Release, UPICS on Flag Day Recordings</h4>
             <div className="img-center">
-              <a href="https://flagdayrecordings.bandcamp.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://flagdayrecordings.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={upicsb} />
               </a>
             </div>
             <div className="img-center">
-              <a href="https://bjarni.bandcamp.com/album/upics" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://bjarni.bandcamp.com/album/upics"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={upicsa} />
               </a>
             </div>
@@ -800,13 +994,18 @@ class Current extends Component {
             <p>
               <a
                 href="https://flagdayrecordings.bandcamp.com/album/upics"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 https://flagdayrecordings.bandcamp.com/album/upics
               </a>
             </p>
             <p>
-              <a href="https://bjarni.bandcamp.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://bjarni.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://bjarni.bandcamp.com
               </a>
             </p>
@@ -820,12 +1019,20 @@ class Current extends Component {
             </div>
             <h4>SØVN Records showcase, Turin</h4>
             <div className="img-center">
-              <a href="https://archiviotipografico.it/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://archiviotipografico.it/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={turina} />
               </a>
             </div>
             <div className="img-center">
-              <a href="https://archiviotipografico.it/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://archiviotipografico.it/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={turinb} />
               </a>
             </div>
@@ -851,7 +1058,8 @@ class Current extends Component {
               <div className="img-center">
                 <a
                   href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <OpacityImage imageUrl={mda} />
                 </a>
@@ -861,7 +1069,8 @@ class Current extends Component {
               <div className="img-center">
                 <a
                   href="https://thegreyspace.net/program/moving-downstairs-19-11-2022/"
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <OpacityImage imageUrl={mdb} />
                 </a>
@@ -893,7 +1102,11 @@ class Current extends Component {
             </div>
             <h4>WFS Festival</h4>
             <div className="img-center">
-              <a href="http://sonology.org/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="http://sonology.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={wfs2022} />
               </a>
             </div>
@@ -927,7 +1140,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://playneutral.bandcamp.com/album/ukraine-appeal"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={playneutralukraine} />
               </a>
@@ -953,7 +1167,11 @@ class Current extends Component {
             </div>
             <h4>LP 1 Recordings from the Institute of Sonology</h4>
             <div className="img-center">
-              <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">
+              <a
+                href="http://sonology.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={culture_archive} />
               </a>
             </div>
@@ -979,7 +1197,11 @@ class Current extends Component {
               provided in the last page of the booklet).{" "}
             </p>
             <p>
-              <a href="https://clone.nl/item68063.html" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://clone.nl/item68063.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://clone.nl/item68063.html
               </a>
             </p>
@@ -994,14 +1216,22 @@ class Current extends Component {
             <h4>Radio New Babylon</h4>
             <div className="col-lg-6">
               <div className="img-center">
-                <a href="http://radionewbabylon.net" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="http://radionewbabylon.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <OpacityImage imageUrl={mgbg_babylona} />
                 </a>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="img-center">
-                <a href="http://radionewbabylon.net" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="http://radionewbabylon.net"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <OpacityImage imageUrl={mgbg_babylonb} />
                 </a>
               </div>
@@ -1040,7 +1270,11 @@ class Current extends Component {
             </div>
             <h4>Sonology Staff Concert</h4>
             <div className="img-center">
-              <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">
+              <a
+                href="http://sonology.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <OpacityImage imageUrl={sonoconcert} />
               </a>
             </div>
@@ -1076,7 +1310,11 @@ class Current extends Component {
             <div className="row">
               <div className="col-lg-12">
                 <div className="img-center">
-                  <a href="https://bjarni.bandcamp.com" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://bjarni.bandcamp.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <OpacityImage imageUrl={anticlines} />
                   </a>
                 </div>
@@ -1092,7 +1330,11 @@ class Current extends Component {
             </div>
             <p>
               'Anticlines' is released today on{" "}
-              <a href="https://playneutral.bandcamp.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://playneutral.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 Playneutral{" "}
               </a>
@@ -1106,7 +1348,11 @@ class Current extends Component {
               generative processes.
             </p>
             <p>
-              <a href="https://bjarni.bandcamp.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://bjarni.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 bjarni.bandcamp.com{" "}
               </a>
@@ -1114,7 +1360,11 @@ class Current extends Component {
             </p>
             <p>
               {" "}
-              <a href="https://playneutral.bandcamp.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://playneutral.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 playneutral.bandcamp.com{" "}
               </a>
@@ -1122,7 +1372,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://bjarni.bandcamp.com/album/anticlines"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 bjarni.bandcamp.com/album/anticlines{" "}
@@ -1141,14 +1392,19 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://bjarni.bandcamp.com/album/fracas"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={fracas} />
               </a>
             </div>
             <p>
               'Fracas' is released today on{" "}
-              <a href="https://superpang.bandcamp.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://superpang.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 Superpang{" "}
               </a>
@@ -1159,7 +1415,11 @@ class Current extends Component {
               members of their roster celebrating their 100th release.
             </p>
             <p>
-              <a href="https://bjarni.bandcamp.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://bjarni.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 bjarni.bandcamp.com{" "}
               </a>
@@ -1167,7 +1427,11 @@ class Current extends Component {
             </p>
             <p>
               {" "}
-              <a href="https://superpang.bandcamp.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://superpang.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 superpang.bandcamp.com{" "}
               </a>
@@ -1175,7 +1439,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://bjarni.bandcamp.com/album/fracas"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 bjarni.bandcamp.com/album/fracas{" "}
@@ -1194,7 +1459,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://www.audiorama.se/events/2021/tonband"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={pulsa} />
               </a>
@@ -1225,7 +1491,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://www.audiorama.se/events/2021/tonband"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={pulsb} />
               </a>
@@ -1271,7 +1538,11 @@ class Current extends Component {
               frontiers of digital art with a multidisciplinary investigation on
               aesthetics, computing, communication and the elusive X factor that
               connects them all."
-              <a href="https://2021.xcoax.org/#program" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://2021.xcoax.org/#program"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 xCoaX 2021{" "}
               </a>
@@ -1280,7 +1551,11 @@ class Current extends Component {
               <strong>xCoAx 2021</strong> goes hybrid in Graz, Austria and is
               open and free to everyone online. I'm presenting my paper
               'Synthesis and Operation Flows' on the 16.07 at 14:00.
-              <a href="https://2021.xcoax.org/papers2" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://2021.xcoax.org/papers2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 Paper session 2{" "}
               </a>
@@ -1288,7 +1563,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://www.youtube.com/watch?v=mIpAZS3bbPw"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 Presentation{" "}
@@ -1297,14 +1573,19 @@ class Current extends Component {
             <p>
               <a
                 href="https://soundcloud.com/bjarni/sets/research"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 Sounds{" "}
               </a>
             </p>
             <p>
-              <a href="https://github.com/bjarnig/OF" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/bjarnig/OF"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 Code{" "}
               </a>
@@ -1312,7 +1593,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://www.academia.edu/50027204/Synthesis_and_Operation_Flows"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 Paper{" "}
@@ -1329,7 +1611,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://superpang.bandcamp.com/album/tour-mode"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 FIFO
               </a>{" "}
@@ -1338,7 +1621,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={queue} />
               </a>
@@ -1351,7 +1635,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://sovnrecords.bandcamp.com/album/music-for-queuing-at-the-supermarket"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 Music for queuing at the supermarket{" "}
@@ -1370,7 +1655,8 @@ class Current extends Component {
               Tour Mode on{" "}
               <a
                 href="https://superpang.bandcamp.com/album/tour-mode"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Superpang
               </a>
@@ -1378,7 +1664,8 @@ class Current extends Component {
             <div className="img-center">
               <a
                 href="https://superpang.bandcamp.com/album/tour-mode"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <OpacityImage imageUrl={sptour} />
               </a>
@@ -1388,7 +1675,8 @@ class Current extends Component {
               including my piece{" "}
               <a
                 href="https://superpang.bandcamp.com/track/crest"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 Crest{" "}
@@ -1397,7 +1685,8 @@ class Current extends Component {
             <p>
               <a
                 href="https://superpang.bandcamp.com/album/tour-mode"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {" "}
                 https://superpang.bandcamp.com/album/tour-mode{" "}
@@ -1436,7 +1725,8 @@ class Current extends Component {
             </p>
             <p>Here on Soundcloud:</p>
             <p>
-              <iframe title="Embedded content"
+              <iframe
+                title="Embedded content"
                 width="100%"
                 height="180"
                 scrolling="no"
@@ -1570,7 +1860,8 @@ class Current extends Component {
             </div>
             <h4>LKS</h4>
             <p>
-              <iframe title="Embedded content"
+              <iframe
+                title="Embedded content"
                 width="100%"
                 height="120"
                 src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbjarnig%2Fcyclic-executive%2F"
@@ -1845,7 +2136,8 @@ class Current extends Component {
             </p>
 
             <p>
-              <iframe title="Embedded content"
+              <iframe
+                title="Embedded content"
                 src="https://player.vimeo.com/video/325550871?color=F27059&title=0&byline=0&portrait=0"
                 width="100%"
                 height="500"
@@ -1944,7 +2236,9 @@ class Current extends Component {
             <div className="hr">
               <hr />
             </div>
-            <h4>Lectorate Music, Education and Society - Festive Presentation</h4>
+            <h4>
+              Lectorate Music, Education and Society - Festive Presentation
+            </h4>
             <div className="img-center">
               <OpacityImage imageUrl={lectoraat} />
             </div>
@@ -2312,8 +2606,7 @@ class Current extends Component {
 
             <div className="col-lg-5"></div>
           </article>
-
-                  </div>
+        </div>
 
         <div className="hr">
           <hr />

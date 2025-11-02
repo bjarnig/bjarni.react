@@ -48,6 +48,20 @@ class Works extends Component {
                     <td>-</td>
                   </tr>
                   <tr>
+                    <td><a href="https://bjarni.bandcamp.com/album/fracas">Averse</a></td>
+                    <td>2025</td>
+                    <td>10:20</td>
+                    <td>2</td>
+                    <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://bjarni.bandcamp.com/album/fracas">Protean</a></td>
+                    <td>2025</td>
+                    <td>12:32</td>
+                    <td>2</td>
+                    <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
+                  </tr>
+                  <tr>
                     <td><a href="https://www.youtube.com/watch?v=QQ9tnpmB_Ok">Streamlines</a></td>
                     <td>2024</td>
                     <td>16:02</td>
@@ -118,11 +132,11 @@ class Works extends Component {
                           <td>-</td>
                       </tr>
                        <tr>
-                          <td><a href="https://playneutral.bandcamp.com/track/bjarni-gunnarsson-costest">Costest</a></td>
+                          <td><a href="https://bjarni.bandcamp.com/album/fracas">Costest</a></td>
                           <td>2022</td>
                           <td>12:00</td>
                           <td>2</td>
-                          <td><a href="https://playneutral.bandcamp.com/album/ukraine-appeal">Ukraine Appeal</a></td>
+                          <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
                       </tr>
                       <tr>
                           <td>Judder</td>
@@ -530,7 +544,7 @@ class Works extends Component {
                           <td><a href="https://bjarni.bandcamp.com/album/fracas"> Fracas </a></td>
                           <td> <a href="https://superpang.bandcamp.com/"> SUPERPANG </a></td>
                           <td>2021</td>
-                          <td>EP</td>
+                          <td>Album</td>
                           <td>Digital</td>
                       </tr>
                       <tr>
@@ -720,6 +734,13 @@ class Works extends Component {
                       </tr>
                   </thead>
                   <tbody>
+                      <tr>
+                          <td>Selective Retention: Composing through Queries and Graphs</td>
+                          <td>2025</td>
+                          <td><a href="https://www.jar-online.net/en/issues/36">The Journal for Artistic Research (JAR), Issue 36</a></td>
+                          <td><a href="https://www.researchcatalogue.net/view/2938321/3620117">RC</a></td>
+                          <td><a href="https://www.jar-online.net/en/issues/36">JAR</a></td>
+                      </tr>
                       <tr>
                           <td>Recomposing Data: Machine Learning As Compositional Process</td>
                           <td>2025</td>

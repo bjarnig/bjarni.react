@@ -66,11 +66,10 @@ class About extends Component {
             <div className="bio">
               <div className="row">
                 <div className="col-lg-8">
-                <p>Bjarni Gunnarsson is a composer and programmer whose work focuses on the generative potential of sound through computational processes. He explores how sound can emerge from interacting behaviours, engaging with the conditions that shape how it unfolds. He creates environments where sound materials form, shift, and dissolve, shaped by systems that evolve through interaction, memory, and transformation.</p>
-                <p>His systems are exploratory rather than fixed, with feedback, inference, and temporal layering functioning as structural elements. The output in this context emerges through process, shaped by a network of interacting elements where tools, code, decisions, and responses develop in relation to one another.</p>
+                <p>Bjarni Gunnarsson is a composer and programmer investigating the generative behaviour of sound in computational processes. His work examines how sound organisation emerges from interactions, exploring concepts such as feedback, inference, and networks. He studies how systems can model and influence the behaviour of sound, focusing on emergence, temporal complexity, and evolving relations between dynamic material.</p>
                 <p>Recent projects include database-driven recomposition, agent-based simulations with mapped synthesis and live-coded interference, observation-driven mappings, block-based sequencing using small-world graphs, real-time network growth with interrupt control, latent-space interpolation, and sequential inference for audio-to-structure mapping.</p>
-                <p>His work has been presented at ICMC, ICLC, SMC, and xCoAx, and performed at festivals including Tectonics, Rewire, Today’s Art, Sonar, and Présences Électroniques. His music appears on labels such as SUPERPANG, SØVN, 3LEAVES, Flag Day Recordings, Tartaruga, and Shipwrec. Solo releases include Safn 2006–2009, Processes & Potentials, Paths, Lueur, Volume & Void, Cendres, Anticlines, and UPICS.</p>
-                <p>He teaches algorithmic composition and computer music at the Institute of Sonology, Royal Conservatory in The Hague. He studied computer science at the University of Reykjavík and composition with Gerard Pape, Trevor Wishart, Agostino Di Scipio, and Curtis Roads at CCMIX in Paris. He completed a master’s degree in Sonology under Paul Berg, Kees Tazelaar, and Richard Barrett.</p>
+                <p>His work has been presented at ICMC, ICLC, SMC, and xCoAx, and performed at festivals including Tectonics, Rewire, Today's Art, Sonar, and Présences Électroniques. His writings have been published by ECHO – Journal of Music, Thought and Technology (Orpheus Instituut) and The Journal for Artistic Research (JAR). His music appears on labels such as SUPERPANG, SØVN, 3LEAVES, Flag Day Recordings, Tartaruga, and Shipwrec. Solo releases include Safn 2006–2009, Processes & Potentials, Paths, Lueur, Volume & Void, Cendres, Anticlines, and UPICS.</p>
+                <p>He teaches algorithmic composition and computer music at the Institute of Sonology, Royal Conservatory in The Hague. He studied computer science at the University of Reykjavík and composition with Gerard Pape, Trevor Wishart, Agostino Di Scipio, and Curtis Roads at CCMIX in Paris. He completed a master's degree in Sonology under Paul Berg, Kees Tazelaar, and Richard Barrett.</p>
                 </div>
                 
                 <div className="col-lg-4">
@@ -85,7 +84,6 @@ class About extends Component {
                     <p> <a href="http://einoma.com" target="_blank" rel="noopener noreferrer">Einóma</a></p>
                     <p> <a href="https://soundcloud.com/mgbg" target="_blank" rel="noopener noreferrer">MGBG</a></p>
                     <p> <a href="https://www.youtube.com/@bjarni-gunnarsson" target="_blank" rel="noopener noreferrer">Youtube</a></p>
-                    <p> <a href="https://vimeo.com/blindni" target="_blank" rel="noopener noreferrer">Vimeo</a></p>
                     <p> <a href="https://www.mixcloud.com/bjarnig/" target="_blank" rel="noopener noreferrer">Mixcloud</a></p>
                     <p> <a href="https://instagram.com/blindni" target="_blank" rel="noopener noreferrer">Instagram</a></p>
                     <p style={{ fontSize: '11px' }}> bjarnig@gmail.com </p>
