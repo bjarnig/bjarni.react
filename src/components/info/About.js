@@ -19,27 +19,27 @@ class About extends Component {
       <>
         <StructuredData type="person" />
         <Helmet>
-          <title>About Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition</title>
-          <meta name="description" content="Bjarni Gunnarsson is a composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
+          <title>Bjarni Gunnarsson | Process-Based Sound & Algorithmic Composition</title>
+          <meta name="description" content="Bjarni Gunnarsson explores generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
           <meta name="keywords" content="Bjarni Gunnarsson, composer, programmer, algorithmic composition, process-based sound, generative music, computational processes, Institute of Sonology, The Hague, electronic music, computer music, machine learning, database-driven composition, variational autoencoders, live coding, SUPERPANG, SØVN, 3LEAVES, Flag Day Recordings, Tartaruga, Shipwrec" />
           
           {/* Open Graph */}
-          <meta property="og:title" content="About Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition" />
-          <meta property="og:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
+          <meta property="og:title" content="Bjarni Gunnarsson | Process-Based Sound & Algorithmic Composition" />
+          <meta property="og:description" content="Exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
           <meta property="og:type" content="profile" />
           <meta property="og:url" content="https://bjarni-gunnarsson.net/about" />
           <meta property="og:image" content={about} />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
+          <meta property="og:image:alt" content="Bjarni Gunnarsson" />
           <meta property="og:image:type" content="image/png" />
           
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="About Bjarni Gunnarsson - Composer and Programmer" />
-          <meta name="twitter:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague." />
+          <meta name="twitter:title" content="Bjarni Gunnarsson" />
+          <meta name="twitter:description" content="Exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague." />
           <meta name="twitter:image" content={about} />
-          <meta name="twitter:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
+          <meta name="twitter:image:alt" content="Bjarni Gunnarsson" />
           
           {/* Additional SEO meta tags */}
           <meta name="author" content="Bjarni Gunnarsson" />
