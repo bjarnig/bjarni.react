@@ -22,7 +22,7 @@ class Pmb extends Component {
             >
               <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pmb06.png" />
             </a>
-            <p>
+            <p> 
               <a
                 href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pmb06.zip"
                 target="_blank"
