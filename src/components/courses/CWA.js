@@ -8,7 +8,30 @@ class Cwa extends Component {
     return (
       <div className="container">
         <div className="content">
-        <article>
+          <article>
+            <div className="date"> 27.11.2025 </div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h1>Class 09, Examples</h1>
+            <a
+              href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa09.zip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa09.png" />
+            </a>
+            <p>
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa09.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download materials
+              </a>
+            </p>
+          </article>
+          <article>
             <div className="date"> 20.11.2025 </div>
             <div className="hr">
               <hr />
@@ -31,7 +54,7 @@ class Cwa extends Component {
               </a>
             </p>
           </article>
-        <article>
+          <article>
             <div className="date"> 13.11.2025 </div>
             <div className="hr">
               <hr />
@@ -54,7 +77,7 @@ class Cwa extends Component {
               </a>
             </p>
           </article>
-        <article>
+          <article>
             <div className="date"> 16.10.2025 </div>
             <div className="hr">
               <hr />
@@ -77,7 +100,7 @@ class Cwa extends Component {
               </a>
             </p>
           </article>
-        <article>
+          <article>
             <div className="date"> 09.10.2025 </div>
             <div className="hr">
               <hr />
@@ -100,7 +123,7 @@ class Cwa extends Component {
               </a>
             </p>
           </article>
-        <article>
+          <article>
             <div className="date"> 02.10.2025 </div>
             <div className="hr">
               <hr />
@@ -123,7 +146,7 @@ class Cwa extends Component {
               </a>
             </p>
           </article>
-        <article>
+          <article>
             <div className="date"> 25.09.2025 </div>
             <div className="hr">
               <hr />
@@ -145,8 +168,8 @@ class Cwa extends Component {
                 Download materials
               </a>
             </p>
-          </article>  
-        <article>
+          </article>
+          <article>
             <div className="date"> 17.09.2025 </div>
             <div className="hr">
               <hr />
