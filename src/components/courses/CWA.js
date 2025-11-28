@@ -13,7 +13,7 @@ class Cwa extends Component {
             <div className="hr">
               <hr />
             </div>
-            <h1>Class 09, Examples</h1>
+            <h1>Class 09, Synthesis</h1>
             <a
               href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa09.zip"
               target="_blank"
