@@ -8,6 +8,30 @@ class Cwa extends Component {
     return (
       <div className="container">
         <div className="content">
+
+        <article>
+            <div className="date"> 04.12.2025 </div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h1>Class 10, Signals</h1>
+            <a
+              href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa10.zip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa10.png" />
+            </a>
+            <p>
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa10.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download materials
+              </a>
+            </p>
+          </article>
           <article>
             <div className="date"> 27.11.2025 </div>
             <div className="hr">
