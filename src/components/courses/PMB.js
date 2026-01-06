@@ -10,6 +10,30 @@ class Pmb extends Component {
         <div className="content">
 
         <article>
+            <div className="date"> 06.01.2026 </div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h1>Class 09, Grammars and Fractals</h1>
+            <a
+              href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pmb09.zip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pmb09.png" />
+            </a>
+            <p> 
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pmb09.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download materials
+              </a>
+            </p>
+          </article>
+
+        <article>
             <div className="date"> 25.11.2025 </div>
             <div className="hr">
               <hr />
