@@ -8,6 +8,29 @@ class Pmb extends Component {
     return (
       <div className="container">
         <div className="content">
+        <article>
+            <div className="date"> 27.01.2026 </div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h1>Class 11, Live Coding 2</h1>
+            <a
+              href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pmb11.zip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pmb11.png" />
+            </a>
+            <p> 
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pmb11.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download materials
+              </a>
+            </p>
+          </article>
 
         <article>
             <div className="date"> 14.01.2026 </div>

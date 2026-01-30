@@ -29,7 +29,57 @@ class Pma extends Component {
         <div className="content">
         {shouldShowArticle("06.01.2026") && (
             <article>
-              <div className="date"> 08.01.2026 </div>
+              <div className="date"> 29.01.2026 </div>
+              <div className="hr">
+                <hr />
+              </div>
+              <h1>Class 13, Patterns</h1>
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma13.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma13.png" />
+              </a>
+              <p>
+                <a
+                  href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma13.zip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download materials
+                </a>
+              </p>
+            </article>
+          )}
+        {shouldShowArticle("06.01.2026") && (
+            <article>
+              <div className="date"> 22.01.2026 </div>
+              <div className="hr">
+                <hr />
+              </div>
+              <h1>Class 12, Clocks</h1>
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma12.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma12.png" />
+              </a>
+              <p>
+                <a
+                  href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/pma12.zip"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download materials
+                </a>
+              </p>
+            </article>
+          )}
+        {shouldShowArticle("06.01.2026") && (
+            <article>
+              <div className="date"> 14.01.2026 </div>
               <div className="hr">
                 <hr />
               </div>

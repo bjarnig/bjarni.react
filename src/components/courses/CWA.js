@@ -9,6 +9,52 @@ class Cwa extends Component {
       <div className="container">
         <div className="content">
         <article>
+            <div className="date"> 29.01.2026 </div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h1>Class 16, Iterative Systems</h1>
+            <a
+              href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa16.zip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa16.png" />
+            </a>
+            <p>
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa16.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download materials
+              </a>
+            </p>
+          </article>
+          <article>
+            <div className="date"> 22.01.2026 </div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h1>Class 15, Errors</h1>
+            <a
+              href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa15.zip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <OpacityImage imageUrl="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa15.png" />
+            </a>
+            <p>
+              <a
+                href="https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/cwa15.zip"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download materials
+              </a>
+            </p>
+          </article>
+        <article>
             <div className="date"> 14.01.2026 </div>
             <div className="hr">
               <hr />
