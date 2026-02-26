@@ -1,21 +1,12 @@
-import React, {Component} from 'react';
-import './../../assets/css/style.css';
-import './../../assets/css/custom.css';
-import './../../assets/css/login.css';
-import './../../assets/css/admin.css';
-import './../../assets/css/app.css';
-import './../../assets/css/main.css';
+import React, { useEffect } from 'react';
 
-class Collaborations extends Component {
+function Collaborations() {
 
-constructor(props) {
-  super(props);
-  this.state = { bandcampStyle:{ border: '0', width: '100%', height: '120px' } };
-}
-  componentDidMount() { window.scrollTo(0, 0) }
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  render() {
-    return <div className="container">
+  const bandcampStyle = { border: '0', width: '100%', height: '120px' };
+
+  return <div className="container">
 
       <div className="content">
 
@@ -73,17 +64,16 @@ constructor(props) {
 
         <div className="media">
         <h4>Wall (with Jaike Stambach)</h4>
-        <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=2710841064/size=medium/bgcol=ffffff/linkcol=1C6E8C/t=11/transparent=true/" seamless><a href="https://lamadameaveclechien.bandcamp.com/album/dog010-soundtrack-to-the-end-of-the-world">DOG010 / Soundtrack To The End Of The World by Bjarni Gunnarsson &amp; Jaike Stambach</a></iframe>
+        <iframe title="Embedded content" style={bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=2710841064/size=medium/bgcol=ffffff/linkcol=1C6E8C/t=11/transparent=true/" seamless><a href="https://lamadameaveclechien.bandcamp.com/album/dog010-soundtrack-to-the-end-of-the-world">DOG010 / Soundtrack To The End Of The World by Bjarni Gunnarsson &amp; Jaike Stambach</a></iframe>
         </div>
 
         <div className="media">
         <h4>Orgel (with Steindór Kristinsson)</h4>
-        <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=2710841064/size=medium/bgcol=ffffff/linkcol=1C6E8C/t=10/transparent=true/" seamless><a href="https://lamadameaveclechien.bandcamp.com/album/dog010-soundtrack-to-the-end-of-the-world">DOG010 / Soundtrack To The End Of The World by Einóma</a></iframe>
+        <iframe title="Embedded content" style={bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=2710841064/size=medium/bgcol=ffffff/linkcol=1C6E8C/t=10/transparent=true/" seamless><a href="https://lamadameaveclechien.bandcamp.com/album/dog010-soundtrack-to-the-end-of-the-world">DOG010 / Soundtrack To The End Of The World by Einóma</a></iframe>
         </div>
 
       </div>
     </div>
-  }
 }
 
 export default Collaborations;

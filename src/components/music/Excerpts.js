@@ -1,17 +1,10 @@
-import React, {Component} from 'react';
-import './../../assets/css/style.css';
-import './../../assets/css/custom.css';
-import './../../assets/css/login.css';
-import './../../assets/css/admin.css';
-import './../../assets/css/app.css';
-import './../../assets/css/main.css';
+import React, { useEffect } from 'react';
 
-class Excerpts extends Component {
+function Excerpts() {
 
-  componentDidMount() { window.scrollTo(0, 0) }
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  render() {
-    return <div className="container">
+  return <div className="container">
 
       <div className="content">
         <div className="music-submenu">
@@ -64,7 +57,6 @@ class Excerpts extends Component {
 
       </div>
     </div>
-  }
 }
 
 export default Excerpts;

@@ -1,13 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { LinkContainer } from 'react-router-bootstrap';
-import { NavItem } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from "react-router-dom";
 import GoogleAnalytics from './components/GoogleAnalytics';
 import './assets/css/app.css';
 import './assets/css/style.css';
 import './assets/css/custom.css';
 
-// Import components directly for react-snap compatibility
+// Import components directly
 import Current from './components/info/Current';
 import Past from './components/info/Past';
 import Index from './components/info/Index';
@@ -31,146 +29,88 @@ import Pmb from './components/courses/PMB';
 import Cwa from './components/courses/CWA';
 import Workshops from './components/courses/Workshops';
 
-// let divStyle = {
-//   display: 'none'
-// };
-
-
-
-class App extends React.Component {
-
- //  getNavLinkClass = (path) => {
- //   return this.props.location.pathname === path ? 'active' : '';
- // }
-
- state = {
-  divStyle : {
-    display: 'none'
-  }
-};
-
-navbarToggleClick = () => {
- 
-  if(this.state.divStyle.display === 'none') {
-    this.setState({
-      divStyle : {
-        display: 'block'
-      }
-    });
-  } else {
-    this.setState({
-      divStyle : {
-        display: 'none'
-      }
-    });
-  }
-
+function NavMenuItem({ to, children, onClick }) {
+  const location = useLocation();
+  const isActive = location.pathname === to;
+  return (
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} onClick={onClick}>{children}</Link>
+    </li>
+  );
 }
 
-render() {
+function App() {
+  const [menuDisplay, setMenuDisplay] = useState('none');
 
-    return (
-      <Router>
-        <div>
-          <GoogleAnalytics />
-          <div>
-            <div className="navbar navbar-fixed-top">
-              <div className="container">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse" onClick={this.navbarToggleClick}>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                  <span className="icon-bar"></span>
-                </button>
-                <a className="navbar-brand" href="/">bjarni gunnarsson</a>
-                  <div className="nav-collapse collapse">
-                    <ul className="nav navbar-nav pull-right">
-                      <LinkContainer to="/current" activeClassName="active">
-                        <NavItem>
-                          current
-                        </NavItem>
-                      </LinkContainer>
-                      <LinkContainer to="/music" activeClassName="active">
-                        <NavItem>
-                          works
-                        </NavItem>
-                      </LinkContainer>
-                      <LinkContainer to="/releases" activeClassName="active">
-                        <NavItem>
-                          releases
-                        </NavItem>
-                      </LinkContainer>
-                      <LinkContainer to="/courses" activeClassName="active">
-                        <NavItem>
-                          courses
-                        </NavItem>
-                      </LinkContainer>
-                      <LinkContainer to="/about" activeClassName="active">
-                        <NavItem>
-                          about
-                        </NavItem>
-                      </LinkContainer>
-                    </ul>
-                  </div>
-              </div>
-              <div id="phonemenu" style={this.state.divStyle}>
-                <ul className="nav navbar-nav pull-right">
-                <LinkContainer to="/current" activeClassName="active" onClick={this.navbarToggleClick}>
-                        <NavItem>
-                          current
-                        </NavItem>
-                      </LinkContainer>
-                      <LinkContainer to="/music" activeClassName="active" onClick={this.navbarToggleClick}>
-                        <NavItem>
-                          works
-                        </NavItem>
-                      </LinkContainer>
-                      <LinkContainer to="/releases" activeClassName="active" onClick={this.navbarToggleClick}>
-                        <NavItem>
-                          releases
-                        </NavItem>
-                      </LinkContainer>
-                      <LinkContainer to="/courses" activeClassName="active" onClick={this.navbarToggleClick}>
-                        <NavItem>
-                          courses
-                        </NavItem>
-                      </LinkContainer>
-                      <LinkContainer to="/about" activeClassName="active" onClick={this.navbarToggleClick}>
-                        <NavItem>
-                          about
-                        </NavItem>
-                      </LinkContainer>
-                </ul>
-              </div>
-            </div>
-              <Route exact path="/" render={(props) => <Index {...props} />} />
-              <Route path="/music" render={(props) => <Music {...props} />} />
-              <Route path="/collaborations" render={(props) => <Collaborations {...props} />} />
-              <Route path="/live" render={(props) => <Live {...props} />} />
-              <Route path="/mixes" render={(props) => <Mixes {...props} />} />
-              <Route path="/visual" render={(props) => <Visual {...props} />} />
-              <Route path="/excerpts" render={(props) => <Excerpts {...props} />} />
-              <Route path="/current" render={(props) => <Current {...props} />} />
-              <Route path="/past" render={(props) => <Past {...props} />} />
-              <Route path="/releases" render={(props) => <Releases {...props} />} />
-              <Route path="/code" render={(props) => <Code {...props} />} />
-              <Route path="/writings" render={(props) => <Writings {...props} />} />
-              <Route path="/press" render={(props) => <Press {...props} />} />
-              <Route path="/courses" render={(props) => <Courses {...props} />} />
-              <Route path="/about" render={(props) => <About {...props} />} />
-              <Route path="/works" render={(props) => <Works {...props} />} />
-              <Route path="/paths" render={(props) => <Paths {...props} />} />
-              <Route path="/processes" render={(props) => <Processes {...props} />} />
-              <Route path="/pma" render={(props) => <Pma {...props} />} />
-              <Route path="/pmb" render={(props) => <Pmb {...props} />} />
-              <Route path="/cwa" render={(props) => <Cwa {...props} />} />
-              <Route path="/workshops" render={(props) => <Workshops {...props} />} />
-          </div>
-        </div>
-      </Router>
-    )
+  const navbarToggleClick = () => {
+    setMenuDisplay(prev => prev === 'none' ? 'block' : 'none');
   };
+
+  const closeMenu = () => {
+    setMenuDisplay('none');
+  };
+
+  return (
+    <Router>
+      <div>
+        <GoogleAnalytics />
+        <div>
+          <div className="navbar navbar-fixed-top">
+            <div className="container">
+              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse" onClick={navbarToggleClick}>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <a className="navbar-brand" href="/">bjarni gunnarsson</a>
+                <div className="nav-collapse collapse">
+                  <ul className="nav navbar-nav pull-right">
+                    <NavMenuItem to="/current">current</NavMenuItem>
+                    <NavMenuItem to="/music">works</NavMenuItem>
+                    <NavMenuItem to="/releases">releases</NavMenuItem>
+                    <NavMenuItem to="/courses">courses</NavMenuItem>
+                    <NavMenuItem to="/about">about</NavMenuItem>
+                  </ul>
+                </div>
+            </div>
+            <div id="phonemenu" style={{ display: menuDisplay }}>
+              <ul className="nav navbar-nav pull-right">
+                <NavMenuItem to="/current" onClick={closeMenu}>current</NavMenuItem>
+                <NavMenuItem to="/music" onClick={closeMenu}>works</NavMenuItem>
+                <NavMenuItem to="/releases" onClick={closeMenu}>releases</NavMenuItem>
+                <NavMenuItem to="/courses" onClick={closeMenu}>courses</NavMenuItem>
+                <NavMenuItem to="/about" onClick={closeMenu}>about</NavMenuItem>
+              </ul>
+            </div>
+          </div>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/music" element={<Music />} />
+            <Route path="/collaborations" element={<Collaborations />} />
+            <Route path="/live" element={<Live />} />
+            <Route path="/mixes" element={<Mixes />} />
+            <Route path="/visual" element={<Visual />} />
+            <Route path="/excerpts" element={<Excerpts />} />
+            <Route path="/current" element={<Current />} />
+            <Route path="/past" element={<Past />} />
+            <Route path="/releases" element={<Releases />} />
+            <Route path="/code" element={<Code />} />
+            <Route path="/writings" element={<Writings />} />
+            <Route path="/press" element={<Press />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/works" element={<Works />} />
+            <Route path="/paths" element={<Paths />} />
+            <Route path="/processes" element={<Processes />} />
+            <Route path="/pma" element={<Pma />} />
+            <Route path="/pmb" element={<Pmb />} />
+            <Route path="/cwa" element={<Cwa />} />
+            <Route path="/workshops" element={<Workshops />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  );
 }
-
-
 
 export default App;

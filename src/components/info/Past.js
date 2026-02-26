@@ -1,12 +1,4 @@
-import React, { Component } from "react";
-
-// Styles
-import "./../../assets/css/style.css";
-import "./../../assets/css/custom.css";
-import "./../../assets/css/login.css";
-import "./../../assets/css/admin.css";
-import "./../../assets/css/app.css";
-import "./../../assets/css/main.css";
+import React, { useEffect } from "react";
 
 // Components
 import OpacityImage from "./../common/OpacityImage";
@@ -64,28 +56,20 @@ const cheryl = imageurl + "cheryl.jpg";
 const osal = imageurl + "osal.png";
 const wfsSonar = imageurl + "wfsSonar.jpg";
 
-class Past extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bandcampStyle: {
-        position: "relative",
-        display: "block",
-        width: "400px",
-        height: "100px",
-      },
-      noBorder: {
-        border: "0px",
-      },
-    };
-  }
+function Past() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
+  const bandcampStyle = {
+    position: "relative",
+    display: "block",
+    width: "400px",
+    height: "100px",
+  };
+  const noBorder = {
+    border: "0px",
+  };
 
-  render() {
-    return (
+  return (
       <div className="container">
         <div className="content">
           <article>
@@ -1718,10 +1702,10 @@ class Past extends Component {
               <iframe title="Embedded content"
                 width="400"
                 height="100"
-                style={this.state.bandcampStyle}
+                style={bandcampStyle}
                 src="https://bandcamp.com/EmbeddedPlayer/v=2/track=2886677352/size=venti/bgcol=333333/linkcol=FFFFFF/"
                 allowtransparency="true"
-                frameborder="0"
+                frameBorder="0"
               >
                 <a href="http://lamadameaveclechien.bandcamp.com/track/wall">
                   Wall by Bjarni Gunnarsson &amp; Jaike Stambach
@@ -1732,10 +1716,10 @@ class Past extends Component {
               <iframe title="Embedded content"
                 width="400"
                 height="100"
-                style={this.state.bandcampStyle}
+                style={bandcampStyle}
                 src="https://bandcamp.com/EmbeddedPlayer/v=2/track=3021810076/size=venti/bgcol=333333/linkcol=FFFFFF/"
                 allowtransparency="true"
-                frameborder="0"
+                frameBorder="0"
               >
                 <a href="http://lamadameaveclechien.bandcamp.com/track/orgel">
                   Orgel by Einóma
@@ -1810,7 +1794,6 @@ class Past extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Past;

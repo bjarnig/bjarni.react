@@ -1,19 +1,12 @@
-import React, {Component} from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import StructuredData from '../StructuredData';
-import './../../assets/css/style.css';
-import './../../assets/css/custom.css';
-import './../../assets/css/login.css';
-import './../../assets/css/admin.css';
-import './../../assets/css/app.css';
-import './../../assets/css/main.css';
 
-class Music extends Component {
+function Music() {
 
-  componentDidMount() { window.scrollTo(0, 0) }
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  render() {
-    return (
+  return (
       <>
         <StructuredData type="music" />
         <Helmet>
@@ -72,7 +65,7 @@ class Music extends Component {
 
             <div className="media">
             <h4>Ever-present Change</h4>
-            <iframe title="Embedded content" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2132545137&color=%23242a31&auto_play=false&;show_artwork=true"></iframe>
+            <iframe title="Embedded content" width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2132545137&color=%23242a31&auto_play=false&;show_artwork=true"></iframe>
             </div>
 
             <div className="media">
@@ -142,7 +135,6 @@ class Music extends Component {
         </div>
       </>
     )
-  }
 }
 
 export default Music;

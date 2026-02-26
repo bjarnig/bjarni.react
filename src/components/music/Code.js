@@ -1,10 +1,4 @@
-import React, {Component} from 'react';
-import './../../assets/css/style.css';
-import './../../assets/css/custom.css';
-import './../../assets/css/login.css';
-import './../../assets/css/admin.css';
-import './../../assets/css/app.css';
-import './../../assets/css/main.css';
+import React, { useEffect } from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
@@ -13,17 +7,13 @@ import OpacityImage from './../common/OpacityImage';
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
 const code = imageurl + 'code.png';
 
-class Collaborations extends Component {
+function Collaborations() {
 
-constructor(props) {
-  super(props);
-  this.state = { bandcampStyle:{ border: '0', width: '100%', height: '120px' } };
-}
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  componentDidMount() { window.scrollTo(0, 0) }
+  const bandcampStyle = { border: '0', width: '100%', height: '120px' };
 
-  render() {
-    return <div className="container">
+  return <div className="container">
 
       <div className="content">
 
@@ -69,7 +59,6 @@ constructor(props) {
       
       </div>
     </div>
-  }
 }
 
 export default Collaborations;

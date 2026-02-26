@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
 // Components
 import OpacityImage from "./../common/OpacityImage";
 
-class Pmb extends Component {
-  render() {
-    return (
+function Pmb() {
+  return (
       <div className="container">
         <div className="content">
 
@@ -320,7 +319,6 @@ class Pmb extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Pmb;

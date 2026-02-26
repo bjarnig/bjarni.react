@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
@@ -7,23 +7,17 @@ import OpacityImage from './../common/OpacityImage';
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
 const albumPaths = imageurl + 'album-paths.jpg';
 
-class Paths extends Component {
+function Paths() {
+  const bandcampStyle = {
+    border: '0',
+    width: '100%',
+    height: '307px'
+  };
+  const alignCenter = {
+    'text-align': 'center'
+  };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      bandcampStyle: {
-        border: '0',
-        width: '100%',
-        height: '307px'
-      },
-      alignCenter : {
-        'text-align': 'center'
-      }
-  }}
-
-  render() {
-    return <div className="container">
+  return <div className="container">
       <div className="content">
 
         <div className="release">
@@ -54,12 +48,12 @@ class Paths extends Component {
                 Artwork by Yorgos Vourlidas
               </p>
 
-              <p style={this.state.alignCenter}>
-              <strong><a href="http://www.grannyrecords.org" style={this.state.alignCenter}>[ More info: Granny Records ] </a></strong></p>
+              <p style={alignCenter}>
+              <strong><a href="http://www.grannyrecords.org" style={alignCenter}>[ More info: Granny Records ] </a></strong></p>
               <hr />
 
               <div className="bandcamp">
-              <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=3447722096/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/" seamless><a href="http://grannyrecords.bandcamp.com/album/paths">Paths by Bjarni Gunnarsson</a></iframe>
+              <iframe title="Embedded content" style={bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=3447722096/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/" seamless><a href="http://grannyrecords.bandcamp.com/album/paths">Paths by Bjarni Gunnarsson</a></iframe>
               </div>
               <hr />
 
@@ -79,7 +73,7 @@ class Paths extends Component {
               <hr />
                 <br />
 
-              <iframe title="Embedded content" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259066161&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+              <iframe title="Embedded content" width="100%" height="450" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/259066161&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
               <br />
               <hr />
 
@@ -91,8 +85,6 @@ class Paths extends Component {
           </div>
       </div>
     </div>
-
-  }
 }
 
 export default Paths;

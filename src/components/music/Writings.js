@@ -1,10 +1,4 @@
-import React, {Component} from 'react';
-import './../../assets/css/style.css';
-import './../../assets/css/custom.css';
-import './../../assets/css/login.css';
-import './../../assets/css/admin.css';
-import './../../assets/css/app.css';
-import './../../assets/css/main.css';
+import React, { useEffect } from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
@@ -23,16 +17,13 @@ const interruptsandintervention = imageurl + "InterruptsandIntervention.png";
 const processesandpotentials = imageurl + "Processes_and_Potentials.png";
 const pr2 = imageurl + "PR2.jpg";
 
-class Writings extends Component {
+function Writings() {
 
-constructor(props) {
-  super(props);
-  this.state = { bandcampStyle:{ border: '0', width: '100%', height: '120px' } };
-}
-  componentDidMount() { window.scrollTo(0, 0) }
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  render() {
-    return <div className="container">
+  const bandcampStyle = { border: '0', width: '100%', height: '120px' };
+
+  return <div className="container">
 
       <div className="content">
 
@@ -330,7 +321,6 @@ constructor(props) {
 
     </div>
     </div>
-  }
 }
 
 export default Writings;

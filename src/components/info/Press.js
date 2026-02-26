@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
+import React, { useEffect } from 'react';
 
-class Press extends Component {
+function Press() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  componentDidMount() { window.scrollTo(0, 0) };
-
-  render() {
-    return <div className="container">
+  return <div className="container">
       <div className="content press-page">
 
         <ul className="nav nav-pills">
@@ -540,8 +538,6 @@ class Press extends Component {
 
       </div>
     </div>
-
-    }
 }
 
 export default Press;

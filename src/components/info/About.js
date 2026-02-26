@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import StructuredData from '../StructuredData';
 
@@ -10,12 +10,10 @@ import StructuredData from '../StructuredData';
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
 const about = imageurl + 'bjarni-gunnarsson.png';
 
-class About extends Component {
+function About() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  componentDidMount() { window.scrollTo(0, 0) };
-
-  render() { 
-    return (
+  return (
       <>
         <StructuredData type="person" />
         <Helmet>
@@ -99,7 +97,6 @@ class About extends Component {
         </div>
       </>
     );
-  }
 }
 
 export default About;

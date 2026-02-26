@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import StructuredData from "../StructuredData";
 
@@ -45,13 +45,10 @@ const brwn6 = imageurl + "gdlwd_pink.png";
 // const upic6 = imageurl + "DSC_0891.jpg";
 
 
-class About extends Component {
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
+function About() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  render() {
-    return (
+  return (
       <>
         <StructuredData type="homepage" />
         <Helmet>
@@ -205,7 +202,6 @@ class About extends Component {
         </div>
       </>
     );
-  }
 }
 
 export default About;

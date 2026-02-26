@@ -1,17 +1,10 @@
-import React, {Component} from 'react';
-import './../../assets/css/style.css';
-import './../../assets/css/custom.css';
-import './../../assets/css/login.css';
-import './../../assets/css/admin.css';
-import './../../assets/css/app.css';
-import './../../assets/css/main.css';
+import React, { useEffect } from 'react';
 
-class Mixes extends Component {
+function Mixes() {
 
-  componentDidMount() { window.scrollTo(0, 0) }
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  render() {
-    return <div className="container">
+  return <div className="container">
 
       <div className="content">
         <div className="music-submenu">
@@ -46,52 +39,51 @@ class Mixes extends Component {
         </div>
 
         <div className="media">
-        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fcyclic-executive%2F" frameborder="0" ></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fcyclic-executive%2F" frameBorder="0" ></iframe>
         </div>
         
         <div className="media">
-        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Featthisradio%2Fbjarni-gunnarsson-the-order-of-time%2F" frameborder="0" ></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Featthisradio%2Fbjarni-gunnarsson-the-order-of-time%2F" frameBorder="0" ></iframe>
         </div>
 
         <br/><div className="hr"><hr/></div>
 
         <div className="media">
-        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fdubitatio%2F" frameborder="0" ></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fdubitatio%2F" frameBorder="0" ></iframe>
         </div>
 
         <br/><div className="hr"><hr/></div>
 
         <div className="media">
-        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fsecretthirteen%2Fsecret-thirteen-mix-096-ein%C3%B3ma%2F" frameborder="0" ></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fsecretthirteen%2Fsecret-thirteen-mix-096-ein%C3%B3ma%2F" frameBorder="0" ></iframe>
         </div>
 
         <br/><div className="hr"><hr/></div>
 
         <div className="media">
-        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fcrates%2F" frameborder="0" ></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fcrates%2F" frameBorder="0" ></iframe>
         </div>
 
         <br/><div className="hr"><hr/></div>
 
         <div className="media">
-        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Finanticipable%2F" frameborder="0" ></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Finanticipable%2F" frameBorder="0" ></iframe>
         </div>
 
         <br/><div className="hr"><hr/></div>
 
         <div className="media">
-        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fpartega%2F" frameborder="0" ></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Fpartega%2F" frameBorder="0" ></iframe>
         </div>
 
         <br/><div className="hr"><hr/></div>
 
         <div className="media">
-        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Ffarfrom%2F" frameborder="0" ></iframe>
+        <iframe title="Embedded content" width="100%" height="600" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fbjarnig%2Ffarfrom%2F" frameBorder="0" ></iframe>
         </div>
 
       </div>
     </div>
-  }
 }
 
 export default Mixes;

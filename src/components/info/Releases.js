@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import StructuredData from '../StructuredData';
 
@@ -18,45 +18,39 @@ const tvenna1 = imageurl + 'tvenna1.JPEG';
 const albumLueur = imageurl + 'lueur1.png';
 const cendres_sovn = imageurl + 'cendres_sovn.jpg';
 
-class Releases extends Component {
+function Releases() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      bandcampStyle: {
-        border: '0',
-        width: '100%',
-        height: '307px'
-      },
-      bandcampStyleVV: {
-        border: '0',
-        width: '100%',
-        height: '940px'
-      },
-      bandcampStyleCendres: {
-        border: '0',
-        width: '100%',
-        height: '220px'
-      },
-      bandcampStyleAnticlines: {
-        border: '0',
-        width: '100%',
-        height: '307px'
-      },
-      bandcampStyleUpics: {
-        border: '0',
-        width: '100%',
-        height: '307px'
-      },
-      bandcampStyleTvenna: {
-        border: '0', width: '100%', height: '1040px'}
-    };
-  }
+  const bandcampStyle = {
+    border: '0',
+    width: '100%',
+    height: '307px'
+  };
+  const bandcampStyleVV = {
+    border: '0',
+    width: '100%',
+    height: '940px'
+  };
+  const bandcampStyleCendres = {
+    border: '0',
+    width: '100%',
+    height: '220px'
+  };
+  const bandcampStyleAnticlines = {
+    border: '0',
+    width: '100%',
+    height: '307px'
+  };
+  const bandcampStyleUpics = {
+    border: '0',
+    width: '100%',
+    height: '307px'
+  };
+  const bandcampStyleTvenna = {
+    border: '0', width: '100%', height: '1040px'
+  };
 
-  componentDidMount() { window.scrollTo(0, 0) }
-
-  render() {
-    return (
+  return (
       <React.Fragment>
         <StructuredData type="music" />
         <Helmet>
@@ -112,7 +106,7 @@ class Releases extends Component {
         <p><a href="https://bjarni.bandcamp.com/album/fracas">bjarni.bandcamp.com/album/fracas</a> <br/></p>
         <p>- - -</p>
         <div className="bandcamp">
-        <iframe title="Embedded content" style={this.state.bandcampStyleUpics} src="https://bandcamp.com/EmbeddedPlayer/album=48616606/size=large/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://bjarni.bandcamp.com/album/fracas">Fracas by Bjarni Gunnarsson</a></iframe>
+        <iframe title="Embedded content" style={bandcampStyleUpics} src="https://bandcamp.com/EmbeddedPlayer/album=48616606/size=large/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://bjarni.bandcamp.com/album/fracas">Fracas by Bjarni Gunnarsson</a></iframe>
         </div>
         </div>
 
@@ -133,7 +127,7 @@ class Releases extends Component {
         <p>Sounds are analyzed and read to a database. They form an archive that can be queried. The music then emerges through processes that interpret the sound or sound segments, transforming them or developing synthetic sound based on their properties. The idea was to create methods for engaging with sound archives in novel ways, to review them from a different angle, or to reveal previously unknown aspects of material already loaded with meaning.</p>
         <p></p>
         <div className="bandcamp">
-        <iframe title="Embedded content" style={this.state.bandcampStyleUpics} src="https://bandcamp.com/EmbeddedPlayer/album=415868467/size=large/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS by Bjarni Gunnarsson</a></iframe>
+        <iframe title="Embedded content" style={bandcampStyleUpics} src="https://bandcamp.com/EmbeddedPlayer/album=415868467/size=large/bgcol=ffffff/linkcol=333333/artwork=none/transparent=true/" seamless><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS by Bjarni Gunnarsson</a></iframe>
         </div>
         <p>
         SNDArchive, software tool available here: <br/>
@@ -157,7 +151,7 @@ class Releases extends Component {
         <p>Sound as behaviour, occurring through operations sequences and generative processes.</p>
         <p></p>
         <div className="bandcamp">
-        <iframe title="Embedded content" style={this.state.bandcampStyleAnticlines} src="https://bandcamp.com/EmbeddedPlayer/album=2637006102/size=large/bgcol=ffffff/linkcol=63b2cc/artwork=none/transparent=true/" seamless><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines by Bjarni Gunnarsson</a></iframe>
+        <iframe title="Embedded content" style={bandcampStyleAnticlines} src="https://bandcamp.com/EmbeddedPlayer/album=2637006102/size=large/bgcol=ffffff/linkcol=63b2cc/artwork=none/transparent=true/" seamless><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines by Bjarni Gunnarsson</a></iframe>
         </div>
         <p>
         OF, synthesis framework available here: <br/>
@@ -190,7 +184,7 @@ class Releases extends Component {
         </p>
         <p></p>
         <div className="bandcamp">
-        <iframe title="Embedded content" style={this.state.bandcampStyleCendres} src="https://bandcamp.com/EmbeddedPlayer/album=3794325908/size=large/bgcol=ffffff/linkcol=f171a2/artwork=none/transparent=true/" seamless><a href="https://sovnrecords.bandcamp.com/album/cendres">Cendres by Bjarni Gunnarsson</a></iframe>
+        <iframe title="Embedded content" style={bandcampStyleCendres} src="https://bandcamp.com/EmbeddedPlayer/album=3794325908/size=large/bgcol=ffffff/linkcol=f171a2/artwork=none/transparent=true/" seamless><a href="https://sovnrecords.bandcamp.com/album/cendres">Cendres by Bjarni Gunnarsson</a></iframe>
         </div>
         <p>The two pieces share an attitude of becoming through synthetic sound. They also both focus on the relations between the processes they consist of, and of the varying boundaries of what is caused by algorithms and what by manual intervention.</p>
         <br/>
@@ -202,7 +196,7 @@ class Releases extends Component {
           <div className="release-title"><h4>Volume & Void (2020)</h4></div>
 
         <div className="bandcamp">
-              <iframe title="Embedded content" style={this.state.bandcampStyleVV} src="https://bandcamp.com/EmbeddedPlayer/album=1204087134/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://superpang.bandcamp.com/album/volume-void">Volume &amp; Void by Bjarni Gunnarsson</a></iframe>
+              <iframe title="Embedded content" style={bandcampStyleVV} src="https://bandcamp.com/EmbeddedPlayer/album=1204087134/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://superpang.bandcamp.com/album/volume-void">Volume &amp; Void by Bjarni Gunnarsson</a></iframe>
           </div>
           <p> New release out on <a href="https://superpang.bandcamp.com/album/volume-void"> Superpang </a>
           </p>
@@ -231,7 +225,7 @@ class Releases extends Component {
           An exploration of process as much as tone and texture, the album takes shape through a series of ever-changing movements, interweaving dense low passages and abrupt changes of atmosphere and sound. </p>
 
           <div className="bandcamp">
-              <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1223447919/size=large/bgcol=ffffff/linkcol=de270f/artwork=none/transparent=true/" seamless="seamless">
+              <iframe title="Embedded content" style={bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1223447919/size=large/bgcol=ffffff/linkcol=de270f/artwork=none/transparent=true/" seamless="seamless">
                 <a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur by Bjarni Gunnarsson</a>
               </iframe>
           </div>
@@ -261,7 +255,7 @@ class Releases extends Component {
 
             <div className="bandcamp">
 
-              <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=3447722096/size=large/bgcol=ffffff/linkcol=de270f/artwork=none/transparent=true/" seamless="seamless">
+              <iframe title="Embedded content" style={bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=3447722096/size=large/bgcol=ffffff/linkcol=de270f/artwork=none/transparent=true/" seamless="seamless">
                 <a href="http://grannyrecords.bandcamp.com/album/paths">Paths by Bjarni Gunnarsson</a>
               </iframe>
             </div>
@@ -289,7 +283,7 @@ class Releases extends Component {
           <p>Processes & Potentials consists of six pieces forming a totality of 48 minutes. The music is the outcome of my work during the past three years and represents my compositional preoccupations during this period of time.</p>
 
           <div className="bandcamp">
-            <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1997432359/size=large/bgcol=ffffff/linkcol=63b2cc/artwork=none/transparent=true/" seamless="seamless">
+            <iframe title="Embedded content" style={bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1997432359/size=large/bgcol=ffffff/linkcol=63b2cc/artwork=none/transparent=true/" seamless="seamless">
               <a href="http://bjarni.bandcamp.com/album/processes-potentials">Processes &amp; Potentials by Bjarni Gunnarsson</a>
             </iframe>
           </div>
@@ -330,7 +324,7 @@ class Releases extends Component {
             , or on Bandcamp <a href="http://lamadameaveclechien.bandcamp.com/album/dog006-safn-2006-2009"><strong>here</strong></a>
         </p>
           <div className="bandcamp">
-            <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=1642249120/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006-2009 by Bjarni Gunnarsson</a></iframe>
+            <iframe title="Embedded content" style={bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=1642249120/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006-2009 by Bjarni Gunnarsson</a></iframe>
           </div>
             <p>
             We are also doing a <a href="http://lamadameaveclechien.com/releases/dog0506/release.html"><strong>special edition</strong></a> which includes the new <a href="http://myspace.com/einoma"><strong>Einóma</strong></a> 12", 'Tvenna'.
@@ -346,7 +340,7 @@ class Releases extends Component {
         <div className="release">
             <div className="release-title"><h4>MGBG - Korabie</h4></div>
             <div className="bandcamp">
-            <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=2529408612/size=large/bgcol=ffffff/linkcol=111111/transparent=true/" seamless><a href="http://mgbg.bandcamp.com/album/korabie">Korabie by mgbg</a></iframe>
+            <iframe title="Embedded content" style={bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=2529408612/size=large/bgcol=ffffff/linkcol=111111/transparent=true/" seamless><a href="http://mgbg.bandcamp.com/album/korabie">Korabie by mgbg</a></iframe>
             </div>
             <p>Korabie contains six new pieces purely composed or created around improvisations during 2009-2001. The main focus is the exploration of the combination between voice and electronics. On Korabie a dense fabric of sound is brought to existence where voices and vocal manipulations meet drones and microsounds. The music seems to be coming from multiple sources. Dynamic forms emerge and spaces appear from the intimate relationship of the human voice and electronics.</p>
             <p>
@@ -362,7 +356,7 @@ class Releases extends Component {
         <div className="release">
             <div className="release-title"><h4>Einóma - Lost & Found</h4></div>
             <div className="bandcamp">
-              <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=3023602503/size=large/bgcol=ffffff/linkcol=111111/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/lost-found">Lost &amp; Found by Einóma</a></iframe>
+              <iframe title="Embedded content" style={bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=3023602503/size=large/bgcol=ffffff/linkcol=111111/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/lost-found">Lost &amp; Found by Einóma</a></iframe>
             </div>
 
             <p>'Lost & Found' is Einóma's new EP, released on Shipwrec records (NL) in 2011 on 12 inch vinyl. </p><p> The record features one long new track on the A-side as well as two older and previously unreleased pieces for the B-side. The main track, 'Bla' was conceived after editing real-time and live sessions made for gigs after the release of last years 'Tvenna' EP.The sound material 'Bla' was initially made from was quite old and the idea and title of the EP, 'Lost and found' came about, reworking of older ideas in a new setting. The A-side demonstretes the more dancefloor sides of Einóma while the B-side explores the more dark and dense regions Einóma have become more known for. </p>
@@ -377,7 +371,7 @@ class Releases extends Component {
                 <div className="release-title"><h4> Encam (2006)</h4></div>
 
                 <div className="bandcamp">
-               <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=1431377201/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/encam">Encam by Einóma</a></iframe>
+               <iframe title="Embedded content" style={bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=1431377201/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/encam">Encam by Einóma</a></iframe>
               </div>
 
               <p>
@@ -392,7 +386,7 @@ class Releases extends Component {
           <div className="release">
               <div className="release-title"><h4> Milli Tónverka (2003)</h4></div>
                 <div className="bandcamp">
-                <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=4183570667/size=large/bgcol=ffffff/linkcol=111111/notracklist=false/transparent=true/" seamless=""><a href="http://einoma.bandcamp.com/album/milli-t-nverka">Milli Tónverka by Einóma</a></iframe>
+                <iframe title="Embedded content" style={bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=4183570667/size=large/bgcol=ffffff/linkcol=111111/notracklist=false/transparent=true/" seamless=""><a href="http://einoma.bandcamp.com/album/milli-t-nverka">Milli Tónverka by Einóma</a></iframe>
               </div>
               <p>
               Released on Vertical Form (UK) in 2003 on CD and vinyl LP. </p>
@@ -406,7 +400,7 @@ class Releases extends Component {
           <div className="release">
               <div className="release-title"><h4>Undir Feilnótum (2002)</h4></div>
               <div className="bandcamp">
-                <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=124760611/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/undir-feiln-tum">Undir Feilnótum by Einóma</a></iframe>
+                <iframe title="Embedded content" style={bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=124760611/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/undir-feiln-tum">Undir Feilnótum by Einóma</a></iframe>
               </div>
               <p>
               Released on Vertical Form (UK) in 2002 on CD and 2x12'"' vinyl.</p>
@@ -420,7 +414,7 @@ class Releases extends Component {
           <div className="release">
             <div className="release-title"><h4> Floating Point by Zero (2001)</h4></div>
             <div className="bandcamp">
-              <iframe title="Embedded content" style={this.state.bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=727902579/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/floating-point-by-zero">Floating Point By Zero by Einóma</a></iframe>
+              <iframe title="Embedded content" style={bandcampStyleTvenna} src="https://bandcamp.com/EmbeddedPlayer/album=727902579/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="http://einoma.bandcamp.com/album/floating-point-by-zero">Floating Point By Zero by Einóma</a></iframe>
             </div>
 
             <p>
@@ -433,7 +427,6 @@ class Releases extends Component {
     </div>
       </React.Fragment>
     )
-  }
 }
 
 export default Releases;

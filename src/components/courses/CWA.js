@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
 // Components
 import OpacityImage from "./../common/OpacityImage";
 
-class Cwa extends Component {
-  render() {
-    return (
+function Cwa() {
+  return (
       <div className="container">
         <div className="content">
         <article>
@@ -402,7 +401,6 @@ class Cwa extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Cwa;

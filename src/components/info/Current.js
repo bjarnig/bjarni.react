@@ -1,12 +1,4 @@
-import React, { Component } from "react";
-
-// Styles
-import "./../../assets/css/style.css";
-import "./../../assets/css/custom.css";
-import "./../../assets/css/login.css";
-import "./../../assets/css/admin.css";
-import "./../../assets/css/app.css";
-import "./../../assets/css/main.css";
+import React, { useEffect } from "react";
 
 // Components
 import OpacityImage from "./../common/OpacityImage";
@@ -80,28 +72,20 @@ const radio_fantasia = imageurl + "radio-fantasia.png";
 const misplaced_objects = imageurl + "misplaced-objects.png";
 const ruv = imageurl + "ruv.png";
 
-class Current extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bandcampStyle: {
-        position: "relative",
-        display: "block",
-        width: "400px",
-        height: "100px",
-      },
-      noBorder: {
-        border: "0px",
-      },
-    };
-  }
+function Current() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
+  const bandcampStyle = {
+    position: "relative",
+    display: "block",
+    width: "400px",
+    height: "100px",
+  };
+  const noBorder = {
+    border: "0px",
+  };
 
-  render() {
-    return (
+  return (
       <div className="container">
         <div className="content">
 
@@ -671,7 +655,7 @@ class Current extends Component {
             </p>
             <br />
             <div className="img-center-noborder">
-              <OpacityImage imageUrl={sl} style={this.state.noBorder} />
+              <OpacityImage imageUrl={sl} style={noBorder} />
             </div>
             <p>
               The idea is to critically question the use of generative
@@ -1730,7 +1714,7 @@ class Current extends Component {
                 width="100%"
                 height="180"
                 scrolling="no"
-                frameborder="no"
+                frameBorder="no"
                 allow="autoplay"
                 src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/821805625&color=%234c4655&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
               ></iframe>
@@ -1865,7 +1849,7 @@ class Current extends Component {
                 width="100%"
                 height="120"
                 src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fbjarnig%2Fcyclic-executive%2F"
-                frameborder="0"
+                frameBorder="0"
               ></iframe>
             </p>
             <p> Mix / Music selection made for LKS podcast.</p>
@@ -2141,7 +2125,7 @@ class Current extends Component {
                 src="https://player.vimeo.com/video/325550871?color=F27059&title=0&byline=0&portrait=0"
                 width="100%"
                 height="500"
-                frameborder="0"
+                frameBorder="0"
                 allow="autoplay; fullscreen"
                 allowfullscreen
               ></iframe>
@@ -2613,7 +2597,6 @@ class Current extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Current;

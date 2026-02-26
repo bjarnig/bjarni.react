@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
@@ -8,23 +8,17 @@ const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
 const album  = imageurl + 'lueur-double.png';
 const album1 = imageurl + 'lueur1.png';
 
-class Paths extends Component {
+function Paths() {
+  const bandcampStyle = {
+    border: '0',
+    width: '100%',
+    height: '950px'
+  };
+  const alignCenter = {
+    'text-align': 'center'
+  };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      bandcampStyle: {
-        border: '0',
-        width: '100%',
-        height: '950px'
-      },
-      alignCenter : {
-        'text-align': 'center'
-      }
-  }}
-
-  render() {
-    return <div className="container">
+  return <div className="container">
       <div className="content">
 
         <div className="release">
@@ -54,13 +48,13 @@ class Paths extends Component {
                 Artwork by Luke Twyman
               </p>
 
-              <p style={this.state.alignCenter}>
-              <strong><a href="https://www.tartaruga.co.uk/" style={this.state.alignCenter}>[ More info: Tartaruga Records ] </a></strong></p>
+              <p style={alignCenter}>
+              <strong><a href="https://www.tartaruga.co.uk/" style={alignCenter}>[ More info: Tartaruga Records ] </a></strong></p>
               <hr />
 
               <div className="bandcamp">
 
-              <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1223447919/size=large/bgcol=ffffff/linkcol=de270f/transparent=true/" seamless><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur by Bjarni Gunnarsson</a></iframe>
+              <iframe title="Embedded content" style={bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1223447919/size=large/bgcol=ffffff/linkcol=de270f/transparent=true/" seamless><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur by Bjarni Gunnarsson</a></iframe>
               </div>
               <hr />
 
@@ -87,7 +81,7 @@ class Paths extends Component {
               <p><a href="http://soundcloud.com/bjarni">soundcloud.com/bjarni</a></p>
               <p><a href="https://tartarugarecords.bandcamp.com/album/lueur">tartarugarecords.bandcamp.com/album/lueur</a></p>
               <hr />
-              <iframe title="Embedded content" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535356630&color=%234c4655&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+              <iframe title="Embedded content" width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535356630&color=%234c4655&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
               <br />
               <hr />
               <div className="img-center">
@@ -97,8 +91,6 @@ class Paths extends Component {
           </div>
       </div>
     </div>
-
-  }
 }
 
 export default Paths;

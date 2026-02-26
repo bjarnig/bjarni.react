@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
 
-class Workshops extends Component {
-  render() { return<div className="container">
+function Workshops() {
+  return (<div className="container">
       <div className="content">
 
     <article>
@@ -59,8 +59,7 @@ class Workshops extends Component {
 
 
       </div>
-  </div>
-  }
+  </div>);
 }
 
 export default Workshops;

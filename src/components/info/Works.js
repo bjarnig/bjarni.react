@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 
-class Works extends Component {
+function Works() {
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  constructor(props) {
-    super(props);
-    this.state = { compositionsStyle:{ float: 'right' } };
-  }
+  const compositionsStyle = { float: 'right' };
 
-  componentDidMount() { window.scrollTo(0, 0) };
-
-  render() {
-    return (
+  return (
       <div className="container">
         <div className="content">
           <ul className="nav nav-pills">
@@ -21,7 +16,7 @@ class Works extends Component {
 
           <div className="row">
             <div className="col-lg-12">
-              <div className="date" style={this.state.compositionsStyle}>Compositions</div>
+              <div className="date" style={compositionsStyle}>Compositions</div>
               <table className="table">
                 <thead>
                   <tr>
@@ -507,7 +502,7 @@ class Works extends Component {
     
       <div className="row">
           <div className="col-lg-12">
-              <div className="date" style={this.state.compositionsStyle}>Releases</div>
+              <div className="date" style={compositionsStyle}>Releases</div>
               <table className="table">
                   <thead>
                       <tr>
@@ -722,7 +717,7 @@ class Works extends Component {
 
       <div className="row">
           <div className="col-lg-12">
-              <div className="date" style={this.state.compositionsStyle}>Writings</div><br /><br /><br />
+              <div className="date" style={compositionsStyle}>Writings</div><br /><br /><br />
               <table className="table">
                   <thead>
                       <tr>
@@ -798,7 +793,7 @@ class Works extends Component {
 
       <div className="row">
           <div className="col-lg-12">
-              <div className="date" style={this.state.compositionsStyle}>Selected Performances</div>
+              <div className="date" style={compositionsStyle}>Selected Performances</div>
               <table className="table">
                   <thead>
                       <tr>
@@ -1436,7 +1431,6 @@ class Works extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Works;

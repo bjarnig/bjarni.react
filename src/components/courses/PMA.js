@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 // Components
 import OpacityImage from "./../common/OpacityImage";
@@ -22,9 +22,8 @@ const shouldShowArticle = (dateString) => {
   return today >= oneDayBefore;
 };
 
-class Pma extends Component {
-  render() {
-    return (
+function Pma() {
+  return (
       <div className="container">
         <div className="content">
         <article>
@@ -401,7 +400,6 @@ class Pma extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Pma;

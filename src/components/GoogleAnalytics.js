@@ -1,5 +1,5 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 // Google Analytics 4 tracking
 const GA_TRACKING_ID = 'G-Q8WVTHJQ71'; // Bjarni Gunnarsson Portfolio
@@ -9,7 +9,7 @@ const initGA = () => {
   if (typeof window !== 'undefined' && window.gtag) {
     return;
   }
-  
+
   // Load Google Analytics script
   const script1 = document.createElement('script');
   script1.async = true;
@@ -21,7 +21,7 @@ const initGA = () => {
   window.gtag = function() {
     window.dataLayer.push(arguments);
   };
-  
+
   window.gtag('js', new Date());
   window.gtag('config', GA_TRACKING_ID, {
     page_title: document.title,
@@ -40,27 +40,23 @@ const trackPageView = (path) => {
   }
 };
 
-class GoogleAnalytics extends React.Component {
-  componentDidMount() {
+function GoogleAnalytics() {
+  const location = useLocation();
+  const prevPathRef = useRef(location.pathname);
+
+  useEffect(() => {
     initGA();
-    if (this.props.location && this.props.location.pathname) {
-      trackPageView(this.props.location.pathname);
-    }
-  }
+    trackPageView(location.pathname);
+  }, []);
 
-  componentDidUpdate(prevProps) {
-    if (
-      this.props.location &&
-      prevProps.location &&
-      this.props.location.pathname !== prevProps.location.pathname
-    ) {
-      trackPageView(this.props.location.pathname);
+  useEffect(() => {
+    if (location.pathname !== prevPathRef.current) {
+      trackPageView(location.pathname);
+      prevPathRef.current = location.pathname;
     }
-  }
+  }, [location.pathname]);
 
-  render() {
-    return null;
-  }
+  return null;
 }
 
-export default withRouter(GoogleAnalytics); 
+export default GoogleAnalytics;

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
@@ -9,23 +9,17 @@ const Inserts = imageurl + 'inserts.jpg';
 const Inserts2 = imageurl + 'inserts2.jpg';
 const Processes_potentials = imageurl + 'processes-potentials.jpg';
 
-class Processes extends Component {
+function Processes() {
+  const bandcampStyle = {
+    border: '0',
+    width: '100%',
+    height: '307px'
+  };
+  const alignCenter = {
+    'text-align': 'center'
+  };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      bandcampStyle: {
-        border: '0',
-        width: '100%',
-        height: '307px'
-      },
-      alignCenter : {
-        'text-align': 'center'
-      }
-  }}
-
-  render() {
-    return <div className="container">
+  return <div className="container">
       <div className="content">
 
         <div className="release">
@@ -58,8 +52,8 @@ class Processes extends Component {
             Artwork by Ákos Garai
           </p>
 
-          <p style={this.state.alignCenter}>
-            <strong><a href="http://3leaves-label.com/store/index.php?main_page=product_info&cPath=0&products_id=34" style={this.state.alignCenter}>[ ORDER NOW! ] </a></strong>
+          <p style={alignCenter}>
+            <strong><a href="http://3leaves-label.com/store/index.php?main_page=product_info&cPath=0&products_id=34" style={alignCenter}>[ ORDER NOW! ] </a></strong>
           </p>
 
             <div className="img-center">
@@ -93,17 +87,15 @@ class Processes extends Component {
             <br /><br />
             <hr />
             <div className="bandcamp">
-            <iframe title="Embedded content" style={this.state.bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1997432359/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://bjarni.bandcamp.com/album/processes-potentials">Processes &amp; Potentials by Bjarni Gunnarsson</a></iframe></div>
+            <iframe title="Embedded content" style={bandcampStyle} src="https://bandcamp.com/EmbeddedPlayer/album=1997432359/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="http://bjarni.bandcamp.com/album/processes-potentials">Processes &amp; Potentials by Bjarni Gunnarsson</a></iframe></div>
             <hr />
-            <iframe title="Embedded content" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F108329364&amp;color=333333&amp;auto_play=false&amp;show_artwork=true"></iframe>
+            <iframe title="Embedded content" width="100%" height="166" scrolling="no" frameBorder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F108329364&amp;color=333333&amp;auto_play=false&amp;show_artwork=true"></iframe>
             <br /><br />
 
         </div>
 
       </div>
     </div>
-
-  }
 }
 
 export default Processes;
