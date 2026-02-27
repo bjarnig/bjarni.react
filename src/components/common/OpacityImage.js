@@ -8,13 +8,13 @@ function OpacityImage({ imageUrl, alt, onClick }) {
   };
 
   const handleImageErrored = () => {
-    console.log('failed to load image');
   };
 
   return (
     <div>
       <img
         style={{...style, cursor: onClick ? 'pointer' : 'default'}}
+        loading="lazy"
         className="img-responsive"
         src={imageUrl}
         alt={alt || ""}

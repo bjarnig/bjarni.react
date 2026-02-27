@@ -1,33 +1,33 @@
-import React, { useState } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from "react-router-dom";
 import GoogleAnalytics from './components/GoogleAnalytics';
 import './assets/css/app.css';
 import './assets/css/style.css';
 import './assets/css/custom.css';
 
-// Import components directly
-import Current from './components/info/Current';
-import Past from './components/info/Past';
-import Index from './components/info/Index';
-import Music from './components/music/Music';
-import Collaborations from './components/music/Collaborations';
-import Code from './components/music/Code';
-import Writings from './components/music/Writings';
-import Live from './components/music/Live';
-import Mixes from './components/music/Mixes';
-import Excerpts from './components/music/Excerpts';
-import Visual from './components/music/Visual';
-import Releases from './components/info/Releases';
-import Press from './components/info/Press';
-import Paths from './components/info/Paths';
-import Processes from './components/info/Processes';
-import Courses from './components/courses/Courses';
-import About from './components/info/About';
-import Works from './components/info/Works';
-import Pma from './components/courses/PMA';
-import Pmb from './components/courses/PMB';
-import Cwa from './components/courses/CWA';
-import Workshops from './components/courses/Workshops';
+// Lazy-loaded route components
+const Current = lazy(() => import('./components/info/Current'));
+const Past = lazy(() => import('./components/info/Past'));
+const Index = lazy(() => import('./components/info/Index'));
+const Music = lazy(() => import('./components/music/Music'));
+const Collaborations = lazy(() => import('./components/music/Collaborations'));
+const Code = lazy(() => import('./components/music/Code'));
+const Writings = lazy(() => import('./components/music/Writings'));
+const Live = lazy(() => import('./components/music/Live'));
+const Mixes = lazy(() => import('./components/music/Mixes'));
+const Excerpts = lazy(() => import('./components/music/Excerpts'));
+const Visual = lazy(() => import('./components/music/Visual'));
+const Releases = lazy(() => import('./components/info/Releases'));
+const Press = lazy(() => import('./components/info/Press'));
+const Paths = lazy(() => import('./components/info/Paths'));
+const Processes = lazy(() => import('./components/info/Processes'));
+const Courses = lazy(() => import('./components/courses/Courses'));
+const About = lazy(() => import('./components/info/About'));
+const Works = lazy(() => import('./components/info/Works'));
+const Pma = lazy(() => import('./components/courses/PMA'));
+const Pmb = lazy(() => import('./components/courses/PMB'));
+const Cwa = lazy(() => import('./components/courses/CWA'));
+const Workshops = lazy(() => import('./components/courses/Workshops'));
 
 function NavMenuItem({ to, children, onClick }) {
   const location = useLocation();
@@ -83,6 +83,7 @@ function App() {
               </ul>
             </div>
           </div>
+          <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/music" element={<Music />} />
@@ -107,6 +108,7 @@ function App() {
             <Route path="/cwa" element={<Cwa />} />
             <Route path="/workshops" element={<Workshops />} />
           </Routes>
+          </Suspense>
         </div>
       </div>
     </Router>
