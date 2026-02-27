@@ -15,6 +15,7 @@ React-based portfolio site
 - **React 18** - Frontend framework
 - **React Router 6** - Client-side routing
 - **React Helmet** - SEO and meta tag management
+- **Vite 7** - Build tool and dev server
 - **Bootstrap 3** - CSS styling (plain classes, no JS framework)
 - **AWS S3 + CloudFront** - Hosting and CDN
 - **Google Analytics 4** - User tracking
@@ -85,17 +86,16 @@ npm install
 ### Development
 
 ```bash
-npm start
+npm run dev
 ```
 
-Opens at `http://localhost:3000`
+Opens at `http://localhost:5173`
 
 ## Available Scripts
 
-- `npm start` - Start development server
-- `npm run build` - Build for production
-- `npm run build:analyze` - Build and analyze bundle size
-- `npm test` - Run tests
+- `npm run dev` - Start development server
+- `npm run build` - Build for production (output in `dist/`)
+- `npm run preview` - Preview production build locally
 - `npm run generate-sitemap` - Generate sitemap.xml
 - `npm run build-with-sitemap` - Build with sitemap generation
 - `npm run deploy:advanced` - Deploy to S3 + invalidate CloudFront
