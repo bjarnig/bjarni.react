@@ -46,20 +46,22 @@ echo -e "${BLUE}   S3 Bucket: $S3_BUCKET${NC}"
 echo -e "${BLUE}   CloudFront Distribution: $CLOUDFRONT_DISTRIBUTION_ID${NC}"
 echo -e "${BLUE}   S3 Region: $S3_REGION${NC}"
 
-# Step 1: Build the application
-echo -e "${YELLOW}📦 Building application...${NC}"
-npm run export
+# Step 1: Build (skip if dist/ was already built by the caller)
+if [ "${SKIP_BUILD:-}" != "1" ]; then
+    echo -e "${YELLOW}📦 Building application...${NC}"
+    npm run export
 
-if [ $? -ne 0 ]; then
-    echo -e "${RED}❌ Build failed!${NC}"
-    exit 1
+    if [ $? -ne 0 ]; then
+        echo -e "${RED}❌ Build failed!${NC}"
+        exit 1
+    fi
+
+    echo -e "${GREEN}✅ Build completed successfully${NC}"
 fi
-
-echo -e "${GREEN}✅ Build completed successfully${NC}"
 
 # Step 2: Sync to S3
 echo -e "${YELLOW}☁️  Syncing to S3...${NC}"
-aws s3 sync build/ s3://$S3_BUCKET --delete --region $S3_REGION
+aws s3 sync dist/ s3://$S3_BUCKET --delete --region $S3_REGION
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ S3 sync failed!${NC}"

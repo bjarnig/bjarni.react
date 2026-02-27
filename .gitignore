@@ -10,4 +10,4 @@ npm-debug.log
 package-lock.json
 
 # Build output
-build/
+dist/

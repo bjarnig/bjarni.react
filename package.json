@@ -2,40 +2,26 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-router-dom": "^6.20.0",
-    "react-scripts": "^5.0.1"
+    "react-router-dom": "^6.20.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "build:analyze": "npm run build && npx webpack-bundle-analyzer build/static/js/*.js",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "export": "npm run build",
-    "deploy": "npm run export && aws s3 sync build/ s3://your-bucket-name --delete",
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "export": "vite build",
+    "deploy": "npm run export && aws s3 sync dist/ s3://your-bucket-name --delete",
     "deploy:full": "./deploy.sh",
     "deploy:advanced": "./deploy-advanced.sh",
     "generate-sitemap": "node -e \"const { generateSitemap } = require('./src/utils/sitemapGenerator.js'); const fs = require('fs'); fs.writeFileSync('public/sitemap.xml', generateSitemap());\"",
     "build-with-sitemap": "npm run generate-sitemap && npm run build"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "webpack-bundle-analyzer": "^4.10.2"
+    "@vitejs/plugin-react": "^5.1.4",
+    "vite": "^7.3.1"
   }
 }

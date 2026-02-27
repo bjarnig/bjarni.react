@@ -19,7 +19,7 @@ npm run generate-sitemap
 
 # Sync to S3
 echo "📤 Syncing to S3 bucket: $BUCKET_NAME"
-aws s3 sync build/ s3://$BUCKET_NAME --delete --region $REGION
+aws s3 sync dist/ s3://$BUCKET_NAME --delete --region $REGION
 
 # Invalidate CloudFront cache (if using CloudFront)
 if [ ! -z "$CLOUDFRONT_DISTRIBUTION_ID" ]; then

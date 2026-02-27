@@ -12,7 +12,7 @@ npm run build-with-sitemap
 # Check if build was successful
 if [ $? -eq 0 ]; then
     echo "✅ Build successful! Deploying..."
-    ./deploy-advanced.sh
+    SKIP_BUILD=1 ./deploy-advanced.sh
 else
     echo "❌ Build failed! Deployment aborted."
     exit 1
