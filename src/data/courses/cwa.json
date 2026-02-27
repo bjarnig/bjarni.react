@@ -1,0 +1,22 @@
+{
+  "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/",
+  "articles": [
+    { "date": "05.02.2026", "title": "Class 17, Control", "file": "cwa17" },
+    { "date": "29.01.2026", "title": "Class 16, Iterative Systems", "file": "cwa16" },
+    { "date": "22.01.2026", "title": "Class 15, Errors", "file": "cwa15" },
+    { "date": "14.01.2026", "title": "Class 14, Stochastic Synthesis", "file": "cwa14" },
+    { "date": "08.01.2026", "title": "Class 13, Microsound", "file": "cwa13" },
+    { "date": "18.12.2025", "title": "Class 12, Combine", "file": "cwa12" },
+    { "date": "11.12.2025", "title": "Class 11, Processing", "file": "cwa11" },
+    { "date": "04.12.2025", "title": "Class 10, Signals", "file": "cwa10" },
+    { "date": "27.11.2025", "title": "Class 09, Synthesis", "file": "cwa09" },
+    { "date": "20.11.2025", "title": "Class 08, Examples", "file": "cwa08" },
+    { "date": "13.11.2025", "title": "Class 07, Koenig", "file": "cwa07" },
+    { "date": "16.10.2025", "title": "Class 06, Xenakis", "file": "cwa06" },
+    { "date": "09.10.2025", "title": "Class 05, History", "file": "cwa05" },
+    { "date": "02.10.2025", "title": "Class 04, Workshop", "file": "cwa04" },
+    { "date": "25.09.2025", "title": "Class 03, Patterns", "file": "cwa03" },
+    { "date": "17.09.2025", "title": "Class 02, SuperCollider", "file": "cwa02" },
+    { "date": "11.09.2025", "title": "Class 01, Composing with Algorithms", "file": "cwa01" }
+  ]
+}

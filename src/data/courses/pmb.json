@@ -1,0 +1,18 @@
+{
+  "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/",
+  "articles": [
+    { "date": "03.02.2026", "title": "Class 13, Spatialisation", "file": "pmb13" },
+    { "date": "03.02.2026", "title": "Class 12, Network Music", "file": "pmb12" },
+    { "date": "27.01.2026", "title": "Class 11, Live Coding 2", "file": "pmb11" },
+    { "date": "14.01.2026", "title": "Class 10, Live Coding", "file": "pmb10" },
+    { "date": "06.01.2026", "title": "Class 09, Grammars and Fractals", "file": "pmb09" },
+    { "date": "25.11.2025", "title": "Class 08, Examples", "file": "pmb08" },
+    { "date": "18.11.2025", "title": "Class 07, Chaos", "file": "pmb07" },
+    { "date": "11.11.2025", "title": "Class 06, Sonification", "file": "pmb06" },
+    { "date": "14.10.2025", "title": "Class 05, Microsound examples", "file": "pmb05" },
+    { "date": "07.10.2025", "title": "Class 04, Waveforms", "file": "pmb04" },
+    { "date": "30.09.2025", "title": "Class 03, Granular Examples", "file": "pmb03" },
+    { "date": "16.09.2025", "title": "Class 02, Granularity", "file": "pmb02" },
+    { "date": "11.09.2025", "title": "Class 01, Programming and Music 2", "file": "pmb01" }
+  ]
+}

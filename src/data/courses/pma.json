@@ -1,0 +1,20 @@
+{
+  "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/",
+  "articles": [
+    { "date": "12.02.2026", "title": "Class 15, Recap", "file": "pma15" },
+    { "date": "05.02.2026", "title": "Class 14, More Patterns", "file": "pma14" },
+    { "date": "29.01.2026", "title": "Class 13, Patterns", "file": "pma13", "showDate": "06.01.2026" },
+    { "date": "22.01.2026", "title": "Class 12, Clocks", "file": "pma12", "showDate": "06.01.2026" },
+    { "date": "14.01.2026", "title": "Class 11, Shaping", "file": "pma11", "showDate": "06.01.2026" },
+    { "date": "08.01.2026", "title": "Class 10, Modulation", "file": "pma10", "showDate": "06.01.2026" },
+    { "date": "18.12.2025", "title": "Class 09, Synthesis", "file": "pma09", "showDate": "19.11.2025" },
+    { "date": "20.11.2025", "title": "Class 08, Routines", "file": "pma08", "showDate": "19.11.2025" },
+    { "date": "13.11.2025", "title": "Class 07, Exercises", "file": "pma07", "showDate": "12.11.2025" },
+    { "date": "16.10.2025", "title": "Class 06, Approaches", "file": "pma06", "showDate": "16.10.2025" },
+    { "date": "09.10.2025", "title": "Class 05, Data Structures", "file": "pma05", "showDate": "09.10.2025" },
+    { "date": "02.10.2025", "title": "Class 04, Functions", "file": "pma04", "showDate": "01.10.2025" },
+    { "date": "25.09.2025", "title": "Class 03, Control Flow", "file": "pma03", "showDate": "25.09.2025" },
+    { "date": "16.09.2025", "title": "Class 02, Syntax", "file": "pma02", "showDate": "16.09.2025" },
+    { "date": "09.09.2025", "title": "Class 01, Programming and Music 1", "file": "pma01", "showDate": "09.09.2025" }
+  ]
+}
