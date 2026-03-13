@@ -1,6 +1,7 @@
 {
   "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/",
   "articles": [
+    { "date": "12.03.2026", "title": "Class 16, GUI", "file": "pma16" },
     { "date": "12.02.2026", "title": "Class 15, Recap", "file": "pma15" },
     { "date": "05.02.2026", "title": "Class 14, More Patterns", "file": "pma14" },
     { "date": "29.01.2026", "title": "Class 13, Patterns", "file": "pma13", "showDate": "06.01.2026" },

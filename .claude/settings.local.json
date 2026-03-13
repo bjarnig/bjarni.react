@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(node:*)",
+      "Bash(npm info:*)",
+      "Bash(npx react-scripts:*)",
+      "Bash(NODE_OPTIONS=--openssl-legacy-provider npx react-scripts:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(timeout 15 npm start:*)",
+      "Bash(git:*)",
+      "Bash(npm audit:*)",
+      "Bash(find:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(du:*)"
+    ]
+  }
+}
