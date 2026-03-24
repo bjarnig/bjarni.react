@@ -117,10 +117,10 @@ function Current() {
               of expression SuperCollider permits.
             </p>
             <p>
-              Presenting on the 26th of March is Marije Baalman and myself.
+              Presenting on the 26th of March are Marije Baalman and myself.
             </p>
             <p> 
-              \"In this talk, I reflect on the relationship between fixed structures and 
+              'In this talk, I reflect on the relationship between fixed structures and 
               dynamic musical processes in my current artistic practice. Using three 
               recent projects as points of departure, I examine how relatively stable 
               code frameworks interact with the evolving and contingent nature of sound 
@@ -130,7 +130,7 @@ function Current() {
               how compositional ideas emerge through interaction with these systems, 
               where musical outcomes are shaped by iterative processes, feedback loops, 
               and acts of listening.
-              \"
+              '
             </p>
             
             <p>
@@ -197,7 +197,7 @@ function Current() {
               </a>
             </div>
             <p>
-            \"The Institute of Sonology and the Groupe de Recherches Musicales 
+            'The Institute of Sonology and the Groupe de Recherches Musicales 
               in Paris (GRM) are among the few institutes whose history extends 
               in an uninterrupted line back to the early years of electronic 
               music and musique concrète. Despite the initially large differences 
@@ -205,17 +205,17 @@ function Current() {
               been strong. On the initiative of then GRM director Daniel Teruggi, 
               a partnership with the Institute of Sonology was established in 
               2009 that has led to cooperation in organising concerts and 
-              symposia on several occasions.\"
+              symposia on several occasions.'
             </p>
             <p>
-              \"To mark the 200th anniversary of the Royal Conservatoire The 
+              'To mark the 200th anniversary of the Royal Conservatoire The 
               Hague and to celebrate that the Institute of Sonology has been 
               part of the Royal Conservatoire for 40 years, GRM will visit The 
               Hague with its Acousmonium from 5 to 7 March 2026. In a series 
               of concerts in the Conservatoriumzaal, works by teachers, students 
               and alumni of the Institute of Sonology, as well as classics from 
               the GRM repertoire, will be spatially performed on this extensive 
-              loudspeaker system.\"
+              loudspeaker system.'
             </p>
             <p>
               I will present a new piece, Ora (2026). 8 channels. Fixed Media. 12:28.
