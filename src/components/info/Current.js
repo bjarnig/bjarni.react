@@ -71,6 +71,8 @@ const lectorate_event = imageurl + "lectorate-event.png";
 const radio_fantasia = imageurl + "radio-fantasia.png";
 const misplaced_objects = imageurl + "misplaced-objects.png";
 const ruv = imageurl + "ruv.png";
+const grm_sonology = imageurl + "grm-sonology.jpg";
+const notam = imageurl + "notam.png";
 
 function Current() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -90,6 +92,157 @@ function Current() {
         <div className="content">
 
         <article>
+            {" "}
+            <div className="date">26-03-2026</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h4>SuperCollider Meetup at NOTAM</h4>
+            <div className="img-center">
+              <a
+                href="https://notam.no/en/event/notams-online-supercollider-meetup/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <OpacityImage imageUrl={notam} />
+              </a>
+            </div>
+            <p>
+              Online SuperCollider Meetup facilitated by NOTAM. 
+              </p>
+              <p>
+              At these meetups, SuperCollider users present a project, class library, 
+              instrument, or artistic practice. The presentations are informal, vary in 
+              their format, and are intended to showcase the diversity and flexibility 
+              of expression SuperCollider permits.
+            </p>
+            <p>
+              Presenting on the 26th of March is Marije Baalman and myself.
+            </p>
+            <p> 
+              \"In this talk, I reflect on the relationship between fixed structures and 
+              dynamic musical processes in my current artistic practice. Using three 
+              recent projects as points of departure, I examine how relatively stable 
+              code frameworks interact with the evolving and contingent nature of sound 
+              production and compositional decision-making. I explore how these 
+              frameworks operate not simply as technical tools but as environments that 
+              both constrain and enable musical activity. The presentation focuses on 
+              how compositional ideas emerge through interaction with these systems, 
+              where musical outcomes are shaped by iterative processes, feedback loops, 
+              and acts of listening.
+              \"
+            </p>
+            
+            <p>
+              <a
+                href="https://notam.no"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NOTAM
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://zoom.us/j/97432580111"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Zoom Link
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://github.com/bjarnig/OF"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                - OF -
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://github.com/bjarnig/Ora"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              - Ora -
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://github.com/bjarnig/Accrete"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              - Accrete -
+              </a>
+            </p>
+          </article>
+
+          <article>
+            {" "}
+            <div className="date">05-03-2026</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h4>GRM Sonology Concert</h4>
+            <div className="img-center">
+              <a
+                href="https://sonology.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <OpacityImage imageUrl={grm_sonology} />
+              </a>
+            </div>
+            <p>
+            \"The Institute of Sonology and the Groupe de Recherches Musicales 
+              in Paris (GRM) are among the few institutes whose history extends 
+              in an uninterrupted line back to the early years of electronic 
+              music and musique concrète. Despite the initially large differences 
+              in theoretical and aesthetic principles, mutual respect has always 
+              been strong. On the initiative of then GRM director Daniel Teruggi, 
+              a partnership with the Institute of Sonology was established in 
+              2009 that has led to cooperation in organising concerts and 
+              symposia on several occasions.\"
+            </p>
+            <p>
+              \"To mark the 200th anniversary of the Royal Conservatoire The 
+              Hague and to celebrate that the Institute of Sonology has been 
+              part of the Royal Conservatoire for 40 years, GRM will visit The 
+              Hague with its Acousmonium from 5 to 7 March 2026. In a series 
+              of concerts in the Conservatoriumzaal, works by teachers, students 
+              and alumni of the Institute of Sonology, as well as classics from 
+              the GRM repertoire, will be spatially performed on this extensive 
+              loudspeaker system.\"
+            </p>
+            <p>
+              I will present a new piece, Ora (2026). 8 channels. Fixed Media. 12:28.
+            </p>
+            <p>
+              Ora takes its name from the Latin ōra, meaning border, rim, 
+              frontier, or edge. The piece unfolds along such boundaries, 
+              between sound and process, between tone and texture. All musical 
+              material is derived from a small set of sine waves that act as 
+              both source and constraint. These sets are stretched, multiplied, 
+              and transformed by algorithms, generating textures that 
+              continuously reorient themselves. Ora is part of an ongoing 
+              project exploring process-based composition through generative 
+              design, emphasizing continuity and sustained temporal processes.
+            </p>
+            <p>
+              <a
+                href="https://sonology.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Sonology
+              </a>
+            </p>
+          </article>
+
+          <article>
             {" "}
             <div className="date">02-11-2025</div>
             <div className="hr">
