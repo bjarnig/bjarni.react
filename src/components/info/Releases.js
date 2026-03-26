@@ -63,13 +63,15 @@ function Releases() {
           <meta property="og:description" content="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur. Process-based electronic music." />
           <meta property="og:type" content="music.album" />
           <meta property="og:url" content="https://bjarni-gunnarsson.net/releases" />
-          <meta property="og:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta property="og:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs" />
           <meta name="twitter:description" content="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur." />
-          <meta name="twitter:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta name="twitter:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
           
           {/* Canonical URL */}
           <link rel="canonical" href="https://bjarni-gunnarsson.net/releases" />

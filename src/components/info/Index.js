@@ -61,14 +61,16 @@ function About() {
           <meta property="og:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://bjarni-gunnarsson.net" />
-          <meta property="og:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta property="og:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           <meta property="og:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
           
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Bjarni Gunnarsson - Composer and Programmer" />
           <meta name="twitter:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague." />
-          <meta name="twitter:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta name="twitter:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
           <meta name="twitter:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
           
           {/* Additional SEO meta tags */}

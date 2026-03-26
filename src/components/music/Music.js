@@ -19,13 +19,15 @@ function Music() {
           <meta property="og:description" content="Listen to electronic music compositions by Bjarni Gunnarsson. Featuring works like Vacuum (UPICS), Anticlines, Polytree, Volume and Void, and more." />
           <meta property="og:type" content="music.album" />
           <meta property="og:url" content="https://bjarni-gunnarsson.net/music" />
-          <meta property="og:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta property="og:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Music - Bjarni Gunnarsson | Electronic Music Compositions" />
           <meta name="twitter:description" content="Listen to electronic music compositions by Bjarni Gunnarsson. Featuring works like Vacuum (UPICS), Anticlines, Polytree, Volume and Void." />
-          <meta name="twitter:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta name="twitter:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
           
           {/* Canonical URL */}
           <link rel="canonical" href="https://bjarni-gunnarsson.net/music" />

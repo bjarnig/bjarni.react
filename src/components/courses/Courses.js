@@ -30,13 +30,15 @@ function Courses() {
           <meta property="og:description" content="Learn algorithmic composition and computer music with Bjarni Gunnarsson. Courses include Composing with Algorithms, Programming and Music 1 & 2, and specialized workshops." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://bjarni-gunnarsson.net/courses" />
-          <meta property="og:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta property="og:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
           
           {/* Twitter Card */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Courses - Bjarni Gunnarsson | Algorithmic Composition & Computer Music" />
           <meta name="twitter:description" content="Learn algorithmic composition and computer music with Bjarni Gunnarsson. Courses include Composing with Algorithms, Programming and Music 1 & 2." />
-          <meta name="twitter:image" content="https://bjarni-gunnarsson.net/bg.jpg" />
+          <meta name="twitter:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
           
           {/* Canonical URL */}
           <link rel="canonical" href="https://bjarni-gunnarsson.net/courses" />
