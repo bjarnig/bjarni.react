@@ -1,6 +1,7 @@
 {
   "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/",
   "articles": [
+    { "date": "07.04.2026", "title": "Class 16, CDP 2", "file": "pmb16" },
     { "date": "31.03.2026", "title": "Class 15, CDP", "file": "pmb15" },
     { "date": "10.03.2026", "title": "Class 14, Examples", "file": "pmb14" },
     { "date": "03.02.2026", "title": "Class 13, Spatialisation", "file": "pmb13" },
