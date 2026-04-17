@@ -1,6 +1,7 @@
 {
   "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/",
   "articles": [
+    { "date": "16.04.2026", "title": "Class 23, Recap", "file": "cwa23" },
     { "date": "09.04.2026", "title": "Class 22, IanniX", "file": "cwa22" },
     { "date": "02.04.2026", "title": "Class 21, Sound Processes", "file": "cwa21" },
     { "date": "26.03.2026", "title": "Class 20, CDP Workshop", "file": "cwa20" },
