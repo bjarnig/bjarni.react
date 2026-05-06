@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../common/SEO';
 
 function Visual() {
 
@@ -8,7 +9,11 @@ function Visual() {
   const ustreamStyle2 = { padding: '2px 0px 4px', width: '0px', background: '#ffffff', display: 'block', color: '#000000', 'font-weight': 'normal', 'font-size': '10px', 'text-decoration':'underline', 'text-align': 'center' };
 
   return <div className="container">
-
+      <SEO
+        title="Visual - Bjarni Gunnarsson"
+        description="Audiovisual works, video pieces, and visual collaborations by Bjarni Gunnarsson."
+        path="/visual"
+      />
       <div className="content">
         <div className="music-submenu">
 

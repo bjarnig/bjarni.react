@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../common/SEO';
 
 function Works() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -7,6 +8,11 @@ function Works() {
 
   return (
       <div className="container">
+        <SEO
+          title="Catalog of Works - Bjarni Gunnarsson"
+          description="Complete catalog of compositions, releases, writings, and performances by Bjarni Gunnarsson — process-based electronic music and algorithmic composition."
+          path="/works"
+        />
         <div className="content">
           <ul className="nav nav-pills">
             <li><a href="/about">bio</a></li>

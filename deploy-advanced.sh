@@ -70,6 +70,34 @@ fi
 
 echo -e "${GREEN}✅ S3 sync completed successfully${NC}"
 
+# Step 2b: Upload prerendered routes to no-extension keys.
+#
+# Why: CloudFront has 403/404 → /index.html SPA fallback. A direct request
+# to /about hits S3, finds no object named "about" (only "about/index.html"),
+# returns 404, and CloudFront serves the homepage shell — defeating the
+# prerender. Putting the same prerendered HTML at key "about" (no extension,
+# Content-Type text/html) makes /about resolve to the prerendered file
+# directly, so crawlers and humans get per-route content.
+echo -e "${YELLOW}🪞  Mirroring prerendered routes to extensionless keys...${NC}"
+PRERENDERED_ROUTES=()
+for d in dist/*/; do
+  route="${d#dist/}"
+  route="${route%/}"
+  if [ -f "dist/$route/index.html" ] && [ "$route" != "assets" ]; then
+    PRERENDERED_ROUTES+=("$route")
+  fi
+done
+
+for route in "${PRERENDERED_ROUTES[@]}"; do
+  aws s3 cp "dist/$route/index.html" "s3://$S3_BUCKET/$route" \
+    --content-type "text/html; charset=utf-8" \
+    --region "$S3_REGION" \
+    --only-show-errors
+  echo -e "${BLUE}   /$route → s3://$S3_BUCKET/$route${NC}"
+done
+
+echo -e "${GREEN}✅ Mirrored ${#PRERENDERED_ROUTES[@]} prerendered route(s)${NC}"
+
 # Step 3: Invalidate CloudFront cache
 echo -e "${YELLOW}🔄 Invalidating CloudFront cache...${NC}"
 INVALIDATION_ID=$(aws cloudfront create-invalidation \

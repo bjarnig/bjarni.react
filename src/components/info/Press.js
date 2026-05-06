@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react';
+import SEO from '../common/SEO';
 
 function Press() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return <div className="container">
+      <SEO
+        title="Press - Bjarni Gunnarsson"
+        description="Press, reviews, and writings about Bjarni Gunnarsson's albums — UPICS, Lueur, Paths, Processes & Potentials, Safn 2006-2009 — and Einóma releases."
+        path="/press"
+      />
       <div className="content press-page">
 
         <ul className="nav nav-pills">

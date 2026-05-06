@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from '../common/SEO';
 
 function Collaborations() {
 
@@ -7,7 +8,11 @@ function Collaborations() {
   const bandcampStyle = { border: '0', width: '100%', height: '120px' };
 
   return <div className="container">
-
+      <SEO
+        title="Collaborations - Bjarni Gunnarsson"
+        description="Collaborations by Bjarni Gunnarsson, including Einóma, MGBG with Marie Guilleray, and projects with Jaike Stambach and Miguel Negrão."
+        path="/collaborations"
+      />
       <div className="content">
 
         <div className="music-submenu">

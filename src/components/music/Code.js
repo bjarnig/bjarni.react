@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
+import SEO from './../common/SEO';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
@@ -14,7 +15,11 @@ function Collaborations() {
   const bandcampStyle = { border: '0', width: '100%', height: '120px' };
 
   return <div className="container">
-
+      <SEO
+        title="Code - Bjarni Gunnarsson"
+        description="Open-source code, software experiments, and SuperCollider tools by Bjarni Gunnarsson, supporting his work in algorithmic composition and process-based sound."
+        path="/code"
+      />
       <div className="content">
 
         <div className="music-submenu">

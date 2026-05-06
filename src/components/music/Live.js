@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
+import SEO from '../common/SEO';
 
 function Live() {
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return <div className="container">
-
+      <SEO
+        title="Live - Bjarni Gunnarsson"
+        description="Live performances and live-coding work by Bjarni Gunnarsson, including multichannel and WFS-based concerts."
+        path="/live"
+      />
       <div className="content">
         <div className="music-submenu">
 

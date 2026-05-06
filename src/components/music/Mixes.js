@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
+import SEO from '../common/SEO';
 
 function Mixes() {
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return <div className="container">
-
+      <SEO
+        title="Mixes - Bjarni Gunnarsson"
+        description="DJ mixes and curated sound selections by Bjarni Gunnarsson."
+        path="/mixes"
+      />
       <div className="content">
         <div className="music-submenu">
 

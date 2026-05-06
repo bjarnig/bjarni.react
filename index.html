@@ -47,22 +47,61 @@
 
     <title>Bjarni Gunnarsson | Process-Based Sound & Algorithmic Composition</title>
 
-    <!-- Google Analytics - Load after page load for better performance -->
-    <script>
-      // Defer Google Analytics loading
-      window.addEventListener('load', function() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-        document.head.appendChild(script);
+    <!-- Google Analytics is loaded by src/components/GoogleAnalytics.js. -->
 
-        script.onload = function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'GA_MEASUREMENT_ID');
-        };
-      });
+    <!-- Structured data for non-JS crawlers; Helmet may augment per route -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Bjarni Gunnarsson",
+      "url": "https://bjarni-gunnarsson.net",
+      "image": "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/bjarni-gunnarsson.png",
+      "jobTitle": "Composer and Programmer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Institute of Sonology, Royal Conservatory"
+      },
+      "description": "Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition.",
+      "knowsAbout": [
+        "Algorithmic Composition",
+        "Process-Based Sound",
+        "Generative Music",
+        "Computational Processes",
+        "Machine Learning",
+        "Database-Driven Composition",
+        "Variational Autoencoders",
+        "Live Coding",
+        "Electronic Music",
+        "Computer Music",
+        "Sonic Art",
+        "Electroacoustic Music",
+        "Acousmatic Music",
+        "SuperCollider",
+        "Sound Art",
+        "Composition",
+        "Programming"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Royal Conservatory of Music, Den Haag"
+      },
+      "sameAs": [
+        "https://bjarni.bandcamp.com",
+        "https://soundcloud.com/bjarni",
+        "https://github.com/bjarnig",
+        "https://www.discogs.com/artist/5895598-Bjarni-%C3%9E%C3%B3r-Gunnarsson",
+        "https://sonology.academia.edu/BjarniGunnarsson",
+        "https://www.researchcatalogue.net/profile/?person=427702",
+        "http://sonology.org",
+        "http://einoma.com",
+        "https://www.youtube.com/@bjarni-gunnarsson",
+        "https://vimeo.com/blindni",
+        "https://www.mixcloud.com/bjarnig/",
+        "https://instagram.com/blindni",
+        "https://www.linkedin.com/in/bjarni-gunnarsson-0b41aa62/"
+      ]
+    }
     </script>
   </head>
   <body>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import SEO from "../common/SEO";
 
 // Components
 import OpacityImage from "./../common/OpacityImage";
@@ -71,6 +72,11 @@ function Past() {
 
   return (
       <div className="container">
+        <SEO
+          title="Past Performances - Bjarni Gunnarsson"
+          description="Archive of past concerts, festivals, and performances by Bjarni Gunnarsson, including Tectonics, Rewire, Today's Art, Sónar, and Présences Électroniques."
+          path="/past"
+        />
         <div className="content">
           <article>
             <div className="date">07.01.2018</div>

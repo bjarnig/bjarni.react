@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 // Components
 import OpacityImage from "./../common/OpacityImage";
+import SEO from "./../common/SEO";
 
 // Images
 const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
@@ -89,6 +90,11 @@ function Current() {
 
   return (
       <div className="container">
+        <SEO
+          title="Current - Bjarni Gunnarsson"
+          description="Recent and upcoming activities by Bjarni Gunnarsson — concerts, releases, talks, and publications in computer music and algorithmic composition."
+          path="/current"
+        />
         <div className="content">
 
         <article>

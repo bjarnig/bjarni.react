@@ -17,7 +17,7 @@ export default defineConfig({
       include: /\.(jsx)$/,
     }),
   ],
-  base: './',
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: false,

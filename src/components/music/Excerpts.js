@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react';
+import SEO from '../common/SEO';
 
 function Excerpts() {
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return <div className="container">
-
+      <SEO
+        title="Excerpts - Bjarni Gunnarsson"
+        description="Audio excerpts and sound examples from Bjarni Gunnarsson's compositions and research projects."
+        path="/excerpts"
+      />
       <div className="content">
         <div className="music-submenu">
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
+import SEO from './../common/SEO';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
@@ -18,6 +19,13 @@ function Paths() {
   };
 
   return <div className="container">
+      <SEO
+        title="Paths (2016) - Bjarni Gunnarsson"
+        description="Paths (Granny Records, 2016): five-piece album by Bjarni Gunnarsson exploring computer-composed sound structures and multichannel space."
+        path="/paths"
+        image={albumPaths}
+        type="music.album"
+      />
       <div className="content">
 
         <div className="release">

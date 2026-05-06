@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
+import SEO from './../common/SEO';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
@@ -20,6 +21,13 @@ function Processes() {
   };
 
   return <div className="container">
+      <SEO
+        title="Processes & Potentials (2013) - Bjarni Gunnarsson"
+        description="Processes & Potentials (3LEAVES, 2013): six-track album by Bjarni Gunnarsson exploring process-based composition and computer-generated sound."
+        path="/processes"
+        image={Processes_potentials}
+        type="music.album"
+      />
       <div className="content">
 
         <div className="release">

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
+import SEO from './../common/SEO';
 
 // Images
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
@@ -24,7 +25,12 @@ function Writings() {
   const bandcampStyle = { border: '0', width: '100%', height: '120px' };
 
   return <div className="container">
-
+      <SEO
+        title="Writings - Bjarni Gunnarsson"
+        description="Articles and papers by Bjarni Gunnarsson on algorithmic composition, process-based sound, and machine learning, published in JAR, ECHO, xCoAx, and SMC."
+        path="/writings"
+        type="article"
+      />
       <div className="content">
 
         <div className="music-submenu">
