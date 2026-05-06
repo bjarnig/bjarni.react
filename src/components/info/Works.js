@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../common/SEO';
 
 function Works() {
@@ -15,8 +16,8 @@ function Works() {
         />
         <div className="content">
           <ul className="nav nav-pills">
-            <li><a href="/about">bio</a></li>
-            <li className="active"><a href="/works">catalog</a></li>
+            <li><Link to="/about">bio</Link></li>
+            <li className="active"><Link to="/works">catalog</Link></li>
           </ul>
           <div className="hr"><hr /></div>
 

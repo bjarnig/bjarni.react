@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Components
 import OpacityImage from "./../common/OpacityImage";
@@ -2743,7 +2744,7 @@ function Current() {
 
             <div className="col-lg-5">
               <p>
-                <a href="/Past">- PAST -</a>
+                <Link to="/past">- PAST -</Link>
               </p>
             </div>
 

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // Components
 import OpacityImage from './../common/OpacityImage';
@@ -37,16 +38,16 @@ function Writings() {
 
         <ul className="nav nav-pills">
                 <li>
-                  <a href="music">pieces</a>
+                  <Link to="/music">pieces</Link>
                 </li>
                 <li>
-                  <a href="live">live</a>
+                  <Link to="/live">live</Link>
                 </li>
                 <li>
-                  <a href="collaborations">collaborations</a>
+                  <Link to="/collaborations">collaborations</Link>
                 </li>
                  <li className="active">
-                  <a href="writings">writings</a>
+                  <Link to="/writings">writings</Link>
                 </li>
                 <li>
                 <a href="https://github.com/bjarnig" target="_blank" rel="noopener noreferrer">software</a>

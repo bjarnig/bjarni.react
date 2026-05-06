@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import StructuredData from '../StructuredData';
 
 // Components
@@ -80,10 +81,10 @@ function Releases() {
           <div className="content">
         <ul className="nav nav-pills">
           <li className="active">
-            <a href="/releases">info</a>
+            <Link to="/releases">info</Link>
           </li>
           <li>
-            <a href="/press">press</a>
+            <Link to="/press">press</Link>
           </li>
         </ul>
 

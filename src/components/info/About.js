@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import StructuredData from '../StructuredData';
 
 // import about from './../../assets/images/bjarni-gunnarsson.jpg';
@@ -50,8 +51,8 @@ function About() {
         </Helmet>
         <div className="container">
           <div className="content">
-            <ul className="nav nav-pills"><li className="active"><a href="/about">bio</a></li>
-            <li><a href="/works">catalog</a></li>
+            <ul className="nav nav-pills"><li className="active"><Link to="/about">bio</Link></li>
+            <li><Link to="/works">catalog</Link></li>
             </ul>
             <div className="hr"><hr /></div>
 

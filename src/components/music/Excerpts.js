@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../common/SEO';
 
 function Excerpts() {
@@ -16,22 +17,22 @@ function Excerpts() {
 
           <ul className="nav nav-pills">
             <li>
-              <a href="music">pieces</a>
+              <Link to="/music">pieces</Link>
             </li>
             <li>
-              <a href="live">live</a>
+              <Link to="/live">live</Link>
             </li>
             <li>
-              <a href="collaborations">collaborations</a>
+              <Link to="/collaborations">collaborations</Link>
             </li>
             <li>
-              <a href="visual">visual</a>
+              <Link to="/visual">visual</Link>
             </li>
             <li>
-              <a href="mixes">mixes</a>
+              <Link to="/mixes">mixes</Link>
             </li>
             <li className="active">
-              <a href="excerpts">excerpts</a>
+              <Link to="/excerpts">excerpts</Link>
             </li>
           </ul>
 

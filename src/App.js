@@ -62,7 +62,7 @@ function App() {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="/">bjarni gunnarsson</a>
+              <Link className="navbar-brand" to="/">bjarni gunnarsson</Link>
                 <div className="nav-collapse collapse">
                   <ul className="nav navbar-nav pull-right">
                     <NavMenuItem to="/current">current</NavMenuItem>

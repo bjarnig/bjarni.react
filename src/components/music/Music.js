@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import StructuredData from '../StructuredData';
 
 function Music() {
@@ -40,16 +41,16 @@ function Music() {
 
               <ul className="nav nav-pills">
                 <li className="active">
-                  <a href="music">pieces</a>
+                  <Link to="/music">pieces</Link>
                 </li>
                 <li>
-                  <a href="live">live</a>
+                  <Link to="/live">live</Link>
                 </li>
                 <li>
-                  <a href="collaborations">collaborations</a>
+                  <Link to="/collaborations">collaborations</Link>
                 </li>
                  <li>
-                  <a href="writings">writings</a>
+                  <Link to="/writings">writings</Link>
                 </li>
                 <li>
                 <a href="https://github.com/bjarnig" target="_blank" rel="noopener noreferrer">software</a>

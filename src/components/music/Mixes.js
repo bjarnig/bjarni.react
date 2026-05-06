@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../common/SEO';
 
 function Mixes() {
@@ -16,27 +17,27 @@ function Mixes() {
 
           <ul className="nav nav-pills">
             <li>
-              <a href="music">pieces</a>
+              <Link to="/music">pieces</Link>
             </li>
             <li>
-              <a href="code">software</a>
+              <Link to="/code">software</Link>
             </li>
             <li>
-              <a href="writings">writings</a>
+              <Link to="/writings">writings</Link>
             </li>
             <li>
-              <a href="live">live</a>
+              <Link to="/live">live</Link>
             </li>
             <li>
-              <a href="collaborations">collaborations</a>
+              <Link to="/collaborations">collaborations</Link>
             </li>
             <li>
-              <a href="visual">visual</a>
+              <Link to="/visual">visual</Link>
             </li>
             <li className="active">
-              <a href="mixes">mixes</a>
+              <Link to="/mixes">mixes</Link>
             </li>
-          
+
           </ul>
 
           <div className="hr"><hr/></div>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../common/SEO';
 
 function Press() {
@@ -14,10 +15,10 @@ function Press() {
 
         <ul className="nav nav-pills">
           <li>
-            <a href="/releases">info</a>
+            <Link to="/releases">info</Link>
           </li>
           <li className="active">
-            <a href="/press">press</a>
+            <Link to="/press">press</Link>
           </li>
         </ul>
         <div className="hr"><hr/></div>

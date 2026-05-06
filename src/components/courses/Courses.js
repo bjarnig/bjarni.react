@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Link, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import StructuredData from '../StructuredData';
 
 // Components
@@ -13,8 +14,9 @@ const music = imageurl + 'xpmb.jpg';
 const workshop = imageurl + 'xworkshop.jpg';
 
 function Courses() {
+  const navigate = useNavigate();
   const handleImageClick = (url) => {
-    window.location.href = url;
+    navigate(url);
   };
 
   return (
@@ -53,32 +55,32 @@ function Courses() {
                   <h4>Composing with Algorithms </h4>
                   <OpacityImage imageUrl= {algorithms} onClick={() => handleImageClick('/cwa')} />
                   <br />
-                  <p><a className="btn btn-default" href="/cwa">Access</a></p>
+                  <p><Link className="btn btn-default" to="/cwa">Access</Link></p>
               </div>
 
               <div className="col-lg-6">
                   <h4>Programming and Music 1</h4>
                   <OpacityImage imageUrl= {programming} onClick={() => handleImageClick('/pma')} />
                   <br />
-                  <p><a className="btn btn-default" href="/pma">Access</a></p>
+                  <p><Link className="btn btn-default" to="/pma">Access</Link></p>
               </div>
 
               </div>
 
               <div className="row">
-          
+
               <div className="col-lg-6">
                   <h4>Programming and Music 2</h4>
                   <OpacityImage imageUrl= {music} onClick={() => handleImageClick('/pmb')} />
                   <br />
-                  <p><a className="btn btn-default" href="/pmb">Access</a></p>
+                  <p><Link className="btn btn-default" to="/pmb">Access</Link></p>
               </div>
 
               <div className="col-lg-6">
                   <h4>Workshops</h4>
                   <OpacityImage imageUrl= {workshop} onClick={() => handleImageClick('/workshops')} />
                   <br />
-                  <p><a className="btn btn-default" href="/workshops">Access</a></p>
+                  <p><Link className="btn btn-default" to="/workshops">Access</Link></p>
               </div>
 
               

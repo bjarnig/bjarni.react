@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import StructuredData from "../StructuredData";
 
 import OpacityImage from "./../common/OpacityImage";
@@ -90,16 +91,16 @@ function About() {
             <div className="bio">
               <div className="row">
                 <div className="col-lg-4 col-sm-4 col-xs-2">
-                  <a href="current">
+                  <Link to="/current">
                   <OpacityImage imageUrl={brwn1} />
                   <h5>News </h5>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-lg-4 col-sm-4 col-xs-2">
-                  <a href="music">
+                  <Link to="/music">
                   <OpacityImage imageUrl={brwn2} />
                   <h5>Pieces </h5>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-lg-4 col-sm-4 col-xs-2">
                   <a href="https://github.com/bjarnig" target="_blank" rel="noopener noreferrer">
@@ -110,30 +111,30 @@ function About() {
               </div>
               <div className="row">
                 <div className="col-lg-4 col-sm-4 col-xs-2">
-                  <a href="writings">
+                  <Link to="/writings">
                   <OpacityImage imageUrl={brwn4} />
                   <h5>Writings </h5>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-lg-4 col-sm-4 col-xs-2">
-                  <a href="courses">
+                  <Link to="/courses">
                   <OpacityImage imageUrl={brwn5} />
                   <h5>Courses </h5>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-lg-4 col-sm-4 col-xs-2">
-                  <a href="press">
+                  <Link to="/press">
                   <OpacityImage imageUrl={brwn6} />
                   <h5>Press </h5>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="row">
                 <div className="col-lg-4 col-sm-4 col-xs-2">
-                  <a href="releases">
+                  <Link to="/releases">
                   <OpacityImage imageUrl={brwn7} />
                   <h5>Releases </h5>
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-lg-4 col-sm-4 col-xs-2">
                   <a href="https://www.youtube.com/@bjarni-gunnarsson" target="_blank" rel="noopener noreferrer">
@@ -142,10 +143,10 @@ function About() {
                   </a>
                 </div>
                 <div className="col-lg-4 col-sm-4 col-xs-2">
-                  <a href="works">
+                  <Link to="/works">
                   <OpacityImage imageUrl={brwn9} />
                   <h5>Catalog </h5>
-                  </a>
+                  </Link>
                 </div>
               </div> 
 
