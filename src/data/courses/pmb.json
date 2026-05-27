@@ -1,6 +1,7 @@
 {
   "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/",
   "articles": [
+    { "date": "26.05.2026", "title": "Class 20, Complexity", "file": "pmb20" },
     { "date": "19.05.2026", "title": "Class 19, Machine Learning", "file": "pmb19" },
     { "date": "12.05.2026", "title": "Class 18, FluCoMa", "file": "pmb18" },
     { "date": "28.04.2026", "title": "Class 17, Analysis", "file": "pmb17" },
