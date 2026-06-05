@@ -3,8 +3,8 @@
 # S3 Static Website Deployment Script
 # Replace these variables with your actual values
 
-BUCKET_NAME="your-s3-bucket-name"
-CLOUDFRONT_DISTRIBUTION_ID="your-cloudfront-distribution-id"
+BUCKET_NAME="www.bjarni-gunnarsson.net"
+CLOUDFRONT_DISTRIBUTION_ID="E2UKM3P46QL7H8"
 REGION="eu-central-1"
 
 echo "🚀 Starting deployment to S3..."

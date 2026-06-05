@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "bjarni-gunnarsson-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "export": "vite build",
-    "deploy": "npm run export && aws s3 sync dist/ s3://your-bucket-name --delete",
+    "deploy": "npm run export && aws s3 sync dist/ s3://www.bjarni-gunnarsson.net --delete --region eu-central-1",
     "deploy:full": "./deploy.sh",
     "deploy:advanced": "./deploy-advanced.sh",
     "generate-sitemap": "node -e \"const { generateSitemap } = require('./src/utils/sitemapGenerator.js'); const fs = require('fs'); fs.writeFileSync('public/sitemap.xml', generateSitemap());\"",
