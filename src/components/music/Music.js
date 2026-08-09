@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../common/SEO';
 import StructuredData from '../StructuredData';
 
 function Music() {
@@ -10,29 +10,12 @@ function Music() {
   return (
       <>
         <StructuredData type="music" />
-        <Helmet>
-          <title>Music - Bjarni Gunnarsson | Electronic Music Compositions</title>
-          <meta name="description" content="Listen to electronic music compositions by Bjarni Gunnarsson. Featuring works like Vacuum (UPICS), Anticlines, Polytree, Volume and Void, and more process-based electronic music." />
-          <meta name="keywords" content="Bjarni Gunnarsson music, electronic music, process-based music, algorithmic composition, Vacuum UPICS, Anticlines, Polytree, Volume and Void, Prisme, Ubieties, Aukera, Grey Seeds, Angst, Fingrafjall, Aftur, Samtimis" />
-          
-          {/* Open Graph */}
-          <meta property="og:title" content="Music - Bjarni Gunnarsson | Electronic Music Compositions" />
-          <meta property="og:description" content="Listen to electronic music compositions by Bjarni Gunnarsson. Featuring works like Vacuum (UPICS), Anticlines, Polytree, Volume and Void, and more." />
-          <meta property="og:type" content="music.album" />
-          <meta property="og:url" content="https://bjarni-gunnarsson.net/music" />
-          <meta property="og:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          
-          {/* Twitter Card */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Music - Bjarni Gunnarsson | Electronic Music Compositions" />
-          <meta name="twitter:description" content="Listen to electronic music compositions by Bjarni Gunnarsson. Featuring works like Vacuum (UPICS), Anticlines, Polytree, Volume and Void." />
-          <meta name="twitter:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
-          
-          {/* Canonical URL */}
-          <link rel="canonical" href="https://bjarni-gunnarsson.net/music" />
-        </Helmet>
+        <SEO
+          title="Music - Bjarni Gunnarsson | Electronic Music Compositions"
+          description="Listen to electronic music compositions by Bjarni Gunnarsson. Featuring works like Vacuum (UPICS), Anticlines, Polytree, Volume and Void, and more process-based electronic music."
+          path="/music"
+          type="music.album"
+        />
         <div className="container">
 
           <div className="content">

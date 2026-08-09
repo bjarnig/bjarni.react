@@ -1,4 +1,5 @@
 // Sitemap generator for SEO
+
 const generateSitemap = () => {
   const baseUrl = 'https://bjarni-gunnarsson.net';
   const currentDate = new Date().toISOString().split('T')[0];
@@ -20,7 +21,6 @@ const generateSitemap = () => {
     { path: '/code', priority: '0.4', changefreq: 'monthly' },
     { path: '/writings', priority: '0.4', changefreq: 'monthly' },
     { path: '/press', priority: '0.4', changefreq: 'monthly' },
-    { path: '/works', priority: '0.4', changefreq: 'monthly' },
     { path: '/paths', priority: '0.4', changefreq: 'monthly' },
     { path: '/processes', priority: '0.4', changefreq: 'monthly' }
   ];

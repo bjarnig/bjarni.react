@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../common/SEO';
 import StructuredData from '../StructuredData';
 
 // Components
@@ -22,29 +22,11 @@ function Courses() {
   return (
       <>
         <StructuredData type="courses" />
-        <Helmet>
-          <title>Courses - Bjarni Gunnarsson | Algorithmic Composition & Computer Music</title>
-          <meta name="description" content="Learn algorithmic composition and computer music with Bjarni Gunnarsson. Courses include Composing with Algorithms, Programming and Music 1 & 2, and specialized workshops." />
-          <meta name="keywords" content="algorithmic composition course, computer music course, programming music, SuperCollider course, electronic music education, music technology course, Bjarni Gunnarsson teaching, Sonology courses" />
-          
-          {/* Open Graph */}
-          <meta property="og:title" content="Courses - Bjarni Gunnarsson | Algorithmic Composition & Computer Music" />
-          <meta property="og:description" content="Learn algorithmic composition and computer music with Bjarni Gunnarsson. Courses include Composing with Algorithms, Programming and Music 1 & 2, and specialized workshops." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://bjarni-gunnarsson.net/courses" />
-          <meta property="og:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          
-          {/* Twitter Card */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Courses - Bjarni Gunnarsson | Algorithmic Composition & Computer Music" />
-          <meta name="twitter:description" content="Learn algorithmic composition and computer music with Bjarni Gunnarsson. Courses include Composing with Algorithms, Programming and Music 1 & 2." />
-          <meta name="twitter:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
-          
-          {/* Canonical URL */}
-          <link rel="canonical" href="https://bjarni-gunnarsson.net/courses" />
-        </Helmet>
+        <SEO
+          title="Courses - Bjarni Gunnarsson | Algorithmic Composition & Computer Music"
+          description="Learn algorithmic composition and computer music with Bjarni Gunnarsson. Courses include Composing with Algorithms, Programming and Music 1 & 2, and specialized workshops."
+          path="/courses"
+        />
         <div className="container">
           <div className="music">
             <div className="date">2025 - 2026</div>

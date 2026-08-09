@@ -10,7 +10,4 @@ Disallow: /pma
 Disallow: /pmb
 Disallow: /cwa
 Disallow: /workshops
-Disallow: /login
-
-# Crawl delay (optional)
-Crawl-delay: 1 
+Disallow: /login 

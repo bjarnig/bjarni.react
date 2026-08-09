@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import StructuredData from "../StructuredData";
 
 import OpacityImage from "./../common/OpacityImage";
+import SEO from "./../common/SEO";
 const imageurl = "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/";
 
 // const brwn1 = imageurl + "gdlb_sharpen.png";
@@ -52,37 +52,13 @@ function About() {
   return (
       <>
         <StructuredData type="homepage" />
-        <Helmet>
-          <title>Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition</title>
-          <meta name="description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
-          <meta name="keywords" content="Bjarni Gunnarsson, composer, programmer, algorithmic composition, process-based sound, generative music, computational processes, Institute of Sonology, The Hague, electronic music, computer music, machine learning, database-driven composition, variational autoencoders, live coding, SUPERPANG, SØVN, 3LEAVES, Flag Day Recordings, Tartaruga, Shipwrec" />
-          
-          {/* Open Graph */}
-          <meta property="og:title" content="Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition" />
-          <meta property="og:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://bjarni-gunnarsson.net" />
-          <meta property="og:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          <meta property="og:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
-          
-          {/* Twitter Card */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Bjarni Gunnarsson - Composer and Programmer" />
-          <meta name="twitter:description" content="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague." />
-          <meta name="twitter:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
-          <meta name="twitter:image:alt" content="Bjarni Gunnarsson - Composer and Programmer" />
-          
-          {/* Additional SEO meta tags */}
-          <meta name="author" content="Bjarni Gunnarsson" />
-          <meta name="robots" content="index, follow" />
-          <meta name="language" content="English" />
-          <meta name="revisit-after" content="7 days" />
-          
-          {/* Canonical URL */}
-          <link rel="canonical" href="https://bjarni-gunnarsson.net" />
-        </Helmet>
+        <SEO
+          title="Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition"
+          description="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition."
+          path="/"
+          image={brwn1}
+          imageAlt="Bjarni Gunnarsson - Composer and Programmer"
+        />
         <div className="container">
           <div className="content">
             <div className="row">
@@ -148,7 +124,21 @@ function About() {
                   <h5>Catalog </h5>
                   </Link>
                 </div>
-              </div> 
+              </div>
+
+              <div className="row">
+                <div className="col-lg-12">
+                  <p className="intro">
+                    Bjarni Gunnarsson is a composer and programmer investigating the
+                    generative behaviour of sound in computational processes. His work
+                    examines how sound organisation emerges from interactions, exploring
+                    feedback, inference, and networks. He teaches algorithmic composition
+                    and computer music at the Institute of Sonology in The Hague.
+                    {' '}<Link to="/about">More about the work</Link>, or browse the
+                    {' '}<Link to="/works">catalog of compositions</Link>.
+                  </p>
+                </div>
+              </div>
 
 
 

@@ -10,6 +10,7 @@ function SEO({
   description,
   path = '/',
   image = DEFAULT_IMAGE,
+  imageAlt = 'Bjarni Gunnarsson',
   noindex = false,
   type = 'website',
 }) {
@@ -22,6 +23,7 @@ function SEO({
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <meta name="author" content="Bjarni Gunnarsson" />
       <link rel="canonical" href={url} />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 
@@ -30,11 +32,15 @@ function SEO({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={imageAlt} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:image:alt" content={imageAlt} />
     </Helmet>
   );
 }

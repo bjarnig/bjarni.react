@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../common/SEO';
 import StructuredData from '../StructuredData';
 
 // Components
@@ -54,29 +54,12 @@ function Releases() {
   return (
       <React.Fragment>
         <StructuredData type="music" />
-        <Helmet>
-          <title>Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs</title>
-          <meta name="description" content="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur. Process-based electronic music exploring computational sound generation." />
-          <meta name="keywords" content="Bjarni Gunnarsson releases, UPICS, Anticlines, Cendres, Volume & Void, Lueur, electronic music albums, process-based music, Flag Day Recordings, Superpang, SØVN, Tartaruga" />
-          
-          {/* Open Graph */}
-          <meta property="og:title" content="Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs" />
-          <meta property="og:description" content="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur. Process-based electronic music." />
-          <meta property="og:type" content="music.album" />
-          <meta property="og:url" content="https://bjarni-gunnarsson.net/releases" />
-          <meta property="og:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          
-          {/* Twitter Card */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs" />
-          <meta name="twitter:description" content="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur." />
-          <meta name="twitter:image" content="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/gdle_blurbvarx_pink.png" />
-          
-          {/* Canonical URL */}
-          <link rel="canonical" href="https://bjarni-gunnarsson.net/releases" />
-        </Helmet>
+        <SEO
+          title="Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs"
+          description="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur. Process-based electronic music exploring computational sound generation."
+          path="/releases"
+          type="music.album"
+        />
         <div className="container">
           <div className="content">
         <ul className="nav nav-pills">
@@ -221,7 +204,7 @@ function Releases() {
           </div>
 
           <p>
-            <a href="http://www.bjarni-gunnarsson.net/lueur">New LP on Tartaruga Records</a>
+            <a href="https://tartarugarecords.bandcamp.com/album/lueur" target="_blank" rel="noopener noreferrer">New LP on Tartaruga Records</a>
           </p>
 
           <p>Lueur consists of four electroacoustic compositions; the product of unfolding and unpredictable generative processes spread across 38 minutes.
@@ -237,7 +220,7 @@ function Releases() {
             <a href="https://www.tartaruga.co.uk/">www.tartaruga.co.uk</a>
           </p>
           <p>
-            <a href="http://www.bjarni-gunnarsson.net/lueur">[ more info here ]</a>
+            <a href="https://tartarugarecords.bandcamp.com/album/lueur" target="_blank" rel="noopener noreferrer">[ more info here ]</a>
           </p>
 
         </div>
@@ -251,7 +234,7 @@ function Releases() {
             </div>
 
             <p>
-              <a href="http://www.bjarni-gunnarsson.net/paths">Album on Granny Records</a>
+              <Link to="/paths">Album on Granny Records</Link>
             </p>
 
             <p>Paths consists of five compositions forming a totality of 53 minutes. The music is derived from three multichannel pieces premiered at the Tectonics festival in Reykjavík (2014), the Ephémère series in The Hague (2014) and Présences électronique festival in Paris (2015). These have been further reduced, combined and rearranged resulting in the five compositions found on the album.</p>
@@ -267,7 +250,7 @@ function Releases() {
               <a href="http://www.grannyrecords.org/releases/paths-cd-granny16">www.grannyrecords.org</a>
             </p>
             <p>
-              <a href="http://www.bjarni-gunnarsson.net/paths">[ more info here ]</a>
+              <Link to="/paths">[ more info here ]</Link>
             </p>
 
           </div>
@@ -295,7 +278,7 @@ function Releases() {
             <a href="http://www.3leaves-label.com/">www.3leaves-label.com</a>
           </p>
           <p>
-            <a href="http://www.bjarni-gunnarsson.net/processes">[ more info here ]</a>
+            <Link to="/processes">[ more info here ]</Link>
           </p>
 
           <div className="img-center">
