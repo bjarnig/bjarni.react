@@ -82,7 +82,7 @@ function Processes() {
             <p>Processes & Potentials consists of six pieces forming a totality of 48 minutes. The music is the outcome of my work during the past three years and represents my compositional preoccupations during this period of time.</p>
 
             <p><a href="http://www.3leaves-label.com/">3leaves-label.com</a></p>
-            <p><a href="http://bjarni-gunnarsson.net/processes.html">bjarni-gunnarsson.net/processes</a></p>
+            <p><a href="https://bjarni-gunnarsson.net/processes">bjarni-gunnarsson.net/processes</a></p>
             <p><a href="http://3leaves-label.com/releases.html">3leaves-label.com/releases.html</a></p>
             <p><a href="http://soundcloud.com/3leaves/bjarni-gunnarsson-processes">soundcloud.com/3leaves/bjarni-gunnarsson-processes</a></p>
             <p><a href="http://soundcloud.com/bjarni">soundcloud.com/bjarni</a></p>

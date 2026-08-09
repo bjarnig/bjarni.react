@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../common/SEO';
+import works from '../../data/works.json';
 
 function Works() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -14,7 +15,7 @@ function Works() {
           description="Complete catalog of compositions, releases, writings, and performances by Bjarni Gunnarsson — process-based electronic music and algorithmic composition."
           path="/works"
         />
-        <div className="content">
+        <div className="content prose">
           <ul className="nav nav-pills">
             <li><Link to="/about">bio</Link></li>
             <li className="active"><Link to="/works">catalog</Link></li>
@@ -35,478 +36,30 @@ function Works() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td><a href="https://www.researchcatalogue.net/view/2532879/2532880">Wither</a></td>
-                    <td>2025</td>
-                    <td>11:15</td>
-                    <td>4</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://www.researchcatalogue.net/view/2532879/2532880">Interstice</a></td>
-                    <td>2025</td>
-                    <td>09:14</td>
-                    <td>2</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://bjarni.bandcamp.com/album/fracas">Averse</a></td>
-                    <td>2025</td>
-                    <td>10:20</td>
-                    <td>2</td>
-                    <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://bjarni.bandcamp.com/album/fracas">Protean</a></td>
-                    <td>2025</td>
-                    <td>12:32</td>
-                    <td>2</td>
-                    <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://www.youtube.com/watch?v=QQ9tnpmB_Ok">Streamlines</a></td>
-                    <td>2024</td>
-                    <td>16:02</td>
-                    <td>8</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://www.youtube.com/watch?v=WBoomju6l-o">Ever-Present Change</a></td>
-                    <td>2024</td>
-                    <td>22:28</td>
-                    <td>8</td>
-                    <td>-</td>
-                </tr>
-                  <tr>
-                    <td><a href="https://soundcloud.com/bjarni/blocking-behaviours-iclc-example">Blocking Behaviours</a></td>
-                    <td>2023</td>
-                    <td>25:00</td>
-                    <td>4</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td><a href="https://flagdayrecordings.bandcamp.com/track/vacuum">Vacuum</a></td>
-                    <td>2023</td>
-                    <td>08:08</td>
-                    <td>2</td>
-                    <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
-                  </tr>
-                       <tr>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/track/distant">Distant</a></td>
-                          <td>2023</td>
-                          <td>07:54</td>
-                          <td>2</td>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
-                       </tr>
-                       <tr>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/track/pice">Pice</a></td>
-                          <td>2023</td>
-                          <td>07:25</td>
-                          <td>2</td>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
-                       </tr>
-                       <tr>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/track/fog">Fog</a></td>
-                          <td>2023</td>
-                          <td>07:44</td>
-                          <td>2</td>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
-                       </tr>
-                       <tr>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/track/sun">Sun</a></td>
-                          <td>2023</td>
-                          <td>12:56</td>
-                          <td>2</td>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
-                       </tr>
-                       <tr>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/track/micro">Micro</a></td>
-                          <td>2023</td>
-                          <td>11:04</td>
-                          <td>2</td>
-                          <td><a href="https://flagdayrecordings.bandcamp.com/album/upics">UPICS</a></td>
-                       </tr>
-                       <tr>
-                          <td>Wildfires</td>
-                          <td>2022</td>
-                          <td>12:10</td>
-                          <td>192 (WFS)</td>
-                          <td>-</td>
-                      </tr>
-                       <tr>
-                          <td><a href="https://bjarni.bandcamp.com/album/fracas">Costest</a></td>
-                          <td>2022</td>
-                          <td>12:00</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
-                      </tr>
-                      <tr>
-                          <td>Judder</td>
-                          <td>2021</td>
-                          <td>11:42</td>
-                          <td>8</td>
-                          <td>-</td>
-                      </tr>
-                       <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/devise">Devise</a></td>
-                          <td>2021</td>
-                          <td>05:08</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/adopt">Adopt</a></td>
-                          <td>2021</td>
-                          <td>06:12</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/sustain">Sustain</a></td>
-                          <td>2021</td>
-                          <td>05:56</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/resist">Resist</a></td>
-                          <td>2021</td>
-                          <td>07:02</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/pursue">Pursue</a></td>
-                          <td>2021</td>
-                          <td>06:54</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/anticlines">Anticlines</a></td>
-                      </tr>
-
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
-                          <td>2021</td>
-                          <td>17:14</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/fracas">Fracas</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/heap">Heap</a></td>
-                          <td>2020</td>
-                          <td>05:30</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/volume-void">Volume and Void</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/wreck">Wreck</a></td>
-                          <td>2020</td>
-                          <td>09:38</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/volume-void">Volume and Void</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/blur">Blur</a></td>
-                          <td>2020</td>
-                          <td>06:41</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/volume-void">Volume and Void</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/stash">Stash</a></td>
-                          <td>2020</td>
-                          <td>06:41</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/volume-void">Volume and Void</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://sovnrecords.bandcamp.com/track/cendres">Cendres</a></td>
-                          <td>2020</td>
-                          <td>22:14</td>
-                          <td>8</td>
-                          <td><a href="https://sovnrecords.bandcamp.com/album/cendres">Cendres</a></td>
-                      </tr>
-                    <tr>
-                        <td><a href="https://www.researchcatalogue.net/view/540350/540351#becoming">Copaline</a></td>
-                        <td>2019</td>
-                        <td>13:02</td>
-                        <td>4</td>
-                        <td>-</td>
+                  {works.map((w) => (
+                    <tr key={w.slug}>
+                      <td>
+                        {w.link
+                          ? <a href={w.link} target="_blank" rel="noopener noreferrer">{w.title}</a>
+                          : w.title}
+                        {w.collaborator && <span className="with"> with {w.collaborator}</span>}
+                      </td>
+                      <td>{w.year}</td>
+                      <td>{w.duration}</td>
+                      <td>{w.format}</td>
+                      <td>
+                        {w.release
+                          ? (w.releaseLink
+                              ? <a href={w.releaseLink} target="_blank" rel="noopener noreferrer">{w.release}</a>
+                              : w.release)
+                          : "-"}
+                      </td>
                     </tr>
-                    <tr>
-                        <td><a href="https://soundcloud.com/bjarni/polytree">Polytree</a></td>
-                        <td>2019</td>
-                        <td>21:07</td>
-                        <td>8</td>
-                        <td><a href="https://sovnrecords.bandcamp.com/album/cendres">Cendres</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://soundcloud.com/mgbg/la-philosophie-du-langage">La Philosophie du Language*</a></td>
-                        <td>2018</td>
-                        <td>15:48</td>
-                        <td>32</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>Vicinity Pulse</td>
-                        <td>2018</td>
-                        <td>25-20</td>
-                        <td>4</td>
-                        <td>-</td>
-                    </tr>
-                      <tr>
-                          <td><a href="https://tartarugarecords.bandcamp.com/track/prisme">Prisme</a></td>
-                          <td>2017</td>
-                          <td>12:23</td>
-                          <td>8 &amp; 2</td>
-                          <td><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://tartarugarecords.bandcamp.com/track/epicycle">Epicycle</a></td>
-                          <td>2017</td>
-                          <td>12:00</td>
-                          <td>8 &amp; 2</td>
-                          <td><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://tartarugarecords.bandcamp.com/track/brackets">Brackets</a></td>
-                          <td>2017</td>
-                          <td>06:47</td>
-                          <td>2</td>
-                          <td><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://tartarugarecords.bandcamp.com/track/aperture">Aperture</a></td>
-                          <td>2017</td>
-                          <td>05:51</td>
-                          <td>2</td>
-                          <td><a href="https://tartarugarecords.bandcamp.com/album/lueur">Lueur</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://grannyrecords.bandcamp.com/track/mecolico">Mecolico</a></td>
-                          <td>2016</td>
-                          <td>10:45</td>
-                          <td>4 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/paths">Paths</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://grannyrecords.bandcamp.com/track/pulsatiles">Pulsatiles</a></td>
-                          <td>2016</td>
-                          <td>08:46</td>
-                          <td>2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/paths">Paths</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://grannyrecords.bandcamp.com/track/gallivant">Gallivant</a></td>
-                          <td>2016</td>
-                          <td>06:40</td>
-                          <td>2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/paths">Paths</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://soundcloud.com/bjarni/ubieties">Ubieties</a></td>
-                          <td>2015</td>
-                          <td>11:38</td>
-                          <td>8 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/paths">Paths</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://grannyrecords.bandcamp.com/track/verlat">Verlat</a></td>
-                          <td>2014</td>
-                          <td>15:04</td>
-                          <td>8 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/paths">Paths</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://vimeo.com/152695407">Journal Afghan</a></td>
-                          <td>2014</td>
-                          <td>38:45</td>
-                          <td>Film</td>
-                          <td><a href="http://www.studio-shaiprod.com">Studio Shaiprod</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://grannyrecords.bandcamp.com/track/aukera">Aukera</a></td>
-                          <td>2013</td>
-                          <td>09:38</td>
-                          <td>4 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/processes">Processes &amp; Potentials</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://soundcloud.com/bjarni/portholes">Portholes</a></td>
-                          <td>2012</td>
-                          <td>08:56</td>
-                          <td>8 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/processes">Processes &amp; Potentials</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/momentaries">Momentaries</a></td>
-                          <td>2012</td>
-                          <td>06:21</td>
-                          <td>8 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/processes">Processes &amp; Potentials</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/signac">Signac</a></td>
-                          <td>2012</td>
-                          <td>07:19</td>
-                          <td>8 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/processes">Processes &amp; Potentials</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/concomitance">Concomittance</a></td>
-                          <td>2012</td>
-                          <td>07:21</td>
-                          <td>4 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/processes">Processes &amp; Potentials</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/pedicel">Pedicel</a></td>
-                          <td>2012</td>
-                          <td>08:19</td>
-                          <td>4 &amp; 2</td>
-                          <td><a href="http://www.bjarni-gunnarsson.net/processes">Processes &amp; Potentials</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/pedicel">Boundary Particulars</a></td>
-                          <td>2012</td>
-                          <td>35:11</td>
-                          <td>4 &amp; 2</td>
-                          <td>-</td>
-                      </tr>
-                      <tr>
-                          <td>Beryl</td>
-                          <td>2012</td>
-                          <td>08:30</td>
-                          <td>2</td>
-                          <td>-</td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://soundcloud.com/bjarni/fallacies">Fallacies**</a></td>
-                          <td>2011</td>
-                          <td>24:33</td>
-                          <td> 192 & 832 (WFS)</td>
-                          <td>-</td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://vimeo.com/76064055">O Sal Da Lua</a></td>
-                          <td>2011</td>
-                          <td>07:48</td>
-                          <td>Film</td>
-                          <td>-</td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://soundcloud.com/mgbg/limaginaire-du-parleur">L'imaginaire du parleur*</a></td>
-                          <td>2011</td>
-                          <td>12:36</td>
-                          <td>8 & 2</td>
-                          <td><a href="https://sonology.bandcamp.com/releases">Post Scriptum</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://soundcloud.com/bjarni/grey-seeds">Grey Seeds</a></td>
-                          <td>2010</td>
-                          <td>10:20</td>
-                          <td>4 &amp; 2</td>
-                          <td>-</td>
-                      </tr>
-                      <tr>
-                          <td><a href="http://www.franceculture.fr/emission-l-atelier-de-la-creation-dia-de-mucho-vispera-de-nada-2013-04-16">Día de mucho, víspera de nada***</a></td>
-                          <td>2010</td>
-                          <td>60:01</td>
-                          <td>Radiophonic</td>
-                          <td><a href="http://www.franceculture.fr/emission-l-atelier-de-la-creation-dia-de-mucho-vispera-de-nada-2013-04-16">France Culture</a></td>
-                      </tr>
-                      <tr>
-                          <td>Windveine</td>
-                          <td>2010</td>
-                          <td>09:43</td>
-                          <td>192 (WFS)</td>
-                          <td>-</td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://soundcloud.com/bjarni/angst">Angst</a></td>
-                          <td>2010</td>
-                          <td>12:02</td>
-                          <td>8 &amp; 2</td>
-                          <td>-</td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://vimeo.com/8825907">Timeless</a></td>
-                          <td>2010</td>
-                          <td>09:12</td>
-                          <td>Film</td>
-                          <td>-</td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/dried-up">Dried up</a></td>
-                          <td>2009</td>
-                          <td>07:02</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006​-​2009</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/fingrafjall">Fingrafjall</a></td>
-                          <td>2009</td>
-                          <td>08:33</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006​-​2009</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/aftur">Aftur</a></td>
-                          <td>2008</td>
-                          <td>06:27</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006​-​2009</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/detta-saman">Detta saman</a></td>
-                          <td>2008</td>
-                          <td>06:14</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006​-​2009</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/timeout">Timeout</a></td>
-                          <td>2008</td>
-                          <td>06:27</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006​-​2009</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/undrun">Undrun</a></td>
-                          <td>2007</td>
-                          <td>06:17</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006​-​2009</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://bjarni.bandcamp.com/track/blindni">Blindi</a></td>
-                          <td>2006</td>
-                          <td>08:27</td>
-                          <td>2</td>
-                          <td><a href="https://bjarni.bandcamp.com/album/safn-2006-2009">Safn 2006​-​2009</a></td>
-                      </tr>
-                      <tr>
-                          <td><a href="https://soundcloud.com/bjarni/samt-mis">Samtímis</a></td>
-                          <td>2006</td>
-                          <td>10:27</td>
-                          <td>2</td>
-                          <td>-</td>
-                      </tr>
-                  </tbody>
+                  ))}
+                </tbody>
               </table>
           </div>
       </div><br />
-      <div className="row">
-          <div className="col-lg-12">
-              * With Marie Guilleray
-          </div>
-          <div className="col-lg-12">
-              ** With Miguel Negrão
-          </div>
-          <div className="col-lg-12">
-              *** With Jacob Stambach
-          </div>
-      </div>
-    
       <div className="row">
           <div className="col-lg-12">
               <div className="date" style={compositionsStyle}>Releases</div>
@@ -599,14 +152,14 @@ function Works() {
                         <td>K7 / Digital</td>
                     </tr>
                       <tr>
-                          <td><a href="http://www.bjarni-gunnarsson.net/paths">Paths</a></td>
+                          <td><Link to="/paths">Paths</Link></td>
                           <td><a href="http://www.grannyrecords.org">Granny Records</a></td>
                           <td>2016</td>
                           <td>Solo</td>
                           <td>CD / Digital</td>
                       </tr>
                       <tr>
-                          <td><a href="http://www.bjarni-gunnarsson.net/processes">Processes &amp; Potentials</a></td>
+                          <td><Link to="/processes">Processes &amp; Potentials</Link></td>
                           <td><a href="https://www.3leaves-label.com">3 Leaves</a></td>
                           <td>2013</td>
                           <td>Solo</td>

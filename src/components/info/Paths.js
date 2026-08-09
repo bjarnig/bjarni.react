@@ -73,7 +73,7 @@ function Paths() {
               <hr />
 
               <p><a href="http://www.grannyrecords.org">granny records</a></p>
-              <p><a href="http://bjarni-gunnarsson.net/paths">bjarni-gunnarsson.net/paths</a></p>
+              <p><a href="https://bjarni-gunnarsson.net/paths">bjarni-gunnarsson.net/paths</a></p>
               <p><a href="http://soundcloud.com/bjarni">soundcloud.com/bjarni</a></p>
               <p><a href="https://soundcloud.com/grannyrecords">soundcloud.com/grannyrecords</a></p>
 

@@ -11,7 +11,7 @@ function Press() {
         description="Press, reviews, and writings about Bjarni Gunnarsson's albums — UPICS, Lueur, Paths, Processes & Potentials, Safn 2006-2009 — and Einóma releases."
         path="/press"
       />
-      <div className="content press-page">
+      <div className="content press-page prose">
 
         <ul className="nav nav-pills">
           <li>

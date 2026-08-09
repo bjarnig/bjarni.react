@@ -594,3 +594,80 @@ iframe {
 }
 /* 
 #phonemenu { display: none;}	 */
+
+/* ---------------------------------------------------------------
+   Reading typography for text-heavy pages (.prose).
+   Follows the course-note style: constrained measure, serif headers
+   with a hairline rule, muted italic links in running text.
+   Image-grid pages are deliberately left full width.
+   --------------------------------------------------------------- */
+
+/* Measure applies to running text only. Constraining the container instead
+   squeezes multi-column layouts (the bio grid) and wide tables (the catalog). */
+.prose p,
+.prose li {
+	max-width: 52rem;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+	font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.prose h1 {
+	font-size: 2rem;
+	margin: 0 0 0.6rem;
+	padding-bottom: 0.7rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.prose h2 {
+	font-size: 1.35rem;
+	margin: 2.8rem 0 0.9rem;
+	padding-bottom: 0.45rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.prose h3 {
+	font-size: 1.05rem;
+	margin: 1.8rem 0 0.5rem;
+}
+
+.prose p {
+	line-height: 1.6;
+}
+
+/* Paragraph links only. Not list items: the nav pills are li > a, and table
+   links keep their brighter colour. */
+.prose p a {
+	color: #8b94ac;
+	font-style: italic;
+}
+
+.prose p a:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+/* Homepage standfirst under the image grid. */
+.intro {
+	max-width: 52rem;
+	margin: 2.5rem auto 0;
+	line-height: 1.6;
+	color: #cfd2da;
+}
+
+.intro a {
+	color: #8b94ac;
+	font-style: italic;
+}
+
+/* Collaborator note next to a catalog title. */
+.with {
+	color: #8b94ac;
+	font-style: italic;
+	font-size: 0.9em;
+}
