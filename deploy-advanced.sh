@@ -59,9 +59,30 @@ if [ "${SKIP_BUILD:-}" != "1" ]; then
     echo -e "${GREEN}✅ Build completed successfully${NC}"
 fi
 
+# Routes that need an extensionless mirror key (see Step 2b for why).
+# Computed before the sync so those keys can be shielded from --delete.
+ROUTE_KEYS=()
+while IFS= read -r f; do
+  route="${f#dist/}"
+  route="${route%/index.html}"
+  [ "$route" = "index.html" ] && continue   # the homepage needs no mirror key
+  case "$route" in assets|assets/*) continue ;; esac
+  ROUTE_KEYS+=("$route")
+done < <(find dist -name index.html | sort)
+
 # Step 2: Sync to S3
+#
+# The mirror keys exist only in the bucket, never in dist/, so a bare --delete
+# removes them and the site serves the SPA shell on every deep route until
+# Step 2b finishes. An interrupted sync leaves it that way. Excluding them
+# keeps the live keys in place throughout; Step 2b then overwrites them.
 echo -e "${YELLOW}☁️  Syncing to S3...${NC}"
-aws s3 sync dist/ s3://$S3_BUCKET --delete --region $S3_REGION
+SYNC_EXCLUDES=()
+for key in "${ROUTE_KEYS[@]}"; do
+  SYNC_EXCLUDES+=(--exclude "$key")
+done
+
+aws s3 sync dist/ s3://$S3_BUCKET --delete --region $S3_REGION "${SYNC_EXCLUDES[@]}"
 
 if [ $? -ne 0 ]; then
     echo -e "${RED}❌ S3 sync failed!${NC}"
@@ -79,21 +100,26 @@ echo -e "${GREEN}✅ S3 sync completed successfully${NC}"
 # Content-Type text/html) makes /about resolve to the prerendered file
 # directly, so crawlers and humans get per-route content.
 echo -e "${YELLOW}🪞  Mirroring prerendered routes to extensionless keys...${NC}"
-PRERENDERED_ROUTES=()
-for d in dist/*/; do
-  route="${d#dist/}"
-  route="${route%/}"
-  if [ -f "dist/$route/index.html" ] && [ "$route" != "assets" ]; then
-    PRERENDERED_ROUTES+=("$route")
-  fi
-done
+PRERENDERED_ROUTES=("${ROUTE_KEYS[@]}")
 
+# Copy server-side (S3 to S3) rather than re-uploading the local file: the
+# object is already in the bucket from the sync above, and a same-bucket copy
+# is ~60x faster and does not depend on upstream bandwidth.
 for route in "${PRERENDERED_ROUTES[@]}"; do
-  aws s3 cp "dist/$route/index.html" "s3://$S3_BUCKET/$route" \
-    --content-type "text/html; charset=utf-8" \
-    --region "$S3_REGION" \
-    --only-show-errors
-  echo -e "${BLUE}   /$route → s3://$S3_BUCKET/$route${NC}"
+  # One retry: a missing key silently falls back to the SPA shell via the 404 rule.
+  if ! aws s3 cp "s3://$S3_BUCKET/$route/index.html" "s3://$S3_BUCKET/$route" \
+        --content-type "text/html; charset=utf-8" \
+        --metadata-directive REPLACE \
+        --region "$S3_REGION" \
+        --only-show-errors \
+     && ! aws s3 cp "s3://$S3_BUCKET/$route/index.html" "s3://$S3_BUCKET/$route" \
+        --content-type "text/html; charset=utf-8" \
+        --metadata-directive REPLACE \
+        --region "$S3_REGION" \
+        --only-show-errors; then
+    echo -e "${RED}❌ Failed to mirror /$route after retry${NC}"
+    exit 1
+  fi
 done
 
 echo -e "${GREEN}✅ Mirrored ${#PRERENDERED_ROUTES[@]} prerendered route(s)${NC}"

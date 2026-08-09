@@ -94,10 +94,36 @@ async function main() {
       const page = await browser.newPage();
       const url = `${ORIGIN}${route}`;
       try {
-        await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
+        // Wait on the React tree, not on the network: routes with many large
+        // S3 images never reach networkidle0 inside the timeout, which silently
+        // yields an unrendered shell for the heaviest (and most important) pages.
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        await page.waitForFunction(
+          () => document.querySelector('#root')?.children.length > 0,
+          { timeout: 30000 }
+        );
         // Helmet writes async; small wait covers the next microtask.
         await new Promise((r) => setTimeout(r, 200));
+
+        // Helmet only owns tags it rendered, so index.html's baseline meta
+        // survives alongside the per-route one and every page ships duplicates.
+        // Drop a baseline tag whenever Helmet supplied the same key.
+        await page.evaluate(() => {
+          const keyOf = (m) => m.getAttribute('name') || m.getAttribute('property');
+          const owned = new Set(
+            [...document.querySelectorAll('meta[data-rh="true"]')].map(keyOf)
+          );
+          document.querySelectorAll('meta:not([data-rh])').forEach((m) => {
+            if (owned.has(keyOf(m))) m.remove();
+          });
+        });
+
         const html = await page.evaluate(() => '<!DOCTYPE html>\n' + document.documentElement.outerHTML);
+
+        // Helmet's marker. Its absence means we captured the shell.
+        if (!html.includes('data-rh="true"')) {
+          throw new Error('no Helmet-rendered meta in captured HTML');
+        }
 
         // Rewrite absolute hrefs/srcs that may point at the preview origin
         // back to relative paths (defense in depth — they shouldn't appear).
