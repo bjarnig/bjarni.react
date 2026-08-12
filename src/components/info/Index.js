@@ -126,21 +126,6 @@ function About() {
                 </div>
               </div>
 
-              <div className="row">
-                <div className="col-lg-12">
-                  <p className="intro">
-                    Bjarni Gunnarsson is a composer and programmer investigating the
-                    generative behaviour of sound in computational processes. His work
-                    examines how sound organisation emerges from interactions, exploring
-                    feedback, inference, and networks. He teaches algorithmic composition
-                    and computer music at the Institute of Sonology in The Hague.
-                    {' '}<Link to="/about">More about the work</Link>, or browse the
-                    {' '}<Link to="/works">catalog of compositions</Link>.
-                  </p>
-                </div>
-              </div>
-
-
 
  {/*
               <div className="row">

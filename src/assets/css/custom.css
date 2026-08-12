@@ -419,6 +419,22 @@ iframe {
 	}
 }
 
+/* Performances table on mobile: keep Event + Date, drop Venue/Location.
+   Overrides the generic column-hiding rules above via the extra class. */
+@media screen and (max-width: 768px) {
+	.content .table.performances th:nth-child(2),
+	.content .table.performances td:nth-child(2),
+	.content .table.performances th:nth-child(3),
+	.content .table.performances td:nth-child(3) {
+		display: none;
+	}
+
+	.content .table.performances th:nth-child(4),
+	.content .table.performances td:nth-child(4) {
+		display: table-cell;
+	}
+}
+
 .content p {
 	margin-bottom: 1.5em;
 	line-height: 1.6;
@@ -603,10 +619,13 @@ iframe {
    --------------------------------------------------------------- */
 
 /* Measure applies to running text only. Constraining the container instead
-   squeezes multi-column layouts (the bio grid) and wide tables (the catalog). */
+   squeezes multi-column layouts (the bio grid) and wide tables (the catalog).
+   In em, not rem: this theme sets html{font-size:10px}, so rem values resolve
+   to roughly two thirds of their apparent size. 46em ~= 644px at the 14px body
+   text, which is wider than the bio column and so only bites on full-width pages. */
 .prose p,
 .prose li {
-	max-width: 52rem;
+	max-width: 46em;
 }
 
 .prose h1,
@@ -647,15 +666,21 @@ iframe {
 	font-style: italic;
 }
 
+/* The bio sidebar is a link list dressed as paragraphs, not running text. */
+.prose .biolinks p a {
+	color: #A3CEF1;
+	font-style: normal;
+}
+
 .prose p a:hover {
 	text-decoration: underline;
 	text-underline-offset: 3px;
 }
 
-/* Homepage standfirst under the image grid. */
+/* Homepage standfirst under the image grid. em, not rem: see the note above. */
 .intro {
-	max-width: 52rem;
-	margin: 2.5rem auto 0;
+	max-width: 46em;
+	margin: 2.5em 0 0;   /* left-aligned with the image grid, not centred */
 	line-height: 1.6;
 	color: #cfd2da;
 }

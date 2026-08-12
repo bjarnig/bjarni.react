@@ -354,7 +354,7 @@ function Works() {
       <div className="row">
           <div className="col-lg-12">
               <div className="date" style={compositionsStyle}>Selected Performances</div>
-              <table className="table">
+              <table className="table performances">
                   <thead>
                       <tr>
                           <th>Event</th>
