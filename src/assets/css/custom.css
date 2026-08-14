@@ -509,20 +509,26 @@ iframe {
 	font-weight: bold;
 	text-decoration: none;
 }
-/* Desktop: grouped sidebar next to the bio, hung off a hairline rule. */
+/* Desktop: grouped sidebar next to the bio, hung off a hairline rule.
+   One font-size here is the whole block's scale; everything below is in em,
+   so the mobile step is a single declaration (see the 767px query). */
 .biolinks {
+	font-size: 14px;   /* the theme's body size */
 	padding-left: 1.6em;
 	border-left: 1px solid rgba(163, 206, 241, 0.35);
 }
 
 .biolinks .linkgroup { margin-bottom: 1.6em; }
 
+/* Same serif voice as the .prose headers, so the labels read as part of the
+   page rather than as UI chrome. The family is explicit: the theme's
+   h1-h6 rule would otherwise put these in Poppins. */
 .biolinks .linkgroup h4 {
-	font-size: 10px;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-	color: #8b94ac;
-	margin: 0 0 0.5em;
+	font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+	font-weight: 700;
+	font-size: 1em;
+	color: #cfd2da;
+	margin: 0 0 0.4em;
 }
 
 .biolinks ul {
@@ -535,13 +541,13 @@ iframe {
 
 .biolinks a,
 .prose .biolinks a {
-	font-size: 13px;
+	font-size: 0.95em;
 	color: #A3CEF1;
 	font-style: normal;
 }
 
 .biolinks .biomail {
-	font-size: 11px;
+	font-size: 0.85em;
 	color: #8b94ac;
 }
 
@@ -596,7 +602,10 @@ iframe {
 	.content h1 { font-size: 14px;}
 	
 	.content p { font-size: 12px; }
-	
+
+	/* Steps the whole link block with the body text: everything in it is in em. */
+	.biolinks { font-size: 12px; }
+
 	.navbar-brand { font-size: 2em; }
 	
 	.release-info { display: none; }
