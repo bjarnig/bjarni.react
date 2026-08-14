@@ -509,8 +509,41 @@ iframe {
 	font-weight: bold;
 	text-decoration: none;
 }
-.biolinks { padding-left : 10%}
-.biolinks a { font-size: 11px; }
+/* Desktop: grouped sidebar next to the bio, hung off a hairline rule. */
+.biolinks {
+	padding-left: 1.6em;
+	border-left: 1px solid rgba(163, 206, 241, 0.35);
+}
+
+.biolinks .linkgroup { margin-bottom: 1.6em; }
+
+.biolinks .linkgroup h4 {
+	font-size: 10px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #8b94ac;
+	margin: 0 0 0.5em;
+}
+
+.biolinks ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.biolinks li { line-height: 1.7; }
+
+.biolinks a,
+.prose .biolinks a {
+	font-size: 13px;
+	color: #A3CEF1;
+	font-style: normal;
+}
+
+.biolinks .biomail {
+	font-size: 11px;
+	color: #8b94ac;
+}
 
 /* Responsive bio divider - only shows on mobile */
 .bio-divider {
@@ -594,6 +627,36 @@ iframe {
 		font-size: 0.9em;
 	}
 }
+/* The bio grid stacks below 992px, so the sidebar stops being a sidebar and
+   becomes two columns under the text: Listen/Research | Projects/Elsewhere. */
+@media screen and (max-width: 991px) {
+	/* Column flow, not row: it fills groups 1,2 down the left column and 3,4
+	   down the right, rather than 1,2 across the top. */
+	.biolinks {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-auto-flow: column;
+		column-gap: 1.5em;
+		row-gap: 1.8em;
+		padding-left: 0;
+		border-left: 0;
+		margin-top: 2em;
+		padding-top: 1.8em;
+		border-top: 1px solid rgba(163, 206, 241, 0.35);
+		text-align: left;   /* the bio above is justified; the link list is not */
+	}
+
+	.biolinks .linkgroup { margin-bottom: 0; }
+
+	/* Explicit row: with column flow an auto-placed spanning item lands in a
+	   third column instead of under the two. */
+	.biolinks .biomail {
+		grid-column: 1 / -1;
+		grid-row: 3;
+		margin: 0.6em 0 0;
+	}
+}
 
 @media screen and (min-width: 768px) and (max-width: 1024px)  {
 	.frontImage {
@@ -664,12 +727,6 @@ iframe {
 .prose p a {
 	color: #8b94ac;
 	font-style: italic;
-}
-
-/* The bio sidebar is a link list dressed as paragraphs, not running text. */
-.prose .biolinks p a {
-	color: #A3CEF1;
-	font-style: normal;
 }
 
 .prose p a:hover {

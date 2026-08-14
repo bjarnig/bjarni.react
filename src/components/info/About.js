@@ -11,6 +11,43 @@ import SEO from '../common/SEO';
 const imageurl = 'https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/';
 const about = imageurl + 'bjarni-gunnarsson.png';
 
+// Groups are labelled on desktop; on mobile the labels are hidden and the
+// links reflow into one separated run (see .biolinks in custom.css).
+const linkGroups = [
+  {
+    label: 'Listen',
+    links: [
+      { name: 'Bandcamp', url: 'https://bjarni.bandcamp.com' },
+      { name: 'SoundCloud', url: 'https://soundcloud.com/bjarni' },
+      { name: 'Discogs', url: 'https://www.discogs.com/artist/5895598-Bjarni-%C3%9E%C3%B3r-Gunnarsson' },
+    ],
+  },
+  {
+    label: 'Research',
+    links: [
+      { name: 'GitHub', url: 'https://github.com/bjarnig' },
+      { name: 'Academia.edu', url: 'https://sonology.academia.edu/BjarniGunnarsson' },
+      { name: 'Research Catalogue', url: 'https://www.researchcatalogue.net/profile/?person=427702' },
+    ],
+  },
+  {
+    label: 'Projects',
+    links: [
+      { name: 'Sonology', url: 'http://sonology.org' },
+      { name: 'Einóma', url: 'http://einoma.com' },
+      { name: 'MGBG', url: 'https://soundcloud.com/mgbg' },
+    ],
+  },
+  {
+    label: 'Elsewhere',
+    links: [
+      { name: 'Youtube', url: 'https://www.youtube.com/@bjarni-gunnarsson' },
+      { name: 'Mixcloud', url: 'https://www.mixcloud.com/bjarnig/' },
+      { name: 'Instagram', url: 'https://instagram.com/blindni' },
+    ],
+  },
+];
+
 function About() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -48,19 +85,19 @@ function About() {
                 
                 <div className="col-lg-4">
                   <div className="biolinks">
-                    <p> <a href="https://bjarni.bandcamp.com" target="_blank" rel="noopener noreferrer">Bandcamp</a></p>
-                    <p> <a href="https://soundcloud.com/bjarni" target="_blank" rel="noopener noreferrer">SoundCloud</a></p>
-                    <p> <a href="https://github.com/bjarnig" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-                    <p> <a href="https://www.discogs.com/artist/5895598-Bjarni-%C3%9E%C3%B3r-Gunnarsson" target="_blank" rel="noopener noreferrer">Discogs</a></p>
-                    <p> <a href="https://sonology.academia.edu/BjarniGunnarsson" target="_blank" rel="noopener noreferrer">Academia.edu</a></p>
-                    <p> <a href="https://www.researchcatalogue.net/profile/?person=427702" target="_blank" rel="noopener noreferrer">Research Catalogue</a></p>
-                    <p> <a href="http://sonology.org" target="_blank" rel="noopener noreferrer">Sonology</a></p>
-                    <p> <a href="http://einoma.com" target="_blank" rel="noopener noreferrer">Einóma</a></p>
-                    <p> <a href="https://soundcloud.com/mgbg" target="_blank" rel="noopener noreferrer">MGBG</a></p>
-                    <p> <a href="https://www.youtube.com/@bjarni-gunnarsson" target="_blank" rel="noopener noreferrer">Youtube</a></p>
-                    <p> <a href="https://www.mixcloud.com/bjarnig/" target="_blank" rel="noopener noreferrer">Mixcloud</a></p>
-                    <p> <a href="https://instagram.com/blindni" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-                    <p style={{ fontSize: '11px' }}> bjarnig@gmail.com </p>
+                    {linkGroups.map((group) => (
+                      <div className="linkgroup" key={group.label}>
+                        <h4>{group.label}</h4>
+                        <ul>
+                          {group.links.map((link) => (
+                            <li key={link.url}>
+                              <a href={link.url} target="_blank" rel="noopener noreferrer">{link.name}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                    <p className="biomail">bjarnig@gmail.com</p>
                     {/* <p> [ Photo from <a href="https://www.azimuthfoundation.net/6-2/">Azimuth #6-2</a> ]</p> */}
                   </div>
                 </div>
