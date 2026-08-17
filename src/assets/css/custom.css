@@ -515,20 +515,31 @@ iframe {
 .biolinks {
 	font-size: 14px;   /* the theme's body size */
 	padding-left: 1.6em;
+	padding-top: 1.5em;   /* sits below the first line of the bio */
 	border-left: 1px solid rgba(163, 206, 241, 0.35);
 }
 
 .biolinks .linkgroup { margin-bottom: 1.6em; }
 
-/* Same serif voice as the .prose headers, so the labels read as part of the
-   page rather than as UI chrome. The family is explicit: the theme's
-   h1-h6 rule would otherwise put these in Poppins. */
+/* The group names are kept for screen readers only; sighted readers get the
+   short rule below instead. */
 .biolinks .linkgroup h4 {
-	font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
-	font-weight: 700;
-	font-size: 1em;
-	color: #cfd2da;
-	margin: 0 0 0.4em;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+/* Short rule between groups, in the same hairline colour as the column edge. */
+.biolinks .linkgroup + .linkgroup::before {
+	content: "";
+	display: block;
+	width: 2.5em;
+	height: 1px;
+	background: rgba(163, 206, 241, 0.35);
+	margin-bottom: 1.5em;
 }
 
 .biolinks ul {
@@ -537,12 +548,14 @@ iframe {
 	padding: 0;
 }
 
-.biolinks li { line-height: 1.7; }
+.biolinks li { line-height: 1.85; }
 
-.biolinks a,
-.prose .biolinks a {
-	font-size: 0.95em;
-	color: #A3CEF1;
+/* Outspecifies the homepage-grid rule above, which also matches this column and
+   forces its links to bold white. Poppins 200 is the site's link weight. */
+.bio .row .col-lg-4 .biolinks a {
+	font-size: 1em;   /* same as every other content link on the site */
+	font-weight: 200;
+	color: #A3CEF1 !important;
 	font-style: normal;
 }
 
@@ -657,6 +670,19 @@ iframe {
 	}
 
 	.biolinks .linkgroup { margin-bottom: 0; }
+
+	/* Column flow puts groups 1,2 in the left column and 3,4 in the right, so
+	   the rule belongs on the lower group of each pair, not on every sibling. */
+	.biolinks .linkgroup + .linkgroup::before { content: none; }
+
+	.biolinks .linkgroup:nth-child(even)::before {
+		content: "";
+		display: block;
+		width: 2.5em;
+		height: 1px;
+		background: rgba(163, 206, 241, 0.35);
+		margin-bottom: 1.4em;
+	}
 
 	/* Explicit row: with column flow an auto-placed spanning item lands in a
 	   third column instead of under the two. */
