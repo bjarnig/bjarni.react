@@ -515,7 +515,7 @@ iframe {
 .biolinks {
 	font-size: 14px;   /* the theme's body size */
 	padding-left: 1.6em;
-	padding-top: 1.5em;   /* sits below the first line of the bio */
+	padding-top: 0.85em;   /* sits just below the first line of the bio */
 	border-left: 1px solid rgba(163, 206, 241, 0.35);
 }
 
