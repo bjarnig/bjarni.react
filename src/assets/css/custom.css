@@ -734,23 +734,25 @@ iframe {
 	color: #ffffff;
 }
 
+/* em, not rem: this theme sets html{font-size:62.5%}, so 1rem is 10px and
+   these headers computed smaller than the 14px body text they head. */
 .prose h1 {
-	font-size: 2rem;
-	margin: 0 0 0.6rem;
-	padding-bottom: 0.7rem;
+	font-size: 2em;
+	margin: 0 0 0.6em;
+	padding-bottom: 0.7em;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .prose h2 {
-	font-size: 1.35rem;
-	margin: 2.8rem 0 0.9rem;
-	padding-bottom: 0.45rem;
+	font-size: 1.35em;
+	margin: 2.8em 0 0.9em;
+	padding-bottom: 0.45em;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .prose h3 {
-	font-size: 1.05rem;
-	margin: 1.8rem 0 0.5rem;
+	font-size: 1.05em;
+	margin: 1.8em 0 0.5em;
 }
 
 .prose p {
