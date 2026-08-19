@@ -32,7 +32,7 @@ function Writings() {
         path="/writings"
         type="article"
       />
-      <div className="content prose">
+      <div className="content">
 
         <div className="music-submenu">
 
