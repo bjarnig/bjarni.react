@@ -41,6 +41,18 @@ function CourseArticleList({ baseUrl, articles }) {
               </a>
             </React.Fragment>
           )}
+          {(article.tools || []).map((tool) => (
+            <React.Fragment key={tool.url}>
+              {"  ·  "}
+              <a
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {tool.label}
+              </a>
+            </React.Fragment>
+          ))}
         </p>
       </article>
     );
