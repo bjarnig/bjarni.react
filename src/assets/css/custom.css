@@ -796,3 +796,45 @@ iframe {
 	font-style: italic;
 	font-size: 0.9em;
 }
+
+/* Course class actions: download, slides, and any web tools for that class.
+   Was a flat dot-separated line under the slide image, which read as leftover
+   text rather than as things you can do. Outlined so a row of four sits light
+   under a full-width image, with the house 4px radius and .btn geometry. */
+.course-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6em;
+	margin: 1.1em 0 0;
+}
+
+.course-links a {
+	display: inline-block;
+	padding: 8px 14px;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.4285;
+	color: #cfd2da;
+	white-space: nowrap;
+	transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.course-links a:hover,
+.course-links a:focus {
+	color: #ffffff;
+	border-color: rgba(255, 255, 255, 0.55);
+	background-color: rgba(255, 255, 255, 0.06);
+	text-decoration: none;
+}
+
+/* Narrow screens: let the buttons fill the width rather than wrap awkwardly
+   mid-label, since "Download materials" is the longest and breaks first. */
+@media screen and (max-width: 480px) {
+	.course-links a {
+		flex: 1 1 100%;
+		text-align: center;
+		white-space: normal;
+	}
+}

@@ -21,7 +21,7 @@ function CourseArticleList({ baseUrl, articles }) {
         >
           <OpacityImage imageUrl={imageUrl} />
         </a>
-        <p>
+        <div className="course-links">
           <a
             href={zipUrl}
             target="_blank"
@@ -30,30 +30,25 @@ function CourseArticleList({ baseUrl, articles }) {
             Download materials
           </a>
           {article.slides && (
-            <React.Fragment>
-              {"  ·  "}
-              <a
-                href={article.slides}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Slides
-              </a>
-            </React.Fragment>
+            <a
+              href={article.slides}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Slides
+            </a>
           )}
           {(article.tools || []).map((tool) => (
-            <React.Fragment key={tool.url}>
-              {"  ·  "}
-              <a
-                href={tool.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {tool.label}
-              </a>
-            </React.Fragment>
+            <a
+              key={tool.url}
+              href={tool.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {tool.label}
+            </a>
           ))}
-        </p>
+        </div>
       </article>
     );
 
