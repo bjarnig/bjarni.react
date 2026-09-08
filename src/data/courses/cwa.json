@@ -1,33 +1,6 @@
 {
-  "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2025-2026/",
+  "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2026-2027/",
   "articles": [
-    { "date": "04.06.2026", "title": "Class 28, Exercises", "file": "cwa28" },
-    { "date": "28.05.2026", "title": "Class 27, Workshop 3", "file": "cwa27" },
-    { "date": "21.05.2026", "title": "Class 26, Composition Processes", "file": "cwa26" },
-    { "date": "07.05.2026", "title": "Class 25, Live Coding", "file": "cwa25" },
-    { "date": "30.04.2026", "title": "Class 24, Own Works", "file": "cwa24" },
-    { "date": "16.04.2026", "title": "Class 23, Recap", "file": "cwa23" },
-    { "date": "09.04.2026", "title": "Class 22, IanniX", "file": "cwa22" },
-    { "date": "02.04.2026", "title": "Class 21, Sound Processes", "file": "cwa21" },
-    { "date": "26.03.2026", "title": "Class 20, CDP Workshop", "file": "cwa20" },
-    { "date": "19.03.2026", "title": "Class 19, Transformation", "file": "cwa19" },
-    { "date": "12.03.2026", "title": "Class 18, CDP", "file": "cwa18" },
-    { "date": "05.02.2026", "title": "Class 17, Control", "file": "cwa17" },
-    { "date": "29.01.2026", "title": "Class 16, Iterative Systems", "file": "cwa16" },
-    { "date": "22.01.2026", "title": "Class 15, Errors", "file": "cwa15" },
-    { "date": "14.01.2026", "title": "Class 14, Stochastic Synthesis", "file": "cwa14" },
-    { "date": "08.01.2026", "title": "Class 13, Microsound", "file": "cwa13" },
-    { "date": "18.12.2025", "title": "Class 12, Combine", "file": "cwa12" },
-    { "date": "11.12.2025", "title": "Class 11, Processing", "file": "cwa11" },
-    { "date": "04.12.2025", "title": "Class 10, Signals", "file": "cwa10" },
-    { "date": "27.11.2025", "title": "Class 09, Synthesis", "file": "cwa09" },
-    { "date": "20.11.2025", "title": "Class 08, Examples", "file": "cwa08" },
-    { "date": "13.11.2025", "title": "Class 07, Koenig", "file": "cwa07" },
-    { "date": "16.10.2025", "title": "Class 06, Xenakis", "file": "cwa06" },
-    { "date": "09.10.2025", "title": "Class 05, History", "file": "cwa05" },
-    { "date": "02.10.2025", "title": "Class 04, Workshop", "file": "cwa04" },
-    { "date": "25.09.2025", "title": "Class 03, Patterns", "file": "cwa03" },
-    { "date": "17.09.2025", "title": "Class 02, SuperCollider", "file": "cwa02" },
-    { "date": "11.09.2025", "title": "Class 01, Composing with Algorithms", "file": "cwa01" }
+    { "date": "10.09.2026", "title": "Class 01, Composing with Algorithms", "file": "cwa01", "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa01/1" }
   ]
 }
