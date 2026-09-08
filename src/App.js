@@ -24,9 +24,10 @@ const Processes = lazy(() => import('./components/info/Processes'));
 const Courses = lazy(() => import('./components/courses/Courses'));
 const About = lazy(() => import('./components/info/About'));
 const Works = lazy(() => import('./components/info/Works'));
-// Course materials temporarily disabled — restore these to re-enable.
+// Course materials are gated per course: uncomment one to re-enable it.
+// Programming and Music 2 is open for 2026-2027; the others follow later.
 // const Pma = lazy(() => import('./components/courses/PMA'));
-// const Pmb = lazy(() => import('./components/courses/PMB'));
+const Pmb = lazy(() => import('./components/courses/PMB'));
 // const Cwa = lazy(() => import('./components/courses/CWA'));
 // const Workshops = lazy(() => import('./components/courses/Workshops'));
 const CoursesUnavailable = lazy(() => import('./components/courses/CoursesUnavailable'));
@@ -106,7 +107,7 @@ function App() {
             <Route path="/paths" element={<Paths />} />
             <Route path="/processes" element={<Processes />} />
             <Route path="/pma" element={<CoursesUnavailable />} />
-            <Route path="/pmb" element={<CoursesUnavailable />} />
+            <Route path="/pmb" element={<Pmb />} />
             <Route path="/cwa" element={<CoursesUnavailable />} />
             <Route path="/workshops" element={<CoursesUnavailable />} />
           </Routes>

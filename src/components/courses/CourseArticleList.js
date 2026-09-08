@@ -29,6 +29,18 @@ function CourseArticleList({ baseUrl, articles }) {
           >
             Download materials
           </a>
+          {article.slides && (
+            <React.Fragment>
+              {"  ·  "}
+              <a
+                href={article.slides}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Slides
+              </a>
+            </React.Fragment>
+          )}
         </p>
       </article>
     );
