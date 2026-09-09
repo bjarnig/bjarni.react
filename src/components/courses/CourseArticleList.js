@@ -41,6 +41,7 @@ function CourseArticleList({ baseUrl, articles }) {
           {(article.tools || []).map((tool) => (
             <a
               key={tool.url}
+              className="tool"
               href={tool.url}
               target="_blank"
               rel="noopener noreferrer"

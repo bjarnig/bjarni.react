@@ -829,6 +829,19 @@ iframe {
 	text-decoration: none;
 }
 
+/* Web tools are a different kind of thing from the class's own files: they are
+   standalone pages that outlive the course. Tinting their border with the site's
+   link blue (#A3CEF1) separates the two groups without adding a heading or a rule. */
+.course-links a.tool {
+	border-color: rgba(163, 206, 241, 0.45);
+}
+
+.course-links a.tool:hover,
+.course-links a.tool:focus {
+	border-color: rgba(163, 206, 241, 0.85);
+	background-color: rgba(163, 206, 241, 0.08);
+}
+
 /* Narrow screens: let the buttons fill the width rather than wrap awkwardly
    mid-label, since "Download materials" is the longest and breaks first. */
 @media screen and (max-width: 480px) {
