@@ -2,18 +2,6 @@
   "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2026-2027/",
   "articles": [
     {
-      "date": "23.09.2026",
-      "title": "Class 03, Control Flow",
-      "file": "pma03",
-      "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/pma03/1"
-    },
-    {
-      "date": "16.09.2026",
-      "title": "Class 02, Syntax",
-      "file": "pma02",
-      "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/pma02/1"
-    },
-    {
       "date": "09.09.2026",
       "title": "Class 01, Programming and Music 1",
       "file": "pma01",
