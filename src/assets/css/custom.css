@@ -522,6 +522,7 @@ iframe {
 	font-size: 14px;   /* the theme's body size */
 	padding-left: 1.6em;
 	padding-top: 0.85em;   /* sits just below the first line of the bio */
+	padding-bottom: 1.9em;   /* stretches the border-left ~5% further down */
 	border-left: 1px solid rgba(163, 206, 241, 0.35);
 }
 
@@ -675,6 +676,7 @@ iframe {
 		column-gap: 1.5em;
 		row-gap: 1.8em;
 		padding-left: 0;
+		padding-bottom: 0;   /* the vertical border-left is desktop-only */
 		border-left: 0;
 		margin-top: 2em;
 		padding-top: 1.8em;
