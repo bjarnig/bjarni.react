@@ -566,8 +566,9 @@ iframe {
 }
 
 .biolinks .biomail {
-	font-size: 0.85em;
-	color: #8b94ac;
+	font-size: 1em;
+	font-weight: 200;
+	color: #ffffff;
 }
 
 /* Responsive bio divider - only shows on mobile */
