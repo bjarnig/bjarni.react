@@ -12,13 +12,14 @@ function Music() {
         <StructuredData type="music" />
         <SEO
           title="Music - Bjarni Gunnarsson | Electronic Music Compositions"
-          description="Listen to electronic music compositions by Bjarni Gunnarsson. Featuring works like Vacuum (UPICS), Anticlines, Polytree, Volume and Void, and more process-based electronic music."
+          description="Electronic music compositions by Bjarni Gunnarsson, including Vacuum (UPICS), Anticlines, Polytree, and Volume and Void."
           path="/music"
           type="music.album"
         />
         <div className="container">
 
           <div className="content">
+            <h1 className="sr-only">Bjarni Gunnarsson - Music</h1>
 
             <div className="music-submenu">
 

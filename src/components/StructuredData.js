@@ -32,14 +32,19 @@ const StructuredData = ({ type = 'homepage' }) => {
         "@type": "Organization",
         "name": "Institute of Sonology, Royal Conservatory"
       },
-      "description": "Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition.",
+      "description": "Composer and programmer whose practice is centred on generative behaviours in computational processes, exploring networks, inference and feedback. Faculty at Institute of Sonology, The Hague.",
       "knowsAbout": [
         "Algorithmic Composition",
-        "Process-Based Sound",
-        "Generative Music",
+        "Generative Behaviours",
         "Computational Processes",
-        "Machine Learning",
+        "Networks",
+        "Inference",
+        "Feedback",
+        "Agent-Based Simulation",
+        "Small-World Graphs",
+        "Latent-Space Interpolation",
         "Database-Driven Composition",
+        "Machine Learning",
         "Variational Autoencoders",
         "Live Coding",
         "Electronic Music",
@@ -53,14 +58,14 @@ const StructuredData = ({ type = 'homepage' }) => {
         "Programming"
       ],
       "alumniOf": {
-        "@type": "Sonology",
+        "@type": "EducationalOrganization",
         "name": "Royal Conservatory of Music, Den Haag"
       },
       "image": {
         "@type": "ImageObject",
         "url": "https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/webimg/bjarni-gunnarsson.png",
         "name": "Bjarni Gunnarsson Portrait",
-        "description": "Portrait of Bjarni Gunnarsson, composer and programmer exploring generative sound through computational processes",
+        "description": "Portrait of Bjarni Gunnarsson, composer and programmer whose practice is centred on generative behaviours in computational processes",
         "width": 1200,
         "height": 630
       }

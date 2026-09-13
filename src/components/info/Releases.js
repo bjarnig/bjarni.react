@@ -56,12 +56,13 @@ function Releases() {
         <StructuredData type="music" />
         <SEO
           title="Releases - Bjarni Gunnarsson | Electronic Music Albums & EPs"
-          description="Latest releases from Bjarni Gunnarsson including UPICS, Anticlines, Cendres, Volume & Void, and Lueur. Process-based electronic music exploring computational sound generation."
+          description="Latest releases from Bjarni Gunnarsson: UPICS, Anticlines, Cendres, Volume & Void, and Lueur — process-based electronic music."
           path="/releases"
           type="music.album"
         />
         <div className="container">
           <div className="content">
+        <h1 className="sr-only">Bjarni Gunnarsson - Releases</h1>
         <ul className="nav nav-pills">
           <li className="active">
             <Link to="/releases">info</Link>

@@ -23,8 +23,8 @@ function Courses() {
       <>
         <StructuredData type="courses" />
         <SEO
-          title="Courses - Bjarni Gunnarsson | Algorithmic Composition & Computer Music"
-          description="Learn algorithmic composition and computer music with Bjarni Gunnarsson. Courses include Composing with Algorithms, Programming and Music 1 & 2, and specialized workshops."
+          title="Courses - Bjarni Gunnarsson"
+          description="Algorithmic composition and computer music courses with Bjarni Gunnarsson: Composing with Algorithms, Programming and Music 1 & 2, and workshops."
           path="/courses"
         />
         <div className="container">

@@ -56,13 +56,14 @@ function About() {
         <StructuredData type="person" />
         <SEO
           title="Biography - Bjarni Gunnarsson | Composer and Programmer"
-          description="Bjarni Gunnarsson explores generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition."
+          description="Bjarni Gunnarsson is a composer and programmer whose practice is centred on generative behaviours in computational processes: networks, inference, feedback."
           path="/about"
           image={about}
           type="profile"
         />
         <div className="container">
           <div className="content prose">
+            <h1 className="sr-only">Bjarni Gunnarsson - Biography</h1>
             <ul className="nav nav-pills"><li className="active"><Link to="/about">bio</Link></li>
             <li><Link to="/works">catalog</Link></li>
             </ul>

@@ -530,7 +530,8 @@ iframe {
 
 /* The group names are kept for screen readers only; sighted readers get the
    short rule below instead. */
-.biolinks .linkgroup h4 {
+.biolinks .linkgroup h4,
+.sr-only {
 	position: absolute;
 	width: 1px;
 	height: 1px;

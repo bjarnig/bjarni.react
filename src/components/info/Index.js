@@ -53,14 +53,15 @@ function About() {
       <>
         <StructuredData type="homepage" />
         <SEO
-          title="Bjarni Gunnarsson - Composer and Programmer | Process-Based Sound & Algorithmic Composition"
-          description="Composer and programmer exploring generative sound through computational processes. Faculty at Institute of Sonology, The Hague. Creator of process-based music systems and algorithmic composition."
+          title="Bjarni Gunnarsson - Composer and Programmer"
+          description="Bjarni Gunnarsson is a composer and programmer whose practice is centred on generative behaviours in computational processes. Faculty at Institute of Sonology."
           path="/"
           image={brwn1}
           imageAlt="Bjarni Gunnarsson - Composer and Programmer"
         />
         <div className="container">
           <div className="content">
+            <h1 className="sr-only">Bjarni Gunnarsson - Composer and Programmer</h1>
             <div className="row">
               <div className="col-lg-12"></div>
             </div>

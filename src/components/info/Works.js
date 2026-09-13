@@ -16,6 +16,7 @@ function Works() {
           path="/works"
         />
         <div className="content prose">
+          <h1 className="sr-only">Bjarni Gunnarsson - Catalog of Works</h1>
           <ul className="nav nav-pills">
             <li><Link to="/about">bio</Link></li>
             <li className="active"><Link to="/works">catalog</Link></li>
