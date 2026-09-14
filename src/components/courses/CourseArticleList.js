@@ -3,7 +3,8 @@ import OpacityImage from "./../common/OpacityImage";
 import shouldShowArticle from "./../../utils/shouldShowArticle";
 
 function CourseArticleList({ baseUrl, articles }) {
-  return articles.map((article, index) => {
+  // newest class first; the data files stay in teaching order
+  return [...articles].reverse().map((article, index) => {
     const zipUrl = `${baseUrl}${article.file}.zip`;
     const imageUrl = `${baseUrl}${article.file}.png`;
 

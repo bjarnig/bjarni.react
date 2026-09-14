@@ -1,6 +1,17 @@
 {
   "baseUrl": "https://s3.eu-central-1.amazonaws.com/bjarnigwebdocs/2026-2027/",
   "articles": [
-    { "date": "08.09.2026", "title": "Class 01, Introduction", "file": "pmb01", "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/pmb01/1" }
+    {
+      "date": "08.09.2026",
+      "title": "Class 01, Introduction",
+      "file": "pmb01",
+      "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/pmb01/1"
+    },
+    {
+      "date": "15.09.2026",
+      "title": "Class 02, Granular Synthesis",
+      "file": "pmb02",
+      "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/pmb02/1"
+    }
   ]
 }
