@@ -7,9 +7,30 @@
       "file": "cwa01",
       "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa01/1",
       "tools": [
-        { "label": "Cellular automata", "url": "https://slides.bjarni-gunnarsson.net/tools/ca/" },
-        { "label": "Chaotic maps", "url": "https://slides.bjarni-gunnarsson.net/tools/chaos/" },
-        { "label": "Event generator", "url": "https://slides.bjarni-gunnarsson.net/tools/events/" }
+        {
+          "label": "Cellular automata",
+          "url": "https://slides.bjarni-gunnarsson.net/tools/ca/"
+        },
+        {
+          "label": "Chaotic maps",
+          "url": "https://slides.bjarni-gunnarsson.net/tools/chaos/"
+        },
+        {
+          "label": "Event generator",
+          "url": "https://slides.bjarni-gunnarsson.net/tools/events/"
+        }
+      ]
+    },
+    {
+      "date": "17.09.2026",
+      "title": "Class 02, SuperCollider",
+      "file": "cwa02",
+      "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa02/1",
+      "tools": [
+        {
+          "label": "Signal chain",
+          "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa02/demos/chain/index.html"
+        }
       ]
     }
   ]

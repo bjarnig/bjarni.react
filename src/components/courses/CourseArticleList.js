@@ -7,6 +7,9 @@ function CourseArticleList({ baseUrl, articles }) {
   return [...articles].reverse().map((article, index) => {
     const zipUrl = `${baseUrl}${article.file}.zip`;
     const imageUrl = `${baseUrl}${article.file}.png`;
+    // the thumbnail opens the slides; it falls back to the zip for a class
+    // that has no slides yet, so the image is never a dead link
+    const imageHref = article.slides || zipUrl;
 
     const content = (
       <article key={index}>
@@ -16,7 +19,7 @@ function CourseArticleList({ baseUrl, articles }) {
         </div>
         <h1>{article.title}</h1>
         <a
-          href={zipUrl}
+          href={imageHref}
           target="_blank"
           rel="noopener noreferrer"
         >
