@@ -23,6 +23,10 @@ color: #ffffff;
    .prose headers Palatino. The title-ish divs that used to inherit Muli from
    here are pinned back to it further down (.date, .release-title). */
 font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* Stated here rather than left to Bootstrap's own body rule in style.css, so the
+   face and its size sit together. 15 rather than the 14 that rule sets: Avenir's
+   x-height is about 7% under Muli's, so 15px here reads as the old 14px did. */
+font-size: 15px;
 }
 
 h1 {
@@ -213,6 +217,12 @@ right: 55px;
 
 .music {
 	margin: 5% 5%;
+}
+
+/* Bootstrap sets h5 to 14px, which is under the 15px body above and so read as
+   smaller than the text it heads. */
+h5, .h5 {
+	font-size: 15px;
 }
 
 .music h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
