@@ -1,6 +1,9 @@
 
 body {
-padding-top: 60px;
+/* 48 rather than 60: the menu sits a little closer to the content. Narrow
+   layouts keep the old value, where the gap was already only ~16px and this
+   reduction left the content almost touching the bar (see the media query). */
+padding-top: 48px;
 /*background-color: #0C0A03;*/
 /*background-color: #13120B;*/
 /*background-color: #070806;*/
@@ -14,7 +17,12 @@ color: #ffffff;
 /*font-family: "Lucida Grande","Lucida Sans Unicode","Trebuchet MS",Helvetica,Arial,Verdana,sans-serif;*/
 /*font-family: 'Abel', sans-serif;*/
 /*font-family: Georgia, serif;*/
-font-family: 'Muli', sans-serif;
+/* Running text is the humanist sans, as in the course notes and /works/docs.
+   Headers keep their own faces, all of which are set explicitly: h1 Muli just
+   below, h2-h6 and .h1-.h6 Poppins, .navbar-brand Oswald, .navbar-nav Assistant,
+   .prose headers Palatino. The title-ish divs that used to inherit Muli from
+   here are pinned back to it further down (.date, .release-title). */
+font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -145,7 +153,7 @@ hr {
 	text-decoration: none;
 	text-transform: none;
 	/* font-family: 'Assistant', sans-serif; */
-	font-family: 'Assistant', sans-serif;
+	font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 1.2em;
 	/* color: #2C2C2C; */
 	background-color: #171b21;
@@ -324,6 +332,15 @@ iframe {
 .content strong {
 	color: #A3CEF1;
 	font-weight: bold;
+}
+
+/* These read as headings and used to take Muli by inheriting it from body.
+   Named explicitly so the body-font change above leaves them as they were. */
+.date,
+.content .date,
+.release-title,
+.content .release-title {
+	font-family: 'Muli', sans-serif;
 }
 
 .content .date {
@@ -742,6 +759,17 @@ iframe {
 	max-width: 46em;
 }
 
+/* Humanist sans for running text. Headers are left alone: they are Palatino
+   inside .prose and Poppins elsewhere, both set explicitly, so this reaches
+   paragraphs, list items and table cells only. Local macOS faces, as in the
+   course notes; Helvetica Neue is the fallback everywhere else. */
+.prose p,
+.prose li,
+.prose td,
+.prose dd {
+	font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .prose h1,
 .prose h2,
 .prose h3 {
@@ -860,4 +888,9 @@ iframe {
 		text-align: center;
 		white-space: normal;
 	}
+}
+
+/* Narrow screens: keep the original clearance under the fixed navbar. */
+@media (max-width: 900px) {
+	body { padding-top: 60px; }
 }
