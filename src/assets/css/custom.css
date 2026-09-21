@@ -546,10 +546,10 @@ iframe {
    One font-size here is the whole block's scale; everything below is in em,
    so the mobile step is a single declaration (see the 767px query). */
 .biolinks {
-	font-size: 14px;   /* the theme's body size */
+	font-size: 15px;   /* the theme's body size */
 	padding-left: 1.6em;
 	padding-top: 0.85em;   /* sits just below the first line of the bio */
-	padding-bottom: 0.45em;   /* stretches the border-left a bit further down */
+	padding-bottom: 0.45em;
 	border-left: 1px solid rgba(163, 206, 241, 0.35);
 }
 
@@ -583,7 +583,7 @@ iframe {
 	padding: 0;
 }
 
-.biolinks li { line-height: 1.85; }
+.biolinks li { line-height: 1.95; }   /* ~3px more air between the links */
 
 /* Outspecifies the homepage-grid rule above, which also matches this column and
    forces its links to bold white. Poppins 200 is the site's link weight. */
@@ -903,4 +903,14 @@ iframe {
 /* Narrow screens: keep the original clearance under the fixed navbar. */
 @media (max-width: 900px) {
 	body { padding-top: 60px; }
+}
+
+/* The rule beside the links should run down as far as the bio text does. Tuning
+   the padding only matches at one width, because the bio rewraps taller as the
+   column narrows while the link list does not. Stretching the two columns to
+   equal height matches at every width instead. Desktop only: below 992px the
+   block becomes a two-column grid under the text, with no rule at all. */
+@media (min-width: 992px) {
+	.bio .row { display: flex; }
+	.bio .row .biolinks { height: 100%; }
 }
