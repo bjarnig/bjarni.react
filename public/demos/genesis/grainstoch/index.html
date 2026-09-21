@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grainstoch — Web Audio demo</title>
+<link rel="stylesheet" href="../kit/kit.css">
+</head>
+<body>
+
+<h1>Grainstoch</h1>
+<p class="sub">A port of <code>Grainstoch.cpp</code> from
+<a href="https://github.com/bjarnig/Tether">Tether</a>, the grain layer of
+<code>moss</code> in Genesis. A pulsaret of <code>knum</code> breakpoints is emitted
+at <code>pitch</code>, filling <code>duty</code> of each period. Parameter names
+follow the UGen.</p>
+
+<p class="sub"><b>The walk happens between grains, not inside them.</b> Every emission
+re-walks the whole pulsaret before playing it, so <code>ampStep</code> is a
+grain-to-grain decorrelation control: at 0 the same waveform repeats and the result is
+a pitched tone, and as it rises each grain departs further from the last until the
+train stops fusing into a pitch at all. The top panel shows the pulsaret currently in
+the buffer, redrawn as it walks.</p>
+
+<p class="warn">Start with the gain low.</p>
+
+<canvas id="view"></canvas>
+<div class="legend">
+  <span><i style="background:var(--accent)"></i>pulsaret breakpoints</span>
+  <span><i style="background:var(--mint)"></i>window</span>
+  <span><i style="background:var(--muted)"></i>audio output</span>
+  <span id="readout"></span>
+</div>
+
+<div class="row">
+  <button id="play">play</button>
+  <span style="color:var(--muted);font-size:.75rem">presets:</span>
+  <button class="preset" data-p="moss">moss</button>
+  <button class="preset" data-p="tone">frozen (ampStep 0)</button>
+  <button class="preset" data-p="walk">walking</button>
+  <button class="preset" data-p="cloud">cloud</button>
+  <button class="preset" data-p="jit">jittered</button>
+</div>
+<p class="hint" id="hint"></p>
+
+<div class="grid">
+  <fieldset>
+    <legend>emission</legend>
+    <label><span>pitch (Hz)</span><input type="range" id="pitch" min="1" max="800" step="1" value="100"><output></output></label>
+    <label><span>duty</span><input type="range" id="duty" min="0.001" max="1" step="0.001" value="0.5"><output></output></label>
+    <label><span>jitter</span><input type="range" id="jitter" min="0" max="1" step="0.005" value="0"><output></output></label>
+    <label><span>window</span><input type="range" id="window" min="0" max="3" step="1" value="1"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>pulsaret</legend>
+    <label><span>knum</span><input type="range" id="knum" min="2" max="128" step="1" value="16"><output></output></label>
+    <label><span>ampStep</span><input type="range" id="ampStep" min="0" max="1" step="0.005" value="0.1"><output></output></label>
+    <label><span>ampJump</span><input type="range" id="ampJump" min="0" max="1" step="0.005" value="0"><output></output></label>
+    <label><span>interp</span><input type="range" id="interp" min="0" max="2" step="1" value="1"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>distribution</legend>
+    <label><span>ampDist</span><input type="range" id="ampDist" min="0" max="6" step="1" value="0"><output></output></label>
+    <label><span>ampDistParam</span><input type="range" id="ampDistParam" min="0" max="1" step="0.005" value="0.5"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+  </fieldset>
+</div>
+
+<p class="sub" style="margin-top:1rem"><b>Reading the controls.</b>
+<code>window</code> 0–3 is rectangular, Hann, triangle, Gaussian. <code>ampDist</code>
+0–6 is linear, Cauchy, logistic, hyperbolic cosine, arcsine, exponential, sinus, the
+distribution set from Xenakis's dynamic stochastic synthesis. <code>ampJump</code>
+blends the walk toward an absolute draw rather than a step from where it was, so at 1
+each grain is independent of the last. <code>jitter</code> perturbs the period only,
+leaving the pulsaret alone, which separates rhythmic irregularity from timbral drift.</p>
+
+<!-- shared by the audio thread and the drawing, so the pulsaret on screen is the one
+     being emitted -->
+<script id="tether" type="text/js-lib">
+const T_PI = Math.PI;
+
+// Ported from t_distribution in Tether/plugins/shared.hpp: a uniform f in [0,1)
+// to a shaped deviate in ~[-1,1].
+function t_distribution(which, a, f) {
+  let temp, c;
+  if (a > 1) a = 1;
+  if (a < 0.0001) a = 0.0001;
+  switch (which) {
+    case 1:
+      c = Math.atan(10 * a);
+      return ((1 / a) * Math.tan(c * (2 * f - 1))) * 0.1;
+    case 2:
+      c = 0.5 + (0.499 * a);
+      c = Math.log((1 - c) / c);
+      f = ((f - 0.5) * 0.998 * a) + 0.5;
+      return Math.log((1 - f) / f) / c;
+    case 3:
+      c = Math.tan(1.5692255 * a);
+      temp = Math.tan(1.5692255 * a * f) / c;
+      temp = Math.log(temp * 0.999 + 0.001) * (-0.1447648);
+      return 2 * temp - 1.0;
+    case 4:
+      c = Math.sin(1.5707963 * a);
+      return Math.sin(T_PI * (f - 0.5) * a) / c;
+    case 5:
+      c = Math.log(1 - (0.999 * a));
+      return 2 * (Math.log(1 - (f * 0.999 * a)) / c) - 1;
+    case 6:
+      return 2 * a - 1;
+    default:
+      break;
+  }
+  return 2 * f - 1;
+}
+
+function t_clamp(x, lo, hi) { return x < lo ? lo : (x > hi ? hi : x); }
+
+function t_mirror(x, lo, hi) {
+  const range = hi - lo;
+  if (range <= 0) return lo;
+  let y = x - lo;
+  const twice = 2 * range;
+  y -= twice * Math.floor(y / twice);
+  if (y > range) y = twice - y;
+  return lo + y;
+}
+
+// interp: 0 hold, 1 linear, 2 cosine
+function t_interp(mode, a, b, t) {
+  switch (mode) {
+    case 0: return a;
+    case 2: return a + (b - a) * (0.5 - 0.5 * Math.cos(T_PI * t));
+    default: return a + (b - a) * t;
+  }
+}
+
+// grain envelope: 0 rect, 1 hann, 2 triangle, 3 gaussian
+function t_window(type, p) {
+  switch (type) {
+    case 1: return 0.5 - 0.5 * Math.cos(2 * T_PI * p);
+    case 2: return 1 - Math.abs(2 * p - 1);
+    case 3: { const x = (p - 0.5) * 5; return Math.exp(-0.5 * x * x); }
+    default: return 1;
+  }
+}
+</script>
+
+<script id="worklet" type="text/js-worklet">
+class GrainstochProcessor extends AudioWorkletProcessor {
+  constructor() {
+    super();
+    this.p = {
+      pitch: 100, knum: 16, duty: 0.5, window: 1, ampStep: 0.1,
+      ampJump: 0, jitter: 0, ampDist: 0, ampDistParam: 0.5, interp: 1, gain: 0.12
+    };
+    this.initMem(this.p.knum);
+    this.emitAcc = 0;        // fractional countdown to the next emission
+    this.grainLen = 1;       // samples in the current pulsaret
+    this.grainPos = -1;      // <0 = in the silent tail
+    this.grains = 0;
+    this.frames = 0;
+    this.port.onmessage = e => {
+      if (e.data.type === 'params') {
+        const want = Math.max(2, Math.min(1024, Math.round(e.data.value.knum)));
+        Object.assign(this.p, e.data.value);
+        if (want !== this.knum) this.initMem(want);
+      }
+    };
+  }
+
+  initMem(n) {
+    this.knum = n;
+    this.ampMem = new Float64Array(n);
+    for (let i = 0; i < n; i++) this.ampMem[i] = Math.sin(2 * T_PI * (i + 0.5) / n);
+  }
+
+  process(inputs, outputs) {
+    const out = outputs[0], ch0 = out[0], n = ch0.length;
+    const p = this.p;
+    let pitch = p.pitch; if (pitch < 0.01) pitch = 0.01;
+    const duty = t_clamp(p.duty, 0.001, 1);
+    const windowT = p.window | 0;
+    const ampStep = p.ampStep;
+    const ampJump = t_clamp(p.ampJump, 0, 1);
+    const jitter = t_clamp(p.jitter, 0, 1);
+    const ampDist = p.ampDist | 0;
+    const ampDistP = p.ampDistParam;
+    const interp = p.interp | 0;
+    const knum = this.knum;
+    const sr = sampleRate;
+    const mem = this.ampMem;
+
+    for (let s = 0; s < n; s++) {
+      if (this.emitAcc <= 0) {
+        // walk the whole pulsaret; ampStep/ampJump set grain-to-grain decorrelation
+        for (let k = 0; k < knum; k++) {
+          const r = t_distribution(ampDist, ampDistP, Math.random());
+          const walked = mem[k] + ampStep * r;
+          mem[k] = t_mirror(walked + ampJump * (r - walked), -1, 1);
+        }
+        let pmul = 1 + jitter * (Math.random() * 2 - 1) * 0.9;
+        if (pmul < 0.1) pmul = 0.1;
+        let period = (sr / pitch) * pmul;     // fractional -> exact emission rate
+        if (period < 1) period = 1;
+        if (period > sr * 4) period = sr * 4;
+        this.grainLen = Math.max(1, (duty * period) | 0);
+        this.grainPos = 0;
+        this.emitAcc += period;               // carry the fractional remainder
+        this.grains++;
+      }
+
+      let outv = 0;
+      if (this.grainPos >= 0 && this.grainPos < this.grainLen) {
+        const gp = this.grainPos / this.grainLen;
+        const cpf = gp * knum;
+        let i0 = cpf | 0; if (i0 >= knum) i0 = knum - 1;
+        let i1 = i0 + 1;  if (i1 >= knum) i1 = knum - 1;
+        const a = t_interp(interp, mem[i0], mem[i1], cpf - i0);
+        outv = a * t_window(windowT, gp);
+        this.grainPos++;
+      } else {
+        this.grainPos = -1;
+      }
+      ch0[s] = outv * p.gain;
+      this.emitAcc -= 1;
+    }
+    for (let c = 1; c < out.length; c++) out[c].set(ch0);
+
+    this.frames++;
+    if ((this.frames & 7) === 0) {
+      this.port.postMessage({
+        type: 'snap', mem: Array.from(mem), knum,
+        grains: this.grains, grainLen: this.grainLen
+      });
+    }
+    return true;
+  }
+}
+registerProcessor('grainstoch', GrainstochProcessor);
+</script>
+
+<script src="../kit/kit.js"></script>
+<script>
+const T = new Function(document.getElementById('tether').textContent +
+  '; return { t_window, t_interp };')();
+
+const IDS = ['pitch','duty','jitter','window','knum','ampStep','ampJump','interp',
+             'ampDist','ampDistParam','gain'];
+
+Kit.compact();
+const el = Kit.controls(IDS);
+const ctx2d = Kit.fit(document.getElementById('view'));
+const readout = document.getElementById('readout');
+let snap = null, lastGrains = 0, lastT = performance.now(), rate = 0;
+
+const getState = Kit.playButton(document.getElementById('play'), async () => {
+  const st = await Kit.build({ processor: 'grainstoch', prelude: ['tether'] });
+  st.node.port.onmessage = e => {
+    if (e.data.type === 'snap') {
+      snap = e.data;
+      const now = performance.now();
+      if (now - lastT > 400) {
+        rate = (snap.grains - lastGrains) * 1000 / (now - lastT);
+        lastGrains = snap.grains; lastT = now;
+      }
+    }
+  };
+  st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
+  return st;
+});
+
+function push() {
+  const st = getState();
+  if (st) st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
+}
+IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+Kit.presets({
+  moss:  { pitch: 120, knum: 16, duty: 0.4,  window: 1, ampStep: 0.2,  ampJump: 0,   jitter: 0.5, ampDist: 0, interp: 1 },
+  tone:  { pitch: 150, knum: 24, duty: 0.6,  window: 1, ampStep: 0,    ampJump: 0,   jitter: 0,   ampDist: 0, interp: 1 },
+  walk:  { pitch: 150, knum: 24, duty: 0.6,  window: 1, ampStep: 0.15, ampJump: 0,   jitter: 0,   ampDist: 0, interp: 1 },
+  cloud: { pitch: 18,  knum: 32, duty: 0.08, window: 3, ampStep: 0.5,  ampJump: 0.4, jitter: 0.8, ampDist: 1, ampDistParam: 0.4, interp: 1 },
+  jit:   { pitch: 90,  knum: 12, duty: 0.35, window: 2, ampStep: 0.05, ampJump: 0,   jitter: 0.9, ampDist: 0, interp: 0 }
+}, (v) => {
+  Object.keys(v).forEach(k => { if (el[k]) el[k].value = v[k]; });
+  Kit.readouts(el);
+  push();
+});
+
+// top: the pulsaret in the buffer right now, under its window. bottom: the stream.
+function draw() {
+  requestAnimationFrame(draw);
+  const st = getState();
+  const w = ctx2d.canvas.clientWidth, h = ctx2d.canvas.clientHeight;
+  const split = Math.round(h * 0.55);
+  ctx2d.clearRect(0, 0, w, h);
+  const windowT = +el.window.value, interp = +el.interp.value;
+
+  // window envelope
+  ctx2d.strokeStyle = Kit.css('--mint');
+  ctx2d.lineWidth = 1.5;
+  ctx2d.setLineDash([4, 3]);
+  ctx2d.beginPath();
+  for (let x = 0; x <= w; x += 2) {
+    const y = split / 2 - T.t_window(windowT, x / w) * (split / 2 - 8);
+    x ? ctx2d.lineTo(x, y) : ctx2d.moveTo(x, y);
+  }
+  ctx2d.stroke();
+  ctx2d.setLineDash([]);
+
+  if (snap) {
+    // the pulsaret as it is actually read: interpolated, then windowed
+    ctx2d.strokeStyle = Kit.css('--accent');
+    ctx2d.lineWidth = 2;
+    ctx2d.beginPath();
+    for (let x = 0; x <= w; x += 1) {
+      const gp = x / w, cpf = gp * snap.knum;
+      let i0 = cpf | 0; if (i0 >= snap.knum) i0 = snap.knum - 1;
+      let i1 = i0 + 1;  if (i1 >= snap.knum) i1 = snap.knum - 1;
+      const a = T.t_interp(interp, snap.mem[i0], snap.mem[i1], cpf - i0);
+      const y = split / 2 - a * T.t_window(windowT, gp) * (split / 2 - 8);
+      x ? ctx2d.lineTo(x, y) : ctx2d.moveTo(x, y);
+    }
+    ctx2d.stroke();
+    readout.textContent = rate.toFixed(0) + ' grains/s · ' + snap.grainLen + ' samples each';
+  }
+
+  ctx2d.strokeStyle = Kit.css('--rule');
+  ctx2d.beginPath(); ctx2d.moveTo(0, split); ctx2d.lineTo(w, split); ctx2d.stroke();
+
+  if (st) {
+    ctx2d.save();
+    ctx2d.translate(0, split);
+    Kit.drawScope(ctx2d, w, h - split, st.analyser, st.scope,
+      { hz: Math.max(20, +el.pitch.value), gain: +el.gain.value, sampleRate: st.ctx.sampleRate });
+    ctx2d.restore();
+  }
+}
+draw();
+Kit.readouts(el);
+</script>
+</body>
+</html>

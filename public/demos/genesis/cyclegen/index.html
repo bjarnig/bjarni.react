@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyclegen — Web Audio demo</title>
+<link rel="stylesheet" href="../kit/kit.css">
+</head>
+<body>
+
+<h1>Cyclegen</h1>
+<p class="sub">A port of <code>Cyclegen.cpp</code> from
+<a href="https://github.com/bjarnig/Tether">Tether</a>, the generator behind
+<code>fern</code> in Genesis. <code>knum</code> breakpoints per cycle, each one
+remembering its own amplitude and walking from it; a frequency sequence steps the
+pitch once per cycle. Parameter names follow the UGen.</p>
+
+<p class="sub"><b>The dial is <code>stiffness</code>.</b> At 0 every breakpoint walks
+freely from where it was, which is the Xenakis breakpoint-walk lineage. At 1 each one
+is pulled all the way onto a fixed template, which is a waveform selected rather than
+walked. In between, the walk is reeled in toward the template without reaching it.
+The top panel draws both, so the dial is visible as well as audible.</p>
+
+<p class="warn">Start with the gain low.</p>
+
+<canvas id="view"></canvas>
+<div class="legend">
+  <span><i style="background:var(--accent)"></i>walked breakpoints</span>
+  <span><i style="background:var(--mint)"></i>template</span>
+  <span><i style="background:var(--muted)"></i>audio output</span>
+  <span id="readout"></span>
+</div>
+
+<div class="row">
+  <button id="play">play</button>
+  <span style="color:var(--muted);font-size:.75rem">presets:</span>
+  <button class="preset" data-p="fern">fern</button>
+  <button class="preset" data-p="koenig">stiff (template)</button>
+  <button class="preset" data-p="xenakis">free walk</button>
+  <button class="preset" data-p="seq">pitch sequence</button>
+  <button class="preset" data-p="grit">dense</button>
+</div>
+<p class="hint" id="hint"></p>
+
+<div class="grid">
+  <fieldset>
+    <legend>waveform</legend>
+    <label><span>knum</span><input type="range" id="knum" min="2" max="64" step="1" value="12"><output></output></label>
+    <label><span>ampStep</span><input type="range" id="ampStep" min="0" max="1" step="0.005" value="0.05"><output></output></label>
+    <label><span>stiffness</span><input type="range" id="stiffness" min="0" max="1" step="0.005" value="0"><output></output></label>
+    <label><span>ampJump</span><input type="range" id="ampJump" min="0" max="1" step="0.005" value="0"><output></output></label>
+    <label><span>interp</span><input type="range" id="interp" min="0" max="2" step="1" value="1"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>template</legend>
+    <label><span>templateType</span><input type="range" id="templateType" min="0" max="4" step="1" value="0"><output></output></label>
+    <label><span>templateSkew</span><input type="range" id="templateSkew" min="0.001" max="0.999" step="0.001" value="0.5"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>distribution</legend>
+    <label><span>ampDist</span><input type="range" id="ampDist" min="0" max="6" step="1" value="0"><output></output></label>
+    <label><span>ampDistParam</span><input type="range" id="ampDistParam" min="0" max="1" step="0.005" value="0.5"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>frequency sequence</legend>
+    <label><span>seqMode</span><input type="range" id="seqMode" min="0" max="3" step="1" value="0"><output></output></label>
+    <label><span>repeats</span><input type="range" id="repeats" min="1" max="16" step="1" value="1"><output></output></label>
+    <label><span>freqMul</span><input type="range" id="freqMul" min="0.1" max="8" step="0.01" value="1"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+  </fieldset>
+</div>
+
+<p class="sub" style="margin-top:1rem"><b>Reading the controls.</b>
+<code>templateType</code> 0–4 is sine, saw, triangle, square, flat; flat means the
+walk has no attractor even at full stiffness. <code>ampDist</code> 0–6 is linear,
+Cauchy, logistic, hyperbolic cosine, arcsine, exponential, sinus, which is the
+distribution set from Xenakis's dynamic stochastic synthesis; <code>ampDistParam</code>
+shapes it. <code>seqMode</code> 0–3 is forward, reverse, pingpong, random, and steps
+the frequency list once every <code>repeats</code> cycles.</p>
+
+<p class="sub">One difference from the UGen: here <code>knum</code> rebuilds the
+breakpoint memory live. In SuperCollider it is fixed when the synth is built, which is
+why fern's <code>knumFrom</code>/<code>knumTo</code> only bite on the next
+<code>~gen.(\fern)</code>.</p>
+
+<!-- shared by the audio thread and the drawing, so the template on screen is the
+     one the walk is actually pulled toward -->
+<script id="tether" type="text/js-lib">
+const T_PI = Math.PI;
+
+// Maps a uniform f in [0,1) to a shaped deviate in ~[-1,1]. Ported from
+// t_distribution in Tether/plugins/shared.hpp.
+function t_distribution(which, a, f) {
+  let temp, c;
+  if (a > 1) a = 1;
+  if (a < 0.0001) a = 0.0001;
+  switch (which) {
+    case 1:
+      c = Math.atan(10 * a);
+      return ((1 / a) * Math.tan(c * (2 * f - 1))) * 0.1;
+    case 2:
+      c = 0.5 + (0.499 * a);
+      c = Math.log((1 - c) / c);
+      f = ((f - 0.5) * 0.998 * a) + 0.5;
+      return Math.log((1 - f) / f) / c;
+    case 3:
+      c = Math.tan(1.5692255 * a);
+      temp = Math.tan(1.5692255 * a * f) / c;
+      temp = Math.log(temp * 0.999 + 0.001) * (-0.1447648);
+      return 2 * temp - 1.0;
+    case 4:
+      c = Math.sin(1.5707963 * a);
+      return Math.sin(T_PI * (f - 0.5) * a) / c;
+    case 5:
+      c = Math.log(1 - (0.999 * a));
+      return 2 * (Math.log(1 - (f * 0.999 * a)) / c) - 1;
+    case 6:
+      return 2 * a - 1;
+    default:
+      break;
+  }
+  return 2 * f - 1;
+}
+
+function t_clamp(x, lo, hi) { return x < lo ? lo : (x > hi ? hi : x); }
+
+// fold x back into [lo, hi]
+function t_mirror(x, lo, hi) {
+  const range = hi - lo;
+  if (range <= 0) return lo;
+  let y = x - lo;
+  const twice = 2 * range;
+  y -= twice * Math.floor(y / twice);
+  if (y > range) y = twice - y;
+  return lo + y;
+}
+
+// template shape at normalised phase p; skew bends phase (pulse width)
+function t_template(type, p, skew) {
+  skew = t_clamp(skew, 0.001, 0.999);
+  const w = (p < skew) ? (0.5 * p / skew) : (0.5 + 0.5 * (p - skew) / (1 - skew));
+  switch (type) {
+    case 1: return 2 * w - 1;
+    case 2: return 2 * Math.abs(2 * w - 1) - 1;
+    case 3: return (p < skew) ? 1 : -1;
+    case 4: return 0;
+    default: return Math.sin(2 * T_PI * w);
+  }
+}
+
+// interp: 0 hold, 1 linear, 2 cosine
+function t_interp(mode, a, b, t) {
+  switch (mode) {
+    case 0: return a;
+    case 2: return a + (b - a) * (0.5 - 0.5 * Math.cos(T_PI * t));
+    default: return a + (b - a) * t;
+  }
+}
+</script>
+
+<script id="worklet" type="text/js-worklet">
+class CyclegenProcessor extends AudioWorkletProcessor {
+  constructor() {
+    super();
+    this.p = {
+      knum: 12, ampStep: 0.05, ampDist: 0, ampDistParam: 0.5, ampJump: 0,
+      stiffness: 0, templateType: 0, templateSkew: 0.5, freqMul: 1,
+      repeats: 1, seqMode: 0, interp: 1, gain: 0.12
+    };
+    this.freqs = [65, 87, 98, 131];
+    this.initMem(this.p.knum);
+    // CPState: phase >= 1 forces the first segment to be set up on the first sample
+    this.phase = 1.0; this.inc = 0; this.curAmp = 0; this.nextAmp = 0;
+    this.segInCycle = this.knum;        // force a frequency load on the first segment
+    this.cycleRepeat = 1 << 29;         // force the first step regardless of repeats
+    this.seqPos = 0; this.seqDir = 1; this.started = 0;
+    this.curFreq = this.freqs[0];
+    this.frames = 0;
+    this.port.onmessage = e => {
+      const d = e.data;
+      if (d.type === 'params') {
+        const wantKnum = Math.max(2, Math.min(1024, Math.round(d.value.knum)));
+        Object.assign(this.p, d.value);
+        if (wantKnum !== this.knum) this.initMem(wantKnum);
+      } else if (d.type === 'freqs') {
+        this.freqs = d.value.slice();
+        if (this.seqPos >= this.freqs.length) this.seqPos = 0;
+      }
+    };
+  }
+
+  initMem(n) {
+    this.knum = n;
+    this.ampMem = new Float64Array(n);
+    for (let i = 0; i < n; i++)
+      this.ampMem[i] = t_template(this.p.templateType, (i + 0.5) / n, this.p.templateSkew);
+    if (this.segInCycle === undefined || this.segInCycle > n) this.segInCycle = n;
+  }
+
+  process(inputs, outputs) {
+    const out = outputs[0], ch0 = out[0], n = ch0.length;
+    const p = this.p;
+    const ampStep = p.ampStep;
+    const ampDist = p.ampDist | 0;
+    const ampDistP = p.ampDistParam;
+    const ampJump = t_clamp(p.ampJump, 0, 1);
+    const stiffness = t_clamp(p.stiffness, 0, 1);
+    const templateType = p.templateType | 0;
+    const skew = p.templateSkew;
+    const freqMul = p.freqMul;
+    const repeats = Math.max(1, p.repeats | 0);
+    const seqMode = p.seqMode | 0;
+    const interp = p.interp | 0;
+    const numFreqs = Math.max(1, this.freqs.length);
+    const knum = this.knum;
+    const sr = sampleRate;
+    const mem = this.ampMem;
+
+    for (let s = 0; s < n; s++) {
+      let g = 0;
+      while (this.phase >= 1.0 && g++ < 64) {
+        this.phase -= 1.0;
+        if (this.segInCycle >= knum) {          // completed a full cycle
+          this.segInCycle = 0;
+          this.cycleRepeat++;
+          if (this.cycleRepeat >= repeats) {    // step the sequence
+            this.cycleRepeat = 0;
+            if (!this.started) {
+              this.started = 1;
+              this.seqPos = (seqMode === 1) ? (numFreqs - 1) : 0;
+              if (seqMode === 3) this.seqPos = (Math.random() * numFreqs) | 0;
+              this.seqDir = (seqMode === 1) ? -1 : 1;
+            } else {
+              switch (seqMode) {
+                case 1: this.seqPos = (this.seqPos - 1 + numFreqs) % numFreqs; break;
+                case 2:
+                  this.seqPos += this.seqDir;
+                  if (this.seqPos >= numFreqs - 1) { this.seqPos = numFreqs - 1; this.seqDir = -1; }
+                  else if (this.seqPos <= 0) { this.seqPos = 0; this.seqDir = 1; }
+                  break;
+                case 3: this.seqPos = (Math.random() * numFreqs) | 0; break;
+                default: this.seqPos = (this.seqPos + 1) % numFreqs; break;
+              }
+            }
+            if (this.seqPos < 0) this.seqPos = 0;
+            if (this.seqPos >= numFreqs) this.seqPos = numFreqs - 1;
+            this.curFreq = Math.max(0.0001, this.freqs[this.seqPos] * freqMul);
+          }
+        }
+        const cp = this.segInCycle;
+        this.curAmp = this.nextAmp;
+
+        const tAmp = t_template(templateType, (cp + 0.5) / knum, skew);
+        const base = mem[cp];
+        const r = t_distribution(ampDist, ampDistP, Math.random());
+        const walked = base - stiffness * (base - tAmp) + ampStep * r;
+        let a = walked + ampJump * (r - walked);   // jump toward an absolute draw
+        a = t_mirror(a, -1.0, 1.0);
+        mem[cp] = a;
+        this.nextAmp = a;
+
+        this.segInCycle++;
+        const inc = (this.curFreq * knum) / sr;
+        this.inc = inc > 64 ? 64 : inc;
+      }
+      ch0[s] = t_interp(interp, this.curAmp, this.nextAmp, this.phase) * p.gain;
+      this.phase += this.inc;
+    }
+    for (let c = 1; c < out.length; c++) out[c].set(ch0);
+
+    // snapshot for the drawing, a few times a second
+    this.frames++;
+    if ((this.frames & 7) === 0) {
+      this.port.postMessage({
+        type: 'snap', mem: Array.from(mem), knum, freq: this.curFreq, seqPos: this.seqPos
+      });
+    }
+    return true;
+  }
+}
+registerProcessor('cyclegen', CyclegenProcessor);
+</script>
+
+<script src="../kit/kit.js"></script>
+<script>
+const T = new Function(document.getElementById('tether').textContent +
+  '; return { t_template, t_distribution, t_mirror, t_interp };')();
+
+const IDS = ['knum','ampStep','stiffness','ampJump','interp','templateType','templateSkew',
+             'ampDist','ampDistParam','seqMode','repeats','freqMul','gain'];
+Kit.compact();
+const el = Kit.controls(IDS);
+const ctx2d = Kit.fit(document.getElementById('view'));
+const readout = document.getElementById('readout');
+
+let snap = null, freqs = [65, 87, 98, 131];   // fern's own list; presets replace it
+
+const getState = Kit.playButton(document.getElementById('play'), async () => {
+  const st = await Kit.build({ processor: 'cyclegen', prelude: ['tether'] });
+  st.node.port.onmessage = e => { if (e.data.type === 'snap') snap = e.data; };
+  st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
+  st.node.port.postMessage({ type: 'freqs', value: freqs });
+  return st;
+});
+
+function push() {
+  const st = getState();
+  if (st) {
+    st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
+    st.node.port.postMessage({ type: 'freqs', value: freqs });
+  }
+}
+IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+Kit.presets({
+  fern:    { _freqs: [65, 87, 98, 131],           knum: 12, ampStep: 0.05, stiffness: 0,    templateType: 1, ampDist: 0, seqMode: 2, repeats: 1, freqMul: 1, interp: 2 },
+  koenig:  { _freqs: [110, 165, 220, 330],        knum: 16, ampStep: 0.05, stiffness: 1,    templateType: 0, ampDist: 0, seqMode: 0, repeats: 1, freqMul: 1, interp: 1 },
+  xenakis: { _freqs: [80],                        knum: 12, ampStep: 0.25, stiffness: 0,    templateType: 4, ampDist: 1, ampDistParam: 0.3, seqMode: 0, repeats: 1, freqMul: 1, interp: 1 },
+  seq:     { _freqs: [65, 87, 98, 131, 175, 233], knum: 10, ampStep: 0.08, stiffness: 0.55, templateType: 2, ampDist: 0, seqMode: 2, repeats: 2, freqMul: 1, interp: 1 },
+  grit:    { _freqs: [40, 55, 71],                knum: 48, ampStep: 0.4,  stiffness: 0.1,  templateType: 3, ampDist: 4, ampDistParam: 0.8, seqMode: 3, repeats: 1, freqMul: 2, interp: 0 }
+}, (v) => {
+  if (v._freqs) freqs = v._freqs.slice();
+  Object.keys(v).forEach(k => { if (k[0] !== '_' && el[k]) el[k].value = v[k]; });
+  Kit.readouts(el);
+  push();
+});
+
+// top panel: the walked breakpoints against the template they are pulled toward.
+// bottom panel: the audio itself.
+function draw() {
+  requestAnimationFrame(draw);
+  const st = getState();
+  const w = ctx2d.canvas.clientWidth, h = ctx2d.canvas.clientHeight;
+  const split = Math.round(h * 0.55);
+  ctx2d.clearRect(0, 0, w, h);
+
+  const type = +el.templateType.value, skew = +el.templateSkew.value;
+  const knum = snap ? snap.knum : Math.round(+el.knum.value);
+
+  // template
+  ctx2d.strokeStyle = Kit.css('--mint');
+  ctx2d.lineWidth = 1.5;
+  ctx2d.setLineDash([4, 3]);
+  ctx2d.beginPath();
+  for (let i = 0; i < knum; i++) {
+    const x = (i + 0.5) / knum * w;
+    const y = split / 2 - T.t_template(type, (i + 0.5) / knum, skew) * (split / 2 - 8);
+    i ? ctx2d.lineTo(x, y) : ctx2d.moveTo(x, y);
+  }
+  ctx2d.stroke();
+  ctx2d.setLineDash([]);
+
+  // walked breakpoints
+  if (snap) {
+    ctx2d.strokeStyle = Kit.css('--accent');
+    ctx2d.lineWidth = 2;
+    ctx2d.beginPath();
+    for (let i = 0; i < snap.knum; i++) {
+      const x = (i + 0.5) / snap.knum * w;
+      const y = split / 2 - snap.mem[i] * (split / 2 - 8);
+      i ? ctx2d.lineTo(x, y) : ctx2d.moveTo(x, y);
+    }
+    ctx2d.stroke();
+    ctx2d.fillStyle = Kit.css('--accent');
+    for (let i = 0; i < snap.knum; i++) {
+      const x = (i + 0.5) / snap.knum * w;
+      const y = split / 2 - snap.mem[i] * (split / 2 - 8);
+      ctx2d.fillRect(x - 1.5, y - 1.5, 3, 3);
+    }
+    // mean distance from the template: the number stiffness moves
+    let d = 0;
+    for (let i = 0; i < snap.knum; i++)
+      d += Math.abs(snap.mem[i] - T.t_template(type, (i + 0.5) / snap.knum, skew));
+    readout.textContent = 'mean |walk − template| ' + (d / snap.knum).toFixed(3) +
+      ' · ' + snap.freq.toFixed(1) + ' Hz · step ' + snap.seqPos;
+  }
+
+  ctx2d.strokeStyle = Kit.css('--rule');
+  ctx2d.beginPath(); ctx2d.moveTo(0, split); ctx2d.lineTo(w, split); ctx2d.stroke();
+
+  if (st) {
+    ctx2d.save();
+    ctx2d.translate(0, split);
+    Kit.drawScope(ctx2d, w, h - split, st.analyser, st.scope,
+      { hz: snap ? Math.max(40, snap.freq) : 110, gain: +el.gain.value, sampleRate: st.ctx.sampleRate });
+    ctx2d.restore();
+  }
+}
+draw();
+Kit.readouts(el);
+</script>
+</body>
+</html>

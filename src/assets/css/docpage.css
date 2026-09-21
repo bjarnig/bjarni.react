@@ -1,0 +1,189 @@
+/* docpage.css — long-form work documentation (/works/docs/*).
+
+   Follows the Course-Development note theme (Courses/Course-Development/style.css):
+   dark ground, Palatino serif headers over a hairline rule, Avenir humanist sans
+   body, steel-blue italic links. The ground is the site's own #171b21, so the page
+   belongs to the site while reading as a document rather than an index.
+
+   Scoped to .docpage so it cannot affect anything else. NB the site sets
+   html{font-size:10px}, so rem is unusable here: the page is anchored in px and
+   everything inside it is sized in em. */
+
+.docpage {
+  --doc-fg: #ffffff;
+  --doc-dim: #cfd2da;
+  --doc-accent: #8b94ac;
+  --doc-rule: rgba(255, 255, 255, 0.22);
+  --doc-hair: rgba(255, 255, 255, 0.09);
+  --doc-serif: "Palatino", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --doc-sans: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-family: var(--doc-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--doc-fg);
+  max-width: 52em;
+  margin: 0 auto;
+  padding: 3.2em 2em 6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.docpage p { margin: 0 0 0.85em; }
+
+.docpage .doc-title {
+  font-family: var(--doc-serif);
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto 0.6em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid var(--doc-rule);
+}
+
+.docpage .doc-standfirst {
+  font-family: var(--doc-serif);
+  font-style: italic;
+  color: var(--doc-dim);
+  text-align: center;
+  margin: 0 0 2.5em;
+}
+
+.docpage h2 {
+  font-family: var(--doc-serif);
+  font-weight: 700;
+  font-size: 1.35em;
+  color: var(--doc-fg);
+  margin: 2.8em 0 0.9em;
+  padding-bottom: 0.45em;
+  border-bottom: 1px solid var(--doc-rule);
+}
+
+.docpage h2 .doc-num {
+  font-family: var(--doc-sans);
+  font-size: 0.62em;
+  color: var(--doc-accent);
+  font-variant-numeric: tabular-nums;
+  margin-right: 0.8em;
+}
+
+.docpage a { color: var(--doc-accent); font-style: italic; text-decoration: none; }
+.docpage a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.docpage strong { color: var(--doc-fg); font-weight: 700; }
+
+.docpage code {
+  font-family: "Fira Code", "Menlo", monospace;
+  font-size: 0.88em;
+  color: var(--doc-dim);
+}
+
+/* contents: the theme's centred serif-italic nav */
+.docpage .doc-toc {
+  font-family: var(--doc-serif);
+  font-style: italic;
+  text-align: center;
+  color: var(--doc-accent);
+  margin: 0 0 2.6em;
+  font-size: 0.95em;
+}
+.docpage .doc-toc-label {
+  font-family: var(--doc-sans);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.68em;
+  color: var(--doc-accent);
+  margin-bottom: 0.7em;
+}
+.docpage .doc-toc ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+.docpage .doc-toc li {
+  counter-increment: toc;
+  display: inline;
+  margin: 0 0.55em;
+  white-space: nowrap;
+}
+.docpage .doc-toc li::before {
+  content: counter(toc) " ";
+  font-family: var(--doc-sans);
+  font-style: normal;
+  font-size: 0.78em;
+  color: rgba(255, 255, 255, 0.3);
+  margin-right: 0.2em;
+}
+
+/* figures */
+.docpage figure { margin: 2em 0 2.2em; }
+.docpage figure.wide {
+  margin-left: calc((100% - min(1060px, 94vw)) / 2);
+  width: min(1060px, 94vw);
+}
+.docpage figcaption {
+  font-family: var(--doc-serif);
+  font-style: italic;
+  color: var(--doc-accent);
+  font-size: 0.92em;
+  line-height: 1.5;
+  border-left: 2px solid var(--doc-rule);
+  padding-left: 1em;
+  margin-top: 0.9em;
+}
+.docpage figcaption .doc-fignum {
+  font-family: var(--doc-sans);
+  font-style: normal;
+  color: var(--doc-dim);
+  margin-right: 0.45em;
+}
+.docpage figcaption a { color: var(--doc-dim); }
+.docpage iframe {
+  width: 100%;
+  height: 600px;
+  border: 1px solid var(--doc-hair);
+  display: block;
+  background: #171b21;
+}
+
+/* tables: serif headers over a rule, first column dimmed */
+.docpage table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92em;
+  margin: 0 0 1.4em;
+}
+.docpage th,
+.docpage td {
+  text-align: left;
+  padding: 0.42em 0.9em 0.42em 0;
+  border-bottom: 1px solid var(--doc-hair);
+  vertical-align: top;
+}
+.docpage th {
+  font-family: var(--doc-serif);
+  font-weight: 700;
+  border-bottom: 1px solid var(--doc-rule);
+  white-space: nowrap;
+}
+.docpage td:first-child { color: var(--doc-dim); }
+
+/* notes, as the theme's footer */
+.docpage .doc-notes {
+  margin-top: 4em;
+  padding-top: 1em;
+  border-top: 1px solid var(--doc-rule);
+  font-family: var(--doc-serif);
+  font-style: italic;
+  font-size: 0.88em;
+  color: var(--doc-accent);
+}
+.docpage .doc-notes .doc-toc-label { text-align: center; margin-bottom: 1em; }
+.docpage .doc-notes ol { padding-left: 1.4em; margin: 0; }
+.docpage .doc-notes li { margin: 0 0 0.6em; }
+.docpage .doc-notes code { font-style: normal; }
+
+@media (max-width: 720px) {
+  .docpage { font-size: 15.5px; padding: 1em 1.1em 4em; }
+  .docpage .doc-title { font-size: 1.7em; }
+  .docpage iframe { height: 560px; }
+  .docpage figure.wide { margin-left: 0; width: 100%; }
+  .docpage .doc-toc li { display: block; margin: 0.25em 0; }
+}

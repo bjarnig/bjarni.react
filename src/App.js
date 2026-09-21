@@ -24,6 +24,7 @@ const Processes = lazy(() => import('./components/info/Processes'));
 const Courses = lazy(() => import('./components/courses/Courses'));
 const About = lazy(() => import('./components/info/About'));
 const Works = lazy(() => import('./components/info/Works'));
+const Genesis = lazy(() => import('./components/info/Genesis'));
 // Course materials are gated per course: uncomment one to re-enable it.
 // All three courses are open for 2026-2027; workshops stay gated.
 const Pma = lazy(() => import('./components/courses/PMA'));
@@ -106,6 +107,8 @@ function App() {
             <Route path="/works" element={<Works />} />
             <Route path="/paths" element={<Paths />} />
             <Route path="/processes" element={<Processes />} />
+            {/* unlisted: linked from concert programmes, kept out of nav and sitemap */}
+            <Route path="/works/docs/genesis" element={<Genesis />} />
             <Route path="/pma" element={<Pma />} />
             <Route path="/pmb" element={<Pmb />} />
             <Route path="/cwa" element={<Cwa />} />
