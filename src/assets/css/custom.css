@@ -549,7 +549,7 @@ iframe {
 	font-size: 15px;   /* the theme's body size */
 	padding-left: 1.6em;
 	padding-top: 0.85em;   /* sits just below the first line of the bio */
-	padding-bottom: 0.45em;
+	padding-bottom: 1.1em;   /* ~40px of rule past the last link: it was ~28px before the type went up, and running it to the bio's full height left 76-220px of bare line */
 	border-left: 1px solid rgba(163, 206, 241, 0.35);
 }
 
@@ -905,12 +905,11 @@ iframe {
 	body { padding-top: 60px; }
 }
 
-/* The rule beside the links should run down as far as the bio text does. Tuning
-   the padding only matches at one width, because the bio rewraps taller as the
-   column narrows while the link list does not. Stretching the two columns to
-   equal height matches at every width instead. Desktop only: below 992px the
-   block becomes a two-column grid under the text, with no rule at all. */
-@media (min-width: 992px) {
-	.bio .row { display: flex; }
-	.bio .row .biolinks { height: 100%; }
+/* The menu outgrew its row once the type went up: it wrapped under the brand
+   from about 991px, doubling the navbar's height. Hand over to the hamburger
+   there rather than at Bootstrap's 767px. #phonemenu is toggled by React state
+   and so already works at any width; only the button was being hidden. */
+@media (max-width: 991px) {
+	.navbar-toggle { display: block; }
+	.nav-collapse { display: none !important; }
 }
