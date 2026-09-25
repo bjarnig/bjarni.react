@@ -910,6 +910,24 @@ iframe {
    there rather than at Bootstrap's 767px. #phonemenu is toggled by React state
    and so already works at any width; only the button was being hidden. */
 @media (max-width: 991px) {
-	.navbar-toggle { display: block; }
+	/* Bootstrap un-positions the toggle from 768px up, so showing it there alone
+	   left it in the flow above the brand: put it back on the absolute corner it
+	   uses on phones. */
+	.navbar-toggle {
+		display: block;
+		position: absolute;
+		top: 14px;
+		right: 55px;
+	}
 	.nav-collapse { display: none !important; }
+
+	/* Bootstrap floats the items into a row from 768px up, which would drop the
+	   phone menu across the page as a single line. Stack it as it does below. */
+	#phonemenu .navbar-nav,
+	#phonemenu .navbar-nav > li {
+		float: none;
+		width: 100%;
+	}
+	/* and keep the phone gap under the title, which the same query zeroes */
+	#phonemenu .navbar-nav { margin: 10px 0 15px; }
 }
