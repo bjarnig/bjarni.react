@@ -51,9 +51,6 @@ function Disc({ c }) {
             {open ? 'show fewer' : `show all ${c.tr.length} tracks`}
           </button>
         )}
-        {c.img && c.src && (
-          <div className="cd-src">cover: <a href={c.src[0]} target="_blank" rel="noopener noreferrer">{c.src[1]}</a></div>
-        )}
       </div>
     </article>
   );
@@ -61,14 +58,11 @@ function Disc({ c }) {
 
 function ListingPaul() {
   const [q, setQ] = useState('');
-  const [onlyCovers, setOnlyCovers] = useState(false);
 
   const list = useMemo(() => {
     const words = q.trim().toLowerCase().split(/\s+/).filter(Boolean);
-    return prepared.filter(c => (!onlyCovers || c.img) && words.every(w => c.hay.includes(w)));
-  }, [q, onlyCovers]);
-
-  const tracks = prepared.reduce((a, c) => a + c.tr.length, 0);
+    return prepared.filter(c => words.every(w => c.hay.includes(w)));
+  }, [q]);
 
   return (
     <div className="cdshelf">
@@ -78,12 +72,7 @@ function ListingPaul() {
         path="/listing/paul"
         noindex
       />
-      <h1 className="doc-title">The CD collection</h1>
-      <p className="doc-standfirst">
-        {prepared.length} discs, {tracks} tracks, offered by Paul Berg. Covers are matched
-        automatically from MusicBrainz and Apple Music and link to their source; a disc
-        without a match shows a blank sleeve.
-      </p>
+      <h1 className="doc-title">Paul's CD Collection</h1>
 
       <div className="cd-bar">
         <input
@@ -93,11 +82,6 @@ function ListingPaul() {
           placeholder="search title, composer, work or performer"
           aria-label="Search"
         />
-        <label>
-          <input type="checkbox" checked={onlyCovers} onChange={e => setOnlyCovers(e.target.checked)} />
-          covers only
-        </label>
-        <span className="cd-count">{list.length} shown</span>
       </div>
 
       {list.length

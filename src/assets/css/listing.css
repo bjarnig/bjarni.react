@@ -30,14 +30,6 @@
   padding-bottom: 0.7em;
   border-bottom: 1px solid var(--rule);
 }
-.cdshelf .doc-standfirst {
-  font-family: var(--serif);
-  font-style: italic;
-  color: var(--dim);
-  text-align: center;
-  max-width: 44em;
-  margin: 0 auto 2em;
-}
 
 .cdshelf a { color: var(--accent); font-style: italic; text-decoration: none; }
 .cdshelf a:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -45,7 +37,7 @@
 .cd-bar {
   position: sticky; top: 50px; z-index: 5; background: #171b21;
   display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center;
-  padding: 14px 0; border-bottom: 1px solid var(--rule);
+  padding: 14px 0;
 }
 .cd-bar input[type=search] {
   flex: 1 1 260px; min-width: 0; font: inherit; color: var(--fg);
@@ -53,8 +45,6 @@
   padding: 6px 2px; border-radius: 0; outline: none;
 }
 .cd-bar input[type=search]:focus { border-bottom-color: var(--accent); }
-.cd-bar label { display: flex; gap: 6px; align-items: center; color: var(--dim); cursor: pointer; margin: 0; font-weight: 400; }
-.cd-count { margin-left: auto; color: var(--dim); font-variant-numeric: tabular-nums; }
 
 .cd-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -99,7 +89,6 @@
   font: inherit; font-style: italic; color: var(--accent);
 }
 .cd-more:hover { text-decoration: underline; text-underline-offset: 3px; }
-.cd-src { font-size: 0.8em; color: var(--dim); }
 .cd-empty { color: var(--dim); text-align: center; padding: 40px 0; }
 
 @media (max-width: 600px) {
