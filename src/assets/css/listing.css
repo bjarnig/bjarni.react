@@ -1,0 +1,108 @@
+/* listing.css — the CD shelf at /listing/paul. Same ground, faces and hairlines as
+   docpage.css, scoped to .cdshelf. The site sets html{font-size:10px}, so sizes are px/em. */
+
+.cdshelf {
+  --fg: #ffffff;
+  --dim: #cfd2da;
+  --accent: #8b94ac;
+  --rule: rgba(255, 255, 255, 0.22);
+  --hair: rgba(255, 255, 255, 0.09);
+  --serif: "Palatino", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--fg);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3.2em 2em 6em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.cdshelf .doc-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto 0.6em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid var(--rule);
+}
+.cdshelf .doc-standfirst {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--dim);
+  text-align: center;
+  max-width: 44em;
+  margin: 0 auto 2em;
+}
+
+.cdshelf a { color: var(--accent); font-style: italic; text-decoration: none; }
+.cdshelf a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.cd-bar {
+  position: sticky; top: 50px; z-index: 5; background: #171b21;
+  display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center;
+  padding: 14px 0; border-bottom: 1px solid var(--rule);
+}
+.cd-bar input[type=search] {
+  flex: 1 1 260px; min-width: 0; font: inherit; color: var(--fg);
+  background: transparent; border: 0; border-bottom: 1px solid var(--rule);
+  padding: 6px 2px; border-radius: 0; outline: none;
+}
+.cd-bar input[type=search]:focus { border-bottom-color: var(--accent); }
+.cd-bar label { display: flex; gap: 6px; align-items: center; color: var(--dim); cursor: pointer; margin: 0; font-weight: 400; }
+.cd-count { margin-left: auto; color: var(--dim); font-variant-numeric: tabular-nums; }
+
+.cd-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px 24px; margin-top: 28px;
+}
+.cd { display: flex; flex-direction: column; min-width: 0; border-top: 1px solid var(--rule); padding-top: 14px; }
+
+.cd-cover { position: relative; aspect-ratio: 1; width: 100%; background: rgba(255, 255, 255, 0.05); }
+.cd-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cd-blank {
+  width: 100%; height: 100%; display: grid; place-items: center; padding: 18px; text-align: center;
+  background: radial-gradient(circle at 50% 50%, #171b21 0 9%, transparent 9.5% 30%,
+    var(--hair) 30.5% 31%, transparent 31.5% 58%, var(--hair) 58.5% 59%, transparent 59.5%);
+}
+.cd-blank span { font-family: var(--serif); font-style: italic; color: var(--dim); overflow-wrap: anywhere; }
+.cd-num {
+  position: absolute; top: 8px; left: 8px; padding: 1px 6px; font-size: 11px;
+  letter-spacing: 0.06em; background: #171b21; color: var(--dim); font-variant-numeric: tabular-nums;
+}
+
+.cd-body { padding-top: 12px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.cd-body h2 {
+  font-family: var(--serif); font-weight: 700; font-size: 1.15em; line-height: 1.25;
+  margin: 0; overflow-wrap: anywhere;
+}
+.cd-body h2.untitled { color: var(--dim); font-weight: 400; font-style: italic; }
+.cd-comps { color: var(--dim); font-size: 0.87em; overflow-wrap: anywhere; }
+.cd-body ol {
+  margin: 0; padding: 0; list-style: none; counter-reset: t;
+  display: flex; flex-direction: column; gap: 4px; font-size: 0.93em;
+}
+.cd-body li { counter-increment: t; padding-left: 26px; position: relative; overflow-wrap: anywhere; }
+.cd-body li::before {
+  content: counter(t); position: absolute; left: 0; width: 18px; text-align: right;
+  color: var(--accent); font-size: 0.85em; font-variant-numeric: tabular-nums;
+}
+.cd-body .who { font-weight: 700; }
+.cd-body .perf { color: var(--dim); font-size: 0.93em; }
+
+.cd-more {
+  align-self: flex-start; background: none; border: 0; padding: 2px 0; cursor: pointer;
+  font: inherit; font-style: italic; color: var(--accent);
+}
+.cd-more:hover { text-decoration: underline; text-underline-offset: 3px; }
+.cd-src { font-size: 0.8em; color: var(--dim); }
+.cd-empty { color: var(--dim); text-align: center; padding: 40px 0; }
+
+@media (max-width: 600px) {
+  .cdshelf { padding: 2em 1.2em 4em; }
+  .cd-bar { top: 44px; }
+}
