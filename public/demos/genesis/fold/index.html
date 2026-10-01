@@ -42,6 +42,14 @@ jumps to the other side, clip flattens.</p>
   <button class="preset" data-p="hard">hard</button>
 </div>
 <p class="hint" id="hint"></p>
+<div class="row">
+  <span style="color:var(--muted);font-size:.75rem">randomise:</span>
+  <button class="dice" data-d="uni">uni</button>
+  <button class="dice" data-d="beta">beta</button>
+  <button class="dice" data-d="exp">exp</button>
+  <button class="dice" data-d="walk">walk</button>
+  <button class="dice" data-d="reset">reset</button>
+</div>
 
 <div class="grid">
   <fieldset>
@@ -56,22 +64,24 @@ jumps to the other side, clip flattens.</p>
     <label><span>min</span><input type="range" id="min" min="0.01" max="1" step="0.01" value="0.1"><output></output></label>
     <label><span>max</span><input type="range" id="max" min="0.01" max="1" step="0.01" value="0.3"><output></output></label>
     <label><span>shape</span><input type="range" id="shape" min="0" max="1" step="1" value="1"><output></output></label>
+    <label><span>bias</span><input type="range" id="bias" min="-0.4" max="0.4" step="0.005" value="0"><output></output></label>
+    <label><span>hpf</span><input type="range" id="hpf" min="10" max="2000" step="5" value="40"><output></output></label>
   </fieldset>
   <fieldset>
     <legend>durations, in samples</legend>
     <label><span>from</span><input type="range" id="from" min="1" max="400" step="1" value="90"><output></output></label>
     <label><span>to</span><input type="range" id="to" min="1" max="400" step="1" value="120"><output></output></label>
     <label><span>walk</span><input type="range" id="walk" min="0" max="100" step="1" value="30"><output></output></label>
-    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" data-fixed="true" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
   </fieldset>
 </div>
 
 <p class="sub" style="margin-top:1rem"><b>Reading the panels.</b> The top panel is one
 short window of signal: the stream as it was written, dim, and what comes out after
 the fold, bright, on the same axes, with the moving threshold drawn behind both. The
-bottom panel is the spectrum, which is where the fold does its real work: the stream
-on its own is almost a square wave with three levels, and everything above its first
-few partials is put there by the bend.</p>
+bottom panel is the output on its own, zoomed out to a few periods, where the extra
+motion the fold adds to an otherwise nearly square stream is what you are looking
+at.</p>
 
 <p class="sub">The duration list is <code>from</code>, then <code>to</code>, then a
 walk between the two, repeated, exactly as in the material. <code>walk</code> is how
@@ -139,10 +149,11 @@ class FoldProcessor extends AudioWorkletProcessor {
     super();
     this.p = {
       mode: 1, bend: 0.3, bendFreq: 20, drive: 1, min: 0.1, max: 0.3,
-      shape: 1, from: 90, to: 120, walk: 30, gain: 0.12
+      shape: 1, from: 90, to: 120, walk: 30, bias: 0, hpf: 40, gain: 0.12
     };
     this.env = new DemandEnv();
     this.phase = 0;
+    this.hpState = { x: 0, y: 0 };      // one pole high pass, as moss has one
     this.raw = new Float32Array(1024);
     this.wet = new Float32Array(1024);
     this.w = 0;
@@ -172,10 +183,17 @@ class FoldProcessor extends AudioWorkletProcessor {
     const mode = p.mode | 0, shape = p.shape | 0;
     const inc = p.bendFreq / sampleRate;
     for (let s = 0; s < n; s++) {
-      const x = this.env.step(this.levelFn, this.durFn, shape) * p.drive;
+      const x = (this.env.step(this.levelFn, this.durFn, shape) + p.bias) * p.drive;
       const lim = p.bend * Math.sin(2 * Math.PI * this.phase);
-      const y = bend2(mode, x, lim);
+      let y = bend2(mode, x, lim);
       this.phase += inc; if (this.phase >= 1) this.phase -= 1;
+      // one pole high pass at hpf, which is what keeps the fold off the DC the
+      // bias and the asymmetric lists put into it
+      const a = Math.exp(-2 * Math.PI * p.hpf / sampleRate);
+      const hp = this.hpState;
+      const out1 = a * (hp.y + y - hp.x);
+      hp.x = y; hp.y = out1;
+      y = out1;
       ch0[s] = y * p.gain;
       this.raw[this.w] = x; this.wet[this.w] = y;
       this.w = (this.w + 1) % 1024;
@@ -195,13 +213,14 @@ registerProcessor('fold', FoldProcessor);
 
 <script src="../kit/kit.js"></script>
 <script>
-const IDS = ['mode','bend','bendFreq','drive','min','max','shape','from','to','walk','gain'];
+const IDS = ['mode','bend','bendFreq','drive','min','max','shape','bias','hpf',
+             'from','to','walk','gain'];
 Kit.compact();
 const el = Kit.controls(IDS);
 const ctx2d = Kit.fit(document.getElementById('view'));
 const readout = document.getElementById('readout');
 
-let snap = null, bins = null;
+let snap = null;
 
 const getState = Kit.playButton(document.getElementById('play'), async () => {
   const st = await Kit.build({ processor: 'fold', prelude: ['demand'] });
@@ -215,6 +234,9 @@ function push() {
   if (st) st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
 }
 IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+
+Kit.dice(el, IDS, push);
 
 Kit.presets({
   moss: { mode: 1, bend: 0.3,  bendFreq: 20,  drive: 1,   min: 0.1,  max: 0.3,  from: 90,  to: 120, walk: 30, shape: 1 },
@@ -290,9 +312,9 @@ function draw() {
   if (st) {
     ctx2d.save();
     ctx2d.translate(0, split);
-    if (!bins) bins = new Float32Array(st.analyser.frequencyBinCount);
-    Kit.drawSpectrum(ctx2d, 0, 0, w, h - split, st.analyser, bins,
-                     { maxHz: 6000, sampleRate: st.ctx.sampleRate });
+    Kit.drawScope(ctx2d, w, h - split, st.analyser, st.scope,
+      { hz: Math.max(20, (st.ctx.sampleRate / Math.max(1, (+el.from.value + +el.to.value) / 2)) / 3),
+        gain: +el.gain.value, sampleRate: st.ctx.sampleRate });
     ctx2d.restore();
   }
 }

@@ -41,6 +41,14 @@ the buffer, redrawn as it walks.</p>
   <button class="preset" data-p="jit">jittered</button>
 </div>
 <p class="hint" id="hint"></p>
+<div class="row">
+  <span style="color:var(--muted);font-size:.75rem">randomise:</span>
+  <button class="dice" data-d="uni">uni</button>
+  <button class="dice" data-d="beta">beta</button>
+  <button class="dice" data-d="exp">exp</button>
+  <button class="dice" data-d="walk">walk</button>
+  <button class="dice" data-d="reset">reset</button>
+</div>
 
 <div class="grid">
   <fieldset>
@@ -61,7 +69,7 @@ the buffer, redrawn as it walks.</p>
     <legend>distribution</legend>
     <label><span>ampDist</span><input type="range" id="ampDist" min="0" max="6" step="1" value="0"><output></output></label>
     <label><span>ampDistParam</span><input type="range" id="ampDistParam" min="0" max="1" step="0.005" value="0.5"><output></output></label>
-    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" data-fixed="true" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
   </fieldset>
 </div>
 
@@ -273,6 +281,9 @@ function push() {
   if (st) st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
 }
 IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+
+Kit.dice(el, IDS, push);
 
 Kit.presets({
   moss:  { pitch: 120, knum: 16, duty: 0.4,  window: 1, ampStep: 0.2,  ampJump: 0,   jitter: 0.5, ampDist: 0, interp: 1 },

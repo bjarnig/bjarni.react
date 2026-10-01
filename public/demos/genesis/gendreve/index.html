@@ -42,6 +42,14 @@ are chaotic rather than merely irregular.</p>
   <button class="preset" data-p="grain">grain</button>
 </div>
 <p class="hint" id="hint"></p>
+<div class="row">
+  <span style="color:var(--muted);font-size:.75rem">randomise:</span>
+  <button class="dice" data-d="uni">uni</button>
+  <button class="dice" data-d="beta">beta</button>
+  <button class="dice" data-d="exp">exp</button>
+  <button class="dice" data-d="walk">walk</button>
+  <button class="dice" data-d="reset">reset</button>
+</div>
 
 <div class="grid">
   <fieldset>
@@ -67,7 +75,7 @@ are chaotic rather than merely irregular.</p>
   <fieldset>
     <legend>output</legend>
     <label><span>refGain</span><input type="range" id="refGain" min="0" max="1" step="0.01" value="0"><output></output></label>
-    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" data-fixed="true" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
   </fieldset>
 </div>
 
@@ -277,6 +285,9 @@ function push() {
   if (st) st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
 }
 IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+
+Kit.dice(el, IDS, push);
 
 Kit.presets({
   tethered:  { ampStiff: 1,    durStiff: 1,    ampKick: 1.2, durKick: 0,   templateType: 0, knum: 16, centerDur: 0.25, interp: 1 },

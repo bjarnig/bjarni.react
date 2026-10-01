@@ -25,8 +25,8 @@ nothing about the selection has changed.</p>
 
 <canvas id="view"></canvas>
 <div class="legend">
-  <span><i style="background:var(--accent)"></i>audio output</span>
-  <span><i style="background:var(--mint)"></i>spectrum</span>
+  <span><i style="background:var(--accent)"></i>close in, a few segments</span>
+  <span><i style="background:var(--mint)"></i>zoomed out</span>
   <span id="readout"></span>
 </div>
 
@@ -40,6 +40,14 @@ nothing about the selection has changed.</p>
   <button class="preset" data-p="wrapped">wrapped</button>
 </div>
 <p class="hint" id="hint"></p>
+<div class="row">
+  <span style="color:var(--muted);font-size:.75rem">randomise:</span>
+  <button class="dice" data-d="uni">uni</button>
+  <button class="dice" data-d="beta">beta</button>
+  <button class="dice" data-d="exp">exp</button>
+  <button class="dice" data-d="walk">walk</button>
+  <button class="dice" data-d="reset">reset</button>
+</div>
 
 <div class="grid">
   <fieldset>
@@ -60,22 +68,27 @@ nothing about the selection has changed.</p>
     <label><span>wrapAt</span><input type="range" id="wrapAt" min="0.02" max="1" step="0.005" value="1"><output></output></label>
     <label><span>wrapFreq</span><input type="range" id="wrapFreq" min="0.005" max="4" step="0.005" value="0.01"><output></output></label>
     <label><span>drive</span><input type="range" id="drive" min="1" max="20" step="0.1" value="10"><output></output></label>
-    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.1"><output></output></label>
+    <label><span>notchFreq</span><input type="range" id="notchFreq" min="40" max="8000" step="10" value="200"><output></output></label>
+    <label><span>notchBw</span><input type="range" id="notchBw" min="0.2" max="8" step="0.1" value="6"><output></output></label>
+    <label><span>notchDepth</span><input type="range" id="notchDepth" min="0" max="1" step="0.01" value="0"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" data-fixed="true" min="0" max="0.5" step="0.005" value="0.1"><output></output></label>
   </fieldset>
 </div>
 
 <p class="sub" style="margin-top:1rem"><b>Reading the panels.</b> The top panel is the
-output at sample resolution, close enough in to count the steps when the segments are
-long. The bottom panel is the spectrum over the full audible range. At
-<code>scale</code> 1 the two panels describe the same thing twice; below about 0.1
-only the spectrum is still telling you anything, because a segment is now shorter than
-a sample and the duration list has stopped controlling pitch at all.</p>
+output at sample resolution, close enough in to count the steps while the segments are
+long. The bottom panel is the same signal a dozen times further out, where the slower
+shape is visible. Below <code>scale</code> 0.1 the top panel has nothing left to show,
+because a segment is now shorter than a sample and the duration list has stopped
+setting pitch at all.</p>
 
 <p class="sub">The durations are drawn between <code>a</code> and <code>b</code> and
 multiplied by <code>scale</code>, as in the material, where that multiplier is 0.1 and
 the upper bound falls from 15 to 1 over the first forty-five seconds. <code>sweep</code>
 does that fall by hand. Afterwards the stream is wrapped at a slowly moving threshold
-and driven into a soft clip, which is what gives the layer its grain.</p>
+and driven into a soft clip, which is what gives the layer its grain. The band stop
+after it is the one the material sweeps across this layer; <code>notchDepth</code>
+fades it in.</p>
 
 <script id="demand" type="text/js-lib">
 // Demand-rate streams, as in SuperCollider's Dseq and Dwhite.
@@ -116,6 +129,20 @@ function wrap2(x, lim) {
   return y - a;
 }
 
+// a band stop, standing in for the one the material sweeps over this layer.
+// state lives on the caller so the prelude stays free of globals.
+function notch(st, x, freq, bw, sr) {
+  const w = 2 * Math.PI * Math.min(freq, sr * 0.45) / sr;
+  const alpha = Math.sin(w) * Math.sinh(Math.log(2) / 2 * Math.max(0.05, bw) * w / Math.sin(w));
+  const b0 = 1, b1 = -2 * Math.cos(w), b2 = 1;
+  const a0 = 1 + alpha, a1 = -2 * Math.cos(w), a2 = 1 - alpha;
+  const y = (b0 / a0) * x + (b1 / a0) * st.z1 + (b2 / a0) * st.z2
+          - (a1 / a0) * st.y1 - (a2 / a0) * st.y2;
+  st.z2 = st.z1; st.z1 = x;
+  st.y2 = st.y1; st.y1 = y;
+  return y;
+}
+
 // a soft saturator standing in for the drive stage
 function softClip(x, drive) {
   return Math.tanh(x * drive) / Math.tanh(drive);
@@ -128,12 +155,14 @@ class EdgeProcessor extends AudioWorkletProcessor {
     super();
     this.p = {
       scale: 0.1, a: 9, b: 15, sweep: 0, min: 0.1, max: 0.3, shape: 1,
-      wrapAt: 1, wrapFreq: 0.01, drive: 10, gain: 0.1
+      wrapAt: 1, wrapFreq: 0.01, drive: 10,
+      notchFreq: 200, notchBw: 6, notchDepth: 0, gain: 0.1
     };
     this.env = new DemandEnv();
     // start the threshold at its peak: from zero it would sit near nothing for the
     // first half minute at these rates, and wrap everything into a thin band
     this.phase = 0.25;
+    this.z1 = 0; this.z2 = 0; this.y1 = 0; this.y2 = 0;   // band stop state
     this.durSum = 0; this.durN = 0;
     this.env.onSegment = null;
     this.build();
@@ -169,7 +198,8 @@ class EdgeProcessor extends AudioWorkletProcessor {
       const x = this.env.step(this.levelFn, this.durFn, shape);
       const lim = p.wrapAt * Math.sin(2 * Math.PI * this.phase);
       this.phase += inc; if (this.phase >= 1) this.phase -= 1;
-      ch0[s] = softClip(wrap2(x, lim), p.drive) * p.gain;
+      const dry = softClip(wrap2(x, lim), p.drive);
+      ch0[s] = (dry + p.notchDepth * (notch(this, dry, p.notchFreq, p.notchBw, sampleRate) - dry)) * p.gain;
     }
     for (let c = 1; c < out.length; c++) out[c].set(ch0);
 
@@ -195,13 +225,14 @@ registerProcessor('edge', EdgeProcessor);
 
 <script src="../kit/kit.js"></script>
 <script>
-const IDS = ['scale','a','b','sweep','min','max','shape','wrapAt','wrapFreq','drive','gain'];
+const IDS = ['scale','a','b','sweep','min','max','shape','wrapAt','wrapFreq','drive',
+             'notchFreq','notchBw','notchDepth','gain'];
 Kit.compact();
 const el = Kit.controls(IDS);
 const ctx2d = Kit.fit(document.getElementById('view'));
 const readout = document.getElementById('readout');
 
-let snap = null, bins = null;
+let snap = null;
 
 const getState = Kit.playButton(document.getElementById('play'), async () => {
   const st = await Kit.build({ processor: 'edge', prelude: ['demand'] });
@@ -215,6 +246,9 @@ function push() {
   if (st) st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
 }
 IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+
+Kit.dice(el, IDS, push);
 
 Kit.presets({
   tone:    { scale: 4,    a: 9, b: 15, sweep: 0,   min: 0.1,  max: 0.3,  shape: 1, wrapAt: 1,   wrapFreq: 0.01, drive: 2 },
@@ -248,9 +282,11 @@ function draw() {
     Kit.drawScope(ctx2d, w, split, st.analyser, st.scope,
       { hz: Math.max(40, Math.min(4000, hz)), gain: +el.gain.value, sampleRate: st.ctx.sampleRate });
 
-    if (!bins) bins = new Float32Array(st.analyser.frequencyBinCount);
-    Kit.drawSpectrum(ctx2d, 0, split, w, h - split, st.analyser, bins,
-                     { maxHz: 20000, sampleRate: st.ctx.sampleRate });
+    ctx2d.save();
+    ctx2d.translate(0, split);
+    Kit.drawScope(ctx2d, w, h - split, st.analyser, st.scope,
+      { hz: Math.max(12, Math.min(400, hz / 12)), gain: +el.gain.value, sampleRate: st.ctx.sampleRate });
+    ctx2d.restore();
   }
 
   ctx2d.strokeStyle = Kit.css('--rule');

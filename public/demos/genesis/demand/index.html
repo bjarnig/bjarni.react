@@ -39,6 +39,14 @@ rate. Nothing in the amplitude list knows about any of this.</p>
   <button class="preset" data-p="edge">at the edge</button>
 </div>
 <p class="hint" id="hint"></p>
+<div class="row">
+  <span style="color:var(--muted);font-size:.75rem">randomise:</span>
+  <button class="dice" data-d="uni">uni</button>
+  <button class="dice" data-d="beta">beta</button>
+  <button class="dice" data-d="exp">exp</button>
+  <button class="dice" data-d="walk">walk</button>
+  <button class="dice" data-d="reset">reset</button>
+</div>
 
 <div class="grid">
   <fieldset>
@@ -53,7 +61,10 @@ rate. Nothing in the amplitude list knows about any of this.</p>
     <label><span>ampLo</span><input type="range" id="ampLo" min="-1" max="0" step="0.01" value="-1"><output></output></label>
     <label><span>ampHi</span><input type="range" id="ampHi" min="0" max="1" step="0.01" value="1"><output></output></label>
     <label><span>shape</span><input type="range" id="shape" min="0" max="1" step="1" value="1"><output></output></label>
-    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+    <label><span>levelScale</span><input type="range" id="levelScale" min="0" max="2" step="0.01" value="1"><output></output></label>
+    <label><span>levelBias</span><input type="range" id="levelBias" min="-0.5" max="0.5" step="0.005" value="0"><output></output></label>
+    <label><span>timeScale</span><input type="range" id="timeScale" min="0.05" max="8" step="0.01" value="1"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" data-fixed="true" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
   </fieldset>
   <fieldset>
     <legend>durations, in samples</legend>
@@ -71,7 +82,9 @@ a fixed short list read round and round; a fresh value drawn between the bounds 
 every point; or a walk that moves by at most <code>ampStep</code> from where it was.
 These are selection principles rather than waveforms, and the same four are what
 decides the durations. <code>shape</code> 0 holds each value until the next, 1 ramps
-between them.</p>
+between them. <code>levelScale</code>, <code>levelBias</code> and
+<code>timeScale</code> are the envelope generator's own arguments: they stretch the
+amplitudes, shift them off centre, and multiply every duration at once.</p>
 
 <p class="sub">The top panel draws what has actually been written, with time running
 left to right in samples, so a long segment is wide. At a few samples a segment the
@@ -127,7 +140,8 @@ class DemandProcessor extends AudioWorkletProcessor {
     super();
     this.p = {
       ampMode: 0, ampStart: -0.5, ampStep: 0.1, ampLen: 12, ampLo: -1, ampHi: 1,
-      durMode: 2, durLo: 3, durHi: 18, durStep: 6, shape: 1, gain: 0.12
+      durMode: 2, durLo: 3, durHi: 18, durStep: 6, shape: 1,
+      levelScale: 1, levelBias: 0, timeScale: 1, gain: 0.12
     };
     this.env = new DemandEnv();
     this.segs = [];                       // recent (level, dur) pairs, for drawing
@@ -168,7 +182,8 @@ class DemandProcessor extends AudioWorkletProcessor {
         };
       }
     }
-    const dlo = Math.min(p.durLo, p.durHi), dhi = Math.max(p.durLo, p.durHi);
+    const ts = Math.max(0.01, p.timeScale);
+    const dlo = Math.min(p.durLo, p.durHi) * ts, dhi = Math.max(p.durLo, p.durHi) * ts;
     switch (p.durMode | 0) {
       case 0: this.durFn = () => dlo; break;
       case 1: this.durFn = dSeq([dlo, dhi, (dlo + dhi) / 2]); break;
@@ -179,8 +194,10 @@ class DemandProcessor extends AudioWorkletProcessor {
   process(inputs, outputs) {
     const out = outputs[0], ch0 = out[0], n = ch0.length;
     const shape = this.p.shape | 0, gain = this.p.gain;
+    // levelScale, levelBias and timeScale are DemandEnvGen's own arguments
+    const ls = this.p.levelScale, lb = this.p.levelBias;
     for (let s = 0; s < n; s++)
-      ch0[s] = this.env.step(this.levelFn, this.durFn, shape) * gain;
+      ch0[s] = (this.env.step(this.levelFn, this.durFn, shape) * ls + lb) * gain;
     for (let c = 1; c < out.length; c++) out[c].set(ch0);
 
     this.frames++;
@@ -197,7 +214,8 @@ registerProcessor('demand', DemandProcessor);
 
 <script src="../kit/kit.js"></script>
 <script>
-const IDS = ['ampMode','ampStart','ampStep','ampLen','ampLo','ampHi','shape','gain',
+const IDS = ['ampMode','ampStart','ampStep','ampLen','ampLo','ampHi','shape',
+             'levelScale','levelBias','timeScale','gain',
              'durMode','durLo','durHi','durStep'];
 Kit.compact();
 const el = Kit.controls(IDS);
@@ -218,6 +236,9 @@ function push() {
   if (st) st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
 }
 IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+
+Kit.dice(el, IDS, push);
 
 Kit.presets({
   clover: { ampMode: 0, ampStart: -0.5, ampStep: 0.1,  ampLen: 12, durMode: 2, durLo: 3,  durHi: 18,  durStep: 6,  shape: 1 },

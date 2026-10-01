@@ -62,6 +62,49 @@ window.Kit = (function () {
       }));
   }
 
+  /* Randomise the controls, with the four distributions of the fader GUI
+     (core/ndef-faders.scd): uniform, beta with a = b = 2 favouring the middle,
+     exponential decaying toward the low end, and a walk from where the slider
+     already is. Each slider's own min/max is its range, as a ControlSpec is
+     there. "reset" restores the values the page was authored with. */
+  const DICE = {
+    uni:  () => Math.random(),
+    beta: () => {
+      const g = () => -Math.log(Math.random()) - Math.log(Math.random());  // shape 2
+      const x = g(), y = g();
+      return x / (x + y);
+    },
+    exp:  () => Math.min(1, Math.max(0, -Math.log(Math.random()) / 3)),
+    // sum of three uniforms, as sum3rand: gaussian-ish, within +/- step
+    walk: (cur) => {
+      const step = 0.22;
+      const d = step * ((Math.random() + Math.random() + Math.random()) / 1.5 - 1);
+      let v = cur + d;
+      // fold back into 0..1 rather than clipping, so the walk does not stick
+      v = Math.abs(v) % 2;
+      return v > 1 ? 2 - v : v;
+    }
+  };
+
+  function dice(el, ids, after) {
+    const initial = {};
+    ids.forEach(id => { initial[id] = el[id].value; });
+    document.querySelectorAll('button.dice').forEach(b =>
+      b.addEventListener('click', () => {
+        const mode = b.dataset.d;
+        ids.forEach(id => {
+          const e = el[id];
+          if (e.dataset.fixed === 'true') return;         // opt a control out
+          if (mode === 'reset') { e.value = initial[id]; return; }
+          const lo = +e.min, hi = +e.max;
+          const cur = (+e.value - lo) / (hi - lo || 1);
+          e.value = lo + (DICE[mode] || DICE.uni)(cur) * (hi - lo);
+        });
+        readouts(el);
+        after && after();
+      }));
+  }
+
   // canvas sized for the device pixel ratio; returns the 2d context
   function fit(canvas) {
     const ctx = canvas.getContext('2d');
@@ -196,6 +239,6 @@ window.Kit = (function () {
     ctx2d.beginPath(); ctx2d.moveTo(0, mid); ctx2d.lineTo(W, mid); ctx2d.stroke();
   }
 
-  return { compact, controls, values, readouts, presets, fit, css, build, playButton,
+  return { compact, controls, values, readouts, presets, dice, fit, css, build, playButton,
            drawScope, drawSpectrum, axis };
 })();

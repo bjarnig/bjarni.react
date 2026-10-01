@@ -24,6 +24,8 @@ button:hover{background:rgba(120,165,210,.12)}
 button.on{background:var(--accent);color:var(--bg);font-weight:600}
 button.preset{border-color:var(--rule);color:var(--muted);font-size:.75rem;padding:.35rem .7rem}
 button.preset:hover{border-color:var(--accent);color:var(--accent);background:transparent}
+button.dice{border-color:var(--rule);color:var(--muted);font-size:.75rem;padding:.35rem .7rem}
+button.dice:hover{border-color:var(--amber,#e3b341);color:var(--amber,#e3b341);background:transparent}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:.5rem 1.6rem}
 label{display:grid;grid-template-columns:7.2rem minmax(0,1fr) 3.4rem;align-items:center;
       gap:.6rem;font-size:.8rem;padding:.18rem 0}
@@ -51,7 +53,7 @@ body.compact fieldset{padding:.3rem .6rem .45rem;margin:0}
 body.compact legend{font-size:.72rem}
 body.compact .row{margin:.45rem 0 .5rem;gap:.4rem}
 body.compact button{padding:.3rem .6rem;font-size:.72rem}
-body.compact button.preset{padding:.22rem .45rem;font-size:.68rem}
+body.compact button.preset,body.compact button.dice{padding:.22rem .45rem;font-size:.68rem}
 body.compact label{padding:.04rem 0;font-size:.7rem;
                    grid-template-columns:5.6rem minmax(0,1fr) 2.8rem}
 body.compact .grid{gap:.35rem 1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}

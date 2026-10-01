@@ -41,6 +41,14 @@ The top panel draws both, so the dial is visible as well as audible.</p>
   <button class="preset" data-p="grit">dense</button>
 </div>
 <p class="hint" id="hint"></p>
+<div class="row">
+  <span style="color:var(--muted);font-size:.75rem">randomise:</span>
+  <button class="dice" data-d="uni">uni</button>
+  <button class="dice" data-d="beta">beta</button>
+  <button class="dice" data-d="exp">exp</button>
+  <button class="dice" data-d="walk">walk</button>
+  <button class="dice" data-d="reset">reset</button>
+</div>
 
 <div class="grid">
   <fieldset>
@@ -66,7 +74,9 @@ The top panel draws both, so the dial is visible as well as audible.</p>
     <label><span>seqMode</span><input type="range" id="seqMode" min="0" max="3" step="1" value="0"><output></output></label>
     <label><span>repeats</span><input type="range" id="repeats" min="1" max="16" step="1" value="1"><output></output></label>
     <label><span>freqMul</span><input type="range" id="freqMul" min="0.1" max="8" step="0.01" value="1"><output></output></label>
-    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+    <label><span>freqBase</span><input type="range" id="freqBase" min="20" max="800" step="1" value="65"><output></output></label>
+    <label><span>freqSpread</span><input type="range" id="freqSpread" min="1" max="4" step="0.01" value="2.02"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" data-fixed="true" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
   </fieldset>
 </div>
 
@@ -287,7 +297,8 @@ const T = new Function(document.getElementById('tether').textContent +
   '; return { t_template, t_distribution, t_mirror, t_interp };')();
 
 const IDS = ['knum','ampStep','stiffness','ampJump','interp','templateType','templateSkew',
-             'ampDist','ampDistParam','seqMode','repeats','freqMul','gain'];
+             'ampDist','ampDistParam','seqMode','repeats','freqMul','freqBase',
+             'freqSpread','gain'];
 Kit.compact();
 const el = Kit.controls(IDS);
 const ctx2d = Kit.fit(document.getElementById('view'));
@@ -310,7 +321,19 @@ function push() {
     st.node.port.postMessage({ type: 'freqs', value: freqs });
   }
 }
+
+// freqBase and freqSpread build the list the sequence steps through: four
+// frequencies from a base, each one freqSpread above the last
+function buildFreqs() {
+  const base = +el.freqBase.value, k = +el.freqSpread.value;
+  freqs = [0, 1, 2, 3].map(i => base * Math.pow(k, i / 2));
+}
+['freqBase','freqSpread'].forEach(id =>
+  el[id].addEventListener('input', () => { buildFreqs(); push(); }));
 IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+
+Kit.dice(el, IDS, push);
 
 Kit.presets({
   fern:    { _freqs: [65, 87, 98, 131],           knum: 12, ampStep: 0.05, stiffness: 0,    templateType: 1, ampDist: 0, seqMode: 2, repeats: 1, freqMul: 1, interp: 2 },
