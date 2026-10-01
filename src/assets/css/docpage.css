@@ -114,10 +114,6 @@
 
 /* figures */
 .docpage figure { margin: 2em 0 2.2em; }
-.docpage figure.wide {
-  margin-left: calc((100% - min(1060px, 94vw)) / 2);
-  width: min(1060px, 94vw);
-}
 .docpage figcaption {
   font-family: var(--doc-serif);
   font-style: italic;
@@ -184,6 +180,5 @@
   .docpage { font-size: 15.5px; padding: 1em 1.1em 4em; }
   .docpage .doc-title { font-size: 1.7em; }
   .docpage iframe { height: 560px; }
-  .docpage figure.wide { margin-left: 0; width: 100%; }
   .docpage .doc-toc li { display: block; margin: 0.25em 0; }
 }

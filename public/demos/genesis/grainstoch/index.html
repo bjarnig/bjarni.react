@@ -9,11 +9,10 @@
 <body>
 
 <h1>Grainstoch</h1>
-<p class="sub">A port of <code>Grainstoch.cpp</code> from
-<a href="https://github.com/bjarnig/Tether">Tether</a>, the grain layer of
-<code>moss</code> in Genesis. A pulsaret of <code>knum</code> breakpoints is emitted
-at <code>pitch</code>, filling <code>duty</code> of each period. Parameter names
-follow the UGen.</p>
+<p class="sub">A pulsaret of <code>knum</code> breakpoints emitted at
+<code>pitch</code>, filling <code>duty</code> of each period. The grain is itself a
+written waveform, so the grain rate and the waveform inside the grain are two separate
+rates rather than one signal being windowed.</p>
 
 <p class="sub"><b>The walk happens between grains, not inside them.</b> Every emission
 re-walks the whole pulsaret before playing it, so <code>ampStep</code> is a

@@ -9,11 +9,11 @@
 <body>
 
 <h1>Cyclegen</h1>
-<p class="sub">A port of <code>Cyclegen.cpp</code> from
-<a href="https://github.com/bjarnig/Tether">Tether</a>, the generator behind
-<code>fern</code> in Genesis. <code>knum</code> breakpoints per cycle, each one
-remembering its own amplitude and walking from it; a frequency sequence steps the
-pitch once per cycle. Parameter names follow the UGen.</p>
+<p class="sub">A waveform kept as a list of <code>knum</code> breakpoints, one per
+control point of the cycle. Each breakpoint remembers its own amplitude and steps from
+there, so the shape drifts instead of repeating, while a frequency list moves the pitch
+once per cycle. The waveform is written point by point; nothing is filtered, and there
+is no oscillator underneath.</p>
 
 <p class="sub"><b>The dial is <code>stiffness</code>.</b> At 0 every breakpoint walks
 freely from where it was, which is the Xenakis breakpoint-walk lineage. At 1 each one

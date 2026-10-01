@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two lists — Web Audio demo</title>
+<link rel="stylesheet" href="../kit/kit.css">
+</head>
+<body>
+
+<h1>Two lists</h1>
+<p class="sub">A waveform written from two lists and nothing else: one list says what
+the next amplitude is, the other says how many samples to take getting there. No
+oscillator, no table, no filter. This is the engine under most of the material in the
+piece, and <code>clover</code> is only this, twice over.</p>
+
+<p class="sub"><b>The dial is <code>durLo</code> and <code>durHi</code>.</b> They are
+counted in samples, and they are the only thing that decides pitch. A hundred samples
+a segment is a low tone, ten is a high one, one is noise at the edge of the sample
+rate. Nothing in the amplitude list knows about any of this.</p>
+
+<p class="warn">Start with the gain low.</p>
+
+<canvas id="view"></canvas>
+<div class="legend">
+  <span><i style="background:var(--accent)"></i>the waveform as written</span>
+  <span><i style="background:var(--mint)"></i>demanded points</span>
+  <span><i style="background:var(--muted)"></i>audio output</span>
+  <span id="readout"></span>
+</div>
+
+<div class="row">
+  <button id="play">play</button>
+  <span style="color:var(--muted);font-size:.75rem">presets:</span>
+  <button class="preset" data-p="clover">clover</button>
+  <button class="preset" data-p="ramp">one long ramp</button>
+  <button class="preset" data-p="alea">drawn each time</button>
+  <button class="preset" data-p="walk">walking</button>
+  <button class="preset" data-p="edge">at the edge</button>
+</div>
+<p class="hint" id="hint"></p>
+
+<div class="grid">
+  <fieldset>
+    <legend>amplitudes</legend>
+    <label><span>ampMode</span><input type="range" id="ampMode" min="0" max="3" step="1" value="0"><output></output></label>
+    <label><span>ampStart</span><input type="range" id="ampStart" min="-1" max="1" step="0.01" value="-0.5"><output></output></label>
+    <label><span>ampStep</span><input type="range" id="ampStep" min="0.005" max="0.5" step="0.005" value="0.1"><output></output></label>
+    <label><span>ampLen</span><input type="range" id="ampLen" min="2" max="64" step="1" value="12"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>bounds</legend>
+    <label><span>ampLo</span><input type="range" id="ampLo" min="-1" max="0" step="0.01" value="-1"><output></output></label>
+    <label><span>ampHi</span><input type="range" id="ampHi" min="0" max="1" step="0.01" value="1"><output></output></label>
+    <label><span>shape</span><input type="range" id="shape" min="0" max="1" step="1" value="1"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>durations, in samples</legend>
+    <label><span>durMode</span><input type="range" id="durMode" min="0" max="2" step="1" value="2"><output></output></label>
+    <label><span>durLo</span><input type="range" id="durLo" min="1" max="400" step="1" value="3"><output></output></label>
+    <label><span>durHi</span><input type="range" id="durHi" min="1" max="400" step="1" value="18"><output></output></label>
+    <label><span>durStep</span><input type="range" id="durStep" min="0.1" max="50" step="0.1" value="6"><output></output></label>
+  </fieldset>
+</div>
+
+<p class="sub" style="margin-top:1rem"><b>Reading the controls.</b>
+<code>ampMode</code> 0&ndash;3 is series, sequence, drawn, walk: an arithmetic series
+that adds <code>ampStep</code> each time and restarts after <code>ampLen</code> points;
+a fixed short list read round and round; a fresh value drawn between the bounds for
+every point; or a walk that moves by at most <code>ampStep</code> from where it was.
+These are selection principles rather than waveforms, and the same four are what
+decides the durations. <code>shape</code> 0 holds each value until the next, 1 ramps
+between them.</p>
+
+<p class="sub">The top panel draws what has actually been written, with time running
+left to right in samples, so a long segment is wide. At a few samples a segment the
+drawing and the sound are the same object seen at two speeds.</p>
+
+<script id="demand" type="text/js-lib">
+// Demand-rate streams, as in SuperCollider's Dseries, Dseq, Dwhite and Dbrown.
+// Each returns a function giving the next value of the stream.
+function dSeries(start, step, len) {
+  let i = 0, v = start;
+  return () => { if (i >= len) { i = 0; v = start; } i++; const out = v; v += step; return out; };
+}
+function dSeq(list) {
+  let i = 0;
+  return () => list[i++ % list.length];
+}
+function dWhite(lo, hi) {
+  return () => lo + Math.random() * (hi - lo);
+}
+function dBrown(lo, hi, step) {
+  let v = (lo + hi) / 2;
+  return () => {
+    v += (Math.random() * 2 - 1) * step;
+    if (v < lo) v = lo; else if (v > hi) v = hi;
+    return v;
+  };
+}
+
+// DemandEnvGen: pull a level and a duration, then take that many samples getting
+// there. shape 0 holds the value, 1 ramps to it, which is the SuperCollider default.
+class DemandEnv {
+  constructor() { this.prev = 0; this.target = 0; this.dur = 1; this.pos = 1e9; }
+  // levelFn gives the next level, durFn the next duration in samples
+  step(levelFn, durFn, shape) {
+    if (this.pos >= this.dur) {
+      this.pos -= this.dur;
+      if (this.pos > this.dur) this.pos = 0;
+      this.prev = this.target;
+      this.target = levelFn();
+      this.dur = Math.max(1, durFn());
+      this.onSegment && this.onSegment(this.target, this.dur);
+    }
+    const t = this.pos / this.dur;
+    this.pos += 1;
+    return shape ? this.prev + (this.target - this.prev) * t : this.target;
+  }
+}
+</script>
+
+<script id="worklet" type="text/js-worklet">
+class DemandProcessor extends AudioWorkletProcessor {
+  constructor() {
+    super();
+    this.p = {
+      ampMode: 0, ampStart: -0.5, ampStep: 0.1, ampLen: 12, ampLo: -1, ampHi: 1,
+      durMode: 2, durLo: 3, durHi: 18, durStep: 6, shape: 1, gain: 0.12
+    };
+    this.env = new DemandEnv();
+    this.segs = [];                       // recent (level, dur) pairs, for drawing
+    this.env.onSegment = (lv, d) => {
+      this.segs.push(lv, d);
+      if (this.segs.length > 256) this.segs.splice(0, this.segs.length - 256);
+      this.durSum += d; this.durN++;
+    };
+    this.durSum = 0; this.durN = 0;
+    this.build();
+    this.frames = 0;
+    this.port.onmessage = e => {
+      if (e.data.type !== 'params') return;
+      Object.assign(this.p, e.data.value);
+      this.build();
+    };
+  }
+
+  build() {
+    const p = this.p;
+    const lo = Math.min(p.ampLo, p.ampHi), hi = Math.max(p.ampLo, p.ampHi);
+    const n = Math.max(2, Math.round(p.ampLen));
+    switch (p.ampMode | 0) {
+      case 1: {
+        const list = [];
+        for (let i = 0; i < n; i++) list.push(lo + (hi - lo) * (i % 2 ? 0.15 : 0.85));
+        this.levelFn = dSeq([hi * 0.1, -hi * 0.1, -hi * 0.3, hi * 0.3]);
+        break;
+      }
+      case 2: this.levelFn = dWhite(lo, hi); break;
+      case 3: this.levelFn = dBrown(lo, hi, p.ampStep); break;
+      default: {
+        const s = dSeries(p.ampStart, p.ampStep, n);
+        this.levelFn = () => {
+          const v = s();
+          // the series runs past the bounds, as Dseries does; fold it back in
+          return v < lo ? lo + ((lo - v) % (hi - lo)) : (v > hi ? hi - ((v - hi) % (hi - lo)) : v);
+        };
+      }
+    }
+    const dlo = Math.min(p.durLo, p.durHi), dhi = Math.max(p.durLo, p.durHi);
+    switch (p.durMode | 0) {
+      case 0: this.durFn = () => dlo; break;
+      case 1: this.durFn = dSeq([dlo, dhi, (dlo + dhi) / 2]); break;
+      default: this.durFn = dBrown(dlo, dhi, p.durStep);
+    }
+  }
+
+  process(inputs, outputs) {
+    const out = outputs[0], ch0 = out[0], n = ch0.length;
+    const shape = this.p.shape | 0, gain = this.p.gain;
+    for (let s = 0; s < n; s++)
+      ch0[s] = this.env.step(this.levelFn, this.durFn, shape) * gain;
+    for (let c = 1; c < out.length; c++) out[c].set(ch0);
+
+    this.frames++;
+    if ((this.frames & 7) === 0) {
+      const meanDur = this.durN ? this.durSum / this.durN : 0;
+      this.port.postMessage({ type: 'snap', segs: this.segs.slice(), meanDur });
+      this.durSum = 0; this.durN = 0;
+    }
+    return true;
+  }
+}
+registerProcessor('demand', DemandProcessor);
+</script>
+
+<script src="../kit/kit.js"></script>
+<script>
+const IDS = ['ampMode','ampStart','ampStep','ampLen','ampLo','ampHi','shape','gain',
+             'durMode','durLo','durHi','durStep'];
+Kit.compact();
+const el = Kit.controls(IDS);
+const ctx2d = Kit.fit(document.getElementById('view'));
+const readout = document.getElementById('readout');
+
+let snap = null;
+
+const getState = Kit.playButton(document.getElementById('play'), async () => {
+  const st = await Kit.build({ processor: 'demand', prelude: ['demand'] });
+  st.node.port.onmessage = e => { if (e.data.type === 'snap') snap = e.data; };
+  st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
+  return st;
+});
+
+function push() {
+  const st = getState();
+  if (st) st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
+}
+IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+Kit.presets({
+  clover: { ampMode: 0, ampStart: -0.5, ampStep: 0.1,  ampLen: 12, durMode: 2, durLo: 3,  durHi: 18,  durStep: 6,  shape: 1 },
+  ramp:   { ampMode: 0, ampStart: -1,   ampStep: 0.02, ampLen: 64, durMode: 0, durLo: 40, durHi: 40,  durStep: 1,  shape: 1 },
+  alea:   { ampMode: 2, ampStart: -0.5, ampStep: 0.1,  ampLen: 12, durMode: 1, durLo: 8,  durHi: 90,  durStep: 6,  shape: 1 },
+  walk:   { ampMode: 3, ampStart: -0.5, ampStep: 0.08, ampLen: 12, durMode: 2, durLo: 20, durHi: 160, durStep: 30, shape: 1 },
+  edge:   { ampMode: 2, ampStart: -0.5, ampStep: 0.1,  ampLen: 12, durMode: 2, durLo: 1,  durHi: 3,   durStep: 1,  shape: 0 }
+}, (v) => {
+  Object.keys(v).forEach(k => { if (el[k]) el[k].value = v[k]; });
+  Kit.readouts(el);
+  push();
+});
+
+// top panel: the waveform as written, time proportional to the demanded durations
+function draw() {
+  requestAnimationFrame(draw);
+  const st = getState();
+  const w = ctx2d.canvas.clientWidth, h = ctx2d.canvas.clientHeight;
+  const split = Math.round(h * 0.58);
+  ctx2d.clearRect(0, 0, w, h);
+
+  if (snap && snap.segs.length >= 4) {
+    const segs = snap.segs;
+    const nSeg = segs.length / 2;
+    let total = 0;
+    for (let i = 0; i < nSeg; i++) total += segs[i * 2 + 1];
+    const shape = +el.shape.value;
+    const yOf = v => split / 2 - v * (split / 2 - 8);
+
+    ctx2d.strokeStyle = Kit.css('--accent');
+    ctx2d.lineWidth = 1.6;
+    ctx2d.beginPath();
+    let acc = 0, prev = segs[0];
+    for (let i = 0; i < nSeg; i++) {
+      const lv = segs[i * 2], d = segs[i * 2 + 1];
+      const x0 = acc / total * w, x1 = (acc + d) / total * w;
+      if (shape) {
+        i ? ctx2d.lineTo(x0, yOf(prev)) : ctx2d.moveTo(x0, yOf(prev));
+        ctx2d.lineTo(x1, yOf(lv));
+      } else {
+        i ? ctx2d.lineTo(x0, yOf(lv)) : ctx2d.moveTo(x0, yOf(lv));
+        ctx2d.lineTo(x1, yOf(lv));
+      }
+      acc += d; prev = lv;
+    }
+    ctx2d.stroke();
+
+    // the demanded points themselves
+    ctx2d.fillStyle = Kit.css('--mint');
+    acc = 0;
+    for (let i = 0; i < nSeg; i++) {
+      const lv = segs[i * 2], d = segs[i * 2 + 1];
+      acc += d;
+      const x = acc / total * w;
+      ctx2d.fillRect(x - 1.5, yOf(lv) - 1.5, 3, 3);
+    }
+
+    const hz = snap.meanDur > 0 ? st ? st.ctx.sampleRate / snap.meanDur : 44100 / snap.meanDur : 0;
+    readout.textContent = 'mean segment ' + snap.meanDur.toFixed(1) + ' samples · ' +
+      hz.toFixed(0) + ' points a second · ' + nSeg + ' shown';
+  }
+
+  ctx2d.strokeStyle = Kit.css('--rule');
+  ctx2d.beginPath(); ctx2d.moveTo(0, split); ctx2d.lineTo(w, split); ctx2d.stroke();
+
+  if (st) {
+    const hz = snap && snap.meanDur > 0 ? st.ctx.sampleRate / snap.meanDur / 4 : 110;
+    ctx2d.save();
+    ctx2d.translate(0, split);
+    Kit.drawScope(ctx2d, w, h - split, st.analyser, st.scope,
+      { hz: Math.max(20, Math.min(2000, hz)), gain: +el.gain.value, sampleRate: st.ctx.sampleRate });
+    ctx2d.restore();
+  }
+}
+draw();
+Kit.readouts(el);
+</script>
+</body>
+</html>

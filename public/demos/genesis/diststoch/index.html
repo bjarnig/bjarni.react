@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diststoch — Web Audio demo</title>
+<link rel="stylesheet" href="../kit/kit.css">
+</head>
+<body>
+
+<h1>Diststoch</h1>
+<p class="sub">The same breakpoint waveform, with the tether removed. Each breakpoint
+walks wherever its own chaotic step takes it, and the only thing keeping the waveform
+inside a range is what happens when it reaches the edge. The amplitude bounds are not
+a limiter: they are part of the instrument, and each of the two can behave
+differently.</p>
+
+<p class="sub"><b>The dials are <code>barrierLo</code> and <code>barrierHi</code>.</b>
+0 reflects the walk back inside, 1 wraps it round to the other bound, 2 holds it
+against the edge, and 3 throws it to a random place in the range. A wrapping bound
+tears the waveform, a holding bound flattens it into a plateau, and a reflecting
+bound keeps it continuous. Set the two differently and the waveform becomes
+asymmetric, which is audible as a shift in weight rather than in pitch.</p>
+
+<p class="warn">Start with the gain low.</p>
+
+<canvas id="view"></canvas>
+<div class="legend">
+  <span><i style="background:var(--accent)"></i>breakpoints</span>
+  <span><i style="background:var(--mint)"></i>bounds</span>
+  <span><i style="background:var(--muted)"></i>steps drawn, audio output</span>
+  <span id="readout"></span>
+</div>
+
+<div class="row">
+  <button id="play">play</button>
+  <span style="color:var(--muted);font-size:.75rem">presets:</span>
+  <button class="preset" data-p="mirror">reflecting</button>
+  <button class="preset" data-p="wrap">wrapping</button>
+  <button class="preset" data-p="clip">holding</button>
+  <button class="preset" data-p="asym">asymmetric</button>
+  <button class="preset" data-p="cauchy">heavy tails</button>
+</div>
+<p class="hint" id="hint"></p>
+
+<div class="grid">
+  <fieldset>
+    <legend>bounds</legend>
+    <label><span>ampLo</span><input type="range" id="ampLo" min="-1" max="0" step="0.01" value="-1"><output></output></label>
+    <label><span>ampHi</span><input type="range" id="ampHi" min="0" max="1" step="0.01" value="1"><output></output></label>
+    <label><span>barrierLo</span><input type="range" id="barrierLo" min="0" max="3" step="1" value="0"><output></output></label>
+    <label><span>barrierHi</span><input type="range" id="barrierHi" min="0" max="3" step="1" value="0"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>step</legend>
+    <label><span>ampKick</span><input type="range" id="ampKick" min="0" max="3" step="0.01" value="1.1"><output></output></label>
+    <label><span>ampDist</span><input type="range" id="ampDist" min="0" max="6" step="1" value="0"><output></output></label>
+    <label><span>ampDistP</span><input type="range" id="ampDistP" min="0" max="1" step="0.005" value="0.5"><output></output></label>
+    <label><span>knum</span><input type="range" id="knum" min="2" max="64" step="1" value="16"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>duration</legend>
+    <label><span>durKick</span><input type="range" id="durKick" min="0" max="3" step="0.01" value="0.4"><output></output></label>
+    <label><span>durDist</span><input type="range" id="durDist" min="0" max="6" step="1" value="0"><output></output></label>
+    <label><span>durDistP</span><input type="range" id="durDistP" min="0" max="1" step="0.005" value="0.5"><output></output></label>
+    <label><span>interp</span><input type="range" id="interp" min="0" max="2" step="1" value="1"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>rate</legend>
+    <label><span>minFreq</span><input type="range" id="minFreq" min="1" max="200" step="1" value="4"><output></output></label>
+    <label><span>maxFreq</span><input type="range" id="maxFreq" min="10" max="2000" step="1" value="400"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.12"><output></output></label>
+  </fieldset>
+</div>
+
+<p class="sub" style="margin-top:1rem"><b>Reading the panels.</b> The top panel is one
+cycle of the waveform between its two bounds, and the bounds are drawn where they
+actually are, so a narrow range is visible as a narrow band. The middle panel is a
+histogram of the steps the walk has actually been given, which is what
+<code>ampDist</code> and <code>ampDistP</code> change. The bottom panel is the
+audio.</p>
+
+<p class="sub"><code>ampDist</code> 0&ndash;6 is linear, Cauchy, logistic, hyperbolic
+cosine, arcsine, exponential and sinus, the distribution set of dynamic stochastic
+synthesis. The steps are not drawn from noise but from the rotor's own angle, which
+is why the default law already piles them at the extremes: a third of the steps land
+in the outer eighth. Cauchy pulls them back toward zero, arcsine pushes them further
+out, and sinus is not a distribution at all but one fixed step repeated. The duration
+walk has its own law and its own bound, so the period drifts independently of the
+shape.</p>
+
+<script id="tether" type="text/js-lib">
+const T_PI = Math.PI;
+const T_PHI = 1.61803398874989484820;
+
+// Maps a uniform f in [0,1) to a shaped deviate in ~[-1,1], shaped by a in [0,1].
+function t_distribution(which, a, f) {
+  let temp, c;
+  if (a > 1) a = 1;
+  if (a < 0.0001) a = 0.0001;
+  switch (which) {
+    case 1:
+      c = Math.atan(10 * a);
+      return ((1 / a) * Math.tan(c * (2 * f - 1))) * 0.1;
+    case 2:
+      c = 0.5 + (0.499 * a);
+      c = Math.log((1 - c) / c);
+      f = ((f - 0.5) * 0.998 * a) + 0.5;
+      return Math.log((1 - f) / f) / c;
+    case 3:
+      c = Math.tan(1.5692255 * a);
+      temp = Math.tan(1.5692255 * a * f) / c;
+      temp = Math.log(temp * 0.999 + 0.001) * (-0.1447648);
+      return 2 * temp - 1.0;
+    case 4:
+      c = Math.sin(1.5707963 * a);
+      return Math.sin(T_PI * (f - 0.5) * a) / c;
+    case 5:
+      c = Math.log(1 - (0.999 * a));
+      return 2 * (Math.log(1 - (f * 0.999 * a)) / c) - 1;
+    case 6:
+      return 2 * a - 1;
+    default:
+      break;
+  }
+  return 2 * f - 1;
+}
+
+function t_clamp(x, lo, hi) { return x < lo ? lo : (x > hi ? hi : x); }
+
+// fold x back into [lo, hi]
+function t_mirror(x, lo, hi) {
+  const range = hi - lo;
+  if (range <= 0) return lo;
+  let y = x - lo;
+  const twice = 2 * range;
+  y -= twice * Math.floor(y / twice);
+  if (y > range) y = twice - y;
+  return lo + y;
+}
+
+// per-bound barrier: 0 mirror, 1 wrap, 2 clip, 3 randomize (r in [0,1))
+function t_barrier(x, lo, hi, modeLo, modeHi, r) {
+  const range = hi - lo;
+  if (range <= 1e-9) return lo;
+  if (x > hi) {
+    const over = x - hi;
+    switch (modeHi) {
+      case 1: x = lo + (over % range); break;
+      case 2: x = hi; break;
+      case 3: x = lo + r * range; break;
+      default: x = hi - (over % range); break;
+    }
+  } else if (x < lo) {
+    const under = lo - x;
+    switch (modeLo) {
+      case 1: x = hi - (under % range); break;
+      case 2: x = lo; break;
+      case 3: x = lo + r * range; break;
+      default: x = lo + (under % range); break;
+    }
+  }
+  return t_clamp(x, lo, hi);
+}
+
+// interp: 0 hold, 1 linear, 2 cosine
+function t_interp(mode, a, b, t) {
+  switch (mode) {
+    case 0: return a;
+    case 2: return a + (b - a) * (0.5 - 0.5 * Math.cos(T_PI * t));
+    default: return a + (b - a) * t;
+  }
+}
+
+// control-point rate r in [0,1] over knum points per period, as phase per sample
+function t_phaseinc(sr, minf, maxf, r, knum) {
+  let cpRate = (minf + (maxf - minf) * r) * knum;
+  if (cpRate < 0) cpRate = 0;
+  const inc = cpRate / sr;
+  return inc > 64 ? 64 : inc;
+}
+
+// one step of the kicked rotor, in place on p[i] and th[i]
+function t_stdmap(p, th, i, kick, gamma, thScale) {
+  p[i] = t_clamp(gamma * p[i] + kick, -1e6, 1e6);
+  th[i] += p[i] * thScale;
+  const twopi = 2 * T_PI;
+  th[i] -= twopi * Math.floor(th[i] / twopi);
+}
+</script>
+
+<script id="worklet" type="text/js-worklet">
+class DiststochProcessor extends AudioWorkletProcessor {
+  constructor() {
+    super();
+    this.p = {
+      knum: 16, minFreq: 4, maxFreq: 400, ampDist: 0, ampDistP: 0.5,
+      durDist: 0, durDistP: 0.5, ampKick: 1.1, durKick: 0.4,
+      ampLo: -1, ampHi: 1, barrierLo: 0, barrierHi: 0, interp: 1, gain: 0.12
+    };
+    this.initMem(this.p.knum);
+    this.hist = new Float64Array(32);        // histogram of the steps actually drawn
+    this.frames = 0;
+    this.port.onmessage = e => {
+      const d = e.data;
+      if (d.type !== 'params') return;
+      const wantKnum = Math.max(1, Math.min(1024, Math.round(d.value.knum)));
+      Object.assign(this.p, d.value);
+      if (wantKnum !== this.knum) this.initMem(wantKnum);
+    };
+  }
+
+  initMem(n) {
+    this.knum = n;
+    this.ampP = new Float64Array(n);
+    this.ampTh = new Float64Array(n);
+    this.durP = new Float64Array(n);
+    this.durTh = new Float64Array(n);
+    const lo = this.p.ampLo, hi = this.p.ampHi;
+    // Golden-ratio angles: a low-discrepancy spread so the rotors start decorrelated.
+    for (let i = 0; i < n; i++) {
+      this.ampP[i] = t_clamp(0.5 * Math.sin(2 * T_PI * (i + 0.5) / n), lo, hi);
+      this.ampTh[i] = 2 * T_PI * (((i + 1) * T_PHI) % 1);
+      this.durP[i] = 0.5;
+      this.durTh[i] = 2 * T_PI * ((((i + 1) * T_PHI * 0.5) + 0.37) % 1);
+    }
+    // CPState: phase >= 1 forces the first segment to be set up on the first sample
+    this.main = { index: 0, phase: 1, inc: 0, curAmp: 0, nextAmp: 0 };
+  }
+
+  process(inputs, outputs) {
+    const out = outputs[0], ch0 = out[0], n = ch0.length;
+    const p = this.p;
+    const minf = p.minFreq, maxf = p.maxFreq;
+    const ampDist = p.ampDist | 0, ampDistP = p.ampDistP;
+    const durDist = p.durDist | 0, durDistP = p.durDistP;
+    const ampKick = p.ampKick, durKick = p.durKick;
+    const ampLo = p.ampLo, ampHi = p.ampHi;
+    const barrierLo = p.barrierLo | 0, barrierHi = p.barrierHi | 0;
+    const interp = p.interp | 0;
+    const knum = this.knum, sr = sampleRate;
+    const ampP = this.ampP, ampTh = this.ampTh, durP = this.durP, durTh = this.durTh;
+    const main = this.main, hist = this.hist;
+
+    // Irrational angle scale: keeps the barrier fold off the low-order resonances
+    // that otherwise open period-2 windows at ordinary kick values.
+    const ampRange = ampHi - ampLo;
+    const ampScale = (ampRange > 1e-9) ? (2 * T_PI * T_PHI / ampRange) : 0;
+    const durScale = 2 * T_PI * T_PHI;
+
+    for (let s = 0; s < n; s++) {
+      let g = 0;
+      while (main.phase >= 1.0 && g++ < 64) {
+        main.phase -= 1.0;
+        main.index = (main.index + 1) % knum;
+        const i = main.index;
+        main.curAmp = main.nextAmp;
+
+        // dist 0 (linear) makes the kick exactly ampKick*sin(theta): the
+        // Chirikov map, chaotic above ~0.97. Other laws reshape the kick.
+        const au = 0.5 + 0.5 * Math.sin(ampTh[i]);
+        const shaped = t_distribution(ampDist, ampDistP, au);
+        const akick = ampKick * shaped;
+        t_stdmap(ampP, ampTh, i, akick, 1.0, ampScale);
+        ampP[i] = t_barrier(ampP[i], ampLo, ampHi, barrierLo, barrierHi, Math.random());
+        main.nextAmp = ampP[i];
+
+        const bin = Math.max(0, Math.min(31, Math.floor((shaped * 0.5 + 0.5) * 32)));
+        hist[bin] += 1;
+
+        const du = 0.5 + 0.5 * Math.sin(durTh[i]);
+        const dkick = durKick * t_distribution(durDist, durDistP, du);
+        t_stdmap(durP, durTh, i, dkick, 1.0, durScale);
+        durP[i] = t_mirror(durP[i], 0.0, 1.0);
+
+        main.inc = t_phaseinc(sr, minf, maxf, durP[i], knum);
+      }
+      ch0[s] = t_interp(interp, main.curAmp, main.nextAmp, main.phase) * p.gain;
+      main.phase += main.inc;
+    }
+    for (let c = 1; c < out.length; c++) out[c].set(ch0);
+
+    this.frames++;
+    if ((this.frames & 7) === 0) {
+      this.port.postMessage({
+        type: 'snap', knum, amps: Array.from(ampP), hist: Array.from(hist),
+        hz: main.inc * sampleRate / knum
+      });
+      for (let i = 0; i < hist.length; i++) hist[i] *= 0.88;   // a slow forget
+    }
+    return true;
+  }
+}
+registerProcessor('diststoch', DiststochProcessor);
+</script>
+
+<script src="../kit/kit.js"></script>
+<script>
+const IDS = ['ampLo','ampHi','barrierLo','barrierHi','ampKick','ampDist','ampDistP',
+             'knum','durKick','durDist','durDistP','interp','minFreq','maxFreq','gain'];
+Kit.compact();
+const el = Kit.controls(IDS);
+const ctx2d = Kit.fit(document.getElementById('view'));
+const readout = document.getElementById('readout');
+
+let snap = null;
+
+const getState = Kit.playButton(document.getElementById('play'), async () => {
+  const st = await Kit.build({ processor: 'diststoch', prelude: ['tether'] });
+  st.node.port.onmessage = e => { if (e.data.type === 'snap') snap = e.data; };
+  st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
+  return st;
+});
+
+function push() {
+  const st = getState();
+  if (st) st.node.port.postMessage({ type: 'params', value: Kit.values(el) });
+}
+IDS.forEach(id => el[id].addEventListener('input', () => { Kit.readouts(el); push(); }));
+
+Kit.presets({
+  mirror: { ampLo: -1,   ampHi: 1,   barrierLo: 0, barrierHi: 0, ampKick: 1.1, ampDist: 0, knum: 16, durKick: 0.4, interp: 1 },
+  wrap:   { ampLo: -1,   ampHi: 1,   barrierLo: 1, barrierHi: 1, ampKick: 1.1, ampDist: 0, knum: 16, durKick: 0.4, interp: 1 },
+  clip:   { ampLo: -0.6, ampHi: 0.6, barrierLo: 2, barrierHi: 2, ampKick: 1.6, ampDist: 0, knum: 12, durKick: 0.2, interp: 1 },
+  asym:   { ampLo: -0.9, ampHi: 0.3, barrierLo: 0, barrierHi: 2, ampKick: 1.3, ampDist: 0, knum: 20, durKick: 0.6, interp: 2 },
+  cauchy: { ampLo: -1,   ampHi: 1,   barrierLo: 3, barrierHi: 3, ampKick: 0.8, ampDist: 1, ampDistP: 0.25, knum: 24, durKick: 1.2, durDist: 1, interp: 0 }
+}, (v) => {
+  Object.keys(v).forEach(k => { if (el[k]) el[k].value = v[k]; });
+  Kit.readouts(el);
+  push();
+});
+
+// three panels: the waveform inside its bounds, the steps drawn, the audio
+function draw() {
+  requestAnimationFrame(draw);
+  const st = getState();
+  const w = ctx2d.canvas.clientWidth, h = ctx2d.canvas.clientHeight;
+  const a = Math.round(h * 0.42), b = Math.round(h * 0.70);
+  ctx2d.clearRect(0, 0, w, h);
+
+  // bounds, drawn on a fixed -1..1 frame so a narrow range looks narrow
+  const lo = +el.ampLo.value, hi = +el.ampHi.value;
+  const yOf = v => a / 2 - v * (a / 2 - 8);
+  ctx2d.strokeStyle = Kit.css('--mint');
+  ctx2d.lineWidth = 1;
+  ctx2d.setLineDash([4, 3]);
+  ctx2d.beginPath();
+  ctx2d.moveTo(0, yOf(hi)); ctx2d.lineTo(w, yOf(hi));
+  ctx2d.moveTo(0, yOf(lo)); ctx2d.lineTo(w, yOf(lo));
+  ctx2d.stroke();
+  ctx2d.setLineDash([]);
+
+  if (snap) {
+    ctx2d.strokeStyle = Kit.css('--accent');
+    ctx2d.lineWidth = 2;
+    ctx2d.beginPath();
+    for (let i = 0; i < snap.knum; i++) {
+      const x = (i + 0.5) / snap.knum * w;
+      i ? ctx2d.lineTo(x, yOf(snap.amps[i])) : ctx2d.moveTo(x, yOf(snap.amps[i]));
+    }
+    ctx2d.stroke();
+    ctx2d.fillStyle = Kit.css('--accent');
+    for (let i = 0; i < snap.knum; i++) {
+      const x = (i + 0.5) / snap.knum * w;
+      ctx2d.fillRect(x - 1.5, yOf(snap.amps[i]) - 1.5, 3, 3);
+    }
+
+    // histogram of the steps drawn
+    const base = b - 6, top = a + 10;
+    let hmax = 1e-9;
+    for (const v of snap.hist) hmax = Math.max(hmax, v);
+    ctx2d.fillStyle = Kit.css('--muted');
+    const bw = w / snap.hist.length;
+    for (let i = 0; i < snap.hist.length; i++) {
+      const bh = (snap.hist[i] / hmax) * (base - top);
+      ctx2d.fillRect(i * bw + 1, base - bh, bw - 2, bh);
+    }
+
+    // how much of the cycle is sitting on a bound
+    let onBound = 0;
+    for (let i = 0; i < snap.knum; i++)
+      if (snap.amps[i] >= hi - 1e-6 || snap.amps[i] <= lo + 1e-6) onBound++;
+    readout.textContent = 'on a bound ' + Math.round(100 * onBound / snap.knum) + '%' +
+      ' · range ' + (hi - lo).toFixed(2) + ' · ' + snap.hz.toFixed(1) + ' Hz';
+  }
+
+  ctx2d.strokeStyle = Kit.css('--rule');
+  ctx2d.beginPath(); ctx2d.moveTo(0, a); ctx2d.lineTo(w, a);
+  ctx2d.moveTo(0, b); ctx2d.lineTo(w, b); ctx2d.stroke();
+
+  if (st) {
+    ctx2d.save();
+    ctx2d.translate(0, b);
+    Kit.drawScope(ctx2d, w, h - b, st.analyser, st.scope,
+      { hz: snap ? Math.max(20, snap.hz) : 60, gain: +el.gain.value, sampleRate: st.ctx.sampleRate });
+    ctx2d.restore();
+  }
+}
+draw();
+Kit.readouts(el);
+</script>
+</body>
+</html>
