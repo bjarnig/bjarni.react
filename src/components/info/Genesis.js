@@ -91,7 +91,7 @@ function Genesis() {
       <h1 className="doc-title">Genesis</h1>
       <p className="doc-standfirst">
         
-Genesis explores a set of sound synthesis procedures built from stochastic, chaotic and network-based functions. Each generator is a short program that produces continuously varying waveforms and places them within a predefined proportional structure. Koenig described the electronically produced sound as "both a form-section and an acoustico-musical unit, a quantum", highlighting its role as both the part and the whole. The piece considers the continuity this idea implies and the tensions it introduces. It reflects on the scope of decisions, selections, and rules, and how these interact through the processes that make up the piece.
+Genesis explores a set of sound synthesis procedures built from stochastic, chaotic and network-based functions. Each generator is a short program that produces continuously varying waveforms and places them within a predefined proportional structure. Koenig described electronically produced sound as "both a form-section and an acoustico-musical unit, a quantum", highlighting its role as both the part and the whole. The piece considers the continuity this idea implies and the tensions it introduces. It reflects on the scope of decisions, selections, and rules, and how these interact through the processes that make up the piece.
 
       </p>
 
