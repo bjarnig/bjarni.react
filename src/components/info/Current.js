@@ -75,6 +75,7 @@ const misplaced_objects = imageurl + "misplaced-objects.png";
 const ruv = imageurl + "ruv.png";
 const grm_sonology = imageurl + "grm-sonology.jpg";
 const notam = imageurl + "notam.png";
+const koenig100 = imageurl + "koenig100.jpg";
 const superpang_world2 = imageurl + "superpang-world2.jpg";
 
 function Current() {
@@ -98,6 +99,39 @@ function Current() {
           path="/current"
         />
         <div className="content">
+
+          <article>
+            {" "}
+            <div className="date">03-10-2026</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h4>Gottfried Michael Koenig 100 years</h4>
+            <div className="img-center">
+              <a
+                href="https://sonology.org/gottfried-michael-koenig-100-years/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <OpacityImage imageUrl={koenig100} />
+              </a>
+            </div>
+            <p>
+              Gottfried Michael Koenig would have turned one hundred on 5
+              October 2026. Following the concert of his own music on 2 October,
+              the Institute of Sonology presents a second evening at the New
+              Music Lab on 3 October, devoted to work inspired by, or in
+              dialogue with, Koenig's music and his thinking about composition.
+              The programme brings together new and recent pieces by Bjarni
+              Gunnarsson, Ji Youn Kang, Riccardo Marogna, Kees Tazelaar, Cansu
+              Ülker and Guyshawn Wong.
+            </p>
+            <p>
+              New Music Lab, sixth floor of Amare, Den Haag. The concert begins
+              at 17:00.
+            </p>
+            <p>Photo: Rineke Dijkstra</p>
+          </article>
 
           <article>
             {" "}
