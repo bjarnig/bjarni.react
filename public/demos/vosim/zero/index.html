@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VOSIM, The zero interval — Web Audio demo</title>
+<link rel="stylesheet" href="../kit/kit.css">
+<style>#view{height:210px;margin-bottom:.5rem}#spec{height:250px}body.compact #view{height:min(26vh,170px)}body.compact #spec{height:min(30vh,200px)}
+#readout{color:var(--muted)}input[type=checkbox]{justify-self:start}</style>
+</head>
+<body>
+
+<h1>VOSIM: The zero interval</h1>
+<p class="sub">The silence after the last pulse is the only part of the period that has to change when the pitch does. Here
+the pulses stay exactly as they are and only the zero interval is modulated, so the pitch wavers while the formant
+does not move. Tempelaars points to this: because of the zero interval the period can be modulated in a simple way.
+The top panel draws four successive periods from the same function that the audio uses.</p>
+<p class="warn">Start with the gain low.</p>
+
+<canvas id="view"></canvas>
+<canvas id="spec"></canvas>
+<div class="legend">
+  <span><i style="background:var(--accent)"></i>signal</span><span><i style="background:var(--rose)"></i>zero interval</span><span><i style="background:var(--muted)"></i>heard (live)</span>
+  <span id="readout"></span>
+</div>
+
+<div class="row">
+  <button id="play">play</button>
+  <span style="color:var(--muted);font-size:.75rem">presets:</span>
+  <button class="preset" data-p="still">none</button>
+  <button class="preset" data-p="vib">vibrato</button>
+  <button class="preset" data-p="wide">slow and wide</button>
+  <button class="preset" data-p="fast">fast</button>
+</div>
+
+<div class="grid">
+  <fieldset>
+    <legend>signal</legend>
+    <label><span>pitch 1/T, Hz</span><input type="range" id="fund" min="30" max="500" step="1" value="100"><output></output></label>
+    <label><span>formant F, Hz</span><input type="range" id="form" min="200" max="6000" step="1" value="1200"><output></output></label>
+    <label><span>N pulses</span><input type="range" id="N" min="1" max="32" step="1" value="5"><output></output></label>
+    <label><span>b, level ratio</span><input type="range" id="b" min="0" max="1" step="0.005" value="0.85"><output></output></label>
+    <label><span>gain</span><input data-fixed="true" type="range" id="gain" min="0" max="0.5" step="0.005" value="0.2"><output></output></label>
+  </fieldset>
+  <fieldset>
+    <legend>zero-interval modulation</legend>
+    <label><span>depth</span><input type="range" id="modDepth" min="0" max="0.6" step="0.005" value="0.2"><output></output></label>
+    <label><span>rate, Hz</span><input type="range" id="modRate" min="0.2" max="12" step="0.1" value="3"><output></output></label>
+  </fieldset>
+</div>
+
+<p class="note">VOSIM (VOice SIMulation): Kaegi and Tempelaars, Institute of Sonology, Utrecht, 1970s. Definitions and the
+spectrum formula are from Tempelaars, <i>Signal Processing, Speech and Music</i> (1996), section 4.3.</p>
+
+<script id="vosimcore" type="text/js-lib">
+/* VOSIM maths, shared by the audio thread, the drawings and the tests.
+ *
+ * Definitions follow Tempelaars, "Signal Processing, Speech and Music" (1996),
+ * section 4.3, which gives the signal of Tempelaars (1977):
+ *
+ *   one period T holds N pulses of sin^2, each of width W, followed by silence;
+ *   pulse n (n = 0 .. N-1) is scaled by b^n, a staircase with a constant ratio b
+ *   between consecutive levels; p(t) = (1 - cos 2 pi t/W) / 2 inside a pulse.
+ *
+ * Pitch is 1 / T, the formant peak sits at F = 1 / W, and the silence is T - N W.
+ * Everything below is in seconds and Hz.
+ */
+
+// Level of pulse n in the original VOSIM (mode 0): b^n.
+// Mode 1 subtracts d per pulse (the Csound opcode's decay); mode 2 is a smooth
+// exponential b^(t/W), the envelope of the recursive realisation in the book's
+// fig. 6.3.20. Only mode 0 is the original signal.
+function vosimLevel(mode, n, frac, b, d) {
+  if (mode === 1) { const v = 1 - n * d; return v > 0 ? v : 0; }
+  if (mode === 2) return Math.pow(b, n + frac);
+  return Math.pow(b, n);
+}
+
+// How many pulses fit in a period of T seconds: N, but never past the period.
+function vosimPulses(N, W, T) {
+  const fit = Math.floor(T / W + 1e-9);
+  return N < fit ? N : fit;
+}
+
+// y(t) for one voice, t = seconds since the period began. Continuous in time:
+// the staircase steps land where p(t) is zero, so the signal has no jump.
+function vosimSample(t, Neff, W, b, mode, d) {
+  if (t < 0) return 0;
+  const n = Math.floor(t / W);
+  if (n >= Neff) return 0;
+  const frac = t / W - n;
+  return vosimLevel(mode, n, frac, b, d) * 0.5 * (1 - Math.cos(2 * Math.PI * frac));
+}
+
+// Tempelaars 1996 p. 138: amplitude of harmonic x (x may be non-integer, for the
+// envelope) of the period T, with gamma = W / T. The first factor is the spectrum
+// of one sin^2 pulse, the second the geometric series over the staircase.
+function vosimHarmonic(x, T, N, W, b) {
+  const g = W / T, xg = x * g;
+  let one;
+  if (x < 1e-9) one = g;                                  // limit at x = 0
+  else if (Math.abs(xg * xg - 1) < 1e-9) one = 0.5 / x;   // limit at x g = 1
+  else one = Math.abs(Math.sin(Math.PI * xg) / (Math.PI * x * (xg * xg - 1)));
+  const bN = Math.pow(b, N), cNg = Math.cos(2 * Math.PI * N * xg);
+  const num = 1 - 2 * bN * cNg + bN * bN;
+  const den = 1 - 2 * b * Math.cos(2 * Math.PI * xg) + b * b;
+  const geo = den < 1e-12 ? N : Math.sqrt(Math.max(0, num / den));
+  return one * geo;
+}
+
+// The length of a period when the zero interval is modulated: only the silence
+// changes, the pulses do not. lfo in [-1, 1].
+function vosimPeriod(fund, depth, lfo) {
+  const T = 1 / fund * (1 + depth * lfo);
+  return T;
+}
+
+</script>
+<script id="worklet" type="text/js-worklet">
+/* VOSIM as an AudioWorklet. Up to three voices share one period (the book, p. 285:
+ * several VOSIM functions with identical periods and different pulse widths give as
+ * many formant peaks). core.js is prepended by the build. */
+class VosimProcessor extends AudioWorkletProcessor {
+  constructor() {
+    super();
+    this.p = { fund: 110, form1: 880, form2: 1760, form3: 2640, g1: 1, g2: 0, g3: 0,
+               N: 6, b: 0.85, env: 0, decay: 0.15, modDepth: 0, modRate: 5, gain: 0.2 };
+    this.t = 0;           // seconds into the current period
+    this.T = 1 / this.p.fund;
+    this.lfo = 0;         // phase of the zero-interval modulation, in cycles
+    this.port.onmessage = e => {
+      if (e.data.type !== 'params') return;
+      Object.assign(this.p, e.data.value);
+      if (!this.live) { this.live = true; this.T = 1 / this.p.fund; this.t = 0; }   // first message sets the first period
+    };
+  }
+  process(inputs, outputs) {
+    const out = outputs[0], ch = out[0], n = ch.length, p = this.p, dt = 1 / sampleRate;
+    const W1 = 1 / p.form1, W2 = 1 / p.form2, W3 = 1 / p.form3;
+    for (let i = 0; i < n; i++) {
+      if (this.t >= this.T) {
+        this.t -= this.T;
+        this.lfo += this.T * p.modRate; this.lfo -= Math.floor(this.lfo);
+        this.T = vosimPeriod(p.fund, p.modDepth, Math.sin(2 * Math.PI * this.lfo));
+        if (this.t >= this.T) this.t = 0;
+      }
+      const t = this.t;
+      let y = 0;
+      if (p.g1) y += p.g1 * vosimSample(t, vosimPulses(p.N, W1, this.T), W1, p.b, p.env, p.decay);
+      if (p.g2) y += p.g2 * vosimSample(t, vosimPulses(p.N, W2, this.T), W2, p.b, p.env, p.decay);
+      if (p.g3) y += p.g3 * vosimSample(t, vosimPulses(p.N, W3, this.T), W3, p.b, p.env, p.decay);
+      ch[i] = y * p.gain;
+      this.t += dt;
+    }
+    for (let c = 1; c < out.length; c++) out[c].set(ch);
+    return true;
+  }
+}
+registerProcessor('vosim', VosimProcessor);
+
+</script>
+<script src="../kit/kit.js"></script>
+<script>
+window.DEMO = {"view":"periods"};
+window.PRESETS = {"still":{"modDepth":0},"vib":{"modDepth":0.12,"modRate":5.5},"wide":{"modDepth":0.4,"modRate":1.2},"fast":{"modDepth":0.3,"modRate":9}};
+</script>
+<script>
+/* Client side of every VOSIM demo: control plumbing, the time-domain panel, the
+ * spectrum panel. The maths comes from core.js (inlined as #vosimcore), so the
+ * drawings use the same functions as the audio thread. Each page sets DEMO first. */
+(function () {
+  const D = Object.assign({ view: 'period', spec: true, maxHz: 0, sweep: false }, window.DEMO || {});
+  const lib = new Function(document.getElementById('vosimcore').textContent +
+    '; return { vosimLevel, vosimPulses, vosimSample, vosimHarmonic, vosimPeriod };')();
+  const IDS = ['fund', 'form', 'N', 'b', 'env', 'decay', 'modDepth', 'modRate', 'gain', 'g1', 'g2', 'g3', 'form2', 'form3']
+    .filter(id => document.getElementById(id));
+  Kit.compact();
+  const el = Kit.controls(IDS);
+  const FRAC = /^(b|decay|modDepth|g1|g2|g3|gain)$/;
+  const read = () => Kit.readouts(el, FRAC);
+  const css = Kit.css;
+  const view = document.getElementById('view'), specCv = document.getElementById('spec');
+  const vctx = view && Kit.fit(view), sctx = specCv && Kit.fit(specCv);
+
+  // worklet parameter set from the controls
+  function params() {
+    const v = Kit.values(el);
+    return { fund: v.fund, form1: v.form, form2: v.form2 || 1760, form3: v.form3 || 2640,
+             g1: 'g1' in v ? v.g1 : 1, g2: v.g2 || 0, g3: v.g3 || 0, N: v.N, b: v.b,
+             env: v.env || 0, decay: v.decay == null ? 0.15 : v.decay,
+             modDepth: v.modDepth || 0, modRate: v.modRate || 5, gain: v.gain };
+  }
+  const voicesOf = p => [[p.form1, p.g1], [p.form2, p.g2], [p.form3, p.g3]].filter(x => x[1] > 0).map(x => ({ F: x[0], g: x[1] }));
+
+  // ---- analysis ------------------------------------------------------------
+  // amplitude of harmonics n = 1..nmax of the summed, unmodulated period, by direct
+  // Fourier sum of the signal function itself (one-sided amplitude, as in the book)
+  function stems(p, nmax) {
+    const T = 1 / p.fund, S = 2048, vs = voicesOf(p), out = new Float64Array(nmax + 1);
+    const y = new Float64Array(S);
+    for (let i = 0; i < S; i++) {
+      const t = (i + 0.5) / S * T; let s = 0;
+      for (const v of vs) { const W = 1 / v.F; s += v.g * lib.vosimSample(t, lib.vosimPulses(p.N, W, T), W, p.b, p.env, p.decay); }
+      y[i] = s;
+    }
+    for (let n = 1; n <= nmax; n++) {
+      let re = 0, im = 0;
+      for (let i = 0; i < S; i++) { const a = -2 * Math.PI * n * (i + 0.5) / S; re += y[i] * Math.cos(a); im += y[i] * Math.sin(a); }
+      out[n] = 2 * Math.hypot(re, im) / S;
+    }
+    return out;
+  }
+  const db = a => 20 * Math.log10(Math.max(a, 1e-9));
+
+  // ---- time-domain panel ----------------------------------------------------
+  const fmt = (s) => (s * 1000 >= 100 ? (s * 1000).toFixed(0) : (s * 1000).toFixed(2)) + ' ms';
+  function drawPeriods(ctx, W, H, p, many) {
+    ctx.clearRect(0, 0, W, H);
+    const vs = voicesOf(p), pad = 14, top = 20, base = H - 22, ph = base - top;
+    const T0 = 1 / p.fund;
+    // sequence of periods: one, or several with the zero interval modulated
+    const seq = []; let lfo = 0; const K = many ? 4 : 1;
+    for (let k = 0; k < K; k++) {
+      const T = many ? lib.vosimPeriod(p.fund, p.modDepth, Math.sin(2 * Math.PI * lfo)) : T0;
+      seq.push(T); lfo += T * p.modRate;
+    }
+    const total = seq.reduce((a, b) => a + b, 0), sx = (W - 2 * pad) / total;
+    // axis
+    ctx.strokeStyle = 'rgba(255,255,255,.10)'; ctx.beginPath(); ctx.moveTo(pad, base); ctx.lineTo(W - pad, base); ctx.stroke();
+    let t0 = 0;
+    seq.forEach((T, k) => {
+      // envelope of voice 1 (dashed) and the summed signal
+      const v1 = vs[0] || { F: p.form1, g: 1 }, W1 = 1 / v1.F, N1 = lib.vosimPulses(p.N, W1, T);
+      const steps = Math.max(120, Math.floor(T * sx / 1.2));
+      ctx.beginPath();
+      for (let i = 0; i <= steps; i++) {
+        const t = i / steps * T; let s = 0;
+        for (const v of vs) { const w = 1 / v.F; s += v.g * lib.vosimSample(t, lib.vosimPulses(p.N, w, T), w, p.b, p.env, p.decay); }
+        const x = pad + (t0 + t) * sx, y = base - Math.min(1.05, s / Math.max(1, vs.reduce((a, v) => a + v.g, 0))) * ph;
+        i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+      }
+      ctx.strokeStyle = css('--accent'); ctx.lineWidth = 1.6; ctx.stroke();
+      if (vs.length === 1 && vs[0]) {      // staircase envelope e(t), the book's fig. 4.3.15
+        ctx.beginPath(); ctx.setLineDash([4, 3]);
+        for (let n = 0; n < N1; n++) {
+          const lv = lib.vosimLevel(p.env, n, p.env === 2 ? 0 : 0, p.b, p.decay), lv2 = p.env === 2 ? lib.vosimLevel(2, n, 1, p.b, p.decay) : lv;
+          const xa = pad + (t0 + n * W1) * sx, xb = pad + (t0 + (n + 1) * W1) * sx;
+          ctx.moveTo(xa, base - lv * ph); ctx.lineTo(xb, base - (p.env === 2 ? lv2 : lv) * ph);
+          if (n + 1 < N1 && p.env !== 2) ctx.lineTo(xb, base - lib.vosimLevel(p.env, n + 1, 0, p.b, p.decay) * ph);
+        }
+        ctx.strokeStyle = css('--mint'); ctx.lineWidth = 1; ctx.stroke(); ctx.setLineDash([]);
+      }
+      // brackets: W on the first pulse, the zero interval after the last
+      if (k === 0 && vs[0]) {
+        const xa = pad, xb = pad + W1 * sx; ctx.strokeStyle = css('--gold'); ctx.fillStyle = css('--gold'); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(xa, base + 8); ctx.lineTo(xb, base + 8); ctx.moveTo(xa, base + 5); ctx.lineTo(xa, base + 11); ctx.moveTo(xb, base + 5); ctx.lineTo(xb, base + 11); ctx.stroke();
+        ctx.font = '10.5px ' + css('--sans'); ctx.fillText('W', xa + (xb - xa) / 2 - 4, base + 19);
+      }
+      const used = vs[0] ? lib.vosimPulses(p.N, 1 / vs[0].F, T) : 0, tail = T - used / (vs[0] ? vs[0].F : 1);
+      if (vs[0] && tail * sx > 18) {
+        const xa = pad + (t0 + T - tail) * sx, xb = pad + (t0 + T) * sx;
+        ctx.strokeStyle = css('--rose'); ctx.fillStyle = css('--rose');
+        ctx.beginPath(); ctx.moveTo(xa, top - 8); ctx.lineTo(xb, top - 8); ctx.moveTo(xa, top - 11); ctx.lineTo(xa, top - 5); ctx.moveTo(xb, top - 11); ctx.lineTo(xb, top - 5); ctx.stroke();
+        ctx.font = '10.5px ' + css('--sans'); ctx.fillText(many ? 'zero interval' : 'zero interval', xa + (xb - xa) / 2 - 28, top - 12 + 0);
+      }
+      // period boundary
+      ctx.strokeStyle = 'rgba(255,255,255,.18)'; ctx.setLineDash([2, 4]); ctx.beginPath();
+      ctx.moveTo(pad + (t0 + T) * sx, top - 4); ctx.lineTo(pad + (t0 + T) * sx, base + 4); ctx.stroke(); ctx.setLineDash([]);
+      t0 += T;
+    });
+    ctx.fillStyle = css('--muted'); ctx.font = '10.5px ' + css('--sans');
+    const cap = many ? 'four periods, zero interval modulated' : 'one period, T = ' + fmt(T0);
+    ctx.fillText(cap, W - pad - ctx.measureText(cap).width, H - 6);
+  }
+
+  // three envelopes of the same pulse train, stacked (variants demo)
+  function drawCompare(ctx, W, H, p) {
+    ctx.clearRect(0, 0, W, H);
+    const rows = [['original: staircase, level b^n', 0], ['subtractive: level 1 - n d (Csound)', 1], ['smooth exponential b^(t/W) (recursive form)', 2]];
+    const T = 1 / p.fund, w = 1 / p.form1, N1 = lib.vosimPulses(p.N, w, T), pad = 14, rh = H / 3;
+    rows.forEach(([name, mode], r) => {
+      const top = r * rh + 16, base = (r + 1) * rh - 6, ph = base - top, sx = (W - 2 * pad) / T;
+      ctx.strokeStyle = 'rgba(255,255,255,.08)'; ctx.beginPath(); ctx.moveTo(pad, base); ctx.lineTo(W - pad, base); ctx.stroke();
+      ctx.beginPath();
+      const steps = 500;
+      for (let i = 0; i <= steps; i++) {
+        const t = i / steps * T, s = lib.vosimSample(t, N1, w, p.b, mode, p.decay);
+        const x = pad + t * sx, y = base - s * ph; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+      }
+      ctx.strokeStyle = p.env === mode ? css('--accent') : 'rgba(154,164,181,.55)'; ctx.lineWidth = p.env === mode ? 1.8 : 1.1; ctx.stroke();
+      ctx.fillStyle = p.env === mode ? css('--accent') : css('--muted'); ctx.font = '10.5px ' + css('--sans');
+      ctx.fillText(name + (p.env === mode ? '   (playing)' : ''), pad, top - 4);
+    });
+  }
+
+  // ---- spectrum panel -------------------------------------------------------
+  let cache = null, cacheKey = '';
+  function drawSpectrum(ctx, W, H, p, st) {
+    ctx.clearRect(0, 0, W, H);
+    const vs = voicesOf(p), maxF = Math.max(...vs.map(v => v.F), p.form1);
+    const maxHz = D.maxHz || Math.min(10000, Math.max(1500, 3.4 * maxF));
+    const nmax = Math.max(4, Math.floor(maxHz * (1 / p.fund)));
+    const key = JSON.stringify([p.fund, p.form1, p.form2, p.form3, p.g1, p.g2, p.g3, p.N, p.b, p.env, p.decay, nmax]);
+    if (key !== cacheKey) { cache = stems(p, nmax); cacheKey = key; }
+    const ampMax = Math.max(...cache), top = db(ampMax), lo = top - 60;
+    const padL = 36, padR = 10, pt = 18, pb = 22, w = W - padL - padR, h = H - pt - pb;
+    const X = f => padL + f / maxHz * w, Y = d => pt + (1 - (Math.max(lo, Math.min(top, d)) - lo) / (top - lo)) * h;
+    // grid and axes
+    ctx.font = '10px ' + css('--sans'); ctx.fillStyle = css('--muted'); ctx.strokeStyle = 'rgba(255,255,255,.07)';
+    for (let g = 0; g <= 60; g += 20) { const y = Y(top - g); ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke(); ctx.fillText(g ? '-' + g : '0 dB', 4, y + 3); }
+    const stepHz = maxHz > 6000 ? 2000 : maxHz > 3000 ? 1000 : 500;
+    for (let f = 0; f <= maxHz; f += stepHz) { ctx.fillText(f >= 1000 ? f / 1000 + (f % 1000 ? '' : ' kHz') : f, X(f) - 6, H - 6); }
+    // live spectrum, scaled so its strongest bin meets the analytic top (what you hear, up to level)
+    if (st && st.analyser && st.playing) {
+      const an = st.analyser, bins = st.bins || (st.bins = new Float32Array(an.frequencyBinCount));
+      an.getFloatFrequencyData(bins);
+      const nyq = st.ctx.sampleRate / 2, topBin = Math.min(bins.length, Math.round(maxHz / nyq * bins.length));
+      let mx = -Infinity; for (let i = 1; i < topBin; i++) mx = Math.max(mx, bins[i]);
+      ctx.beginPath(); ctx.moveTo(X(0), Y(lo));
+      for (let i = 0; i < topBin; i++) ctx.lineTo(X(i / bins.length * nyq), Y(bins[i] - mx + top));
+      ctx.lineTo(X(topBin / bins.length * nyq), Y(lo)); ctx.closePath();
+      ctx.fillStyle = 'rgba(154,164,181,.22)'; ctx.fill();
+      ctx.strokeStyle = 'rgba(154,164,181,.55)'; ctx.lineWidth = 1; ctx.stroke();
+    }
+    // the book's continuous envelope of the first voice (fig. 4.3.16)
+    if (vs[0] && p.env === 0) {      // the closed form holds for the staircase only
+      const v = vs[0], W1 = 1 / v.F, T = 1 / p.fund, Nn = lib.vosimPulses(p.N, W1, T);
+      ctx.beginPath(); let started = false;
+      for (let i = 0; i <= 400; i++) {
+        const f = i / 400 * maxHz, x = f * T, a = v.g * lib.vosimHarmonic(Math.max(x, 1e-3), T, Math.max(Nn, 1), W1, p.b) * (p.env === 0 ? 1 : 1);
+        const y = Y(db(a)); if (!started) { ctx.moveTo(X(f), y); started = true; } else ctx.lineTo(X(f), y);
+      }
+      ctx.strokeStyle = css('--mint'); ctx.lineWidth = 1.1; ctx.globalAlpha = p.env === 0 ? 0.9 : 0.35; ctx.stroke(); ctx.globalAlpha = 1;
+    }
+    // harmonics
+    ctx.strokeStyle = css('--accent'); ctx.fillStyle = css('--accent'); ctx.lineWidth = 1.4;
+    for (let n = 1; n < cache.length; n++) {
+      const f = n * p.fund; if (f > maxHz) break; const y = Y(db(cache[n]));
+      ctx.beginPath(); ctx.moveTo(X(f), Y(lo)); ctx.lineTo(X(f), y); ctx.stroke();
+      if (maxHz / p.fund < 90) { ctx.beginPath(); ctx.arc(X(f), y, 2, 0, 6.3); ctx.fill(); }
+    }
+    // formant markers F = 1/W
+    ctx.setLineDash([3, 3]); ctx.strokeStyle = css('--gold'); ctx.fillStyle = css('--gold');
+    vs.forEach((v, i) => { if (v.F > maxHz) return; ctx.beginPath(); ctx.moveTo(X(v.F), pt - 4); ctx.lineTo(X(v.F), H - pb); ctx.stroke(); ctx.fillText('F' + (vs.length > 1 ? i + 1 : '') + ' = ' + Math.round(v.F), X(v.F) + 4, pt + 4 + i * 11); });
+    ctx.setLineDash([]);
+  }
+
+  // ---- readout, presets, audio ----------------------------------------------
+  const readout = document.getElementById('readout');
+  function describe(p) {
+    const T = 1 / p.fund, W1 = 1 / p.form1, used = lib.vosimPulses(p.N, W1, T);
+    if (!readout) return;
+    readout.textContent = `pitch 1/T = ${p.fund} Hz  ·  F = 1/W = ${p.form1} Hz  ·  N = ${used}` + (used < p.N ? ` (of ${p.N}: no more fit)` : '') +
+      `  ·  zero interval ${fmt(Math.max(0, T - used * W1))}  ·  duty ${(used * W1 / T).toFixed(2)}`;
+  }
+  let st = null;
+  const getState = Kit.playButton(document.getElementById('play'), async () => {
+    const s = await Kit.build({ processor: 'vosim', prelude: ['vosimcore'] });
+    s.analyser.fftSize = 8192; s.analyser.smoothingTimeConstant = 0.7;
+    s.node.port.postMessage({ type: 'params', value: params() });
+    st = s; return s;
+  });
+  function push() { const s = getState(); if (s) s.node.port.postMessage({ type: 'params', value: params() }); }
+  IDS.forEach(id => el[id].addEventListener('input', () => { read(); push(); }));
+  Kit.presets(window.PRESETS || {}, p => { for (const k in p) if (el[k]) el[k].value = p[k]; read(); push(); });
+  const sw = document.getElementById('sweep'); let t00 = performance.now();
+
+  function frame() {
+    if (sw && sw.checked && el.form) {              // slow logarithmic sweep of F while the pitch holds
+      const ph = ((performance.now() - t00) / 9000) % 1, tri = ph < 0.5 ? ph * 2 : 2 - ph * 2;
+      el.form.value = Math.round(300 * Math.pow(10, tri)); read(); push();
+    }
+    const p = params();
+    if (st) st.playing = st.ctx.state === 'running';
+    if (vctx) {
+      const r = view.getBoundingClientRect();
+      if (D.view === 'compare') drawCompare(vctx, r.width, r.height, p); else drawPeriods(vctx, r.width, r.height, p, D.view === 'periods');
+    }
+    if (sctx && D.spec) { const r = specCv.getBoundingClientRect(); drawSpectrum(sctx, r.width, r.height, p, st); }
+    describe(p);
+    requestAnimationFrame(frame);
+  }
+  read(); frame();
+  window.__vosim = { params, lib, stems, state: () => st };       // for the page tests
+})();
+
+</script>
+</body>
+</html>

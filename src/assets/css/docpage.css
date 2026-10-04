@@ -201,3 +201,11 @@
   .docpage .doc-refs li { grid-template-columns: 1fr; }
   .docpage .doc-refs a, .docpage .doc-refs a.doc-ref-url { grid-row: auto; grid-column: auto; }
 }
+
+/* formulas and short lists on the VOSIM page */
+.docpage .doc-formula { font-family: var(--doc-serif); text-align: center; color: var(--doc-dim); margin: 1.2em 0; line-height: 1.9; }
+.docpage .doc-checks { margin: 0 0 1.2em; padding-left: 1.2em; }
+.docpage .doc-checks li { margin: 0.45em 0; }
+.docpage code { background: none; padding: 0; white-space: normal; }
+.docpage .doc-refs .doc-ref-name { grid-row: 1 / span 2; font-family: var(--doc-serif); font-size: 1.15em; font-style: italic; color: var(--doc-accent); }
+.docpage .doc-refs li > * { min-width: 0; overflow-wrap: anywhere; }
