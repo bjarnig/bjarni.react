@@ -86,7 +86,6 @@ function Genesis() {
         title="Genesis (2026) - Bjarni Gunnarsson"
         description="Genesis: twelve minutes in seven sections, with seven of the waveform generators it is built from, playable."
         path="/works/docs/genesis"
-        noindex={true}
       />
       <h1 className="doc-title">Genesis</h1>
       <p className="doc-standfirst">

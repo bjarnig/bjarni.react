@@ -40,6 +40,7 @@ const ROUTES = [
   '/press',
   '/paths',
   '/processes',
+  '/works/docs/genesis',
 ];
 
 function waitForServer(url, timeoutMs = 30000) {

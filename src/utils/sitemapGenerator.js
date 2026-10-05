@@ -22,7 +22,8 @@ const generateSitemap = () => {
     { path: '/writings', priority: '0.4', changefreq: 'monthly' },
     { path: '/press', priority: '0.4', changefreq: 'monthly' },
     { path: '/paths', priority: '0.4', changefreq: 'monthly' },
-    { path: '/processes', priority: '0.4', changefreq: 'monthly' }
+    { path: '/processes', priority: '0.4', changefreq: 'monthly' },
+    { path: '/works/docs/genesis', priority: '0.4', changefreq: 'monthly' }
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

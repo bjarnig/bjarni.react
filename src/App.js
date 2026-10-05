@@ -109,7 +109,7 @@ function App() {
             <Route path="/works" element={<Works />} />
             <Route path="/paths" element={<Paths />} />
             <Route path="/processes" element={<Processes />} />
-            {/* unlisted: linked from concert programmes, kept out of nav and sitemap */}
+            {/* linked from concert programmes and from /current, kept out of the nav */}
             <Route path="/works/docs/genesis" element={<Genesis />} />
             <Route path="/works/docs/vosim" element={<Vosim />} />
             {/* unlisted: shared by link, noindex, kept out of nav, sitemap and robots.txt */}
