@@ -127,6 +127,14 @@ function Current() {
               Ülker and Guyshawn Wong.
             </p>
             <p>
+              My contribution is a new twelve minute piece for eight channels,
+              Genesis. More about it, including playable versions of the
+              generators it is built from, here:{" "}
+              <Link to="/works/docs/genesis">
+                bjarni-gunnarsson.net/works/docs/genesis
+              </Link>
+            </p>
+            <p>
               New Music Lab, sixth floor of Amare, Den Haag. The concert begins
               at 17:00.
             </p>
