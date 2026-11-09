@@ -81,6 +81,10 @@ SYNC_EXCLUDES=()
 for key in "${ROUTE_KEYS[@]}"; do
   SYNC_EXCLUDES+=(--exclude "$key")
 done
+# Talk decks are uploaded from "~/Works/Entelechy/- Presentations -" (./talk publish), not built here.
+for deck in colloquium colloquium-old; do
+  SYNC_EXCLUDES+=(--exclude "works/docs/$deck" --exclude "works/docs/$deck/*")
+done
 
 aws s3 sync dist/ s3://$S3_BUCKET --delete --region $S3_REGION "${SYNC_EXCLUDES[@]}"
 
