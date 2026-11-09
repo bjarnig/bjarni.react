@@ -28,25 +28,26 @@ function Vosim() {
   return <div className="docpage">
       <SEO
         title="VOSIM - Bjarni Gunnarsson"
-        description="VOSIM, the voice simulation of Kaegi and Tempelaars, rebuilt from Tempelaars's definitions in six playable figures."
+        description="VOSIM, the voice simulation technique of Kaegi and Tempelaars, with six interactive examples based on Tempelaars's definitions."
         path="/works/docs/vosim"
         noindex={true}
       />
       <h1 className="doc-title">VOSIM</h1>
       <p className="doc-standfirst">
-        VOSIM (VOice SIMulation) was developed by Werner Kaegi and Stan Tempelaars at the Institute of Sonology
-        in Utrecht in the 1970s. A period of its signal holds a few pulses of squared sine, each lower than the
-        one before, followed by silence. Pitch, formant and timbre each have a control of their own, and no filter
-        is involved. This page rebuilds the signal from Tempelaars's definitions and lets each part be heard.
+        VOSIM (VOice SIMulation) is a synthesis technique developed by Werner Kaegi and Stan Tempelaars at the
+        Institute of Sonology in Utrecht in the 1970s. The signal is built from a short train of squared sine pulses
+        that decrease in amplitude, followed by a silent interval. Pitch, formant frequency and timbre can be
+        controlled independently, without the use of filters. The examples on this page are built from
+        Tempelaars's own definitions of the signal and its spectrum.
       </p>
 
       <h2 id="signal"><span className="doc-num">1</span>The signal</h2>
 
       <p>
-        A period of length <i>T</i> contains <i>N</i> pulses. Each pulse is a sine squared, which is a raised
-        cosine, of width <i>W</i>. The pulses fall in level by a constant ratio <i>b</i>, so that the n-th pulse
-        is <i>b<sup>n</sup></i> times the first, and what is left of the period after the last pulse is silence.
-        Tempelaars calls the envelope a staircase, "very similar to an exponentially decaying one".
+        Each period of length <i>T</i> contains <i>N</i> pulses. A pulse is a squared sine (a raised cosine) of
+        width <i>W</i>. Each pulse is the previous one multiplied by a constant <i>b</i>, so the n-th pulse has
+        the amplitude <i>b<sup>n</sup></i>. The rest of the period after the last pulse is silent. Tempelaars
+        describes the resulting envelope as a staircase, "very similar to an exponentially decaying one".
       </p>
 
       <p className="doc-formula">
@@ -56,23 +57,24 @@ function Vosim() {
       </p>
 
       <p>
-        The staircase steps fall where the squared sine is zero, so the signal is continuous: there is no click
-        at a step. The silence is the zero interval, <i>T</i> − <i>N</i><i>W</i>. When <i>N</i><i>W</i> would exceed
-        <i> T</i> the pulses do not fit, and here <i>N</i> is reduced to the number that does.
+        Since each step of the staircase happens where the squared sine is at zero, the signal has no
+        discontinuities. The silent part, the zero interval, has the length <i>T</i> − <i>N</i><i>W</i>. If
+        <i> N</i><i>W</i> is larger than <i>T</i>, the pulses do not fit into the period, and in the examples
+        below <i>N</i> is then reduced to the number that fits.
       </p>
 
       <Demo name="period" num="1" title="One period">
-        The top panel is the signal of the book's figure 4.3.15 (there N = 8 and b = 0.85), and the dashed line is the
-        envelope e(t). Below it each harmonic of the signal is a blue line, and the green curve is the closed form of the
-        spectral envelope. Try b = 1, where every pulse is as high as the first.
+        The upper panel shows the signal from figure 4.3.15 in Tempelaars (1996), with N = 8 and b = 0.85. The
+        dashed line is the envelope e(t). The lower panel shows the harmonics of the signal in blue and the
+        spectral envelope from the formula in section 2 in green. With b = 1 all pulses have the same height.
       </Demo>
 
       <h2 id="pitch"><span className="doc-num">2</span>Pitch and formant</h2>
 
       <p>
-        The repetition rate is <i>1/T</i> and fixes the pitch. The pulse width fixes where the spectrum has its one
-        dominant maximum, at <i>F</i> = 1/<i>W</i>. These are separate quantities. Tempelaars gives the amplitude of
-        harmonic <i>n</i>, with γ = <i>W</i>/<i>T</i>:
+        The pitch is given by the repetition rate <i>1/T</i>. The pulse width <i>W</i> sets the position of the
+        main peak in the spectrum, at <i>F</i> = 1/<i>W</i>. Tempelaars gives the amplitude of harmonic <i>n</i>
+        as follows, with γ = <i>W</i>/<i>T</i>:
       </p>
 
       <p className="doc-formula">
@@ -80,104 +82,90 @@ function Vosim() {
       </p>
 
       <p>
-        The first factor is the spectrum of a single raised-cosine pulse. The second comes from the geometric series
-        of the staircase and has its maximum where 2π<i>n</i>γ = 2π, which is <i>n</i>/<i>T</i> = 1/<i>W</i>.
-        Changing <i>T</i> moves the harmonics under that hill and changing <i>W</i> moves the hill under the
-        harmonics. The spectrum stretches from 0 to roughly 2<i>F</i>, and the higher components are weak.
-        This is what Tempelaars means by a formant structure: the spectral envelope does not depend on the
-        repetition frequency, as in a vowel.
+        The first part of the formula is the spectrum of a single raised cosine pulse. The second part comes from
+        the decaying staircase and has its maximum where <i>n</i>γ = 1, that is, where the frequency
+        <i> n</i>/<i>T</i> equals 1/<i>W</i>. When <i>T</i> changes, the harmonics shift while the peak stays in
+        place. When <i>W</i> changes, the peak itself moves. Most of the energy lies between 0 and about 2<i>F</i>.
+        Tempelaars refers to this as a formant structure, since the spectral envelope stays the same when the
+        repetition frequency changes, as is the case with vowels.
       </p>
 
       <Demo name="formant" num="2" title="Pitch and formant">
-        Hold the pitch and sweep the formant, then hold the formant and change the pitch. The
-        grey outline in the spectrum is the sound you hear, measured live from the audio and scaled to the same
-        height as the computed harmonics.
+        Keep the pitch fixed and move the formant, then keep the formant fixed and change the pitch. The grey
+        outline is the spectrum of the audio as it plays, scaled to the height of the computed harmonics.
       </Demo>
 
       <h2 id="decay"><span className="doc-num">3</span>Pulses and decay</h2>
 
       <p>
-        <i>N</i> and <i>b</i> shape the peak. One pulse gives a broad hill, and more pulses narrow it. A ratio
-        below 1 lets the staircase die away, which rounds the peak and fills the dips between the lobes. At
-        <i> b</i> = 1 the dips reach zero, and any harmonic that falls in one is missing from the signal altogether.
-        Tempelaars describes this: if all the pulses have the same height, "the minima extend up to the zero line".
+        The number of pulses <i>N</i> and the decay factor <i>b</i> determine the shape of the peak. With a single
+        pulse the peak is wide, and it gets narrower as more pulses are added. When <i>b</i> is below 1 the peak
+        is smoother and the gaps between the lobes are partly filled. When <i>b</i> = 1 the gaps go all the way
+        down to zero, and harmonics that fall there disappear from the signal. In Tempelaars's words, if all
+        pulses have the same height "the minima extend up to the zero line".
       </p>
 
       <Demo name="decay" num="3" title="Pulses and decay">
-        With T/W = 8, N = 4 and b = 1 only the odd harmonics and the eighth remain. Dots at the bottom of the
-        spectrum mark the absent ones.
+        With T/W = 8, N = 4 and b = 1, only the odd harmonics and the eighth harmonic are present. The dots at the
+        bottom of the spectrum mark the missing harmonics.
       </Demo>
 
       <h2 id="zero"><span className="doc-num">4</span>The zero interval</h2>
 
       <p>
-        The period has the pulses at the start and then silence, and only the silence has to give way when the
-        pitch changes. Tempelaars notes that the duty cycle, the proportion of the pulse train to the zero
-        interval, is one of the free variables and that, thanks to the zero interval, the period can be
-        modulated in a simple way.
+        Since the pulses come at the beginning of each period, a change in pitch only affects the length of the
+        silence that follows them. Tempelaars mentions the duty cycle, the ratio between the pulse train and the
+        zero interval, as one of the free variables of the model, and points out that the zero interval makes it
+        easy to modulate the period.
       </p>
 
-      <Demo name="zero" num="4" title="Modulating the silence">
-        Only the zero interval changes from period to period, and the pulses keep their width. The top panel draws
-        four periods from the function the audio uses, and the spectrum shows the harmonics of the unmodulated
-        period with the live sound smeared around them.
+      <Demo name="zero" num="4" title="Modulating the zero interval">
+        The length of the zero interval changes from period to period while the pulse width stays the same. The
+        upper panel shows four periods of the signal. The spectrum shows the harmonics of the unmodulated period,
+        with the modulated sound spread around them.
       </Demo>
 
-      <h2 id="parallel"><span className="doc-num">5</span>Several in parallel</h2>
+      <h2 id="parallel"><span className="doc-num">5</span>Several formants</h2>
 
       <p>
-        One VOSIM function has one formant. Combining several with the same period and different pulse widths
-        gives a signal with as many formant peaks. Tempelaars describes VOSIM as a direct realisation of the
-        modulation model of acoustic communication, "avoiding the nasty problems that can be introduced by
-        filters", and compares it with Rodet's CHANT, where several sine bursts with attack and exponential decay
-        (FOF) are added in the same way.
+        A single VOSIM signal produces one formant. Several signals with the same period but different pulse
+        widths can be added together to get several formants. Tempelaars presents VOSIM as a direct realisation
+        of the modulation model of acoustic communication, "avoiding the nasty problems that can be introduced by
+        filters". He compares it to Rodet's CHANT, where sine bursts with an attack and an exponential decay (FOF)
+        are added together in a similar way.
       </p>
 
       <Demo name="vowels" num="5" title="Three formants">
-        Three voices share one period. The buttons set typical first, second and third formant frequencies for five
-        vowels, approximate male averages after Peterson and Barney (1952). They are an illustration, since
-        the VOSIM sources consulted for this page do not give vowel tables.
+        Three VOSIM signals share the same period. The buttons set approximate values for the first three formants
+        of five vowels, based on average male voices from Peterson and Barney (1952). These values are only meant
+        as an illustration, as the VOSIM literature I consulted does not include vowel tables.
       </Demo>
 
-      <h2 id="variants"><span className="doc-num">6</span>Three decays</h2>
+      <h2 id="variants"><span className="doc-num">6</span>Other implementations</h2>
 
       <p>
-        Implementations differ on how the pulses fall. The original is the staircase above, a constant ratio per
-        pulse. The Csound <code>vosim</code> opcode, written by Rasmus Ekman, subtracts a fixed amount from each pulse. The
-        SuperCollider <code>VOSIM</code> UGen, by Léon Spek, multiplies by a factor per pulse like the original,
-        and its <code>freq</code> is the frequency of the sine inside the square: a pulse is half of its period, so
-        W = 1/(2 freq), which is read from the C++ source and not from its help text. The book also gives a
-        recursive filter form of a damped raised cosine (its figure 6.3.20), in which the envelope is a smooth
-        exponential. With the coefficients as printed there, its impulse response is 1 − cos <i>k</i>γ times
-        <i> r<sup>k</sup></i>, twice the function written beside it, so the shape matches and the scale is off by a
-        factor of two.
+        The way the pulses decay differs between implementations. The original uses the staircase described above,
+        where each pulse is multiplied by a constant ratio. The Csound <code>vosim</code> opcode by Rasmus Ekman
+        instead subtracts a fixed amount from each pulse. The SuperCollider <code>VOSIM</code> UGen by Léon Spek
+        multiplies each pulse by a factor, as in the original. Its <code>freq</code> argument is the frequency of
+        the sine before squaring, so a pulse lasts half a period and W = 1/(2 freq). This is clear from the C++
+        source but not from the help file. Tempelaars (1996, figure 6.3.20) also gives a recursive filter that
+        produces a damped raised cosine with a smooth exponential envelope. With the coefficients as printed, its
+        impulse response is (1 − cos <i>k</i>γ) <i>r<sup>k</sup></i>, which has the right shape but is twice the
+        size of the function given next to it.
       </p>
 
-      <Demo name="variants" num="6" title="Three ways to decay">
-        The same pulse train under the three decays. Only the first is the signal of Tempelaars (1977). The closed-form
-        spectrum applies to it alone, so the green curve is hidden for the other two.
+      <Demo name="variants" num="6" title="Decay types">
+        The same pulse train with each of the three decay types. Only the first one is the signal described by
+        Tempelaars (1977). The green curve is computed from his formula and is therefore only shown for that one.
       </Demo>
 
-      <h2 id="checks"><span className="doc-num">7</span>What was checked</h2>
-
-      <ul className="doc-checks">
-        <li>The spectrum formula was compared with the Fourier coefficients of the signal as defined, for four
-          settings of N, γ and b. They agree to 10<sup>−13</sup>, with the constant factor ½ that comes from <i>C<sub>n</sub></i> being a one-sided amplitude.</li>
-        <li>The audio worklet was run outside the browser and its harmonics compared with the formula: the largest
-          difference is 3 × 10<sup>−7</sup> against a peak of 0.19.</li>
-        <li>The period measured 1/T for formants from 600 to 2300 Hz, the peak of the formula stayed within 260 Hz of 1/W for
-          three pitches, consecutive pulse levels differed by exactly b, and with b = 1 the predicted harmonics were
-          absent to 10<sup>−9</sup>.</li>
-        <li>With the zero interval modulated, the first pulse of every period had the same width while the period
-          length ranged from 288 to 672 samples.</li>
-        <li>In a browser, the live spectrum of the playing audio matched the computed harmonics within one decibel
-          for the 22 of the first 24 harmonics that are not exactly zero.</li>
-      </ul>
+      <h2 id="notes"><span className="doc-num">7</span>Notes</h2>
 
       <p>
-        Not read: the original paper of Kaegi and Tempelaars (1978) and Tempelaars's paper on the spectrum (1977),
-        both of which this page cites at second hand through the 1996 book. The names and ranges of the original
-        hardware controls, and the MIDIM system around it, are not covered.
+        The harmonics computed from the formula and the spectrum measured from the audio agree within one decibel.
+        The papers by Kaegi and Tempelaars (1978) and Tempelaars (1977) are cited here through
+        the 1996 book, and the original hardware controls and the MIDIM system are not covered.
       </p>
 
       <h2 id="references"><span className="doc-num">8</span>References</h2>
