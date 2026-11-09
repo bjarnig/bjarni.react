@@ -77,6 +77,7 @@ const grm_sonology = imageurl + "grm-sonology.jpg";
 const notam = imageurl + "notam.png";
 const koenig100 = imageurl + "koenig100.jpg";
 const superpang_world2 = imageurl + "superpang-world2.jpg";
+const colloquium2026 = imageurl + "colloquium2026-panels.jpg";
 
 function Current() {
   useEffect(() => { window.scrollTo(0, 0); }, []);
@@ -99,6 +100,43 @@ function Current() {
           path="/current"
         />
         <div className="content">
+
+          <article>
+            {" "}
+            <div className="date">16-10-2026</div>
+            <div className="hr">
+              <hr />
+            </div>
+            <h4>Presentation at Sonology</h4>
+            <div className="img-center">
+              <a
+                href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <OpacityImage imageUrl={colloquium2026} />
+              </a>
+            </div>
+            <p>Tools, Sound and Structure</p>
+            <p>
+              A presentation at the Sonology Colloquium on how my recent tools
+              and pieces shape each other. It covers Accrete, a SuperCollider
+              library for sound processes organised as graphs, and the
+              frameworks behind Ora, Genesis and Crossings. It also looks at
+              the risks of working this way: early technical choices that
+              harden over time, software that steers the results, and listening
+              and analysis as a way to keep the work open.
+            </p>
+            <p>
+              <a
+                href="https://bjarnigwebdocs.s3.eu-central-1.amazonaws.com/docs/Colloquium-2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Presentation Slides
+              </a>
+            </p>
+          </article>
 
           <article>
             {" "}
