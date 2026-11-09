@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crossings, WsGen — Web Audio demo</title>
+<link rel="stylesheet" href="../kit/kit.css">
+<style>#view{height:190px;margin-bottom:.5rem}#spec{height:230px}body.compact #view{height:min(24vh,150px)}body.compact #spec{height:min(30vh,190px)}
+#readout{color:var(--muted)}</style>
+</head>
+<body>
+
+<h1>Crossings: WsGen</h1>
+<p class="sub">A waveset is a positive half-cycle and a negative one. <code>freq</code> sets its length, <code>shape</code> the
+half-cycle (sine, triangle, square, spike), and <code>skew</code> where the middle zero crossing falls. A skewed waveset
+has a DC offset, the red bar at 0 Hz; <code>balance</code> scales down the larger half until both enclose the same area.</p>
+<p class="warn">Start with the gain low.</p>
+
+<canvas id="view"></canvas>
+<canvas id="spec"></canvas>
+<div class="legend">
+  <span><i style="background:var(--accent)"></i>output</span><span><i style="background:var(--rose)"></i>DC</span>
+  <span id="readout"></span>
+</div>
+
+<div class="row">
+  <button id="play">play</button>
+  <span style="color:var(--muted);font-size:.75rem">presets:</span>
+  <button class="preset" data-p="sine">sine</button>
+  <button class="preset" data-p="skewed">skewed</button>
+  <button class="preset" data-p="balanced">balanced</button>
+  <button class="preset" data-p="triangle">triangle</button>
+  <button class="preset" data-p="spike">spike</button>
+  <button class="preset" data-p="two">WsGen 2</button>
+</div>
+
+<div class="grid">
+  <fieldset>
+    <legend>waveset</legend>
+    <label><span>freq, Hz</span><input type="range" id="freq" min="20" max="2000" step="1" value="220"><output></output></label>
+    <label><span>shape</span><input type="range" id="shape" min="0" max="3" step="0.01" value="0"><output></output></label>
+    <label><span>skew</span><input type="range" id="skew" min="0.01" max="0.99" step="0.01" value="0.5"><output></output></label>
+    <label><span>balance</span><input type="range" id="balance" min="0" max="1" step="0.01" value="0"><output></output></label>
+    <label><span>glide</span><input type="range" id="glide" min="0" max="1" step="0.01" value="0"><output></output></label>
+    <label><span>gain</span><input type="range" id="gain" min="0" max="0.5" step="0.005" value="0.15"><output></output></label>
+  </fieldset>
+</div>
+
+<p class="note">A JavaScript port of the SuperCollider UGens in <a href="https://github.com/bjarnig/Crossings" style="color:var(--accent)">Crossings</a>,
+checked sample by sample against scsynth. The parameters carry the names of the UGen inputs.</p>
+
+<script id="crossingscore" type="text/js-lib">
+/* Crossings in JavaScript: a line-by-line port of the SuperCollider UGens in
+ * github.com/bjarnig/Crossings (plugins/ws.hpp and plugins/Ws*.cpp). Internal maths is
+ * double, as in the C++; anything the C++ keeps in a float (inputs, stored parameters,
+ * the output) is rounded with Math.fround so the two agree sample for sample.
+ * Shared by the audio worklet, the drawings and scripts/crossings/test.mjs. */
+
+const f32 = Math.fround;
+const kPi = 3.141592653589793;
+const kTau = 2.0 * kPi;
+
+// ---- ws.hpp ----------------------------------------------------------------
+
+function shapeAt(k, p) {
+  switch (k) {
+    case 0: return Math.sin(kPi * p);
+    case 1: return 1.0 - Math.abs(2.0 * p - 1.0);
+    case 2: return 1.0;
+    default: { let s = Math.sin(kPi * p); s *= s; s *= s; return s * s; }
+  }
+}
+
+function halfCycle(shape, p) {
+  const sh = shape < 0.0 ? 0.0 : (shape > 3.0 ? 3.0 : shape);
+  const k = Math.trunc(sh), frac = sh - k, a = shapeAt(k, p);
+  return frac > 0.0 ? a + frac * (shapeAt(k + 1, p) - a) : a;
+}
+
+const clampd = (x, lo, hi) => (x < lo ? lo : (x > hi ? hi : x));
+const incFor = (freq, sr) => clampd(Math.abs(freq), 0.01, sr * 0.5) / sr;
+
+function mirror(x, lo, hi) {
+  const r = hi - lo;
+  if (r <= 0.0) return lo;
+  let m = (x - lo) % (2.0 * r);
+  if (m < 0.0) m += 2.0 * r;
+  return lo + (m > r ? 2.0 * r - m : m);
+}
+
+// returns [gPos, gNeg]
+function balanceGains(areaPos, areaNeg, balance) {
+  const b = clampd(balance, 0.0, 1.0);
+  if (b <= 0.0 || areaPos <= 0.0 || areaNeg <= 0.0) return [1.0, 1.0];
+  if (areaPos > areaNeg) return [1.0 - b * (1.0 - areaNeg / areaPos), 1.0];
+  return [1.0, 1.0 - b * (1.0 - areaPos / areaNeg)];
+}
+
+// SuperCollider's float zapgremlins
+function zap(v) {
+  const x = f32(v), a = Math.abs(x);
+  return a > 1e-15 && a < 1e15 ? x : 0;
+}
+
+const kLogistic = 0, kTent = 1, kSine = 2, kCircle = 3, kStandard = 4, kIkeda = 5, kNumMaps = 6;
+const kIkX0 = -0.5, kIkX1 = 1.9, kIkY0 = -2.4, kIkY1 = 1.0;
+const MAP_NAMES = ['logistic', 'tent', 'sine', 'circle', 'standard', 'Ikeda'];
+const is2D = map => map >= kStandard;
+const wrap01 = v => v - Math.floor(v);
+
+function mapInit(init) {
+  return { x: clampd(init, 0.0, 1.0), y: (0.0 - kIkY0) / (kIkY1 - kIkY0) };
+}
+
+// steps s = {x, y} in place
+function stepMap(map, r, s) {
+  r = clampd(r, 0.0, 1.0);
+  let x = s.x, y = s.y;
+  switch (map) {
+    case kLogistic: x = 4.0 * r * x * (1.0 - x); break;
+    case kTent: x = 2.0 * (r > 0.9995 ? 0.9995 : r) * (x < 0.5 ? x : 1.0 - x); break;
+    case kSine: x = r * Math.sin(kPi * x); break;
+    case kCircle: x = wrap01(x + 0.618 - (8.0 * r / kTau) * Math.sin(kTau * x)); break;
+    case kStandard: {
+      const p = wrap01(y + (6.0 * r / kTau) * Math.sin(kTau * x));
+      x = wrap01(x + p); y = p; break;
+    }
+    default: {
+      const a = kIkX0 + x * (kIkX1 - kIkX0), b = kIkY0 + y * (kIkY1 - kIkY0);
+      const u = 0.9 * r, t = 0.4 - 6.0 / (1.0 + a * a + b * b);
+      let a2 = 1.0 + u * (a * Math.cos(t) - b * Math.sin(t));
+      let b2 = u * (a * Math.sin(t) + b * Math.cos(t));
+      if (a2 < kIkX0 || a2 > kIkX1 || b2 < kIkY0 || b2 > kIkY1) a2 = b2 = 0.0;
+      x = (a2 - kIkX0) / (kIkX1 - kIkX0);
+      y = (b2 - kIkY0) / (kIkY1 - kIkY0);
+    }
+  }
+  s.x = clampd(x, 1e-9, 1.0 - 1e-9);
+  s.y = clampd(y, 0.0, 1.0);
+}
+
+const mapSecond = (map, x, y, prevX) => (is2D(map) ? 2.0 * y - 1.0 : x - prevX);
+const backlash = (rEff, r, h) => { h = Math.abs(h); return clampd(rEff, r - h, r + h); };
+
+// Streaming waveset detector (WsDetect)
+class WsDetect {
+  constructor() { this.prevX = 0; this.t = 0; this.start = -1; this.fall = -1; this.peak = 0; this.armed = false; this.len = 0; this.skew = 0.5; this.lastPeak = 0; }
+  detect(x, thresh) {
+    let done = false;
+    const prev = this.prevX;
+    if (x < -Math.abs(thresh)) this.armed = true;
+    if (this.start >= 0.0 && this.fall < 0.0 && prev > 0.0 && x <= 0.0) this.fall = this.t - 1.0 + prev / (prev - x);
+    if (this.armed && prev <= 0.0 && x > 0.0) {
+      const tc = this.t - 1.0 + -prev / (x - prev);
+      if (this.start >= 0.0) {
+        this.len = tc - this.start;
+        this.skew = this.fall >= 0.0 ? (this.fall - this.start) / this.len : 0.5;
+        this.lastPeak = this.peak;
+        done = true;
+      }
+      this.start = tc; this.fall = -1.0; this.peak = 0.0; this.armed = false;
+    }
+    const a = Math.abs(x);
+    if (a > this.peak) this.peak = a;
+    this.prevX = x;
+    this.t += 1.0;
+    return done;
+  }
+}
+
+// ---- SuperCollider's RGen (taus88), so WsGendy and WsGroup match under RandSeed ----
+
+class RGen {
+  constructor(seed) { this.init(seed); }
+  init(seed) {
+    let h = seed >>> 0;
+    h = (h + ~(h << 15)) >>> 0; h = (h ^ (h >>> 10)) >>> 0; h = (h + (h << 3)) >>> 0;
+    h = (h ^ (h >>> 6)) >>> 0; h = (h + ~(h << 11)) >>> 0; h = (h ^ (h >>> 16)) >>> 0;
+    this.s1 = (1243598713 ^ h) >>> 0; if (this.s1 < 2) this.s1 = 1243598713;
+    this.s2 = (3093459404 ^ h) >>> 0; if (this.s2 < 8) this.s2 = 3093459404;
+    this.s3 = (1821928721 ^ h) >>> 0; if (this.s3 < 16) this.s3 = 1821928721;
+  }
+  trand() {
+    let { s1, s2, s3 } = this;
+    s1 = (((s1 & 0xFFFFFFFE) << 12) ^ (((s1 << 13) ^ s1) >>> 19)) >>> 0;
+    s2 = (((s2 & 0xFFFFFFF8) << 4) ^ (((s2 << 2) ^ s2) >>> 25)) >>> 0;
+    s3 = (((s3 & 0xFFFFFFF0) << 17) ^ (((s3 << 3) ^ s3) >>> 11)) >>> 0;
+    this.s1 = s1; this.s2 = s2; this.s3 = s3;
+    return (s1 ^ s2 ^ s3) >>> 0;
+  }
+  frand() { return ((this.trand() >>> 9) / 8388608); }        // 0x3F800000 | bits, minus 1: exact in float
+  frand2() { return ((this.trand() >>> 9) / 4194304) - 1.0; } // 0x40000000 | bits, minus 3: exact in float
+}
+
+// ---- demand-rate streams: what the UGens pull once per waveset ----------------
+
+// a parameter is a number (an audio or control input) or a stream with next()
+const val = v => (typeof v === 'number' ? v : NaN);
+
+function pull(src, prev) {
+  if (typeof src === 'number') return f32(src);
+  const x = src.next();
+  return Number.isNaN(x) ? prev : f32(x);
+}
+
+class Dseq {
+  constructor(list, repeats = Infinity) { this.list = list; this.repeats = repeats; this.i = 0; this.n = 0; }
+  next() {
+    if (this.i >= this.list.length) { this.i = 0; this.n++; }
+    if (this.n >= this.repeats) return NaN;
+    const v = this.list[this.i++];
+    return typeof v === 'number' ? f32(v) : v.next();
+  }
+}
+
+class Dstutter {
+  constructor(n, src) { this.n = n; this.src = src; this.repeats = -1; this.count = 0; this.value = 0; }
+  next() {
+    if (this.count >= this.repeats) {
+      const v = typeof this.src === 'number' ? f32(this.src) : this.src.next();
+      const r = typeof this.n === 'number' ? f32(this.n) : this.n.next();
+      if (Number.isNaN(r) || Number.isNaN(v)) return NaN;
+      this.value = v; this.repeats = Math.floor(f32(r + 0.5)); this.count = 0;
+    }
+    this.count++;
+    return this.value;
+  }
+}
+
+// src * mul + add, in float as SuperCollider's demand-rate BinaryOpUGens compute it
+class Dlin {
+  constructor(src, mul, add) { this.src = src; this.mul = f32(mul); this.add = f32(add); }
+  next() { const v = this.src.next(); return Number.isNaN(v) ? NaN : f32(f32(v * this.mul) + this.add); }
+}
+
+class Dmap {
+  constructor({ r = 0.9, map = 0, init = 0.3, axis = 0, hyst = 0 } = {}) {
+    this.p = { r, map, axis, hyst };
+    const s = mapInit(f32(init)); this.s = s; this.prev = s.x; this.rEff = -1;
+    this.r = f32(0.9); this.map = 0; this.axis = 0; this.hyst = 0;
+  }
+  next() {
+    this.r = pull(this.p.r, this.r); this.map = pull(this.p.map, this.map);
+    this.axis = pull(this.p.axis, this.axis); this.hyst = pull(this.p.hyst, this.hyst);
+    this.prev = this.s.x;
+    this.rEff = this.rEff < 0.0 ? this.r : backlash(this.rEff, this.r, this.hyst);
+    const m = Math.trunc(clampd(this.map, 0.0, kNumMaps - 1));
+    stepMap(m, this.rEff, this.s);
+    return this.axis >= 0.5 ? f32(0.5 + 0.5 * clampd(mapSecond(m, this.s.x, this.s.y, this.prev), -1.0, 1.0)) : f32(this.s.x);
+  }
+}
+
+// ---- the generators. next() returns one output sample; onWaveset, if set, is called
+// with a small record whenever a waveset (or group, or tree) starts. ----------------
+
+class WsGen {
+  constructor(p, sr) {
+    this.p = p; this.sr = sr; this.phase = 1.0;
+    this.pFreq = this.cFreq = 0; this.pAmp = this.cAmp = 0; this.pShape = this.cShape = 0; this.pSkew = this.cSkew = 0.5;
+    this.glide = 0; this.balance = 0; this.repLeft = 0; this.started = false;
+  }
+  next() {
+    const p = this.p;
+    let phase = this.phase;
+    if (phase >= 1.0) {
+      phase -= 1.0;
+      this.pFreq = this.cFreq; this.pAmp = this.cAmp; this.pShape = this.cShape; this.pSkew = this.cSkew;
+      if (this.repLeft <= 0) {
+        this.cFreq = pull(p.freq, f32(this.cFreq)); this.cAmp = pull(p.amp, f32(this.cAmp));
+        this.cShape = pull(p.shape, f32(this.cShape)); this.cSkew = pull(p.skew, f32(this.cSkew));
+        this.glide = pull(p.glide, this.glide); this.balance = pull(p.balance, this.balance);
+        const reps = pull(p.repeats, 1);
+        this.repLeft = reps < 1 ? 1 : Math.trunc(reps);
+        if (!this.started) { this.pFreq = this.cFreq; this.pAmp = this.cAmp; this.pShape = this.cShape; this.pSkew = this.cSkew; this.started = true; }
+      }
+      this.repLeft--;
+      if (phase >= 1.0) phase = 0.0;
+      if (this.onWaveset) this.onWaveset({ freq: this.cFreq, skew: this.cSkew });
+    }
+    const g = this.glide, t = g <= 0.0 ? 1.0 : (phase >= g ? 1.0 : phase / g);
+    const freq = this.pFreq + t * (this.cFreq - this.pFreq), amp = this.pAmp + t * (this.cAmp - this.pAmp);
+    const shape = this.pShape + t * (this.cShape - this.pShape);
+    const s = clampd(this.pSkew + t * (this.cSkew - this.pSkew), 0.01, 0.99);
+    const [gPos, gNeg] = balanceGains(s, 1.0 - s, this.balance);
+    const y = phase < s ? gPos * halfCycle(shape, phase / s) : -gNeg * halfCycle(shape, (phase - s) / (1.0 - s));
+    this.phase = phase + incFor(freq, this.sr);
+    return zap(y * amp);
+  }
+}
+
+class WsMap {
+  constructor(p, sr) {
+    this.p = p; this.sr = sr; this.phase = 1.0; this.inc = 0.0;
+    this.s = mapInit(f32(val(p.init ?? 0.3))); this.prev = this.s.x; this.rEff = -1.0;
+    this.r = f32(0.9); this.lo = 60; this.hi = 1200; this.amp = 0; this.shape = 0; this.map = 0;
+    this.skewDepth = 0; this.ampDepth = 0; this.balance = 0; this.hyst = 0;
+    this.gPos = this.gNeg = 1.0; this.peak = 0.0; this.skew = 0.5;
+  }
+  next() {
+    const p = this.p;
+    let phase = this.phase;
+    if (phase >= 1.0) {
+      phase -= 1.0;
+      this.r = pull(p.r, this.r); this.lo = pull(p.lo, this.lo); this.hi = pull(p.hi, this.hi);
+      this.amp = pull(p.amp, this.amp); this.shape = pull(p.shape, this.shape); this.map = pull(p.map, this.map);
+      this.skewDepth = pull(p.skewDepth, this.skewDepth); this.ampDepth = pull(p.ampDepth, this.ampDepth);
+      this.balance = pull(p.balance, this.balance); this.hyst = pull(p.hyst, this.hyst);
+      this.prev = this.s.x;
+      this.rEff = this.rEff < 0.0 ? this.r : backlash(this.rEff, this.r, this.hyst);
+      const m = Math.trunc(clampd(this.map, 0.0, kNumMaps - 1));
+      stepMap(m, this.rEff, this.s);
+      const lo = Math.abs(this.lo) < 0.01 ? 0.01 : Math.abs(this.lo), hi = Math.abs(this.hi) < 0.01 ? 0.01 : Math.abs(this.hi);
+      this.inc = incFor(lo * Math.pow(hi / lo, this.s.x), this.sr);
+      this.skew = clampd(0.5 + this.skewDepth * mapSecond(m, this.s.x, this.s.y, this.prev), 0.01, 0.99);
+      this.peak = this.amp * (1.0 - clampd(this.ampDepth, 0.0, 1.0) * this.s.x);
+      [this.gPos, this.gNeg] = balanceGains(this.skew, 1.0 - this.skew, this.balance);
+      if (phase >= 1.0) phase = 0.0;
+      if (this.onWaveset) this.onWaveset({ x: this.s.x, y: this.s.y, r: this.rEff, freq: this.inc * this.sr, skew: this.skew });
+    }
+    const s = this.skew;
+    const v = phase < s ? this.gPos * halfCycle(this.shape, phase / s) : -this.gNeg * halfCycle(this.shape, (phase - s) / (1.0 - s));
+    this.phase = phase + this.inc;
+    return zap(v * this.peak);
+  }
+}
+
+// WsHear: WsMap with an input; next(input) takes the input sample.
+class WsHear {
+  constructor(p, sr) {
+    this.p = p; this.sr = sr; this.det = new WsDetect(); this.heardLen = 0;
+    this.phase = 1.0; this.inc = 0.0;
+    this.s = mapInit(f32(val(p.init ?? 0.3))); this.prev = this.s.x; this.rEff = -1.0;
+    this.r = f32(0.9); this.lo = 60; this.hi = 1200; this.amp = 0; this.shape = 0; this.map = 0; this.couple = 0;
+    this.skewDepth = 0; this.ampDepth = 0; this.balance = 0; this.hyst = 0;
+    this.gPos = this.gNeg = 1.0; this.peak = 0.0; this.skew = 0.5;
+  }
+  next(input) {
+    const p = this.p;
+    if (this.det.detect(f32(input), f32(val(p.thresh ?? 0.01)))) this.heardLen = this.det.len;
+    let phase = this.phase;
+    if (phase >= 1.0) {
+      phase -= 1.0;
+      this.r = pull(p.r, this.r); this.lo = pull(p.lo, this.lo); this.hi = pull(p.hi, this.hi);
+      this.amp = pull(p.amp, this.amp); this.shape = pull(p.shape, this.shape); this.map = pull(p.map, this.map);
+      this.couple = pull(p.couple, this.couple);
+      this.skewDepth = pull(p.skewDepth, this.skewDepth); this.ampDepth = pull(p.ampDepth, this.ampDepth);
+      this.balance = pull(p.balance, this.balance); this.hyst = pull(p.hyst, this.hyst);
+      const lo = Math.abs(this.lo) < 0.01 ? 0.01 : Math.abs(this.lo), hi = Math.abs(this.hi) < 0.01 ? 0.01 : Math.abs(this.hi);
+      const span = Math.log(hi / lo);
+      let heard = -1;
+      if (this.heardLen > 0.0 && Math.abs(span) > 1e-9) {
+        heard = clampd(Math.log(this.sr / this.heardLen / lo) / span, 1e-9, 1.0 - 1e-9);
+        const c = clampd(this.couple, 0.0, 1.0);
+        this.s.x += c * (heard - this.s.x);
+        this.heardLen = 0.0;
+      }
+      this.prev = this.s.x;
+      this.rEff = this.rEff < 0.0 ? this.r : backlash(this.rEff, this.r, this.hyst);
+      const m = Math.trunc(clampd(this.map, 0.0, kNumMaps - 1));
+      stepMap(m, this.rEff, this.s);
+      this.inc = incFor(lo * Math.pow(hi / lo, this.s.x), this.sr);
+      this.skew = clampd(0.5 + this.skewDepth * mapSecond(m, this.s.x, this.s.y, this.prev), 0.01, 0.99);
+      this.peak = this.amp * (1.0 - clampd(this.ampDepth, 0.0, 1.0) * this.s.x);
+      [this.gPos, this.gNeg] = balanceGains(this.skew, 1.0 - this.skew, this.balance);
+      if (phase >= 1.0) phase = 0.0;
+      if (this.onWaveset) this.onWaveset({ x: this.s.x, r: this.rEff, heard, freq: this.inc * this.sr });
+    }
+    const s = this.skew;
+    const v = phase < s ? this.gPos * halfCycle(this.shape, phase / s) : -this.gNeg * halfCycle(this.shape, (phase - s) / (1.0 - s));
+    this.phase = phase + this.inc;
+    return zap(v * this.peak);
+  }
+}
+
+class WsGendy {
+  constructor(p, sr, rgen) {
+    this.p = p; this.sr = sr; this.rgen = rgen;
+    this.pos = new Float64Array(16); this.neg = new Float64Array(16);
+    for (let k = 0; k < 16; ++k) { this.pos[k] = rgen.frand(); this.neg[k] = rgen.frand(); }
+    this.phase = 1.0; this.inc = 0.0;
+    this.oct = Math.log2(clampd(Math.sqrt(Math.abs(f32(val(p.minFreq)) * f32(val(p.maxFreq)))), 0.01, 20000.0));
+    this.minFreq = 80; this.maxFreq = 800; this.freqStep = 0; this.ampStep = 0; this.knum = 8; this.amp = 0;
+    this.skew = f32(0.5); this.interp = 0; this.balance = 0; this.gPos = this.gNeg = 1.0; this.n = 8;
+  }
+  static curve(pts, n, p, interp) {
+    const q = p * (n + 1);
+    let j = Math.trunc(q); if (j > n) j = n;
+    const f = q - j, a = j === 0 ? 0.0 : pts[j - 1], b = j === n ? 0.0 : pts[j];
+    const w = f + interp * (0.5 - 0.5 * Math.cos(kPi * f) - f);
+    return a + w * (b - a);
+  }
+  next() {
+    const p = this.p, rgen = this.rgen;
+    let phase = this.phase;
+    if (phase >= 1.0) {
+      phase -= 1.0;
+      this.minFreq = pull(p.minFreq, this.minFreq); this.maxFreq = pull(p.maxFreq, this.maxFreq);
+      this.freqStep = pull(p.freqStep, this.freqStep); this.ampStep = pull(p.ampStep, this.ampStep);
+      this.knum = pull(p.knum, this.knum); this.amp = pull(p.amp, this.amp); this.skew = pull(p.skew, this.skew);
+      this.interp = pull(p.interp, this.interp); this.balance = pull(p.balance, this.balance);
+      this.n = Math.trunc(clampd(this.knum, 1.0, 16));
+      const st = Math.abs(this.ampStep);
+      for (let k = 0; k < this.n; ++k) {
+        this.pos[k] = mirror(this.pos[k] + st * rgen.frand2(), 0.0, 1.0);
+        this.neg[k] = mirror(this.neg[k] + st * rgen.frand2(), 0.0, 1.0);
+      }
+      let lo = Math.log2(clampd(Math.abs(this.minFreq), 0.01, this.sr * 0.5));
+      let hi = Math.log2(clampd(Math.abs(this.maxFreq), 0.01, this.sr * 0.5));
+      if (lo > hi) [lo, hi] = [hi, lo];
+      this.oct = mirror(this.oct + Math.abs(this.freqStep) * rgen.frand2(), lo, hi);
+      this.inc = incFor(Math.pow(2, this.oct), this.sr);
+      let sumPos = 0.0, sumNeg = 0.0;
+      for (let k = 0; k < this.n; ++k) { sumPos += this.pos[k]; sumNeg += this.neg[k]; }
+      const sk = clampd(this.skew, 0.01, 0.99);
+      [this.gPos, this.gNeg] = balanceGains(sk * sumPos, (1.0 - sk) * sumNeg, this.balance);
+      if (phase >= 1.0) phase = 0.0;
+      if (this.onWaveset) this.onWaveset({ freq: this.inc * this.sr, pos: Array.from(this.pos.subarray(0, this.n)), neg: Array.from(this.neg.subarray(0, this.n)) });
+    }
+    const s = clampd(this.skew, 0.01, 0.99), it = clampd(this.interp, 0.0, 1.0);
+    const y = phase < s ? this.gPos * WsGendy.curve(this.pos, this.n, phase / s, it)
+                        : -this.gNeg * WsGendy.curve(this.neg, this.n, (phase - s) / (1.0 - s), it);
+    this.phase = phase + this.inc;
+    return zap(y * this.amp);
+  }
+}
+
+class WsGroup {
+  constructor(p, sr, rgen) {
+    this.p = p; this.sr = sr; this.rgen = rgen; this.phase = 1.0; this.inc = 0.0;
+    this.freq = f32(110); this.amp = 0; this.shape = 0; this.halves = 3; this.tilt = 0; this.decay = 0; this.flip = 0; this.balance = 0;
+    this.n = 1; this.j = 0; this.edge = new Float64Array(65); this.gain = new Float64Array(64); this.edge[1] = 1.0;
+  }
+  newGroup() {
+    const p = this.p, rgen = this.rgen;
+    this.freq = pull(p.freq, this.freq); this.amp = pull(p.amp, this.amp); this.shape = pull(p.shape, this.shape);
+    this.halves = pull(p.halves, this.halves); this.tilt = pull(p.tilt, this.tilt); this.decay = pull(p.decay, this.decay);
+    this.flip = pull(p.flip, this.flip); this.balance = pull(p.balance, this.balance);
+    const n = Math.trunc(clampd(this.halves, 1.0, 64));
+    const fade = 1.0 - clampd(this.decay, 0.0, 1.0), flip = clampd(this.flip, 0.0, 1.0);
+    let total = 0.0, level = 1.0, aPos = 0.0, aNeg = 0.0;
+    const w = new Float64Array(n);
+    for (let j = 0; j < n; ++j) {
+      w[j] = n > 1 ? Math.pow(2, this.tilt * (2.0 * j / (n - 1) - 1.0)) : 1.0;
+      total += w[j];
+      let sign = (j % 2 === 0) ? 1.0 : -1.0;
+      if (flip > 0.0 && rgen.frand() < flip) sign = -sign;
+      this.gain[j] = sign * level;
+      if (sign > 0.0) aPos += w[j] * level; else aNeg += w[j] * level;
+      level *= fade;
+    }
+    this.edge[0] = 0.0;
+    for (let j = 0; j < n; ++j) this.edge[j + 1] = this.edge[j] + w[j] / total;
+    this.edge[n] = 1.0;
+    const [gPos, gNeg] = balanceGains(aPos, aNeg, this.balance);
+    for (let j = 0; j < n; ++j) this.gain[j] *= this.gain[j] > 0.0 ? gPos : gNeg;
+    this.n = n; this.j = 0; this.inc = incFor(this.freq, this.sr);
+    if (this.onWaveset) this.onWaveset({ freq: this.freq, edge: Array.from(this.edge.subarray(0, n + 1)), gain: Array.from(this.gain.subarray(0, n)) });
+  }
+  next() {
+    let phase = this.phase;
+    if (phase >= 1.0) { phase -= 1.0; this.newGroup(); if (phase >= 1.0) phase = 0.0; }
+    while (this.j < this.n - 1 && phase >= this.edge[this.j + 1]) this.j++;
+    const j = this.j, a = this.edge[j], b = this.edge[j + 1];
+    const v = this.gain[j] * halfCycle(this.shape, (phase - a) / (b - a));
+    this.phase = phase + this.inc;
+    return zap(v * this.amp);
+  }
+}
+
+class WsNest {
+  constructor(p, sr) {
+    this.p = p; this.sr = sr; this.phase = 1.0; this.inc = 0.0;
+    this.s = mapInit(f32(val(p.init ?? 0.3)));
+    this.r = f32(0.9); this.lo = 2; this.hi = 20; this.amp = 0; this.shape = 0; this.map = 0; this.depth = 2; this.branch = 3;
+    this.spread = 1; this.contour = 0; this.skewDepth = 0; this.balance = 0;
+    this.n = 1; this.j = 0; this.edge = new Float64Array(4097); this.gain = new Float64Array(4096);
+    this.edge[1] = 1.0; this.levels = 0;
+  }
+  node(b, x, y, prev, level, start, len, sign, env) {
+    const s = clampd(0.5 + b.skewDepth * mapSecond(b.map, x, y, prev), 0.01, 0.99);
+    const hStart = [start, start + len * s], hLen = [len * s, len * (1.0 - s)], hSign = [sign, -sign];
+    const st = { x, y };
+    for (let h = 0; h < 2; ++h) {
+      if (level === b.depth) {
+        this.edge[this.n] = hStart[h];
+        this.gain[this.n] = hSign[h] * env;
+        if (hSign[h] > 0.0) b.aPos += hLen[h] * env; else b.aNeg += hLen[h] * env;
+        this.n++;
+        continue;
+      }
+      const sx = [], sy = [], sp = [], w = [];
+      let total = 0.0;
+      for (let c = 0; c < b.branch; ++c) {
+        sp[c] = st.x;
+        stepMap(b.map, b.r, st);
+        sx[c] = st.x; sy[c] = st.y;
+        w[c] = Math.pow(2, b.spread * (1.0 - 2.0 * st.x));
+        total += w[c];
+      }
+      let pos = hStart[h];
+      for (let c = 0; c < b.branch; ++c) {
+        const clen = hLen[h] * w[c] / total;
+        const centre = (pos + 0.5 * clen - hStart[h]) / hLen[h];
+        const cenv = env * (1.0 - b.contour + b.contour * halfCycle(b.shape, centre));
+        this.node(b, sx[c], sy[c], sp[c], level + 1, pos, clen, hSign[h], cenv);
+        pos += clen;
+      }
+    }
+  }
+  newTree() {
+    const p = this.p;
+    this.r = pull(p.r, this.r); this.lo = pull(p.lo, this.lo); this.hi = pull(p.hi, this.hi); this.amp = pull(p.amp, this.amp);
+    this.shape = pull(p.shape, this.shape); this.map = pull(p.map, this.map); this.depth = pull(p.depth, this.depth);
+    this.branch = pull(p.branch, this.branch); this.spread = pull(p.spread, this.spread); this.contour = pull(p.contour, this.contour);
+    this.skewDepth = pull(p.skewDepth, this.skewDepth); this.balance = pull(p.balance, this.balance);
+    const b = { map: Math.trunc(clampd(this.map, 0.0, kNumMaps - 1)), branch: Math.trunc(clampd(this.branch, 1.0, 8)) };
+    let depth = Math.trunc(clampd(this.depth, 0.0, 11.0)), halves = 2;
+    for (let d = 0; d < depth; ++d) {
+      if (halves * 2 * b.branch > 4096) { depth = d; break; }
+      halves *= 2 * b.branch;
+    }
+    b.depth = depth; b.r = this.r; b.spread = this.spread; b.contour = clampd(this.contour, 0.0, 1.0);
+    b.shape = this.shape; b.skewDepth = this.skewDepth;
+    const prev = this.s.x;
+    stepMap(b.map, b.r, this.s);
+    const lo = Math.abs(this.lo) < 0.01 ? 0.01 : Math.abs(this.lo), hi = Math.abs(this.hi) < 0.01 ? 0.01 : Math.abs(this.hi);
+    this.inc = incFor(lo * Math.pow(hi / lo, this.s.x), this.sr);
+    for (;; --b.depth) {
+      b.aPos = b.aNeg = 0.0;
+      this.n = 0;
+      this.node(b, this.s.x, this.s.y, prev, 0, 0.0, 1.0, 1.0, 1.0);
+      this.edge[this.n] = 1.0;
+      let shortest = 1.0;
+      for (let j = 0; j < this.n; ++j) shortest = Math.min(shortest, this.edge[j + 1] - this.edge[j]);
+      if (b.depth === 0 || shortest >= 4.0 * this.inc) break;
+    }
+    this.levels = b.depth;
+    const [gPos, gNeg] = balanceGains(b.aPos, b.aNeg, this.balance);
+    for (let j = 0; j < this.n; ++j) this.gain[j] *= this.gain[j] > 0.0 ? gPos : gNeg;
+    this.j = 0;
+    if (this.onWaveset) this.onWaveset({ x: this.s.x, y: this.s.y, prev, freq: this.inc * this.sr, levels: b.depth,
+      b: { map: b.map, r: b.r, branch: b.branch, spread: b.spread, contour: b.contour, shape: b.shape, skewDepth: b.skewDepth },
+      edge: Array.from(this.edge.subarray(0, this.n + 1)), gain: Array.from(this.gain.subarray(0, this.n)) });
+  }
+  next() {
+    let phase = this.phase;
+    if (phase >= 1.0) { phase -= 1.0; this.newTree(); if (phase >= 1.0) phase = 0.0; }
+    while (this.j < this.n - 1 && phase >= this.edge[this.j + 1]) this.j++;
+    const j = this.j, a = this.edge[j], b = this.edge[j + 1];
+    const v = b > a ? this.gain[j] * halfCycle(this.shape, (phase - a) / (b - a)) : 0.0;
+    this.phase = phase + this.inc;
+    return zap(v * this.amp);
+  }
+}
+
+
+// ---- what WsHear hears: SuperCollider's LPF, Ringz and DelayN, and the LocalIn loop ----
+// Each filter takes a 64-sample block, as scsynth runs it; a coefficient change ramps across
+// the block in steps of three samples (mFilterLoops 21, mFilterRemain 1).
+
+class LPF {
+  constructor(freq, sr) { this.sr = sr; this.y1 = 0; this.y2 = 0; this.set(f32(freq)); }
+  coef(freq) {
+    const pfreq = freq * (kTau / this.sr) * 0.5, C = 1.0 / Math.tan(pfreq), C2 = C * C, sqrt2C = C * f32(Math.SQRT2);
+    const a0 = 1.0 / (1.0 + sqrt2C + C2);
+    return [a0, -2.0 * (1.0 - C2) * a0, -(1.0 - sqrt2C + C2) * a0];
+  }
+  set(freq) { this.freq = freq; [this.a0, this.b1, this.b2] = this.coef(freq); }
+  block(inp, out, freq) {
+    freq = f32(freq);
+    let { y1, y2, a0, b1, b2 } = this, y0, i = 0;
+    const ramp = freq !== this.freq;
+    const [na0, nb1, nb2] = ramp ? this.coef(freq) : [a0, b1, b2];
+    const s0 = (na0 - a0) / 21, s1 = (nb1 - b1) / 21, s2 = (nb2 - b2) / 21;
+    for (let k = 0; k < 21; k++) {
+      y0 = f32(inp[i]) + b1 * y1 + b2 * y2; out[i++] = f32(a0 * (y0 + 2.0 * y1 + y2));
+      y2 = f32(inp[i]) + b1 * y0 + b2 * y1; out[i++] = f32(a0 * (y2 + 2.0 * y0 + y1));
+      y1 = f32(inp[i]) + b1 * y2 + b2 * y0; out[i++] = f32(a0 * (y1 + 2.0 * y2 + y0));
+      if (ramp) { a0 += s0; b1 += s1; b2 += s2; }
+    }
+    y0 = f32(inp[i]) + b1 * y1 + b2 * y2; out[i] = f32(a0 * (y0 + 2.0 * y1 + y2)); y2 = y1; y1 = y0;
+    if (ramp) { this.freq = freq; this.a0 = na0; this.b1 = nb1; this.b2 = nb2; }
+    this.y1 = zap64(y1); this.y2 = zap64(y2);
+  }
+}
+
+class Ringz {
+  constructor(freq, decay, sr) { this.sr = sr; this.y1 = 0; this.y2 = 0; this.freq = f32(freq); this.decay = f32(decay); [this.b1, this.b2] = this.coef(this.freq, this.decay); }
+  coef(freq, decay) {
+    const ffreq = freq * (kTau / this.sr), R = decay === 0 ? 0.0 : Math.exp(Math.log(0.001) / (decay * this.sr));
+    const twoR = 2.0 * R, R2 = R * R, cost = (twoR * Math.cos(ffreq)) / (1.0 + R2);
+    return [twoR * cost, -R2];
+  }
+  block(inp, out, freq, decay) {
+    freq = f32(freq); decay = f32(decay);
+    let { y1, y2, b1, b2 } = this, y0, i = 0;
+    const a0 = 0.5, ramp = freq !== this.freq || decay !== this.decay;
+    const [nb1, nb2] = ramp ? this.coef(freq, decay) : [b1, b2];
+    const s1 = (nb1 - b1) / 21, s2 = (nb2 - b2) / 21;
+    for (let k = 0; k < 21; k++) {
+      y0 = f32(inp[i]) + b1 * y1 + b2 * y2; out[i++] = f32(a0 * (y0 - y2));
+      y2 = f32(inp[i]) + b1 * y0 + b2 * y1; out[i++] = f32(a0 * (y2 - y1));
+      y1 = f32(inp[i]) + b1 * y2 + b2 * y0; out[i++] = f32(a0 * (y1 - y0));
+      if (ramp) { b1 += s1; b2 += s2; }
+    }
+    y0 = f32(inp[i]) + b1 * y1 + b2 * y2; out[i] = f32(a0 * (y0 - y2)); y2 = y1; y1 = y0;
+    if (ramp) { this.freq = freq; this.decay = decay; this.b1 = nb1; this.b2 = nb2; }
+    this.y1 = zap64(y1); this.y2 = zap64(y2);
+  }
+}
+
+class DelayN {
+  constructor(maxTime, sr) { this.sr = sr; this.buf = new Float32Array(Math.ceil(maxTime * sr) + 2); this.w = 0; }
+  block(inp, out, time) {
+    const n = this.buf.length, d = Math.trunc(clampd(f32(time) * this.sr, 1, n - 1));
+    for (let i = 0; i < 64; i++) {
+      this.buf[this.w] = inp[i];
+      out[i] = this.buf[(this.w - d + n) % n];
+      this.w = (this.w + 1) % n;
+    }
+  }
+}
+
+function zap64(x) { const a = Math.abs(x); return a > 1e-15 && a < 1e15 ? x : 0; }
+
+// WsHear inside a LocalIn/LocalOut loop: the input to each 64-sample block is the previous
+// block's output after `loop` (a function filling `heard` from `prev`), as in scsynth.
+class HearLoop {
+  constructor(hear, loop) { this.hear = hear; this.loop = loop; this.prev = new Float32Array(64); this.heard = new Float32Array(64); this.cur = new Float32Array(64); this.i = 64; }
+  next() {
+    if (this.i >= 64) { this.loop(this.prev, this.heard); this.i = 0; }
+    const y = this.hear.next(this.heard[this.i]);
+    this.cur[this.i++] = y;
+    if (this.i >= 64) this.prev.set(this.cur);
+    return y;
+  }
+}
+
+const UGENS = { WsGen, WsMap, WsHear, WsGendy, WsGroup, WsNest };
+
+// ---- building a running generator from a plain description (worklet, drawings, tests) ----
+
+// a parameter spec is a number, or { D: 'stutter' | 'lin' | 'map' | 'seq', ... }
+function makeStream(spec) {
+  if (typeof spec === 'number') return spec;
+  switch (spec.D) {
+    case 'seq': return new Dseq(spec.list.map(makeStream));
+    case 'stutter': return new Dstutter(makeStream(spec.n), makeStream(spec.src));
+    case 'lin': return new Dlin(makeStream(spec.src), spec.mul, spec.add);
+    case 'map': return new Dmap({ r: makeStream(spec.r), map: makeStream(spec.map), init: spec.init ?? 0.3, axis: spec.axis ?? 0, hyst: spec.hyst ?? 0 });
+  }
+  throw new Error('unknown stream ' + spec.D);
+}
+
+// cfg: { ugen, p: { name: number | stream spec }, seed, loop: { type, freq, decay, time } }
+// returns { u, next() }; for WsHear the loop reads cfg.loop on every block, so it can change live
+function makeGenerator(cfg, sr) {
+  const p = {};
+  for (const k in cfg.p) p[k] = makeStream(cfg.p[k]);
+  const U = UGENS[cfg.ugen];
+  const u = new U(p, sr, new RGen(cfg.seed ?? 1));
+  if (cfg.ugen !== 'WsHear') return { u, next: () => u.next() };
+  const lp = new LPF(cfg.loop.freq, sr), rz = new Ringz(cfg.loop.freq, cfg.loop.decay ?? 0.05, sr), dl = new DelayN(0.5, sr);
+  const loop = new HearLoop(u, (a, b) => {
+    const L = cfg.loop;
+    if (L.type === 'resonator') { rz.block(a, b, L.freq, L.decay ?? 0.05); for (let i = 0; i < 64; i++) b[i] = f32(b[i] * f32(0.1)); }
+    else if (L.type === 'delay') dl.block(a, b, L.time);
+    else lp.block(a, b, L.freq);
+  });
+  return { u, next: () => loop.next() };
+}
+
+
+</script>
+<script id="worklet" type="text/js-worklet">
+/* One processor for every Crossings figure. core.js is prepended by the build, so the
+ * audio runs the same port of the UGens that the drawings and the tests use. */
+class CrossingsProcessor extends AudioWorkletProcessor {
+  constructor() {
+    super();
+    this.gain = 0.2; this.g = null; this.cfg = null; this.key = '';
+    this.chunk = new Float32Array(Math.ceil(sampleRate / 20) + 128); this.fill = 0;
+    this.recs = []; this.total = 0;
+    this.port.onmessage = e => { if (e.data.type === 'params') this.set(e.data.value); };
+  }
+  set(v) {
+    this.gain = v.gain;
+    // a change of generator, seed or any stream rebuilds it; plain numbers change in place
+    const key = JSON.stringify([v.ugen, v.seed, Object.entries(v.p).filter(([, x]) => typeof x !== 'number')]);
+    if (!this.g || key !== this.key) {
+      this.cfg = { ugen: v.ugen, p: v.p, seed: v.seed, loop: Object.assign({}, v.loop) };
+      this.g = makeGenerator(this.cfg, sampleRate);
+      this.g.u.onWaveset = r => { r.at = this.total; this.recs.push(r); if (this.recs.length > 400) this.recs.shift(); };
+      this.key = key;
+    } else {
+      for (const k in v.p) if (typeof v.p[k] === 'number') this.g.u.p[k] = v.p[k];
+      Object.assign(this.cfg.loop, v.loop);
+    }
+  }
+  process(inputs, outputs) {
+    const out = outputs[0], ch = out[0], n = ch.length;
+    for (let i = 0; i < n; i++) {
+      const y = this.g ? this.g.next() : 0;
+      ch[i] = y * this.gain;
+      this.chunk[this.fill++] = y;
+      this.total++;
+    }
+    for (let c = 1; c < out.length; c++) out[c].set(ch);
+    if (this.fill >= sampleRate / 20) {   // ~20 snapshots a second: the new samples and wavesets
+      this.port.postMessage({ wave: this.chunk.slice(0, this.fill), recs: this.recs, total: this.total });
+      this.fill = 0; this.recs = [];
+    }
+    return true;
+  }
+}
+registerProcessor('crossings', CrossingsProcessor);
+
+</script>
+<script src="../kit/kit.js"></script>
+<script>
+window.DEMO = {"ugen":"WsGen","view":"spectrum","count":4,"inputs":["freq","shape","skew","balance","glide"],"fixed":{"amp":1,"repeats":1}};
+window.DEMO.maxHz = v => Math.min(12000, Math.max(1500, v.freq * 14));
+window.PRESETS = {"sine":{"freq":220,"shape":0,"skew":0.5,"balance":0,"glide":0},"skewed":{"freq":220,"shape":0,"skew":0.15,"balance":0,"glide":0},"balanced":{"freq":220,"shape":0,"skew":0.15,"balance":1,"glide":0},"triangle":{"freq":220,"shape":1,"skew":0.3,"balance":1,"glide":0},"spike":{"freq":220,"shape":3,"skew":0.5,"balance":0,"glide":0},"two":{"freq":30,"shape":1.5,"skew":0.3,"balance":0,"glide":0}};
+</script>
+<script>
+/* Client side of every Crossings figure. The generators come from core.js (inlined as
+ * #crossingscore), so the drawings render the same code the audio thread runs: while
+ * stopped the page renders a few seconds itself, while playing it draws what the
+ * worklet sends. Each page sets DEMO (generator, view, how controls map to inputs). */
+(function () {
+  const D = window.DEMO;
+  const lib = new Function(document.getElementById('crossingscore').textContent +
+    '; return { makeGenerator, stepMap, mapInit, halfCycle, WsGendy, WsNest, MAP_NAMES };')();
+  const IDS = [...document.querySelectorAll('.grid input, .grid select')].map(e => e.id);
+  Kit.compact();
+  const el = Kit.controls(IDS);
+  const read = () => Kit.readouts(el, /^(shape|skew|balance|glide|ampDepth|hyst|r|sr|rLo|rHi|ampStep|freqStep|interp|tilt|decay|flip|spread|contour|skewDepth|couple|gain|loopTime)$/);
+  const css = Kit.css;
+  const waveCv = document.getElementById('view'), lowCv = document.getElementById('spec');
+  const wctx = Kit.fit(waveCv), lctx = Kit.fit(lowCv);
+  const SR = 48000;
+
+  // ---- controls to a generator description, the same one the worklet builds -----------
+  function config() {
+    const v = Kit.values(el);
+    const p = {};
+    for (const k of D.inputs) p[k] = v[k] ?? D.fixed[k];
+    Object.assign(p, D.fixed);
+    if (D.ugen === 'WsMap' && 'smap' in v)   // the slow map: r from Dstutter(hold, Dmap(sr, smap) * (rHi - rLo) + rLo)
+      p.r = { D: 'stutter', n: v.hold, src: { D: 'lin', src: { D: 'map', r: v.sr, map: v.smap }, mul: v.rHi - v.rLo, add: v.rLo } };
+    const loop = { type: v.loop || 'lowpass', freq: v.loopFreq || 600, decay: 0.05, time: v.loopTime || 0.1 };
+    return { ugen: D.ugen, p, seed: D.seed || 1, loop, gain: v.gain };
+  }
+
+  // ---- what is drawn: a ring of recent output and the wavesets that started in it -------
+  const RING = 1 << 18;
+  let ring = new Float32Array(RING), total = 0, recs = [];
+  function push(wave, rs) {
+    for (let i = 0; i < wave.length; i++) ring[(total + i) & (RING - 1)] = wave[i];
+    total += wave.length;
+    for (const r of rs) recs.push(r);
+    if (recs.length > 2000) recs.splice(0, recs.length - 2000);
+  }
+  function preview() {
+    ring = new Float32Array(RING); total = 0; recs = [];
+    const g = lib.makeGenerator(config(), SR), seconds = D.preview || 1.5, n = Math.round(seconds * SR);
+    const out = new Float32Array(n);
+    g.u.onWaveset = r => { r.at = i; recs.push(r); };
+    let i = 0;
+    for (; i < n; i++) out[i] = g.next();
+    push(out, []);
+  }
+  const playing = () => document.getElementById('play').classList.contains('on');
+
+  // the last `count` complete wavesets (or groups, or trees)
+  function windowOf(count) {
+    const done = recs.filter(r => r.at < total);
+    if (done.length < 2) return { a: Math.max(0, total - 2048), b: total, rs: done };
+    const last = done.length - 1, first = Math.max(0, last - count);
+    let a = done[first].at, b = done[last].at;
+    if (b - a > RING - 1024) a = b - (RING - 1024);
+    if (total - a > RING) a = total - RING + 1;
+    return { a, b, rs: done.slice(first, last + 1) };
+  }
+
+  // ---- drawing helpers ------------------------------------------------------------
+  const dim = a => `rgba(255,255,255,${a})`;
+  function label(ctx, text, x, y, color) { ctx.fillStyle = color || css('--muted'); ctx.font = '10.5px ' + css('--sans'); ctx.fillText(text, x, y); }
+
+  function drawWave(ctx, W, H, a, b, rs, marks) {
+    ctx.clearRect(0, 0, W, H);
+    const pad = 10, mid = H / 2, amp = (H / 2 - 14), n = Math.max(1, b - a), sx = (W - 2 * pad) / n;
+    ctx.strokeStyle = dim(0.12); ctx.beginPath(); ctx.moveTo(pad, mid); ctx.lineTo(W - pad, mid); ctx.stroke();
+    // waveset starts
+    ctx.strokeStyle = dim(0.16); ctx.setLineDash([2, 4]); ctx.beginPath();
+    for (const r of rs) { const x = pad + (r.at - a) * sx; ctx.moveTo(x, 8); ctx.lineTo(x, H - 8); }
+    ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = css('--accent'); ctx.lineWidth = 1.3; ctx.beginPath();
+    const at = i => ring[(a + i) & (RING - 1)] / (D.scale || 1);
+    if (n / (W - 2 * pad) > 2) {   // more than two samples a pixel: draw each column's range
+      const cols = Math.floor(W - 2 * pad);
+      for (let c = 0; c < cols; c++) {
+        let lo = Infinity, hi = -Infinity;
+        for (let i = Math.floor(c / sx); i < Math.floor((c + 1) / sx); i++) { const v = at(i); if (v < lo) lo = v; if (v > hi) hi = v; }
+        ctx.moveTo(pad + c + 0.5, mid - hi * amp); ctx.lineTo(pad + c + 0.5, mid - lo * amp);
+      }
+    } else {
+      for (let i = 0; i <= n; i++) { const x = pad + i * sx, y = mid - at(i) * amp; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+    }
+    ctx.stroke(); ctx.lineWidth = 1;
+    if (marks) marks(ctx, pad, sx, a, mid);
+  }
+
+  // magnitude spectrum of the last 8192 samples, in dB, with the DC bin drawn apart
+  function fft(re, im) {
+    const n = re.length;
+    for (let i = 1, j = 0; i < n; i++) { let bit = n >> 1; for (; j & bit; bit >>= 1) j ^= bit; j ^= bit; if (i < j) { [re[i], re[j]] = [re[j], re[i]]; [im[i], im[j]] = [im[j], im[i]]; } }
+    for (let len = 2; len <= n; len <<= 1) {
+      const ang = -2 * Math.PI / len;
+      for (let i = 0; i < n; i += len) for (let k = 0; k < len / 2; k++) {
+        const c = Math.cos(ang * k), s = Math.sin(ang * k), a = i + k, b = a + len / 2;
+        const tr = re[b] * c - im[b] * s, ti = re[b] * s + im[b] * c;
+        re[b] = re[a] - tr; im[b] = im[a] - ti; re[a] += tr; im[a] += ti;
+      }
+    }
+  }
+  function drawSpectrum(ctx, W, H, maxHz) {
+    ctx.clearRect(0, 0, W, H);
+    const N = 8192, re = new Float64Array(N), im = new Float64Array(N);
+    for (let i = 0; i < N; i++) re[i] = ring[(total - N + i) & (RING - 1)] * (0.5 - 0.5 * Math.cos(2 * Math.PI * i / N));
+    fft(re, im);
+    const mag = i => 20 * Math.log10(Math.max(1e-7, 4 * Math.hypot(re[i], im[i]) / N));
+    const padL = 36, padR = 10, pt = 14, pb = 22, w = W - padL - padR, h = H - pt - pb, top = 0, lo = -80;
+    const X = f => padL + f / maxHz * w, Y = d => pt + (1 - (Math.max(lo, Math.min(top, d)) - lo) / (top - lo)) * h;
+    ctx.font = '10px ' + css('--sans'); ctx.fillStyle = css('--muted'); ctx.strokeStyle = dim(0.07);
+    for (let g = 0; g <= 80; g += 20) { const y = Y(-g); ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke(); ctx.fillText(g ? '-' + g : '0 dB', 2, y + 3); }
+    const step = maxHz > 6000 ? 2000 : maxHz > 2500 ? 1000 : maxHz > 1000 ? 500 : 100;
+    for (let f = 0; f <= maxHz; f += step) ctx.fillText(f >= 1000 ? f / 1000 + 'k' : f, X(f) - 6, H - 6);
+    ctx.beginPath(); ctx.moveTo(X(0), Y(lo));
+    const bins = Math.min(N / 2, Math.ceil(maxHz / (SR / N)));
+    for (let i = 1; i < bins; i++) ctx.lineTo(X(i * SR / N), Y(mag(i)));
+    ctx.lineTo(X(bins * SR / N), Y(lo)); ctx.closePath();
+    ctx.fillStyle = 'rgba(120,165,210,.25)'; ctx.fill(); ctx.strokeStyle = css('--accent'); ctx.stroke();
+    // DC: the mean, measured over whole wavesets so it does not depend on where the window falls
+    const { a, b } = windowOf(D.count || 4);
+    let s = 0; for (let i = a; i < b; i++) s += ring[i & (RING - 1)];
+    const dc = b > a ? s / (b - a) : 0, dcDb = 20 * Math.log10(Math.max(1e-7, Math.abs(dc)));
+    ctx.strokeStyle = css('--rose'); ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(X(0) + 2, Y(lo)); ctx.lineTo(X(0) + 2, Y(dcDb)); ctx.stroke(); ctx.lineWidth = 1;
+    return dc;
+  }
+
+  // x against r for the current map, computed once per map and size
+  const bifCache = {};
+  function bifurcation(map, W, H) {
+    const key = map + ':' + W + 'x' + H;
+    if (bifCache[key]) return bifCache[key];
+    const off = document.createElement('canvas'); off.width = W; off.height = H;
+    const c = off.getContext('2d'), img = c.createImageData(W, H);
+    for (let col = 0; col < W; col++) {
+      const r = col / (W - 1), s = lib.mapInit(0.3);
+      for (let k = 0; k < 300; k++) lib.stepMap(map, r, s);
+      for (let k = 0; k < 220; k++) {
+        lib.stepMap(map, r, s);
+        const row = Math.round((1 - s.x) * (H - 1)), o = (row * W + col) * 4;
+        img.data[o] = 210; img.data[o + 1] = 215; img.data[o + 2] = 225; img.data[o + 3] = Math.min(255, img.data[o + 3] + 70);
+      }
+    }
+    c.putImageData(img, 0, 0);
+    return (bifCache[key] = off);
+  }
+  function drawBif(ctx, W, H, map, rs, heard) {
+    ctx.clearRect(0, 0, W, H);
+    const padL = 26, pb = 18, pt = 8, w = Math.floor(W - padL - 8), h = Math.floor(H - pt - pb);
+    ctx.globalAlpha = 0.55; ctx.drawImage(bifurcation(map, w, h), padL, pt); ctx.globalAlpha = 1;
+    label(ctx, 'x', 6, pt + 10); label(ctx, '0', padL - 2, H - 4); label(ctx, 'r', padL + w / 2, H - 4); label(ctx, '1', padL + w - 6, H - 4);
+    const X = r => padL + r * w, Y = x => pt + (1 - x) * h;
+    const last = rs[rs.length - 1];
+    if (last) { ctx.strokeStyle = css('--gold'); ctx.setLineDash([3, 3]); ctx.beginPath(); ctx.moveTo(X(last.r), pt); ctx.lineTo(X(last.r), pt + h); ctx.stroke(); ctx.setLineDash([]); }
+    for (const r of rs.slice(-120)) {
+      ctx.fillStyle = css('--accent'); ctx.beginPath(); ctx.arc(X(r.r), Y(r.x), 2.2, 0, 7); ctx.fill();
+      if (heard && r.heard >= 0) { ctx.fillStyle = css('--mint'); ctx.beginPath(); ctx.arc(X(r.r) + 5, Y(r.heard), 2, 0, 7); ctx.fill(); }
+    }
+  }
+
+  // r and x over the last few hundred wavesets
+  function drawTrace(ctx, W, H, rs) {
+    ctx.clearRect(0, 0, W, H);
+    const pad = 12, w = W - 2 * pad, h = H - 28, list = rs.slice(-500), n = Math.max(1, list.length - 1);
+    const X = i => pad + i / n * w, Y = v => 10 + (1 - v) * h;
+    ctx.strokeStyle = css('--gold'); ctx.lineWidth = 1.4; ctx.beginPath();
+    list.forEach((r, i) => { i ? ctx.lineTo(X(i), Y(r.r)) : ctx.moveTo(X(i), Y(r.r)); });
+    ctx.stroke(); ctx.lineWidth = 1;
+    ctx.fillStyle = css('--accent');
+    list.forEach((r, i) => { ctx.fillRect(X(i) - 1, Y(r.x) - 1, 2, 2); });
+    label(ctx, 'last ' + list.length + ' wavesets', W - pad - 110, H - 4);
+  }
+
+  // the breakpoints of the current waveset, and the walk of its frequency
+  function drawGendy(ctx, W, H, rs, v) {
+    ctx.clearRect(0, 0, W, H);
+    const last = rs[rs.length - 1]; if (!last) return;
+    const left = W * 0.62, pad = 12, mid = H / 2, amp = H / 2 - 16, s = Math.min(0.99, Math.max(0.01, v.skew)), it = v.interp;
+    ctx.strokeStyle = dim(0.12); ctx.beginPath(); ctx.moveTo(pad, mid); ctx.lineTo(left - pad, mid); ctx.stroke();
+    const X = p => pad + p * (left - 2 * pad);
+    ctx.strokeStyle = css('--accent'); ctx.lineWidth = 1.5; ctx.beginPath();
+    for (let i = 0; i <= 400; i++) {
+      const p = i / 400, y = p < s ? lib.WsGendy.curve(last.pos, last.pos.length, p / s, it) : -lib.WsGendy.curve(last.neg, last.neg.length, (p - s) / (1 - s), it);
+      i ? ctx.lineTo(X(p), mid - y * amp) : ctx.moveTo(X(p), mid - y * amp);
+    }
+    ctx.stroke(); ctx.lineWidth = 1;
+    ctx.fillStyle = css('--gold'); const n = last.pos.length;
+    for (let k = 0; k < n; k++) {
+      const pp = (k + 1) / (n + 1);
+      ctx.beginPath(); ctx.arc(X(pp * s), mid - last.pos[k] * amp, 3, 0, 7); ctx.fill();
+      ctx.beginPath(); ctx.arc(X(s + pp * (1 - s)), mid + last.neg[k] * amp, 3, 0, 7); ctx.fill();
+    }
+    label(ctx, 'one waveset, breakpoints', pad, H - 4);
+    // frequency walk, log scale between minFreq and maxFreq
+    const lo = Math.log2(Math.min(v.minFreq, v.maxFreq)), hi = Math.log2(Math.max(v.minFreq, v.maxFreq)), list = rs.slice(-160);
+    const x0 = left + 10, w = W - x0 - pad, Y = f => 10 + (1 - (Math.log2(f) - lo) / Math.max(1e-9, hi - lo)) * (H - 30);
+    ctx.strokeStyle = dim(0.15); ctx.strokeRect(x0, 10, w, H - 30);
+    ctx.strokeStyle = css('--mint'); ctx.beginPath();
+    list.forEach((r, i) => { const x = x0 + i / Math.max(1, list.length - 1) * w; i ? ctx.lineTo(x, Y(r.freq)) : ctx.moveTo(x, Y(r.freq)); });
+    ctx.stroke();
+    label(ctx, 'waveset frequency', x0, H - 4);
+  }
+
+  // the levels of the current tree, as rows of half-cycles: light positive, dark negative
+  function drawTree(ctx, W, H, last) {
+    ctx.clearRect(0, 0, W, H);
+    if (!last) return;
+    const pad = 12, w = W - 2 * pad, rows = last.levels + 1, rh = Math.min(26, (H - 30) / rows);
+    const scratch = { edge: new Float64Array(4097), gain: new Float64Array(4096), n: 0, node: lib.WsNest.prototype.node };
+    for (let L = 0; L <= last.levels; L++) {
+      scratch.n = 0;
+      const b = Object.assign({}, last.b, { depth: L, aPos: 0, aNeg: 0 });
+      scratch.node(b, last.x, last.y, last.prev, 0, 0, 1, 1, 1);
+      scratch.edge[scratch.n] = 1;
+      const y = 8 + L * rh;
+      for (let j = 0; j < scratch.n; j++) {
+        const x0 = pad + scratch.edge[j] * w, x1 = pad + scratch.edge[j + 1] * w;
+        ctx.fillStyle = scratch.gain[j] > 0 ? 'rgba(120,165,210,.75)' : 'rgba(120,165,210,.25)';
+        ctx.fillRect(x0, y, Math.max(0.6, x1 - x0 - (x1 - x0 > 3 ? 1 : 0)), rh - 4);
+      }
+      label(ctx, L === 0 ? 'level 0' : String(L), W - pad - 40, y + rh - 8, dim(0.6));
+    }
+    // zero crossings lost: neighbouring bottom half-cycles with the same sign
+    const g = last.gain, e = last.edge, yb = 8 + rows * rh + 4;
+    ctx.fillStyle = css('--rose'); let lost = 0;
+    for (let j = 1; j < g.length; j++) if ((g[j] > 0) === (g[j - 1] > 0)) { lost++; ctx.beginPath(); ctx.arc(pad + e[j] * w, yb, 2.4, 0, 7); ctx.fill(); }
+    label(ctx, `${g.length} half-cycles, ${lost} zero crossings removed by a parent's sign change`, pad, H - 4);
+    return lost;
+  }
+
+  // smallest period (up to 16) of the last 64 states, or 0 if none
+  function period(rs) {
+    const xs = rs.slice(-64).map(r => r.x);
+    if (xs.length < 48) return -1;
+    for (let p = 1; p <= 16; p++) { let ok = true; for (let i = p; i < xs.length; i++) if (Math.abs(xs[i] - xs[i - p]) > 1e-6) { ok = false; break; } if (ok) return p; }
+    return 0;
+  }
+  const describePeriod = p => (p < 0 ? '' : p === 0 ? 'no period up to 16: chaotic or quasi-periodic' : p === 1 ? 'fixed point' : 'period ' + p);
+
+  // ---- per-view drawing ---------------------------------------------------------------
+  const readout = document.getElementById('readout');
+  function draw() {
+    const v = Kit.values(el);
+    const Ww = waveCv.getBoundingClientRect().width, Hw = waveCv.getBoundingClientRect().height;
+    const Wl = lowCv.getBoundingClientRect().width, Hl = lowCv.getBoundingClientRect().height;
+    const { a, b, rs } = windowOf(D.count || 6);
+    const done = recs.filter(r => r.at < total), last = done[done.length - 1];
+    let text = '';
+    drawWave(wctx, Ww, Hw, a, b, rs);
+    if (D.view === 'spectrum') {
+      const dc = drawSpectrum(lctx, Wl, Hl, D.maxHz(v));
+      text = (last ? `waveset ${Math.round(last.freq)} Hz` : '') + `  ·  DC ${dc.toFixed(4)}`;
+    } else if (D.view === 'bif') {
+      drawBif(lctx, Wl, Hl, Math.trunc(v.map), done, D.ugen === 'WsHear');
+      text = last ? `x ${last.x.toFixed(3)}  ·  waveset ${Math.round(last.freq)} Hz  ·  ${describePeriod(period(done))}` : '';
+      if (D.ugen === 'WsHear' && last) {
+        const hs = done.slice(-64).filter(r => r.heard >= 0);
+        const md = hs.length ? hs.reduce((s, r) => s + Math.abs(r.heard - r.x), 0) / hs.length : 0;
+        text += `  ·  heard ${hs.length} of the last ${Math.min(64, done.length)}, mean |heard − made| ${md.toFixed(3)}`;
+      }
+    } else if (D.view === 'trace') {
+      drawTrace(lctx, Wl, Hl, done);
+      text = last ? `r ${last.r.toFixed(3)}  ·  x ${last.x.toFixed(3)}  ·  ${describePeriod(period(done))}` : '';
+    } else if (D.view === 'gendy') {
+      drawGendy(lctx, Wl, Hl, done, v);
+      text = last ? `waveset ${Math.round(last.freq)} Hz` : '';
+    } else if (D.view === 'nest') {
+      drawTree(lctx, Wl, Hl, last);
+      text = last ? `top waveset ${last.freq.toFixed(2)} Hz  ·  levels drawn ${last.levels} of ${Math.trunc(v.depth)}` + (last.levels < Math.trunc(v.depth) ? ' (lowered so no half-cycle is under 4 samples)' : '') : '';
+    }
+    if (readout) readout.textContent = text;
+  }
+
+  // ---- audio and lifecycle ------------------------------------------------------------
+  let dirty = true;
+  const getState = Kit.playButton(document.getElementById('play'), async () => {
+    const s = await Kit.build({ processor: 'crossings', prelude: ['crossingscore'] });
+    ring = new Float32Array(RING); total = 0; recs = [];
+    s.node.port.onmessage = e => push(e.data.wave, e.data.recs.map(r => Object.assign(r, {})));
+    s.node.port.postMessage({ type: 'params', value: config() });
+    return s;
+  });
+  function send() { const s = getState(); if (s) s.node.port.postMessage({ type: 'params', value: config() }); }
+  IDS.forEach(id => el[id].addEventListener('input', () => { read(); send(); dirty = true; }));
+  Kit.presets(window.PRESETS || {}, p => { for (const k in p) if (el[k]) el[k].value = p[k]; read(); send(); dirty = true; });
+  read();
+  (function loop() {
+    if (!playing() && dirty) { preview(); dirty = false; }
+    draw();
+    requestAnimationFrame(loop);
+  })();
+})();
+
+</script>
+</body>
+</html>
