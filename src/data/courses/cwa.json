@@ -44,6 +44,18 @@
       "title": "Class 04, CDP",
       "file": "cwa04",
       "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa04/1"
+    },
+    {
+      "date": "15.10.2026",
+      "title": "Class 05, Algorithmic Composition",
+      "file": "cwa05b",
+      "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa05b/1",
+      "tools": [
+        { "label": "Vowel table", "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa05b/demos/guido/index.html" },
+        { "label": "Mozart dice game", "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa05b/demos/wurfel/index.html" },
+        { "label": "Generate and test", "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa05b/demos/hiller/index.html" },
+        { "label": "Loops", "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa05b/demos/loops/index.html" }
+      ]
     }
   ]
 }
