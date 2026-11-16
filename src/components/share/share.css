@@ -1,0 +1,83 @@
+.share-page {
+  position: fixed;
+  top: 0;
+  z-index: 1050;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background: #1e2127;
+}
+
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background: #16181d;
+  color: #abb2bf;
+  font-family: Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+}
+
+.share-home {
+  color: #abb2bf;
+}
+
+.share-home:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.share-room {
+  color: #fff;
+  font-weight: bold;
+}
+
+.share-status {
+  flex: 1;
+}
+
+.share-status-live::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #98c379;
+}
+
+.share-status-offline,
+.share-status-error {
+  color: #e06c75;
+}
+
+.share-copy {
+  padding: 4px 14px;
+  border: 1px solid #5c6370;
+  border-radius: 4px;
+  background: #2a2e36;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.share-copy:hover {
+  background: #3e4451;
+}
+
+.share-editor {
+  flex: 1;
+  min-height: 0;
+}
+
+.share-editor .cm-editor {
+  height: 100%;
+  font-size: 15px;
+}
+
+.share-editor .cm-scroller {
+  font-family: Menlo, Monaco, Consolas, monospace;
+}
