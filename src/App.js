@@ -34,6 +34,7 @@ const Pmb = lazy(() => import('./components/courses/PMB'));
 const Cwa = lazy(() => import('./components/courses/CWA'));
 // const Workshops = lazy(() => import('./components/courses/Workshops'));
 const CoursesUnavailable = lazy(() => import('./components/courses/CoursesUnavailable'));
+const Share = lazy(() => import('./components/share/Share'));
 
 function NavMenuItem({ to, children, onClick }) {
   const location = useLocation();
@@ -118,6 +119,7 @@ function App() {
             <Route path="/pmb" element={<Pmb />} />
             <Route path="/cwa" element={<Cwa />} />
             <Route path="/workshops" element={<CoursesUnavailable />} />
+            <Route path="/share/:room" element={<Share />} />
           </Routes>
           </Suspense>
         </div>
