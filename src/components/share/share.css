@@ -39,7 +39,7 @@
   flex: 1;
 }
 
-.share-status-live::before {
+.share-status-saved::before {
   content: '';
   display: inline-block;
   width: 8px;

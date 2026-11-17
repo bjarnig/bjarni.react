@@ -5,6 +5,7 @@ import { EditorView, basicSetup } from 'codemirror';
 import { EditorState } from '@codemirror/state';
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags as t } from '@lezer/highlight';
+import DiffMatchPatch from 'diff-match-patch';
 import { supercollider } from './supercollider';
 import './share.css';
 
@@ -31,47 +32,74 @@ const darkTheme = EditorView.theme({
   '&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection': { backgroundColor: '#3e4451' },
 }, { dark: true });
 
-// A ?key= in the URL is stored once and then removed, so it never lingers on a projected screen.
-function takeKey() {
-  const params = new URLSearchParams(window.location.search);
-  const fromUrl = params.get('key');
-  if (fromUrl) {
-    localStorage.setItem('share-key', fromUrl);
-    window.history.replaceState(null, '', window.location.pathname);
-  }
-  return localStorage.getItem('share-key');
-}
+const dmp = new DiffMatchPatch();
 
 function Share() {
   const { room } = useParams();
   const host = useRef(null);
   const view = useRef(null);
-  const [writeKey, setWriteKey] = useState(() => takeKey());
   const [status, setStatus] = useState('loading');
   const [copied, setCopied] = useState(false);
   const url = `${API}?room=${encodeURIComponent(room)}`;
 
   useEffect(() => {
-    let lastUpdated = -1;
+    let baseText = '';
+    let baseUpdated = null;
     let saveTimer;
+    let busy = false;
     let stopped = false;
 
-    const save = async (text) => {
-      setStatus('saving');
+    // Replace only the differing middle so the reader's cursor and scroll stay put.
+    const setText = (text) => {
+      const v = view.current;
+      const old = v.state.doc.toString();
+      if (old === text) return;
+      let from = 0;
+      while (from < old.length && from < text.length && old[from] === text[from]) from++;
+      let toOld = old.length;
+      let toNew = text.length;
+      while (toOld > from && toNew > from && old[toOld - 1] === text[toNew - 1]) { toOld--; toNew--; }
+      v.dispatch({ changes: { from, to: toOld, insert: text.slice(from, toNew) }, userEvent: 'remote' });
+    };
+
+    // Re-apply local edits made since the last sync on top of the server's newer text.
+    const absorb = (doc) => {
+      const mine = view.current.state.doc.toString();
+      const merged = mine === baseText ? doc.text : dmp.patch_apply(dmp.patch_make(baseText, mine), doc.text)[0];
+      baseText = doc.text;
+      baseUpdated = doc.updated;
+      setText(merged);
+    };
+
+    const sync = async () => {
+      if (busy || stopped) return;
+      busy = true;
       try {
-        const res = await fetch(url, {
-          method: 'PUT',
-          headers: { 'content-type': 'application/json', 'x-key': writeKey },
-          body: JSON.stringify({ text }),
-        });
-        if (res.status === 403) {
-          localStorage.removeItem('share-key');
-          setWriteKey(null);
-          return;
+        const mine = view.current.state.doc.toString();
+        if (baseUpdated !== null && mine !== baseText) {
+          setStatus('saving');
+          const res = await fetch(url, {
+            method: 'PUT',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ text: mine, base: baseUpdated }),
+          });
+          const body = await res.json();
+          if (res.ok) { baseText = mine; baseUpdated = body.updated; }
+          else if (res.status === 409) absorb(body);
+          else throw new Error(body.error);
+        } else {
+          const doc = await (await fetch(url, { cache: 'no-store' })).json();
+          if (doc.updated !== baseUpdated) absorb(doc);
         }
-        setStatus(res.ok ? 'saved' : 'error');
+        setStatus('saved');
       } catch {
-        setStatus('error');
+        setStatus('offline');
+      } finally {
+        busy = false;
+      }
+      if (!stopped && view.current.state.doc.toString() !== baseText) {
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(sync, SAVE_DELAY_MS);
       }
     };
 
@@ -83,35 +111,18 @@ function Share() {
           supercollider,
           syntaxHighlighting(scHighlight),
           darkTheme,
-          EditorState.readOnly.of(!writeKey),
           EditorView.updateListener.of((u) => {
-            if (!writeKey || !u.docChanged || u.transactions.some((tr) => tr.isUserEvent('load'))) return;
+            if (!u.docChanged || u.transactions.every((tr) => tr.isUserEvent('remote'))) return;
             clearTimeout(saveTimer);
-            setStatus('typing');
-            saveTimer = setTimeout(() => save(u.state.doc.toString()), SAVE_DELAY_MS);
+            setStatus('saving');
+            saveTimer = setTimeout(sync, SAVE_DELAY_MS);
           }),
         ],
       }),
     });
 
-    const load = async () => {
-      try {
-        const res = await fetch(url, { cache: 'no-store' });
-        const doc = await res.json();
-        if (!stopped && doc.updated !== lastUpdated) {
-          lastUpdated = doc.updated;
-          const v = view.current;
-          v.dispatch({ changes: { from: 0, to: v.state.doc.length, insert: doc.text }, userEvent: 'load' });
-        }
-        setStatus(writeKey ? 'saved' : 'live');
-      } catch {
-        setStatus('offline');
-      }
-    };
-
-    load();
-    // Only readers poll; the writer's copy is the source of truth.
-    const poll = writeKey ? null : setInterval(() => !document.hidden && load(), POLL_MS);
+    sync();
+    const poll = setInterval(() => !document.hidden && sync(), POLL_MS);
 
     return () => {
       stopped = true;
@@ -119,7 +130,7 @@ function Share() {
       clearTimeout(saveTimer);
       view.current.destroy();
     };
-  }, [url, writeKey]);
+  }, [url]);
 
   const copy = async () => {
     await navigator.clipboard.writeText(view.current.state.doc.toString());
@@ -137,7 +148,7 @@ function Share() {
         <Link className="share-home" to="/">bjarni gunnarsson</Link>
         <span className="share-room">{room}</span>
         <span className={`share-status share-status-${status}`}>
-          {writeKey ? `editing, ${status}` : status}
+          {status}
         </span>
         <button type="button" className="share-copy" onClick={copy}>
           {copied ? 'copied' : 'copy all'}
