@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { EditorView, basicSetup } from 'codemirror';
 import { EditorState } from '@codemirror/state';
@@ -145,7 +145,7 @@ function Share() {
         <meta name="robots" content="noindex" />
       </Helmet>
       <div className="share-bar">
-        <Link className="share-home" to="/">bjarni gunnarsson</Link>
+        <span className="share-home">codeshare</span>
         <span className="share-room">{room}</span>
         <span className={`share-status share-status-${status}`}>
           {status}
