@@ -42,7 +42,8 @@ export const handler = async (event) => {
         ...(current.etag ? { IfMatch: current.etag } : { IfNoneMatch: '*' }),
       }));
     } catch (e) {
-      if (e.name === 'PreconditionFailed' || e.$metadata?.httpStatusCode === 412) {
+      // S3 answers 412 when another write already landed, 409 when one is still in flight.
+      if ([409, 412].includes(e.$metadata?.httpStatusCode)) {
         return reply(409, (await read(Key)).doc);
       }
       throw e;
