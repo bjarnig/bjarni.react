@@ -56,6 +56,16 @@
         { "label": "Generate and test", "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa05/demos/hiller/index.html" },
         { "label": "Loops", "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa05/demos/loops/index.html" }
       ]
+    },
+    {
+      "date": "19.11.2026",
+      "title": "Class 06, Xenakis and Stochastics",
+      "file": "cwa06",
+      "slides": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa06/1",
+      "tools": [
+        { "label": "Distributions", "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa06/demos/events/index.html" },
+        { "label": "GENDYN", "url": "https://slides.bjarni-gunnarsson.net/2026-2027/cwa06/demos/gendy/index.html" }
+      ]
     }
   ]
 }
